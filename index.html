@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>#govbins</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    
+    <div class="jumbotron">
+	    <div class="container-fluid">
+		    	<div class="row">
+					<div class="col-md-1"></div>
+					<div class="col-md-7 col-lg-7">
+						<p style="font-weight: 300; font-size: 30px;"><a href="index.html"><span style="text-decoration: none; color: #0000FF" class="me-on-internet">Harry Trimble</span></a></p>
+			            <input type="text" id="search" class="search form-control img-responsive" placeholder="#govbins">
+			            <br><br>
+					</div>
+		    	</div>
+				
+				<!-- not result -->
+			    <div class="row warning no-result">
+					<div class="col-md-1"></div>
+					<div class="col-md-8 col-lg-8">
+					<br>
+				      <p id="zero-results"><i class="fa fa-warning"></i> Not in collection (yet)</p>
+				    </div>
+			    </div>
+
+				<div class="row">
+					<div class="col-md-1"></div>
+					<div class="col-md-8 col-lg-8">
+
+						<!-- search filter table -->	    	
+						<table id="filter-table" class="table results">
+						  <thead>
+						  </thead>
+						  <tbody>
+						    <tr id="Harrow">
+						      <td>
+						      	<br><br>
+						      	<img src="images/bins/Harrow.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-eng="HRW"></h2>
+								<p>22.4.2017</p>
+						      </td>
+						    </tr>
+						    <tr id="Brent">
+						      <td>
+						      	<br><br>
+						      	<img src="images/bins/Brent.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-eng="BEN"></h2>
+								<p>22.4.2017</p>
+						      </td>
+						    </tr>
+						    <tr id="Barnet">
+						      <td>
+						      	<br><br>
+						      	<img src="images/bins/Barnet.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-eng="BNE"></h2>
+								<p>22.4.2017</p>
+						      </td>
+						    </tr>
+						    <tr id="Northampton">
+						      <td>
+						      	<br><br>
+						      	<img src="images/bins/Northampton.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-eng="NOR"></h2>
+								<p>20.4.2017</p>
+						      </td>
+						    </tr>
+						    <tr id="Leeds">
+						      <td>
+						      	<br><br>
+						      	<img src="images/bins/Leeds.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-eng="LDS"></h2>
+								<p>18.4.2017</p>
+						      </td>
+						    </tr>
+						    <tr id="Enfield">
+						      <td>
+						      	<br><br>
+						      	<img src="images/bins/Enfield.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-eng="ENF"></h2>
+								<p>17.4.2017</p>
+						      </td>
+						    </tr>
+						    <tr id="Broxbourne">
+						      <td>
+						      	<br><br>
+						      	<img src="images/bins/Broxbourne.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-eng="BRX"></h2>
+								<p>17.4.2017</p>
+						      </td>
+						    </tr>
+						    <tr id="Epping-Forest">
+						      <td>
+						      	<br><br>
+						      	<img src="images/bins/Epping-Forest.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-eng="EPP"></h2>
+								<p>17.4.2017</p>
+						      </td>
+						    </tr>
+						    <tr id="East-Hertfordshire">
+						      <td>
+						      	<br><br>
+						      	<img src="images/bins/East-Hertfordshire.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-eng="EHE"></h2>
+								<p>17.4.2017</p>
+						      </td>
+						    </tr>
+						    <tr id="Waltham-Forest">
+						      <td>
+						      	<br><br>
+						      	<img src="images/bins/Waltham-Forest.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-eng="WFT"></h2>
+								<p>16.4.2017</p>
+						      </td>
+						    </tr>
+						    <tr id="Renfrewshire">
+						      <td>
+						      	<br><br>
+						      	<img src="images/bins/Renfrewshire.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-sct="RFW"></h2>
+								<p>16.4.2017</p>
+						      </td>
+						    </tr>
+						    <tr id="East-Dunbartonshire">
+						      <td>
+						      	<br><br>
+						      	<img src="images/bins/East-Dunbartonshire.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-sct="EDU"></h2>
+								<p>15.4.2017</p>
+						      </td>
+						    </tr>
+						    <tr id="Falkirk">
+						      <td>
+						      	<br><br>
+						      	<img src="images/bins/Falkirk.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-sct="FAL"></h2>
+								<p>15.4.2017</p>
+						      </td>
+						    </tr>
+						    <tr id="Stirling">
+						      <td>
+						      	<br><br>
+						      	<img src="images/bins/Stirling.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-sct="STG"></h2>
+								<p>15.4.2017</p>
+						      </td>
+						    </tr>
+						    <tr id="Perth-and-Kinross">
+						      <td>
+						      	<br><br>
+						      	<img src="images/bins/Perth-and-Kinross.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-sct="PKN"></h2>
+								<p>15.4.2017</p>
+						      </td>
+						    </tr>
+						    <tr id="Glasgow-City">
+						      <td>
+						      	<br><br>
+						      	<img src="images/bins/Glasgow-City.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-sct="GLG"></h2>
+								<p>15.4.2017</p>
+						      </td>
+						    </tr>
+						    <tr id="Sutton">
+						      <td>
+						      	<br><br>
+						      	<img src="images/bins/Sutton.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-eng="STN"></h2>
+								<p>9.4.2017</p>
+						      </td>
+						    </tr>
+						    <tr id="Cardiff">
+						      <td>
+						      	<br><br>
+						      	<img src="images/bins/Cardiff.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-wls="CRF"></h2>
+								<p>7.4.2017</p>
+						      </td>
+						    </tr>
+						    <tr id="Camden">
+						      <td>
+						      	<br><br>
+						      	<img src="images/bins/Camden.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-eng="CMD"></h2>
+								<p>3.4.2017</p>
+						      </td>
+						    </tr>
+						    <tr id="Kensington-and-Chelsea">
+						      <td>
+						      	<br><br>
+						      	<img src="images/bins/Kensington-and-Chelsea.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-eng="KEC"></h2>
+								<p>29.3.2017</p>
+						      </td>
+						    </tr>
+						    <tr id="Merton">
+						      <td>
+						      	<br><br>
+								<img src="images/bins/Merton.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-eng="MRT"></h2>
+								<p>26.3.2017</p>
+						      </td>
+						    </tr>
+						    <tr id="Kingston-upon-Thames">
+						      <td>
+						      	<br><br>
+								<img src="images/bins/Kingston-upon-Thames.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-eng="KTT"></h2>
+								<p>26.3.2017</p>
+						      </td>
+						    </tr>
+						    <tr id="Hackney">
+						      <td>
+						      	<br><br>
+								<img src="images/bins/Hackney.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-eng="HCK"></h2>
+								<p>18.3.2017</p>
+						      </td>
+						    </tr>
+						    <tr id="Islington">
+						      <td>
+						      	<br><br>
+								<img src="images/bins/Islington.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-eng="ISL"></h2>
+								<p>18.3.2017</p>
+						      </td>
+						    </tr>
+						    <tr id="Westminster">
+						      <td>
+						      	<br><br>
+								<img src="images/bins/Westminster.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-eng="WSM"></h2>
+								<p>17.3.2017</p>
+						      </td>
+						    </tr>
+						    <tr id="Newham">
+						      <td>
+						      	<br><br>
+								<img src="images/bins/Newham.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-eng="NWM"></h2>
+								<p>12.3.2017</p>
+						      </td>
+						    </tr>
+						    <tr id="Tower-Hamlets">
+						      <td>
+						      	<br><br>
+								<img src="images/bins/Tower-Hamlets.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-eng="TWH"></h2>
+								<p>12.3.2017</p>
+						      </td>
+						    </tr>
+						    <tr id="Greenwich">
+						      <td>
+						      	<br><br>
+								<img src="images/bins/Greenwich.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-eng="GRE"></h2>
+								<p>12.3.2017</p>
+						      </td>
+						    </tr>
+						    <tr id="Croydon">
+						      <td>
+						      	<br><br>
+								<img src="images/bins/Croydon.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-eng="CRY"></h2>
+								<p>12.3.2017</p>
+						      </td>
+						    </tr>
+						    <tr id="Bromley">
+						      <td>
+						      	<br><br>
+								<img src="images/bins/Bromley.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-eng="BRY"></h2>
+								<p>12.3.2017</p>
+						      </td>
+						    </tr>
+						    <tr id="Hounslow">
+						      <td>
+						      	<br><br>
+								<img src="images/bins/Hounslow.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-eng="HNS"></h2>
+								<p>19.2.2017</p>
+						      </td>
+						    </tr>
+						    <tr id="Medway">
+						      <td>
+						      	<br><br>
+								<img src="images/bins/Medway.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-eng="MDW"></h2>
+								<p>18.1.2017</p>
+						      </td>
+						    </tr>
+						    <tr id="Lewisham">
+						      <td>
+						      	<br><br>
+								<img src="images/bins/Lewisham.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-eng="LEW"></h2>
+								<p>18.1.2017</p>
+						      </td>
+						    </tr>
+						    <tr id="Lambeth">
+						      <td>
+						      	<br><br>
+								<img src="images/bins/Lambeth.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-eng="LBH"></h2>
+								<p>31.12.2016</p>
+						      </td>
+						    </tr>
+						    <tr id="South-Lakeland">
+						      <td>
+						      	<br><br>
+								<img src="images/bins/South-Lakeland.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-eng="SLA"></h2>
+								<p>20.12.2016</p>
+						      </td>
+						    </tr>
+						    <tr id="Haringey">
+						      <td>
+						      	<br><br>
+								<img src="images/bins/Haringey.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-eng="HRY"></h2>
+								<p>13.12.2016</p>
+						      </td>
+						    </tr>
+						    <tr id="Ealing">
+						      <td>
+						      	<br><br>
+								<img src="images/bins/Ealing.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-eng="EAL"></h2>
+								<p>2.12.2016</p>
+						      </td>
+						    </tr>
+						    <tr id="Richmond-upon-Thames">
+						      <td>
+						      	<br><br>
+								<img src="images/bins/Richmond-upon-Thames.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-eng="RIC"></h2>
+								<p>30.11.2016</p>
+						      </td>
+						    </tr>
+						    <tr id="Southwark">
+						      <td>
+						      	<br><br>
+								<img src="images/bins/Southwark.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-eng="SWK"></h2>
+								<p>19.11.2016</p>
+						      </td>
+						    </tr>
+						  </tbody>
+						</table>
+					</div>
+				</div>
+											
+	    </div>
+	</div>
+
+	<div class="jumbotron">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-1"></div>
+					<div class="col-md-9">
+		<p><a href="things"><span class="me-on-internet">Things</span></a> I've made</p>
+		<p><a href="words"><span class="me-on-internet">Words</span></a> I've written</p>
+		<p><a href="books"><span class="me-on-internet">Books</span></a> I like</p>
+		<p><a href="podcasts"><span class="me-on-internet">Podcasts</span></a> I listen to</p>
+		<p>Other places <a href="https://twitter.com/HarryTrimble" target="_blank"><span class="me-on-internet">Twitter</span></a>, <a href="https://uk.linkedin.com/pub/harry-trimble/38/b3a/b23" target="_blank"><span class="me-on-internet">LinkedIn</span></a>, <a href="https://github.com/HarryTrimble?tab=repositories" target="_blank"><span class="me-on-internet">GitHub</span></a></p>
+					</div>
+			</div>
+		</div>
+	</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+	<!-- search filter script from https://codepen.io/adobewordpress/pen/gbewLV -->
+	<script>
+		$(document).ready(function() {
+		  $(".search").keyup(function () {
+		    var searchTerm = $(".search").val();
+		    var listItem = $('.results tbody').children('tr');
+		    var searchSplit = searchTerm.replace(/ /g, "'):containsi('")
+		    
+		  $.extend($.expr[':'], {'containsi': function(elem, i, match, array){
+		        return (elem.textContent || elem.innerText || '').toLowerCase().indexOf((match[3] || "").toLowerCase()) >= 0;
+		    }
+		  });
+		    
+		  $(".results tbody tr").not(":containsi('" + searchSplit + "')").each(function(e){
+		    $(this).attr('visible','false');
+		  });
+
+		  $(".results tbody tr:containsi('" + searchSplit + "')").each(function(e){
+		    $(this).attr('visible','true');
+		  });
+
+		  var jobCount = $('.results tbody tr[visible="true"]').length;
+		    $('.counter').text(jobCount + ' item');
+
+		  if(jobCount == '0') {$('.no-result').show();}
+		    else {$('.no-result').hide();}
+				  });
+		});
+	</script>
+
+	<!-- API: local authority ENGLAND register -->
+	<script>
+
+		$(document).ready(function(){
+			$.get('https://local-authority-eng.register.gov.uk/records.json?page-size=500', function (results) {
+				// console.log(result)
+				for (var localAuthorityCode in results) {
+					console.log(results[localAuthorityCode])
+					$('[data-local-authority-eng="'+localAuthorityCode+'"]').html(results[localAuthorityCode]['item'][0]['name'])
+				}
+			})
+		})
+
+	</script>
+
+	<!-- API: local authority SCOTLAND register -->
+	<script>
+
+		$(document).ready(function(){
+			$.get('https://local-authority-sct.alpha.openregister.org/records.json?page-size=500', function (results) {
+				// console.log(result)
+				for (var localAuthorityCode in results) {
+					console.log(results[localAuthorityCode])
+					$('[data-local-authority-sct="'+localAuthorityCode+'"]').html(results[localAuthorityCode]['item'][0]['name'])
+				}
+			})
+		})
+
+	</script>
+
+	<!-- API: local authority WALES register -->
+	<script>
+
+		$(document).ready(function(){
+			$.get('https://local-authority-wls.discovery.openregister.org/records.json?page-size=500', function (results) {
+				// console.log(result)
+				for (var localAuthorityCode in results) {
+					console.log(results[localAuthorityCode])
+					$('[data-local-authority-wls="'+localAuthorityCode+'"]').html(results[localAuthorityCode]['item'][0]['name'])
+				}
+			})
+		})
+
+	</script>
+
+
+  </body>
+
+
+</html>

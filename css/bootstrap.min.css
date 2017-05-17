@@ -6943,3 +6943,17 @@ a:link {
   padding:8px; 
   color:#ccc;
 }
+
+/* img {
+   -moz-filter: grayscale(100%);
+   -ms-filter: grayscale(100%);
+   filter: grayscale(100%);
+   filter: gray; 
+}
+
+img:hover {
+   -webkit-filter: none;
+   -moz-filter: none;
+   -ms-filter: none;
+   filter: none;
+} */

@@ -6933,6 +6933,10 @@ a:link {
     padding: 0px;
 }
 
+#filter-table img {
+    width: 720px;
+}
+
 #zero-results {
     font-size: 30px;
     font-weight: 500;

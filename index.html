@@ -547,7 +547,7 @@
 	<script>
 
 		$(document).ready(function(){
-			$.get('https://local-authority-sct.alpha.openregister.org/records.json?page-size=500', function (results) {
+			$.get('https://local-authority-sct.register.gov.uk/records.json?page-size=500', function (results) {
 				// console.log(result)
 				for (var localAuthorityCode in results) {
 					console.log(results[localAuthorityCode])
@@ -562,7 +562,7 @@
 	<script>
 
 		$(document).ready(function(){
-			$.get('https://local-authority-wls.discovery.openregister.org/records.json?page-size=500', function (results) {
+			$.get('https://principal-local-authority.register.gov.uk/records.json?page-size=500', function (results) {
 				// console.log(result)
 				for (var localAuthorityCode in results) {
 					console.log(results[localAuthorityCode])

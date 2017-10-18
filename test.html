@@ -21,26 +21,54 @@
     
     <div class="jumbotron" style="background-color: #F8F8F8;">
 	    <div class="container-fluid">
+	    		<div class="col-md-1"></div>
+		    	
 		    	<div class="row">
-					<div class="col-md-1"></div>
-					<div class="col-md-7 col-lg-7">
-						<p style="font-weight: 700; font-size: 48px;"><a href="index.html"><span style="text-decoration: none;" class="me-on-internet">#govbins</span></a></p>
-			            <input type="text" id="search" class="search form-control img-responsive" placeholder="Find your local bin">
-			            <br><br>
+					<div class="col-sm-5 col-md-4 col-lg-3" style="height: 100%;">
+							<br>
+							<img src="images/Hammersmith-and-Fulham.jpg" class="img-responsive" alt="Responsive image">
+							<h2 id="council-name" data-local-authority-eng="HMF"></h2>
+							<p>12.10.2017</p>
+							<br>
 					</div>
-					<div class="col-md-1"></div>
-					<div class="col-md-1"></div>
-					<div class="col-md-1"><p><a href="about.html"><span class="me-on-internet">About</span></a></p></div>
-		    	</div>
-				
-				<!-- not result -->
-			    <div class="row warning no-result">
-					<div class="col-md-1"></div>
-					<div class="col-md-8 col-lg-8">
-					<br>
-				      <p id="zero-results"><i class="fa fa-warning"></i> Not in collection (yet)</p>
-				    </div>
-			    </div>
+					<div class="col-sm-5 col-md-4 col-lg-3" style="height: 100%;">
+							<br>
+							<img src="images/St-Albans.jpg" class="img-responsive" alt="Responsive image">
+							<h2 id="council-name" data-local-authority-eng="SAL"></h2>
+							<p>12.10.2017</p>
+							<br>
+					</div>
+					<div class="col-sm-5 col-md-4 col-lg-3" style="height: 100%;">
+							<br>
+							<img src="images/St-Albans.jpg" class="img-responsive" alt="Responsive image">
+							<h2 id="council-name" data-local-authority-eng="SAL"></h2>
+							<p>12.10.2017</p>
+							<br>
+					</div>
+					<div class="col-sm-5 col-md-4 col-lg-3" style="height: 100%;">
+							<br>
+							<img src="images/Hammersmith-and-Fulham.jpg" class="img-responsive" alt="Responsive image">
+							<h2 id="council-name" data-local-authority-eng="HMF"></h2>
+							<p>12.10.2017</p>
+							<br>
+					</div>
+					<div class="col-sm-5 col-md-4 col-lg-3" style="height: 100%;">
+							<br>
+							<img src="images/St-Albans.jpg" class="img-responsive" alt="Responsive image">
+							<h2 id="council-name" data-local-authority-eng="SAL"></h2>
+							<p>12.10.2017</p>
+							<br>
+					</div>
+					<div class="col-sm-5 col-md-4 col-lg-3" style="height: 100%;">
+							<br>
+							<img src="images/Hammersmith-and-Fulham.jpg" class="img-responsive" alt="Responsive image">
+							<h2 id="council-name" data-local-authority-eng="HMF"></h2>
+							<p>12.10.2017</p>
+							<br>
+					</div>
+				</div>
+
+
 
 				<div class="row">
 					<div class="col-md-1"></div>
@@ -114,14 +142,6 @@
 								<img src="images/Dacorum.jpg" class="img-responsive" alt="Responsive image">
 								<h2 id="council-name" data-local-authority-eng="DAC"></h2>
 								<p>7.10.2017</p>
-						      </td>
-						    </tr>
-						    <tr id="Ealing">
-						      <td>
-						      	<br><br>
-								<img src="images/Ealing.jpg" class="img-responsive" alt="Responsive image">
-								<h2 id="council-name" data-local-authority-eng="EAL"></h2>
-								<p>1.10.2017</p>
 						      </td>
 						    </tr>
 						    <tr id="South-Lakeland">
@@ -573,6 +593,14 @@
 								<p>13.12.2016</p>
 						      </td>
 						    </tr>
+						    <tr id="Ealing">
+						      <td>
+						      	<br><br>
+								<img src="images/Ealing.jpg" class="img-responsive" alt="Responsive image">
+								<h2 id="council-name" data-local-authority-eng="EAL"></h2>
+								<p>2.12.2016</p>
+						      </td>
+						    </tr>
 						    <tr id="Richmond-upon-Thames">
 						      <td>
 						      	<br><br>
@@ -593,16 +621,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-
-    <script type="text/javascript">
-    	  var $groupNumbers = $( ".group-number" );
-
-  $groupNumbers.each(function(index) {
-
-    $( this ).append(index+1+".");
-
-  });
-    </script>
 
 	<!-- search filter script from https://codepen.io/adobewordpress/pen/gbewLV -->
 	<script>

@@ -6958,6 +6958,18 @@ a:link {
   color:#ccc;
 }
 
+img {
+    /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
+      filter: gray; /* IE5+ */
+      -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
+      -webkit-transition: all;  
+    }
+
+    img:hover {
+    filter: none;
+      -webkit-filter: grayscale(0);
+    }
+
 /* img {
    -moz-filter: grayscale(100%);
    -ms-filter: grayscale(100%);

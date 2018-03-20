@@ -20,7 +20,7 @@
     <![endif]-->
   </head>
   <body>
-    
+
 		<nav class="navbar" style="margin-bottom: 0px;">
 		  <div class="container-fluid">
 		  	<div style="float: left;">
@@ -618,7 +618,7 @@
 					</div>
 				</div>
 			</div>
-											
+
 	    </div>
 	</div>
 
@@ -634,12 +634,12 @@
 		    var searchTerm = $(".search").val();
 		    var listItem = $('.results tbody').children('tr');
 		    var searchSplit = searchTerm.replace(/ /g, "'):containsi('")
-		    
+
 		  $.extend($.expr[':'], {'containsi': function(elem, i, match, array){
 		        return (elem.textContent || elem.innerText || '').toLowerCase().indexOf((match[3] || "").toLowerCase()) >= 0;
 		    }
 		  });
-		    
+
 		  $(".results tbody tr").not(":containsi('" + searchSplit + "')").each(function(e){
 		    $(this).attr('visible','false');
 		  });
@@ -665,7 +665,7 @@
 				// console.log(result)
 				for (var localAuthorityCode in results) {
 					console.log(results[localAuthorityCode])
-					$('[data-local-authority-eng="'+localAuthorityCode+'"]').html(results[localAuthorityCode]['item'][0]['name'])
+					$('[data-local-authority-eng="'+localAuthorityCode+'"]').html(results[localAuthorityCode]['item'][0]['official-name'])
 				}
 			})
 		})
@@ -680,7 +680,7 @@
 				// console.log(result)
 				for (var localAuthorityCode in results) {
 					console.log(results[localAuthorityCode])
-					$('[data-local-authority-sct="'+localAuthorityCode+'"]').html(results[localAuthorityCode]['item'][0]['name'])
+					$('[data-local-authority-sct="'+localAuthorityCode+'"]').html(results[localAuthorityCode]['item'][0]['official-name'])
 				}
 			})
 		})
@@ -695,7 +695,7 @@
 				// console.log(result)
 				for (var localAuthorityCode in results) {
 					console.log(results[localAuthorityCode])
-					$('[data-local-authority-wls="'+localAuthorityCode+'"]').html(results[localAuthorityCode]['item'][0]['name'])
+					$('[data-local-authority-wls="'+localAuthorityCode+'"]').html(results[localAuthorityCode]['item'][0]['official-name'])
 				}
 			})
 		})

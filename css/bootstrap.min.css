@@ -6898,6 +6898,26 @@ body {
 
 .bin p {font-size: 19px; font-family: helvetica;}
 
+.bin {
+    padding: 0;
+}
+
+#council-name, #collection-date {
+    padding-left: 15px;
+}
+
+@media (max-width: 576px) {
+    #council-name, #collection-date {
+        display: none;
+    }
+    .bin {
+        padding: 0;
+    }
+    .bin br {
+        display: none;
+    }
+}
+
 a:link {
     text-decoration: none;
     color: black;
@@ -6956,12 +6976,6 @@ a:link {
 .counter{
   padding:8px; 
   color:#ccc;
-}
-
-@media (max-width: 600px) {
-    #council-name {
-        background-color: lightblue;
-    }
 }
 
     /* filter: url(filters.svg#grayscale); Firefox 3.5+

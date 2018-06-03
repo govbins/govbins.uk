@@ -6958,6 +6958,12 @@ a:link {
   color:#ccc;
 }
 
+@media (max-width: 600px) {
+    #council-name {
+        background-color: lightblue;
+    }
+}
+
     /* filter: url(filters.svg#grayscale); Firefox 3.5+
 
 img {

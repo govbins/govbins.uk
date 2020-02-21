@@ -6906,6 +6906,18 @@ body {
     padding-left: 15px;
 }
 
+#collection-date {
+    margin-bottom: 40px;
+}
+
+.colour {
+    display: none;
+}
+
+.date {
+    display: none;
+}
+
 @media (max-width: 576px) {
     #council-name, #collection-date {
         display: none;
@@ -6977,6 +6989,64 @@ a:link {
   padding:8px; 
   color:#ccc;
 }
+
+/* sort buttons
+------------------------- */
+
+#button-banner {
+    background-color: #DCDCDC; 
+    border-radius: 0px; 
+    margin-bottom: 0px; 
+    border: solid 0px #b1b4b6;
+}
+
+.button {
+  display: inline-block;
+  padding: 5px 10px;
+  padding-top: 7px;
+  padding-bottom: 0px;
+  background-color: #DCDCDC;
+  border-top: 4px solid #DCDCDC;
+  border-right: 0px solid #DCDCDC;
+  border-left: 0px solid #DCDCDC;
+  border-bottom: 0px solid #DCDCDC;
+  border-radius: 5px;
+  font-size: 19px;
+}
+
+.button:enabled {
+  cursor: pointer;
+}
+
+.button:enabled:hover {
+  background-color: #DCDCDC;
+  color: #333;
+}
+
+.button.is-checked,
+.button.is-selected {
+  background-color: transparent;
+  color: #333;
+  border-top: 4px solid #333;
+}
+
+.button:active {
+  color: #b1b4b6;
+  background-color: #333;
+}
+
+/* hide radio inputs */
+.button input[type="radio"] { display: none; }
+
+/* ---- button-group ---- */
+
+.button-group .button {
+  float: left;
+  border-radius: 0;
+  margin-left: -1px;
+}
+
+.button:focus {outline:0;}
 
     /* filter: url(filters.svg#grayscale); Firefox 3.5+
 

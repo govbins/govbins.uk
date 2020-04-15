@@ -26,10 +26,11 @@ const Home = () => (
       <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet" />
     </Head>
 
-
-    {binsData.bins.map((bin) => {
-      return <Bin {...bin} />
-    })}
+    <section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      {binsData.bins.map((bin, index) => {
+        return <Bin key={index} {...bin} />
+      })}
+    </section>
   </React.Fragment >
 );
 

@@ -10,7 +10,8 @@
   "dependencies": {
     "next": "9.3.4",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "typeface-rubik": "0.0.72"
   },
   "devDependencies": {
     "postcss-preset-env": "^6.7.0",

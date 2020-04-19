@@ -3,50 +3,55 @@ import Head from "next/head";
 import binsData from "../src/bins"
 import Bin from "../components/bin"
 
-const engAuthorityCodes = () => {
-  return fetchCodes('https://local-authority-sct.register.gov.uk/records.json?page-size=500')
+const engAuthorityCodes = async () => {
+  return await fetchCodes('https://local-authority-eng.register.gov.uk/records.json?page-size=500')
 }
 
-const welshAuthorityCodes = () => {
-  return fetchCodes('https://principal-local-authority.register.gov.uk/records.json?page-size=500')
+const welshAuthorityCodes = async () => {
+  return await fetchCodes('https://principal-local-authority.register.gov.uk/records.json?page-size=500')
 }
 
-const scotAuthorityCodes = () => {
-  return fetchCodes('https://local-authority-sct.register.gov.uk/records.json?page-size=500')
+const scotAuthorityCodes = async () => {
+  return await fetchCodes('https://local-authority-sct.register.gov.uk/records.json?page-size=500')
 }
 
-const niAuthorityCodes = () => {
-  return fetchCodes('https://local-authority-nir.register.gov.uk/records.json?page-size=500')
+const niAuthorityCodes = async () => {
+  return await fetchCodes('https://local-authority-nir.register.gov.uk/records.json?page-size=500')
 }
 
-const fetchCodes = (url) => {
+const fetchCodes = async (url) => {
   let codes = {}
 
-  fetch(url)
-    .then((response) => response.json())
-    .then((results) => {
-      for (var localAuthorityCode in results) {
-        codes[localAuthorityCode] = results[localAuthorityCode]['item'][0]['name']
-      }
-    })
+  try {
+    const response = await fetch(url);
+    const results = await response.json();
+    for (var localAuthorityCode in results) {
+      codes[localAuthorityCode] = results[localAuthorityCode]['item'][0]['name'];
+    }
+  }
+  catch (e) { }
 
   return codes
 }
 
 export async function getStaticProps(context) {
+  const eng = engAuthorityCodes()
+  const wales = welshAuthorityCodes()
+  const scot = scotAuthorityCodes()
+  const ni = niAuthorityCodes()
   return {
     props: {
-      engAuthorityCodes: engAuthorityCodes(),
-      welshAuthorityCodes: welshAuthorityCodes(),
-      scotAuthorityCodes: scotAuthorityCodes(),
-      niAuthorityCodes: niAuthorityCodes(),
+      engAuthorityCodes: await eng,
+      welshAuthorityCodes: await wales,
+      scotAuthorityCodes: await scot,
+      niAuthorityCodes: await ni,
     }
   }
 }
 
 export default class extends React.Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
 
     this.state = {
       bins: { ...binsData.bins },
@@ -57,8 +62,6 @@ export default class extends React.Component {
     let councilName
     switch (binData.localAuthorityCountry) {
       case "eng":
-        debugger
-        console.log(binData.localAuthorityCode)
         councilName = this.props.engAuthorityCodes[binData.localAuthorityCode]
       case "sct":
         councilName = this.props.scotAuthorityCodes[binData.localAuthorityCode]
@@ -82,7 +85,7 @@ export default class extends React.Component {
     return (
       <React.Fragment>
         <Head>
-          <meta charset="utf-8" />
+          <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
 

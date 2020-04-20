@@ -63,10 +63,13 @@ export default class extends React.Component {
     switch (binData.localAuthorityCountry) {
       case "eng":
         councilName = this.props.engAuthorityCodes[binData.localAuthorityCode]
+        break;
       case "sct":
         councilName = this.props.scotAuthorityCodes[binData.localAuthorityCode]
+        break;
       case "wls":
         councilName = this.props.welshAuthorityCodes[binData.localAuthorityCode]
+        break;
       default:
         councilName = "";
     }
@@ -74,8 +77,8 @@ export default class extends React.Component {
     return (
       <Bin
         key={key}
-        {...binData}
         councilName={councilName}
+        {...binData}
       />
     )
   }

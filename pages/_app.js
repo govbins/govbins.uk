@@ -17,7 +17,7 @@ export default function Govbins({ Component, pageProps }) {
         <header className="w-screen pr-5 pl-5 pt-4 pb-3">
           <h1 className="float-left text-4xl">
             <Link href="/">
-              #govbins
+              <a>#govbins</a>
             </Link>
           </h1>
           <nav className="float-right text-xl mt-5">

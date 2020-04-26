@@ -3,6 +3,7 @@ import Head from "next/head";
 import binsData from "../src/bins"
 import Bin from "../components/bin"
 import React from "react";
+import Footer from "../components/footer"
 
 const engAuthorityCodes = async () => {
   return await fetchCodes('https://local-authority-eng.register.gov.uk/records.json?page-size=500')
@@ -115,6 +116,7 @@ export default class Index extends React.Component {
             return this.renderBin(index, bin)
           })}
         </section>
+        <Footer />
       </React.Fragment>
     )
   }

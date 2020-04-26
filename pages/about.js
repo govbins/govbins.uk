@@ -1,19 +1,8 @@
 import React from "react"
 import A from "../components/a"
-
-const P = ({ children }) => {
-  return (
-    <p className="mb-6">
-      {children}
-    </p>
-  )
-}
-
-const H2 = ({ children }) => {
-  return (
-    <h2 className="text-3xl mb-6 mt-12">{children}</h2>
-  )
-}
+import P from "../components/p"
+import H2 from "../components/h2"
+import Footer from "../components/footer"
 
 const About = () => {
   return (
@@ -35,12 +24,7 @@ const About = () => {
 
       <H2>Contact</H2>
       <A href="https://twitter.com/HarryTrimble/">Twitter</A>, <A href="https://github.com/HarryTrimble/govbins.uk">Github</A>, <A href="mailto:harryroberttrimble@gmail.com">email</A>
-
-      <footer className="mt-40">
-        <P>
-          © <A href="http://www.harrytrimble.co.uk/" target="_blank">Harry Trimble</A> {new Date().getFullYear()}
-        </P>
-      </footer>
+      <Footer />
     </div>
   )
 }

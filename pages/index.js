@@ -2,6 +2,7 @@ import fetch from 'node-fetch'
 import Head from "next/head";
 import binsData from "../src/bins"
 import Bin from "../components/bin"
+import React from "react";
 
 const engAuthorityCodes = async () => {
   return await fetchCodes('https://local-authority-eng.register.gov.uk/records.json?page-size=500')
@@ -29,12 +30,12 @@ const fetchCodes = async (url) => {
       codes[localAuthorityCode] = results[localAuthorityCode]['item'][0]['name'];
     }
   }
-  catch (e) { }
+  catch (e) { return null }
 
   return codes
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   const eng = engAuthorityCodes()
   const wales = welshAuthorityCodes()
   const scot = scotAuthorityCodes()
@@ -49,7 +50,7 @@ export async function getStaticProps(context) {
   }
 }
 
-export default class extends React.Component {
+export default class Index extends React.Component {
   constructor(props) {
     super(props)
 

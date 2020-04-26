@@ -15,6 +15,8 @@
     "typeface-rubik": "0.0.72"
   },
   "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.19.0",
     "postcss-preset-env": "^6.7.0",
     "tailwindcss": "^1.2.0"
   }

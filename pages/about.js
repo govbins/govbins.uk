@@ -3,6 +3,7 @@ import A from "../components/a"
 import P from "../components/p"
 import H2 from "../components/h2"
 import Footer from "../components/footer"
+import Contact from "../components/contact"
 
 const About = () => {
   return (
@@ -22,8 +23,7 @@ const About = () => {
       <P><A href="https://www.citylab.com/design/2018/03/britains-beautiful-garbage-bins/556217/">The Atlantic</A></P>
       <P><A href="https://www.creativereview.co.uk/bin-done-visual-catalogue-nations-bins/">Creative Review</A></P>
 
-      <H2>Contact</H2>
-      <A href="https://twitter.com/HarryTrimble/">Twitter</A>, <A href="https://github.com/HarryTrimble/govbins.uk">Github</A>, <A href="mailto:harryroberttrimble@gmail.com">email</A>
+      <Contact />
       <Footer />
     </div>
   )

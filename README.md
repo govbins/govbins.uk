@@ -25,3 +25,17 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
+
+
+## Adding a bin
+
+Add the image in `/public/images`, then add another entry in `/src/bins.js` with the information:
+
+```javascript
+{
+  "fileName": "/images/name-of-images.jpg",
+  "localAuthorityCountry": "eng", // must be eng, sct orwls
+  "localAuthorityCode": "CHE", // must matches the code from the api
+  "collectionDate": "12.3.2020"
+},
+```

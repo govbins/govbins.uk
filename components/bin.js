@@ -7,6 +7,7 @@ const Bin = ({ fileName, councilCode, councilName, collectionDate }) => {
       <LazyLoad
         width={585}
         height={380}
+        offset={300}
       >
         <img src={fileName} />
       </LazyLoad>

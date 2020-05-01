@@ -13,6 +13,7 @@
     "node-fetch": "^2.6.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-lazyload": "^2.6.7",
     "typeface-rubik": "0.0.72"
   },
   "devDependencies": {

@@ -264,19 +264,19 @@ export default
       },
       {
         "fileName": "/images/Cardiff.jpg",
-        "locaAuthorityCountry": "wls",
+        "localAuthorityCountry": "wls",
         "localAuthorityCode": "CRF",
         "collectionDate": "9.7.2019"
       },
       {
         "fileName": "/images/Newport.jpg",
-        "locaAuthorityCountry": "wls",
+        "localAuthorityCountry": "wls",
         "localAuthorityCode": "NWP",
         "collectionDate": "9.7.2019"
       },
       {
         "fileName": "/images/Caerphilly.jpg",
-        "locaAuthorityCountry": "wls",
+        "localAuthorityCountry": "wls",
         "localAuthorityCode": "CAY",
         "collectionDate": "8.7.2019"
       },

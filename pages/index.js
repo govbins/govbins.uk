@@ -111,12 +111,15 @@ export default class Index extends React.Component {
           <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet" />
         </Head>
 
+
         <section className="grid grid-cols-2 lg:grid-cols-4">
           {binsData.bins.map((bin, index) => {
             return this.renderBin(index, bin)
           })}
         </section>
-        <Footer />
+        <div className="pl-6 text-2xl">
+          <Footer />
+        </div>
       </React.Fragment>
     )
   }

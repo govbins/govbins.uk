@@ -9,8 +9,9 @@ const About = () => {
   return (
     <div className="lg:w-2/3 lg:ml-40 pl-5 pr-5 text-2xl font-rubik">
       <P>Cataloguing a nation&apos;s bins.</P>
+      <P><A href="https://medium.com/@HarryTrimble/contribute-to-govbins-88b23a24cbd7">Submit photos to #govbins</A></P>
       <P>
-        Each bin is photographed in person by me, then labelled with data about local councils in <A href="https://local-authority-eng.register.gov.uk/">England</A>, <A href="https://local-authority-nir.register.gov.uk/">Northern Ireland</A>, <A href="https://local-authority-sct.register.gov.uk/">Scotland</A> and <A href="https://principal-local-authority.register.gov.uk/">Wales</A>.
+        Each bin is labelled with open data about local councils in <A href="https://www.registers.service.gov.uk/registers/local-authority-eng">England</A>, <A href="https://www.registers.service.gov.uk/registers/local-authority-nir">Northern Ireland</A>, <A href="https://www.registers.service.gov.uk/registers/local-authority-sct">Scotland</A> and <A href="https://www.registers.service.gov.uk/registers/principal-local-authority">Wales</A>.
       </P>
       <P>
         Follow on <A href="https://www.instagram.com/govbins.uk/">Instagram</A>

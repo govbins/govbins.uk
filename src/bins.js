@@ -33,6 +33,8 @@ export default
       },
       {
         "fileName": "/images/Antrim-and-Newtownabbey.jpg",
+        "localAuthorityCountry": "ni",
+        "localAuthorityCode": "ANN",
         "councilName": "Antrim and Newtownabbey",
         "collectionDate": "27.2.2020"
       },
@@ -205,6 +207,8 @@ export default
       },
       {
         "fileName": "/images/Derry-City-and-Strabane.jpeg",
+        "localAuthorityCountry": "ni",
+        "localAuthorityCode": "DRS",
         "councilName": "Derry City and Strabane",
         "collectionDate": "22.10.2019"
       },

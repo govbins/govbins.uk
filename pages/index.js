@@ -72,6 +72,9 @@ export default class Index extends React.Component {
       case "wls":
         councilName = this.props.welshAuthorityCodes[binData.localAuthorityCode]
         break;
+      case "ni":
+        councilName = this.props.niAuthorityCodes[binData.localAuthorityCode]
+        break;
       default:
         councilName = "";
     }

@@ -2,6 +2,84 @@ export default
   {
     "bins": [
       {
+        "fileName": "/images/Bradford.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "BRD",
+        "collectionDate": "1.5.2020"
+      },
+      {
+        "fileName": "/images/City-of-Lincoln.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "LIC",
+        "collectionDate": "27.4.2020"
+      },
+      {
+        "fileName": "/images/Portsmouth.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "POR",
+        "collectionDate": "26.4.2020"
+      },
+      {
+        "fileName": "/images/Doncaster.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "DNC",
+        "collectionDate": "25.4.2020"
+      },
+      {
+        "fileName": "/images/Cheshire-West-and-Chester.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "CHW",
+        "collectionDate": "25.4.2020"
+      },
+      {
+        "fileName": "/images/Telford-and-Wrekin.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "TFW",
+        "collectionDate": "24.4.2020"
+      },
+      {
+        "fileName": "/images/Angus.jpg",
+        "localAuthorityCountry": "sct",
+        "localAuthorityCode": "ANS",
+        "collectionDate": "22.4.2020"
+      },
+      {
+        "fileName": "/images/Kings-Lynn-and-West-Norfolk.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "KIN",
+        "collectionDate": "21.4.2020"
+      },
+      {
+        "fileName": "/images/North-Devon.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "NDE",
+        "collectionDate": "19.4.2020"
+      },
+      {
+        "fileName": "/images/Stroud.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "STO",
+        "collectionDate": "18.4.2020"
+      },
+      {
+        "fileName": "/images/East-Riding-of-Yorkshire.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "ERY",
+        "collectionDate": "18.4.2020"
+      },
+      {
+        "fileName": "/images/Wakefield.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "WKF",
+        "collectionDate": "13.4.2020"
+      },
+      {
+        "fileName": "/images/East-Lindsey.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "ELI",
+        "collectionDate": "13.4.2020"
+      },
+      {
         "fileName": "/images/Cheshire-East.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "CHE",
@@ -35,6 +113,12 @@ export default
         "fileName": "/images/Antrim-and-Newtownabbey.jpg",
         "councilName": "Antrim and Newtownabbey",
         "collectionDate": "27.2.2020"
+      },
+      {
+        "fileName": "/images/Conwy.jpg",
+        "localAuthorityCountry": "wls",
+        "localAuthorityCode": "CWY",
+        "collectionDate": "25.2.2020"
       },
       {
         "fileName": "/images/Arun.jpg",

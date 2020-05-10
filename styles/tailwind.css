@@ -13950,6 +13950,12 @@ video {
   transition-duration: 1000ms;
 }
 
+.contributor {
+  text-decoration: underline;
+  -webkit-text-decoration-color: #ea47cb;
+          text-decoration-color: #ea47cb;
+}
+
 @media (min-width: 640px) {
   .sm\:sr-only {
     position: absolute;

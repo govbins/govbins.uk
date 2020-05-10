@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.contributor {
+	text-decoration: underline;
+	text-decoration-color: #ea47cb;
+}

@@ -4,7 +4,7 @@ export default
       {
         "fileName": "/images/East-Suffolk.jpg",
         "localAuthorityCountry": "eng",
-        "localAuthorityCode": "BAE",
+        "localAuthorityCode": "ESK",
         "collectionDate": "3 May 2020",
         "contributorHandle" : "@angusmontgomery",
         "contributorURL" : "https://www.instagram.com/angusmontgomery/"

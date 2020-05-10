@@ -1,11 +1,7 @@
 import '../styles/tailwind.css'
 import React from "react"
 import Link from "next/link"
-import * as gtag from '../lib/gtag'
-import Router from 'next/router'
 import A from '../components/a'
-
-Router.events.on('routeChangeComplete', url => gtag.pageview(url))
 
 export default function Govbins({ Component, pageProps }) {
   return (

@@ -2,85 +2,123 @@ export default
   {
     "bins": [
       {
+        "fileName": "/images/East-Suffolk.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "ESK",
+        "collectionDate": "3 May 2020",
+        "contributorHandle" : "@angusmontgomery",
+        "contributorURL" : "https://www.instagram.com/angusmontgomery/"
+      },
+      {
+        "fileName": "/images/Bassetlaw.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "BAE",
+        "collectionDate": "3 May 2020",
+        "contributorHandle" : "Huw Robinson",
+      },
+      {
         "fileName": "/images/Bradford.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "BRD",
-        "collectionDate": "1 May 2020",
-        "contributorHandle" : "@TommyP",
-        "contributorURL" : "https://twitter.com/tommypalm"
+        "collectionDate": "3 May 2020",
+        "contributorHandle" : "@neogwydian",
+        "contributorURL" : "https://www.instagram.com/neogwydian/"
       },
       {
         "fileName": "/images/City-of-Lincoln.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "LIC",
-        "collectionDate": "27 April 2020"
+        "collectionDate": "27 April 2020",
+        "contributorHandle" : "@nacnudus",
+        "contributorURL" : "https://twitter.com/nacnudus"
       },
       {
         "fileName": "/images/Portsmouth.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "POR",
-        "contributorHandle" : "Anonymous",
-        "collectionDate": "26 April 2020"
+        "collectionDate": "26 April 2020",
+        "contributorHandle" : "@loveyourbin",
+        "contributorURL" : "https://www.instagram.com/loveyourbin/"
       },
       {
         "fileName": "/images/Doncaster.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "DNC",
-        "collectionDate": "25 April 2020"
+        "collectionDate": "25 April 2020",
+        "contributorHandle" : "@marynagaf",
+        "contributorURL" : "https://www.instagram.com/marynagaf/"
       },
       {
         "fileName": "/images/Cheshire-West-and-Chester.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "CHW",
-        "collectionDate": "25 April 2020"
+        "collectionDate": "25 April 2020",
+        "contributorHandle" : "@paulemorgan",
+        "contributorURL" : "https://www.instagram.com/paulemorgan/"
       },
       {
         "fileName": "/images/Telford-and-Wrekin.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "TFW",
-        "collectionDate": "24 April 2020"
+        "collectionDate": "24 April 2020",
+        "contributorHandle" : "@lucyjudson",
+        "contributorURL" : "https://www.instagram.com/lucyjudson/"
       },
       {
         "fileName": "/images/Angus.jpg",
         "localAuthorityCountry": "sct",
         "localAuthorityCode": "ANS",
-        "collectionDate": "22 April 2020"
+        "collectionDate": "22 April 2020",
+        "contributorHandle" : "@simdess",
+        "contributorURL" : "https://twitter.com/simdess"
       },
       {
         "fileName": "/images/Kings-Lynn-and-West-Norfolk.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "KIN",
-        "collectionDate": "21 April 2020"
+        "collectionDate": "21 April 2020",
+        "contributorHandle" : "@mrdanielweir",
+        "contributorURL" : "https://www.instagram.com/mrdanielweir/"
       },
       {
         "fileName": "/images/North-Devon.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "NDE",
-        "collectionDate": "19 April 2020"
+        "collectionDate": "19 April 2020",
+        "contributorHandle" : "@vosageroll",
+        "contributorURL" : "https://twitter.com/vosageroll"
       },
       {
         "fileName": "/images/Stroud.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "STO",
-        "collectionDate": "18 April 2020"
+        "collectionDate": "18 April 2020",
+        "contributorHandle" : "@joegiddings",
+        "contributorURL" : "https://twitter.com/joegiddings"
       },
       {
         "fileName": "/images/East-Riding-of-Yorkshire.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "ERY",
-        "collectionDate": "18 April 2020"
+        "collectionDate": "18 April 2020",
+        "contributorHandle" : "@fezlayd",
+        "contributorURL" : "https://www.instagram.com/fezlayd"
       },
       {
         "fileName": "/images/Wakefield.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "WKF",
-        "collectionDate": "13 April 2020"
+        "collectionDate": "13 April 2020",
+        "contributorHandle" : "@taikodrum",
+        "contributorURL" : "https://www.instagram.com/taikodrum"
       },
       {
         "fileName": "/images/East-Lindsey.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "ELI",
-        "collectionDate": "13 April 2020"
+        "collectionDate": "13 April 2020",
+        "contributorHandle" : "@tronkins",
+        "contributorURL" : "https://www.instagram.com/tronkins"
       },
       {
         "fileName": "/images/Cheshire-East.jpg",
@@ -123,7 +161,9 @@ export default
         "fileName": "/images/Conwy.jpg",
         "localAuthorityCountry": "wls",
         "localAuthorityCode": "CWY",
-        "collectionDate": "25 February 2020"
+        "collectionDate": "25 February 2020",
+        "contributorHandle" : "@SarahBargiela",
+        "contributorURL" : "https://twitter.com/SarahBargiela"
       },
       {
         "fileName": "/images/Arun.jpg",

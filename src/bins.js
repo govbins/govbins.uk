@@ -2,6 +2,14 @@ export default
   {
     "bins": [
       {
+        "fileName": "/images/Powys.jpg",
+        "localAuthorityCountry": "wls",
+        "localAuthorityCode": "POW",
+        "collectionDate": "15 May 2020",
+        "contributorHandle" : "@benaldo",
+        "contributorURL" : "https://twitter.com/benaldo/"
+      },
+      {
         "fileName": "/images/East-Suffolk.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "ESK",

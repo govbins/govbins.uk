@@ -2,6 +2,14 @@ export default
   {
     "bins": [
       {
+        "fileName": "/images/Falkirk.jpg",
+        "localAuthorityCountry": "sct",
+        "localAuthorityCode": "FAL",
+        "collectionDate": "16 May 2020",
+        "contributorHandle" : "@declancorcoran",
+        "contributorURL" : "https://www.instagram.com/declancorcoran/"
+      },      
+      {
         "fileName": "/images/Powys.jpg",
         "localAuthorityCountry": "wls",
         "localAuthorityCode": "POW",
@@ -1268,12 +1276,6 @@ export default
         "fileName": "/images/East-Dunbartonshire.jpg",
         "localAuthorityCountry": "sct",
         "localAuthorityCode": "EDU",
-        "collectionDate": "15 April 2017"
-      },
-      {
-        "fileName": "/images/Falkirk.jpg",
-        "localAuthorityCountry": "sct",
-        "localAuthorityCode": "FAL",
         "collectionDate": "15 April 2017"
       },
       {

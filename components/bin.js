@@ -3,17 +3,17 @@ import LazyLoad from 'react-lazyload';
 
 const Bin = ({ fileName, councilCode, councilName, collectionDate, contributorHandle, contributorURL }) => {
   let contributor
-  if (contributorHandle && contributorURL){
-    contributor=<p className="text-xl font-sans font-light"><a className="contributor" href={contributorURL}>{contributorHandle}</a></p>
-  } else if (contributorHandle){
-    contributor=<p className="text-xl font-sans font-light">{contributorHandle}</p>
+  if (contributorHandle && contributorURL) {
+    contributor = <p className="text-xl font-sans font-light"><a className="contributor" href={contributorURL}>{contributorHandle}</a></p>
+  } else if (contributorHandle) {
+    contributor = <p className="text-xl font-sans font-light">{contributorHandle}</p>
   }
   return (
     <div className="sm:mb-10">
       <LazyLoad
-        width={585}
         height={380}
-        offset={600}
+        offset={1500}
+        width={585}
       >
         <img src={fileName} />
       </LazyLoad>

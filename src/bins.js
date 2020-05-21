@@ -2,6 +2,14 @@ export default
   {
     "bins": [
       {
+        "fileName": "/images/Belfast.jpg",
+        "localAuthorityCountry": "ni",
+        "localAuthorityCode": "BFS",
+        "collectionDate": "21 May 2020",
+        "contributorHandle" : "@candaharcats",
+        "contributorURL" : "https://www.instagram.com/candaharcats/"
+      }, 
+      {
         "fileName": "/images/Falkirk.jpg",
         "localAuthorityCountry": "sct",
         "localAuthorityCode": "FAL",

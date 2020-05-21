@@ -30,7 +30,8 @@ export default
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "BAE",
         "collectionDate": "3 May 2020",
-        "contributorHandle" : "Huw Robinson",
+        "contributorHandle" : "@huwrobinson",
+        "contributorURL" : "https://www.instagram.com/huwrobinson/"
       },
       {
         "fileName": "/images/Bradford.jpg",

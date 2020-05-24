@@ -1,7 +1,8 @@
-import '../styles/tailwind.css'
-import React from "react"
-import Link from "next/link"
-import A from '../components/a'
+import "../styles/tailwind.css";
+import React from "react";
+import Link from "next/link";
+import A from "../components/a";
+import "fontsource-rubik";
 
 export default function Govbins({ Component, pageProps }) {
   return (
@@ -9,7 +10,7 @@ export default function Govbins({ Component, pageProps }) {
       <style jsx global>
         {`
           body {
-            background-color: #F8F8F8;
+            background-color: #f8f8f8;
           }
         `}
       </style>
@@ -23,14 +24,10 @@ export default function Govbins({ Component, pageProps }) {
           <nav className="float-right text-xl mt-5">
             <ul>
               <li className="inline-block mr-5">
-                <A href="/about">
-                  About
-                </A>
+                <A href="/about">About</A>
               </li>
               <li className="inline-block">
-                <A href="/map">
-                  Map
-                </A>
+                <A href="/map">Map</A>
               </li>
             </ul>
           </nav>
@@ -40,5 +37,5 @@ export default function Govbins({ Component, pageProps }) {
         </main>
       </div>
     </React.Fragment>
-  )
+  );
 }

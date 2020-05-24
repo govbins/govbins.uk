@@ -2646,6 +2646,11 @@ flush-write-stream@^1.0.0:
     inherits "^2.0.3"
     readable-stream "^2.3.6"
 
+fontsource-rubik@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/fontsource-rubik/-/fontsource-rubik-2.1.2.tgz#974b3e669167b7df89153517f998577367dcc5e6"
+  integrity sha512-rg/ojnfjEYrvAxR1/gAec++YsBKUdQjwqSTmtgb1jxInILgL6blB4YWmKNZ9fchqZQ/cZ4w3t0dV0Lyg4EVahA==
+
 for-in@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/for-in/-/for-in-1.0.2.tgz#81068d295a8142ec0ac726c6e2200c30fb6d5e80"

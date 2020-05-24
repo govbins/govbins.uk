@@ -9,6 +9,7 @@
     "export": "npm run build && next export"
   },
   "dependencies": {
+    "fontsource-rubik": "^2.1.2",
     "next": "9.3.4",
     "node-fetch": "^2.6.0",
     "react": "16.13.1",

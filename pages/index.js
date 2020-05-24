@@ -46,16 +46,39 @@ const fetchCodes = async (url) => {
 };
 
 export async function getStaticProps() {
-  const eng = engAuthorityCodes();
-  const wales = welshAuthorityCodes();
-  const scot = scotAuthorityCodes();
-  const ni = niAuthorityCodes();
+  const engCodes = await engAuthorityCodes();
+  const welshCodes = await welshAuthorityCodes();
+  const scotCodes = await scotAuthorityCodes();
+  const niCodes = await niAuthorityCodes();
+
+  const bins = binsData.bins.map((bin) => {
+    let councilName;
+    switch (bin.localAuthorityCountry) {
+      case "eng":
+        councilName = engCodes[bin.localAuthorityCode];
+        break;
+      case "sct":
+        councilName = scotCodes[bin.localAuthorityCode];
+        break;
+      case "wls":
+        councilName = welshCodes[bin.localAuthorityCode];
+        break;
+      case "ni":
+        councilName = niCodes[bin.localAuthorityCode];
+        break;
+      default:
+        councilName = "";
+    }
+
+    return {
+      councilName,
+      ...bin,
+    };
+  });
+
   return {
     props: {
-      engAuthorityCodes: await eng,
-      welshAuthorityCodes: await wales,
-      scotAuthorityCodes: await scot,
-      niAuthorityCodes: await ni,
+      bins,
     },
   };
 }
@@ -63,34 +86,10 @@ export async function getStaticProps() {
 export default class Index extends React.Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      bins: { ...binsData.bins },
-    };
   }
 
   renderBin(key, binData) {
-    let councilName;
-    switch (binData.localAuthorityCountry) {
-      case "eng":
-        councilName = this.props.engAuthorityCodes[binData.localAuthorityCode];
-        break;
-      case "sct":
-        councilName = this.props.scotAuthorityCodes[binData.localAuthorityCode];
-        break;
-      case "wls":
-        councilName = this.props.welshAuthorityCodes[
-          binData.localAuthorityCode
-        ];
-        break;
-      case "ni":
-        councilName = this.props.niAuthorityCodes[binData.localAuthorityCode];
-        break;
-      default:
-        councilName = "";
-    }
-
-    return <Bin key={key} councilName={councilName} {...binData} />;
+    return <Bin key={key} {...binData} />;
   }
 
   render() {

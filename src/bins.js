@@ -2,6 +2,14 @@ export default
   {
     "bins": [
       {
+        "fileName": "/images/Forest-of-Dean.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "FOE",
+        "collectionDate": "8 July 2020",
+        "contributorHandle" : "@siamakamini",
+        "contributorURL" : "https://www.instagram.com/siamakamini/"
+      },
+      {
         "fileName": "/images/Cheltenham.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "CHT",

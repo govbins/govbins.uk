@@ -2,6 +2,14 @@ export default
   {
     "bins": [
       {
+        "fileName": "/images/Cheltenham.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "CHT",
+        "collectionDate": "7 July 2020",
+        "contributorHandle" : "@siamakamini",
+        "contributorURL" : "https://www.instagram.com/siamakamini/"
+      }, 
+      {
         "fileName": "/images/Belfast.jpg",
         "localAuthorityCountry": "ni",
         "localAuthorityCode": "BFS",

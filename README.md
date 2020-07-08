@@ -4,28 +4,26 @@ Source code for [govbins.uk](http://govbins.uk/)
 
 Open data APIs used in site:
 
-- [Local authorities in England](https://local-authority-eng.alpha.openregister.org/)
-- [Local authorities in Scotland](https://local-authority-sct.alpha.openregister.org/)
-- [Principal local authorities in Wales](https://principal-local-authority.alpha.openregister.org/)
+- [Local authorities in England](https://www.registers.service.gov.uk/registers/local-authority-eng)
+- [Local authorities in Northern Ireland](https://www.registers.service.gov.uk/registers/local-authority-nir)
+- [Local authorities in Scotland](https://www.registers.service.gov.uk/registers/local-authority-sct)
+- [Principal local authorities in Wales](https://www.registers.service.gov.uk/registers/principal-local-authority)
 
 ## Running it
 
 Install the dependencies:
 
 ```bash
-npm install
+yarn install
 ```
 
 First, run the development server:
 
 ```bash
-npm run dev
-# or
 yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
-
 
 ## Adding a bin
 

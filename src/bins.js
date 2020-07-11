@@ -2,6 +2,30 @@ export default
   {
     "bins": [
       {
+        "fileName": "/images/Winchester.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "WIN",
+        "collectionDate": "11 July 2020"
+      },
+      {
+        "fileName": "/images/Eastleigh.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "EAT",
+        "collectionDate": "11 July 2020"
+      },
+      {
+        "fileName": "/images/Southampton.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "STH",
+        "collectionDate": "11 July 2020"
+      },
+      {
+        "fileName": "/images/Bournemouth-Christchurch-and-Poole.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "BPC",
+        "collectionDate": "11 July 2020"
+      },
+      {
         "fileName": "/images/Forest-of-Dean.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "FOE",

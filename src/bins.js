@@ -2,6 +2,14 @@ export default
   {
     "bins": [
       {
+        "fileName": "/images/Somerset-West-and-Taunton.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "SWT",
+        "collectionDate": "12 July 2020",
+        "contributorHandle" : "@georgewg323",
+        "contributorURL" : "https://www.instagram.com/georgewg323/"
+      },
+      {
         "fileName": "/images/Winchester.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "WIN",

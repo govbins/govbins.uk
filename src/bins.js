@@ -2,6 +2,14 @@ export default
   {
     "bins": [
       {
+        "fileName": "/images/Lisburn-and-Castlereagh.jpg",
+        "localAuthorityCountry": "ni",
+        "localAuthorityCode": "LBC",
+        "collectionDate": "18 July 2020",
+        "contributorHandle" : "@patrick_s_k",
+        "contributorURL" : "https://www.instagram.com/patrick_s_k"
+      }, 
+      {
         "fileName": "/images/Somerset-West-and-Taunton.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "SWT",

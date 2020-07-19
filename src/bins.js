@@ -2,6 +2,13 @@ export default
   {
     "bins": [
       {
+        "fileName": "/images/South-Derbyshire.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "SDE",
+        "collectionDate": "18 July 2020",
+        "contributorHandle" : "Helen Campbell"
+      },
+      {
         "fileName": "/images/Amber-Valley.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "AMB",

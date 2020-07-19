@@ -2,6 +2,13 @@ export default
   {
     "bins": [
       {
+        "fileName": "/images/Amber-Valley.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "AMB",
+        "collectionDate": "18 July 2020",
+        "contributorHandle" : "Helen Campbell"
+      },
+      {
         "fileName": "/images/Lisburn-and-Castlereagh.jpg",
         "localAuthorityCountry": "ni",
         "localAuthorityCode": "LBC",

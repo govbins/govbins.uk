@@ -60,6 +60,31 @@ export async function getStaticProps() {
   };
 }
 
+const sortOptions = [
+  {
+    name: "Latest",
+  },
+  {
+    name: "Oldest",
+  },
+  {
+    name: "Name",
+  },
+  {
+    name: "Colour",
+  },
+]
+
+const sortOption = ({ name, active }) => {
+  return (
+    <li className="inline-block">
+      <a href="#" className={`block px-3 py-1 border-transparent border-t-4 ${active ? 'border-gray-800' : 'hover:border-gray-800'}`} >
+        {name}
+      </a>
+    </li>
+  )
+}
+
 export default class Index extends React.Component {
   constructor(props) {
     super(props);
@@ -96,6 +121,14 @@ export default class Index extends React.Component {
   render() {
     return (
       <React.Fragment>
+        <div className="bg-gray-400">
+          <ul>
+            {sortOptions.map((option, index) => {
+              option.active = index == 2
+              return sortOption(option)
+            })}
+          </ul>
+        </div>
         <section className="grid grid-cols-2 lg:grid-cols-4">
           {binsData.bins.map((bin, index) => {
             return this.renderBin(index, bin);

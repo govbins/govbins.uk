@@ -70,7 +70,10 @@ export default class Index extends React.Component {
     this.sortName = this.sortName.bind(this)
 
     this.state = {
-      bins: [...binsData.bins],
+      bins: binsData.bins.map((bin) => {
+        bin.councilName = this.councilName(bin)
+        return bin
+      }),
       sortOptions: {
         latest: {
           name: "Latest",
@@ -82,10 +85,10 @@ export default class Index extends React.Component {
           active: false,
           func: this.sortOldest
         },
-        az: {
+        name: {
           name: "Name",
           active: false,
-          func: null,
+          func: this.sortName,
         },
         colour: {
           name: "Colour",
@@ -150,6 +153,21 @@ export default class Index extends React.Component {
     this.updateNav("oldest")
   }
 
+  sortName(e) {
+    e.preventDefault()
+    const bins = this.state.bins
+
+    this.setState({
+      bins: bins.sort((a, b) => {
+        if (a.councilName.toLowerCase() < b.councilName.toLowerCase()) return -1;
+        if (a.councilName.toLowerCase() > b.councilName.toLowerCase()) return 1;
+        return 0;
+      }),
+    })
+
+    this.updateNav("name")
+  }
+
   councilName(bin) {
     let councilName;
     const { localAuthorityCountry, localAuthorityCode } = bin
@@ -194,7 +212,6 @@ export default class Index extends React.Component {
           {this.state.bins.map((bin, i) => {
             return <Bin
               key={i}
-              councilName={this.councilName(bin)}
               {...bin}
             />;
           })}

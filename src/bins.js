@@ -7,7 +7,7 @@ export default
         "localAuthorityCode": "SDE",
         "collectionDate": "18 July 2020",
         "contributorHandle" : "Helen Campbell",
-        "colour": "900-not-sorted-yet"
+        "colour": "313-green"
       },
       {
         "fileName": "/images/Amber-Valley.jpg",
@@ -15,7 +15,7 @@ export default
         "localAuthorityCode": "AMB",
         "collectionDate": "18 July 2020",
         "contributorHandle" : "Helen Campbell",
-        "colour": "900-not-sorted-yet"
+        "colour": "762-grayscale"
       },
       {
         "fileName": "/images/Lisburn-and-Castlereagh.jpg",
@@ -24,7 +24,7 @@ export default
         "collectionDate": "18 July 2020",
         "contributorHandle" : "@patrick_s_k",
         "contributorURL" : "https://www.instagram.com/patrick_s_k",
-        "colour": "900-not-sorted-yet"
+        "colour": "310-green"
       }, 
       {
         "fileName": "/images/Somerset-West-and-Taunton.jpg",
@@ -33,35 +33,35 @@ export default
         "collectionDate": "12 July 2020",
         "contributorHandle" : "@georgewg323",
         "contributorURL" : "https://www.instagram.com/georgewg323/",
-        "colour": "900-not-sorted-yet"
+        "colour": "772-grayscale"
       },
       {
         "fileName": "/images/Winchester.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "WIN",
         "collectionDate": "11 July 2020",
-        "colour": "900-not-sorted-yet"
+        "colour": "788-grayscale"
       },
       {
         "fileName": "/images/Eastleigh.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "EAT",
         "collectionDate": "11 July 2020",
-        "colour": "900-not-sorted-yet"
+        "colour": "342-green"
       },
       {
         "fileName": "/images/Southampton.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "STH",
         "collectionDate": "11 July 2020",
-        "colour": "900-not-sorted-yet"
+        "colour": "321-green"
       },
       {
         "fileName": "/images/Bournemouth-Christchurch-and-Poole.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "BPC",
         "collectionDate": "11 July 2020",
-        "colour": "900-not-sorted-yet"
+        "colour": "210-blue"
       },
       {
         "fileName": "/images/Forest-of-Dean.jpg",
@@ -70,7 +70,7 @@ export default
         "collectionDate": "8 July 2020",
         "contributorHandle" : "@siamakamini",
         "contributorURL" : "https://www.instagram.com/siamakamini/",
-        "colour": "900-not-sorted-yet"
+        "colour": "782-grayscale"
       },
       {
         "fileName": "/images/Cheltenham.jpg",
@@ -79,7 +79,7 @@ export default
         "collectionDate": "7 July 2020",
         "contributorHandle" : "@siamakamini",
         "contributorURL" : "https://www.instagram.com/siamakamini/",
-        "colour": "900-not-sorted-yet"
+        "colour": "600-brown"
       }, 
       {
         "fileName": "/images/Belfast.jpg",
@@ -88,7 +88,7 @@ export default
         "collectionDate": "21 May 2020",
         "contributorHandle" : "@candaharcats",
         "contributorURL" : "https://www.instagram.com/candaharcats/",
-        "colour": "900-not-sorted-yet"
+        "colour": "220-blue"
       }, 
       {
         "fileName": "/images/Falkirk.jpg",
@@ -97,7 +97,7 @@ export default
         "collectionDate": "16 May 2020",
         "contributorHandle" : "@declancorcoran",
         "contributorURL" : "https://www.instagram.com/declancorcoran/",
-        "colour": "900-not-sorted-yet"
+        "colour": "503-red-burgundy"
       },      
       {
         "fileName": "/images/Powys.jpg",
@@ -106,7 +106,7 @@ export default
         "collectionDate": "15 May 2020",
         "contributorHandle" : "@benaldo",
         "contributorURL" : "https://twitter.com/benaldo/",
-        "colour": "900-not-sorted-yet"
+        "colour": "791-grayscale"
       },
       {
         "fileName": "/images/East-Suffolk.jpg",
@@ -115,7 +115,7 @@ export default
         "collectionDate": "3 May 2020",
         "contributorHandle" : "@angusmontgomery",
         "contributorURL" : "https://www.instagram.com/angusmontgomery/",
-        "colour": "900-not-sorted-yet"
+        "colour": "643-brown"
       },
       {
         "fileName": "/images/Bassetlaw.jpg",
@@ -124,7 +124,7 @@ export default
         "collectionDate": "3 May 2020",
         "contributorHandle" : "@huwrobinson",
         "contributorURL" : "https://www.instagram.com/huwrobinson/",
-        "colour": "900-not-sorted-yet"
+        "colour": "220-blue"
       },
       {
         "fileName": "/images/Bradford.jpg",
@@ -133,7 +133,7 @@ export default
         "collectionDate": "3 May 2020",
         "contributorHandle" : "@neogwydian",
         "contributorURL" : "https://www.instagram.com/neogwydian/",
-        "colour": "900-not-sorted-yet"
+        "colour": "733-grayscale"
       },
       {
         "fileName": "/images/City-of-Lincoln.jpg",
@@ -142,7 +142,7 @@ export default
         "collectionDate": "27 April 2020",
         "contributorHandle" : "@nacnudus",
         "contributorURL" : "https://twitter.com/nacnudus",
-        "colour": "900-not-sorted-yet"
+        "colour": "326-greens"
       },
       {
         "fileName": "/images/Portsmouth.jpg",
@@ -151,7 +151,7 @@ export default
         "collectionDate": "26 April 2020",
         "contributorHandle" : "@loveyourbin",
         "contributorURL" : "https://www.instagram.com/loveyourbin/",
-        "colour": "900-not-sorted-yet"
+        "colour": "780-grayscale"
       },
       {
         "fileName": "/images/Doncaster.jpg",
@@ -160,7 +160,7 @@ export default
         "collectionDate": "25 April 2020",
         "contributorHandle" : "@marynagaf",
         "contributorURL" : "https://www.instagram.com/marynagaf/",
-        "colour": "900-not-sorted-yet"
+        "colour": "245-blue"
       },
       {
         "fileName": "/images/Cheshire-West-and-Chester.jpg",
@@ -169,7 +169,7 @@ export default
         "collectionDate": "25 April 2020",
         "contributorHandle" : "@paulemorgan",
         "contributorURL" : "https://www.instagram.com/paulemorgan/",
-        "colour": "900-not-sorted-yet"
+        "colour": "779-grayscale"
       },
       {
         "fileName": "/images/Telford-and-Wrekin.jpg",
@@ -178,7 +178,7 @@ export default
         "collectionDate": "24 April 2020",
         "contributorHandle" : "@lucyjudson",
         "contributorURL" : "https://www.instagram.com/lucyjudson/",
-        "colour": "900-not-sorted-yet"
+        "colour": "731-grayscale"
       },
       {
         "fileName": "/images/Angus.jpg",
@@ -187,7 +187,7 @@ export default
         "collectionDate": "22 April 2020",
         "contributorHandle" : "@simdess",
         "contributorURL" : "https://twitter.com/simdess",
-        "colour": "900-not-sorted-yet"
+        "colour": "111-purple"
       },
       {
         "fileName": "/images/Kings-Lynn-and-West-Norfolk.jpg",
@@ -196,7 +196,7 @@ export default
         "collectionDate": "21 April 2020",
         "contributorHandle" : "@mrdanielweir",
         "contributorURL" : "https://www.instagram.com/mrdanielweir/",
-        "colour": "900-not-sorted-yet"
+        "colour": "773-grayscale"
       },
       {
         "fileName": "/images/North-Devon.jpg",
@@ -205,7 +205,7 @@ export default
         "collectionDate": "19 April 2020",
         "contributorHandle" : "@vosageroll",
         "contributorURL" : "https://twitter.com/vosageroll",
-        "colour": "900-not-sorted-yet"
+        "colour": "755-grayscale"
       },
       {
         "fileName": "/images/Stroud.jpg",
@@ -214,7 +214,7 @@ export default
         "collectionDate": "18 April 2020",
         "contributorHandle" : "@joegiddings",
         "contributorURL" : "https://twitter.com/joegiddings",
-        "colour": "900-not-sorted-yet"
+        "colour": "772-grayscale"
       },
       {
         "fileName": "/images/East-Riding-of-Yorkshire.jpg",
@@ -223,7 +223,7 @@ export default
         "collectionDate": "18 April 2020",
         "contributorHandle" : "@fezlayd",
         "contributorURL" : "https://www.instagram.com/fezlayd",
-        "colour": "900-not-sorted-yet"
+        "colour": "351-green"
       },
       {
         "fileName": "/images/Wakefield.jpg",
@@ -232,7 +232,7 @@ export default
         "collectionDate": "13 April 2020",
         "contributorHandle" : "@taikodrum",
         "contributorURL" : "https://www.instagram.com/taikodrum",
-        "colour": "900-not-sorted-yet"
+        "colour": "624-brown"
       },
       {
         "fileName": "/images/East-Lindsey.jpg",
@@ -241,42 +241,42 @@ export default
         "collectionDate": "13 April 2020",
         "contributorHandle" : "@tronkins",
         "contributorURL" : "https://www.instagram.com/tronkins",
-        "colour": "900-not-sorted-yet"
+        "colour": "720-grayscale"
       },
       {
         "fileName": "/images/Cheshire-East.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "CHE",
         "collectionDate": "12 March 2020",
-        "colour": "900-not-sorted-yet"
+        "colour": "709-grayscale"
       },
       {
         "fileName": "/images/Coventry.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "COV",
         "collectionDate": "5 March 2020",
-        "colour": "900-not-sorted-yet"
+        "colour": "314-green"
       },
       {
         "fileName": "/images/Bromsgrove.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "BRM",
         "collectionDate": "5 March 2020",
-        "colour": "900-not-sorted-yet"
+        "colour": "799-grayscale"
       },
       {
         "fileName": "/images/Hart.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "HAT",
         "collectionDate": "28 February 2020",
-        "colour": "900-not-sorted-yet"
+        "colour": "200-blue"
       },
       {
         "fileName": "/images/Rushmoor.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "RUH",
         "collectionDate": "28 February 2020",
-        "colour": "900-not-sorted-yet"
+        "colour": "210-blue"
       },
       {
         "fileName": "/images/Antrim-and-Newtownabbey.jpg",
@@ -284,7 +284,7 @@ export default
         "localAuthorityCode": "ANN",
         "councilName": "Antrim and Newtownabbey",
         "collectionDate": "27 February 2020",
-        "colour": "900-not-matched-yet"
+        "colour": "220-blue"
       },
       {
         "fileName": "/images/Conwy.jpg",
@@ -293,7 +293,7 @@ export default
         "collectionDate": "25 February 2020",
         "contributorHandle" : "@SarahBargiela",
         "contributorURL" : "https://twitter.com/SarahBargiela",
-        "colour": "900-not-sorted-yet"
+        "colour": "742-grayscale"
       },
       {
         "fileName": "/images/Arun.jpg",

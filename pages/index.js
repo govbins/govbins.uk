@@ -68,6 +68,7 @@ export default class Index extends React.Component {
     this.sortOldest = this.sortOldest.bind(this)
     this.sortLatest = this.sortLatest.bind(this)
     this.sortName = this.sortName.bind(this)
+    this.sortColour = this.sortColour.bind(this)
 
     this.state = {
       bins: binsData.bins.map((bin) => {
@@ -93,7 +94,7 @@ export default class Index extends React.Component {
         colour: {
           name: "Colour",
           active: false,
-          func: null,
+          func: this.sortColour,
         }
       }
     };
@@ -167,6 +168,24 @@ export default class Index extends React.Component {
 
     this.updateNav("name")
   }
+
+  sortColour(e) {
+    e.preventDefault()
+    const bins = this.state.bins
+
+    this.setState({
+      bins: bins.sort((a, b) => {
+        const aColour = parseInt(a.colour.substring(0, 3))
+        const bColour = parseInt(b.colour.substring(0, 3))
+        if (aColour < bColour) return -1;
+        if (aColour > bColour) return 1;
+        return 0;
+      }),
+    })
+
+    this.updateNav("colour")
+  }
+
 
   councilName(bin) {
     let councilName;

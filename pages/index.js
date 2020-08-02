@@ -188,27 +188,19 @@ export default class Index extends React.Component {
 
 
   councilName(bin) {
-    let councilName;
     const { localAuthorityCountry, localAuthorityCode } = bin
     switch (localAuthorityCountry) {
       case "eng":
-        councilName = this.props.engAuthorityCodes[localAuthorityCode];
-        break;
+        return this.props.engAuthorityCodes[localAuthorityCode];
       case "sct":
-        councilName = this.props.scotAuthorityCodes[localAuthorityCode];
-        break;
+        return this.props.scotAuthorityCodes[localAuthorityCode];
       case "wls":
-        councilName = this.props.welshAuthorityCodes[localAuthorityCode];
-        break;
+        return this.props.welshAuthorityCodes[localAuthorityCode];
       case "ni":
-        councilName = this.props.niAuthorityCodes[localAuthorityCode];
-        break;
+        return this.props.niAuthorityCodes[localAuthorityCode];
       default:
-        councilName = "";
-        break;
+        return "";
     }
-
-    return councilName
   }
 
   render() {

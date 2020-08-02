@@ -105,11 +105,9 @@ export default class Index extends React.Component {
     const newOptions = {}
 
     Object.keys(options).map((key) => {
-      const existing = options[key]
       newOptions[key] = {
-        name: existing.name,
+        ...options[key],
         active: key === newActive ? true : false,
-        func: existing.func,
       }
     })
 

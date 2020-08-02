@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "fontsource-rubik": "^2.1.2",
+    "moment": "^2.27.0",
     "next": "9.3.4",
     "node-fetch": "^2.6.0",
     "react": "16.13.1",

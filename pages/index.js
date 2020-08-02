@@ -205,7 +205,7 @@ export default class Index extends React.Component {
     const { sortOptions } = this.state
     return (
       <React.Fragment>
-        <div className="bg-gray-400">
+        <div className="sort-bar">
           <ul>
             {Object.keys(sortOptions).map((option, index) => {
               const sortOption = sortOptions[option]

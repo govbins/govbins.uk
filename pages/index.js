@@ -72,7 +72,7 @@ export default class Index extends React.Component {
 
     this.state = {
       bins: binsData.bins.map((bin) => {
-        bin.councilName = this.councilName(bin)
+        bin.councilName = bin.councilName || this.councilName(bin)
         return bin
       }),
       sortOptions: {

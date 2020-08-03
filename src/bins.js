@@ -8,7 +8,7 @@ export default
         "collectionDate": "3 August 2020",
         "contributorHandle" : "@bin_lorry_fan_uk",
         "contributorURL" : "https://www.instagram.com/bin_lorry_fan_uk/",
-        "colour": "502-red-burgundy"
+        "colour": "503-red-burgundy"
       },
       {
         "fileName": "/images/South-Derbyshire.jpg",

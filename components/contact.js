@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <div>
       <H2>Contact</H2>
-      <A href="https://twitter.com/HarryTrimble/">Twitter</A>, <A href="https://github.com/HarryTrimble/govbins.uk">Github</A>, <A href="mailto:harryroberttrimble@gmail.com">email</A>
+      <A href="https://twitter.com/HarryTrimble/">Twitter</A>, <A href="https://github.com/HarryTrimble/govbins.uk">GitHub</A>, <A href="mailto:harryroberttrimble@gmail.com">email</A>
     </div>
   )
 }

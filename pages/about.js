@@ -40,24 +40,29 @@ const About = () => {
 
         <H2>Press</H2>
         <P>
-          <A href="https://inews.co.uk/light-relief/offbeat/local-council-wheelie-bins/">
-            The Independent
-          </A>
-        </P>
-        <P>
           <A href="https://www.theguardian.com/cities/2018/apr/02/the-beauty-of-bins-instagram-account-catalogues-cities-unique-designs">
             The Guardian
-          </A>
-        </P>
-        <P>
-          <A href="https://www.citylab.com/design/2018/03/britains-beautiful-garbage-bins/556217/">
-            The Atlantic
           </A>
         </P>
         <P>
           <A href="https://www.creativereview.co.uk/bin-done-visual-catalogue-nations-bins/">
             Creative Review
           </A>
+        </P>
+        <P>
+          <A href="https://www.citylab.com/design/2018/03/britains-beautiful-garbage-bins/556217/">
+            Bloomberg
+          </A>
+        </P>
+        <P>
+          <A href="https://inews.co.uk/light-relief/offbeat/local-council-wheelie-bins/">
+            The Independent
+          </A>
+        </P>
+        <P>
+          <A href="https://qz.com/emails/quartz-obsession/1687384/">
+            Quartz
+          </A> (scroll way down)
         </P>
 
         <Contact />

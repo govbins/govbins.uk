@@ -2,6 +2,15 @@ export default
   {
     "bins": [
       {
+        "fileName": "/images/North-East-Lincolnshire.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "NEL",
+        "collectionDate": "5 August 2020",
+        "contributorHandle" : "@bin_lorry_fan_uk",
+        "contributorURL" : "https://www.instagram.com/bin_lorry_fan_uk/",
+        "colour": "503-red-burgundy"
+      },
+      {
         "fileName": "/images/North-Lincolnshire.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "NLN",

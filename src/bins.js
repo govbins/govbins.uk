@@ -2,13 +2,22 @@ export default
   {
     "bins": [
       {
+        "fileName": "/images/Calderdale.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "CLD",
+        "collectionDate": "10 August 2020",
+        "contributorHandle" : "@Holland_pie",
+        "contributorURL" : "https://www.instagram.com/Holland_pie",
+        "colour": "725-grayscale"
+      },
+      {
         "fileName": "/images/North-East-Lincolnshire.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "NEL",
         "collectionDate": "5 August 2020",
         "contributorHandle" : "@bin_lorry_fan_uk",
         "contributorURL" : "https://www.instagram.com/bin_lorry_fan_uk/",
-        "colour": "503-red-burgundy"
+        "colour": "355-green"
       },
       {
         "fileName": "/images/North-Lincolnshire.jpg",

@@ -2,6 +2,47 @@ export default
   {
     "bins": [
       {
+        "fileName": "/images/Sheffield.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "SHF",
+        "collectionDate": "23 August 2020",
+        "contributorHandle" : "Melissa Young",
+        "colour": "600-brown"
+      }, 
+      {
+        "fileName": "/images/Derbyshire-Dales.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "DEB",
+        "collectionDate": "22 August 2020",
+        "contributorHandle" : "Samatha Podmore",
+        "colour": "775-grayscale"
+      }, 
+      {
+        "fileName": "/images/West-Oxfordshire.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "WOX",
+        "collectionDate": "22 August 2020",
+        "contributorHandle" : "Anonymous",
+        "colour": "795-grayscale"
+      },
+      {
+        "fileName": "/images/Mid-Suffolk.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "MSU",
+        "collectionDate": "22 August 2020",
+        "contributorHandle" : "@camillaherrmann",
+        "contributorURL" : "https://www.instagram.com/camillaherrmann",
+        "colour": "725-grayscale"
+      },
+      {
+        "fileName": "/images/North-Lanarkshire.jpg",
+        "localAuthorityCountry": "sct",
+        "localAuthorityCode": "NLK",
+        "collectionDate": "22 August 2020",
+        "contributorHandle" : "Peter Munns",
+        "colour": "642-brown"
+      },
+      {
         "fileName": "/images/Calderdale.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "CLD",

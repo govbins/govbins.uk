@@ -2,6 +2,15 @@ export default
   {
     "bins": [
       {
+        "fileName": "/images/Aberdeenshire.jpg",
+        "localAuthorityCountry": "sct",
+        "localAuthorityCode": "ABD",
+        "collectionDate": "24 August 2020",
+        "contributorHandle" : "@Mike_Rawlins",
+        "contributorURL" : "https://twitter.com/Mike_Rawlins",        
+        "colour": "776-grayscale"
+      },
+      {
         "fileName": "/images/Flintshire.jpg",
         "localAuthorityCountry": "wls",
         "localAuthorityCode": "FLN",

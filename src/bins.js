@@ -8,7 +8,7 @@ export default
         "collectionDate": "24 August 2020",
         "contributorHandle" : "@sweynh",
         "contributorURL" : "https://twitter.com/sweynh",        
-        "colour": "642-brown"
+        "colour": "325-green"
       },
       {
         "fileName": "/images/Sheffield.jpg",

@@ -2,6 +2,15 @@ export default
   {
     "bins": [
       {
+        "fileName": "/images/Orkney-Islands.jpg",
+        "localAuthorityCountry": "sct",
+        "localAuthorityCode": "ORK",
+        "collectionDate": "24 August 2020",
+        "contributorHandle" : "@sweynh",
+        "contributorURL" : "https://twitter.com/sweynh",        
+        "colour": "642-brown"
+      },
+      {
         "fileName": "/images/Sheffield.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "SHF",

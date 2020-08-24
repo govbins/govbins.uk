@@ -2,6 +2,15 @@ export default
   {
     "bins": [
       {
+        "fileName": "/images/Flintshire.jpg",
+        "localAuthorityCountry": "wls",
+        "localAuthorityCode": "FLN",
+        "collectionDate": "24 August 2020",
+        "contributorHandle" : "@Louis_g._",
+        "contributorURL" : "https://www.instagram.com/Louis_g._/",
+        "colour": "791-grayscale"
+      },
+      {
         "fileName": "/images/Orkney-Islands.jpg",
         "localAuthorityCountry": "sct",
         "localAuthorityCode": "ORK",

@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "npm run build && next export"
+    "export": "npm run build && next export",
+    "postbuild": "next-on-netlify"
   },
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^2.3.0",
@@ -14,6 +15,7 @@
     "fontsource-rubik": "^2.1.2",
     "moment": "^2.27.0",
     "next": "9.3.4",
+    "next-on-netlify": "^2.3.2",
     "node-fetch": "^2.6.0",
     "postcss-import": "^12.0.1",
     "react": "16.13.1",

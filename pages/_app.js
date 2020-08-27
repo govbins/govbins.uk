@@ -46,6 +46,9 @@ export default function Govbins({ Component, pageProps }) {
           <nav className="float-right text-xl mt-5">
             <ul>
               <li className="inline-block mr-5">
+                <A href="/guidelines">Submit photos</A>
+              </li>
+              <li className="inline-block mr-5">
                 <A href="/about">About</A>
               </li>
               <li className="inline-block">

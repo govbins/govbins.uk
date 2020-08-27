@@ -2,6 +2,15 @@ export default
   {
     "bins": [
       {
+        "fileName": "/images/South-Staffordshire.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "SST",
+        "collectionDate": "26 August 2020",
+        "contributorHandle" : "@DangerMonk1485",
+        "contributorURL" : "https://twitter.com/DangerMonk1485",  
+        "colour": "220-blue"
+      },
+      {
         "fileName": "/images/Aberdeenshire.jpg",
         "localAuthorityCountry": "sct",
         "localAuthorityCode": "ABD",

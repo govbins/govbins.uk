@@ -136,8 +136,6 @@ export default class Index extends React.Component {
     e.preventDefault()
     const bins = this.state.bins
 
-    console.log('clicked oldest')
-
     this.setState({
       bins: bins.sort((a, b) => {
         const aDate = moment(a.collectionDate)

@@ -9,10 +9,13 @@
     "export": "npm run build && next export"
   },
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^2.3.0",
+    "autoprefixer": "^9.8.6",
     "fontsource-rubik": "^2.1.2",
     "moment": "^2.27.0",
     "next": "9.3.4",
     "node-fetch": "^2.6.0",
+    "postcss-import": "^12.0.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-lazy-load": "^3.0.13",

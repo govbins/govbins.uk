@@ -2,6 +2,15 @@ export default
   {
     "bins": [
       {
+        "fileName": "/images/Colchester.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "COL",
+        "collectionDate": "28 August 2020",
+        "contributorHandle" : "@gazaston",
+        "contributorURL" : "https://twitter.com/gazaston",  
+        "colour": "725-grayscale"
+      },
+      {
         "fileName": "/images/South-Staffordshire.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "SST",

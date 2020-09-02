@@ -10,7 +10,6 @@ const Bin = ({
   contributorURL,
 }) => {
   let contributor;
-  const asset_root = process.env.NEXT_PUBLIC_ASSET_ROOT || ""
 
   if (contributorHandle && contributorURL) {
     contributor = (
@@ -25,10 +24,11 @@ const Bin = ({
       <p className="text-xl font-sans font-light">{contributorHandle}</p>
     );
   }
+
   return (
     <div className="sm:mb-10">
       <LazyLoad offsetVertical={1500}>
-        <img src={`${asset_root}${fileName}`} />
+        <img src={fileName} />
       </LazyLoad>
       <div className="p-4 hidden sm:block">
         <h3 className="text-2xl mb-1" data-local-authority-eng={councilCode}>

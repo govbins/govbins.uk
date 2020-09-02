@@ -53,6 +53,10 @@ export async function getStaticProps() {
   const ni = niAuthorityCodes();
   return {
     props: {
+      bins: binsData.bins.map((bin) => {
+        bin.fileName = `${process.env.NEXT_PUBLIC_ASSET_ROOT}${bin.fileName}`
+        return bin
+      }),
       engAuthorityCodes: await eng,
       welshAuthorityCodes: await wales,
       scotAuthorityCodes: await scot,
@@ -71,7 +75,7 @@ export default class Index extends React.Component {
     this.sortColour = this.sortColour.bind(this)
 
     this.state = {
-      bins: binsData.bins.map((bin) => {
+      bins: props.bins.map((bin) => {
         bin.councilName = bin.councilName || this.councilName(bin)
         return bin
       }),

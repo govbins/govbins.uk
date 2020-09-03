@@ -2,6 +2,14 @@ export default
   {
     "bins": [
       {
+        "fileName": "Fenland.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "FEN",
+        "collectionDate": "2 September 2020",
+        "contributorHandle": "Oliver Knights",
+        "colour": "725-grayscale"
+      },
+      {
         "fileName": "Colchester.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "COL",

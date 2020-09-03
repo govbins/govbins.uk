@@ -7,7 +7,7 @@ export default
         "localAuthorityCode": "FEN",
         "collectionDate": "2 September 2020",
         "contributorHandle": "Oliver Knights",
-        "colour": "725-grayscale"
+        "colour": "326-green"
       },
       {
         "fileName": "Colchester.jpg",
@@ -263,7 +263,7 @@ export default
         "collectionDate": "27 April 2020",
         "contributorHandle": "@nacnudus",
         "contributorURL": "https://twitter.com/nacnudus",
-        "colour": "326-greens"
+        "colour": "326-green"
       },
       {
         "fileName": "Portsmouth.jpg",

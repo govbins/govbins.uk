@@ -32,8 +32,8 @@ Add the image in `/public/images`, then add another entry in `/src/bins.js` with
 ```javascript
 {
   "fileName": "name-of-image.jpg",
-  "localAuthorityCountry": "eng", // must be eng, sct or wls
+  "localAuthorityCountry": "eng", // must be eng, ni, sct or wls
   "localAuthorityCode": "CHE", // must match the code from the api
-  "collectionDate": "12.3.2020"
+  "collectionDate": "12 March 2020"
 },
 ```

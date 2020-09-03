@@ -64,6 +64,11 @@ const About = () => {
             Quartz
           </A> (scroll way down)
         </P>
+        <P>
+          <A href="https://www.gizmodo.co.uk/2020/08/this-website-shows-you-what-bins-look-like-around-the-uk/">
+            Gizmodo UK
+          </A>
+        </P>
 
         <Contact />
         <Footer />

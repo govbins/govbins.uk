@@ -18,7 +18,6 @@ const Map = () => {
           </small>
         </P>
         <img src="/images/map.svg" />
-
         <Contact />
         <Footer />
       </div>

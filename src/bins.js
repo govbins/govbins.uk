@@ -2,6 +2,15 @@ export default
   {
     "bins": [
       {
+        "fileName": "Aberdeen-City.jpg",
+        "localAuthorityCountry": "sct",
+        "localAuthorityCode": "ABE",
+        "collectionDate": "3 September 2020",
+        "contributorHandle": "@tausendberlin31",
+        "contributorURL": "https://instagram.com/tausendberlin31",
+        "colour": "755-grayscale"
+      },
+      {
         "fileName": "Fenland.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "FEN",

@@ -2,6 +2,28 @@ export default
   {
     "bins": [
       {
+        "fileName": "Merthyr-Tydfil.jpg",
+        "localAuthorityCountry": "wls",
+        "localAuthorityCode": "MTY",
+        "collectionDate": "6 September 2020",
+        "colour": "762-grayscale"
+      }, 
+      {
+        "fileName": "Neath-Port-Talbot.jpg",
+        "localAuthorityCountry": "wls",
+        "localAuthorityCode": "NTL",
+        "collectionDate": "5 September 2020",
+        "colour": "755-grayscale"
+      }, 
+      {
+        "fileName": "Argyll-and-Bute.jpg",
+        "localAuthorityCountry": "sct",
+        "localAuthorityCode": "AGB",
+        "collectionDate": "4 September 2020",
+        "contributorHandle": "Finlay Wilson",
+        "colour": "291-blue"
+      },      
+      {
         "fileName": "Aberdeen-City.jpg",
         "localAuthorityCountry": "sct",
         "localAuthorityCode": "ABE",

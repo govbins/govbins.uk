@@ -2,6 +2,15 @@ export default
   {
     "bins": [
       {
+        "fileName": "North-Norfolk.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "NNO",
+        "collectionDate": "12 September 2020",
+        "contributorHandle": "@alicebartlett",
+        "contributorURL": "https://twitter.com/alicebartlett",
+        "colour": "750-grayscale"
+      },
+      {
         "fileName": "Merthyr-Tydfil.jpg",
         "localAuthorityCountry": "wls",
         "localAuthorityCode": "MTY",

@@ -2,6 +2,15 @@ export default
   {
     "bins": [
       {
+        "fileName": "Fife.jpg",
+        "localAuthorityCountry": "sct",
+        "localAuthorityCode": "FIF",
+        "collectionDate": "18 September 2020",
+        "contributorHandle": "@tausendberlin31",
+        "contributorURL": "https://instagram.com/tausendberlin31",
+        "colour": "755-grayscale"
+      }, 
+      {
         "fileName": "North-Norfolk.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "NNO",

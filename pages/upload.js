@@ -26,7 +26,7 @@ const Upload = () => {
       <div className="mx-auto w-full px-4 lg:px-0 lg:w-1/3 mb-20 pt-5 lg:pt-0">
         <h1 className="text-3xl">Upload your photos 🖼</h1>
 
-        <form method="POST" action="/confirmation" data-netlify="true">
+        <form action="/confirmation" data-netlify="true">
           <FormGroup>
             <Label htmlFor="photos">Upload photos</Label>
             <input type="file" id="photos" name="photos" multiple className="text-sm" />

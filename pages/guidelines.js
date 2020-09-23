@@ -1,6 +1,7 @@
 import React from 'react'
 import A from "../components/a";
 import Link from "next/link"
+import Button from '../components/button';
 
 const P = ({ children }) => {
   return (
@@ -64,11 +65,10 @@ const Guidelines = () => {
 
       <div className="mx-auto w-full px-4 lg:px-0 lg:w-1/3 my-16 text-center">
         <h1 className="text-3xl">Ready to send your photo?</h1>
-        <Link href="/upload">
-          <a style={{ background: '#333' }} className="text-xl mt-4 text-white rounded-md p-2 inline-block">
-            Send your photos
-          </a>
-        </Link>
+
+        <Button href="/upload">
+          Send your photos
+        </Button>
       </div>
     </>
   )

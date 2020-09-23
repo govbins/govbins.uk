@@ -7,10 +7,14 @@ module.exports = {
     purgeLayersByDefault: true,
   },
   theme: {
-    fontFamily: {
-      ...defaultTheme.fontFamily,
-      rubik: ["Rubik", ...defaultTheme.fontFamily.sans],
-    },
+    extend: {
+      backgroundColor: {
+        gray: '#f8f8f8',
+      },
+      fontFamily: {
+        rubik: ["Rubik", ...defaultTheme.fontFamily.sans],
+      },
+    }
   },
   variants: {},
   plugins: [],

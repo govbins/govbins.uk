@@ -1,0 +1,66 @@
+import React from 'react'
+
+const Label = ({ htmlFor, children }) => {
+  return (
+    <label htmlFor={htmlFor} className="text-xl block pb-1">{children}</label>
+  )
+}
+
+const TextInput = ({ name }) => {
+  return (
+    <input type="text" id={name} name={name} className="border-2 border-solid border-black text-xl w-full bg-gray" />
+  )
+}
+
+const FormGroup = ({ children }) => {
+  return (
+    <div className="mt-4">
+      {children}
+    </div>
+  )
+}
+
+const Upload = () => {
+  return (
+    <>
+      <div className="mx-auto w-full px-4 lg:px-0 lg:w-1/3 mb-20 pt-5 lg:pt-0">
+        <h1 className="text-3xl">Upload your photos 🖼</h1>
+
+        <form method="POST" action="/confirmation" data-netlify="true">
+          <FormGroup>
+            <Label htmlFor="photos">Upload photos</Label>
+            <input type="file" id="photos" name="photos" multiple className="text-sm" />
+          </FormGroup>
+
+          <FormGroup>
+            <Label htmlFor="council">Local council</Label>
+            <TextInput name="council" />
+          </FormGroup>
+
+          <FormGroup>
+            <Label htmlFor="email">Email address</Label>
+            <TextInput name="email" />
+          </FormGroup>
+
+          <FormGroup>
+            <Label htmlFor="name">Full name (optional)</Label>
+            <TextInput name="name" />
+          </FormGroup>
+
+          <FormGroup>
+            <Label htmlFor="social">Twitter or Instagram</Label>
+            <TextInput name="social" />
+          </FormGroup>
+
+          <FormGroup>
+            <button to="/submit" style={{ background: '#333' }} className="text-xl mt-4 text-white rounded-md p-2 inline-block">
+              Send and finish
+            </button>
+          </FormGroup>
+        </form>
+      </div>
+    </>
+  )
+}
+
+export default Upload

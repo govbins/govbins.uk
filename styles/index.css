@@ -1,10 +1,9 @@
+/* purgecss start ignore */
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
+/* purgecss end ignore */
 
-html {
-	line-height: 1.5;
-}
+@tailwind utilities;
 
 .contributor {
 	text-decoration: underline;

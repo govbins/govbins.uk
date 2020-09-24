@@ -13,4 +13,7 @@ module.exports = {
   },
   variants: {},
   plugins: [],
+  purge: {
+    layers: ['utilities'],
+  }
 };

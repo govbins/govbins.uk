@@ -2,7 +2,7 @@ import React from 'react'
 
 const Label = ({ htmlFor, children }) => {
   return (
-    <label htmlFor={htmlFor} className="text-xl block pb-1">{children}</label>
+    <label htmlFor={htmlFor} className="text-xl block">{children}</label>
   )
 }
 
@@ -50,7 +50,8 @@ const Upload = () => {
           </FormGroup>
 
           <FormGroup>
-            <Label htmlFor="social">Twitter or Instagram</Label>
+            <Label htmlFor="social">Social media URL</Label>
+            <p>We link to this to credit the image to you</p>
             <TextInput name="social" />
           </FormGroup>
 

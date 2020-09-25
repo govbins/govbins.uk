@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-	line-height: 1.5;
-}
-
 .contributor {
 	text-decoration: underline;
 	text-decoration-color: #ea47cb;

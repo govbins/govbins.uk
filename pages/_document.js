@@ -9,7 +9,7 @@ class _Document extends Document {
 
   render() {
     return (
-      <Html lang="en" style={{ lineHeight: 1.5 }}>
+      <Html lang="en">
         <Head />
         <body>
           <Main />

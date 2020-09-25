@@ -43,7 +43,7 @@ export default function Govbins({ Component, pageProps }) {
               <a>#govbins</a>
             </Link>
           </h1>
-          <nav className="float-left w-full sm:w-auto sm:float-right text-xl mt-5">
+          <nav className="float-left w-full sm:w-auto sm:float-right text-xl sm:mt-5">
             <ul>
               <li className="inline-block mr-5">
                 <A href="/guidelines">Submit photos</A>

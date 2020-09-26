@@ -7,7 +7,7 @@ import Contact from "../components/contact";
 const Map = () => {
   return (
     <>
-      <div className="lg:w-2/3 lg:ml-40 px-5 pt-5 lg:p-0 text-2xl font-rubik">
+      <div className="lg:w-2/3 lg:ml-40 px-5 pt-5 lg:px-0 text-2xl font-rubik">
         <h3 className="">Bins catalogued so far</h3>
         <P>
           <small>

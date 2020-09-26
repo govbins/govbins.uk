@@ -20,7 +20,7 @@ const Li = ({ children }) => {
 const Guidelines = () => {
   return (
     <>
-      <div className="mx-auto w-full px-4 lg:px-0 lg:w-1/3 mb-20">
+      <div className="mx-auto w-full px-4 lg:px-0 pt-5 lg:w-1/3 mb-20">
         <h1 className="text-3xl">Submit photos to #govbins</h1>
         <h2 className="text-xl">Help catalogue a nations bins by sending photos from where you are.</h2>
       </div>

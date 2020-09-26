@@ -4,7 +4,7 @@ import Link from "next/link";
 const Confirmation = () => {
   return (
     <>
-      <div className="mx-auto w-full px-4 lg:px-0 lg:w-1/3 mb-20 pt-5 lg:pt-0">
+      <div className="mx-auto w-full px-4 lg:px-0 lg:w-1/3 mb-20 pt-5">
         <div className="border-2 border-solid border-pink p-8 w-full text-center">
           <h1 className="text-2xl">Success 💅</h1>
           <h2 className="text-3xl">Thank you for your submission</h2>

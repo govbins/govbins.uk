@@ -40,7 +40,7 @@ export default function Govbins({ Component, pageProps }) {
         `}
       </style>
       <div className="font-rubik text-gray-800">
-        <header className={`w-screen pr-5 pl-5 pt-4 pb-5 sm:flex sm:justify-between ${router.pathname === '/' ? '' : 'border-b-2 border-gray-800'}`}>
+        <header className={`w-screen pr-5 pl-5 pt-4 pb-10 sm:flex sm:justify-between ${router.pathname === '/' ? '' : 'border-b-2 border-gray-800'}`}>
           <h1 className="text-4xl sm:w-full">
             <Link href="/">
               <a>#govbins</a>
@@ -60,7 +60,7 @@ export default function Govbins({ Component, pageProps }) {
             </ul>
           </nav>
         </header>
-        <main className="clear-both mt-10">
+        <main className="">
           <Component {...pageProps} />
         </main>
       </div>

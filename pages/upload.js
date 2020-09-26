@@ -23,7 +23,7 @@ const FormGroup = ({ children }) => {
 const Upload = () => {
   return (
     <>
-      <div className="mx-auto w-full px-4 lg:px-0 lg:w-1/3 mb-20 pt-5 lg:pt-0">
+      <div className="mx-auto w-full px-4 lg:px-0 lg:w-1/3 mb-20 pt-5 ">
         <h1 className="text-3xl">Upload your photos</h1>
 
         <form action="/confirmation" method="POST" data-netlify="true" name="submission" encType="multipart/form-data">

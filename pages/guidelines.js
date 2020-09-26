@@ -13,7 +13,7 @@ const P = ({ children }) => {
 
 const Li = ({ children }) => {
   return (
-    <li className="text-xl list-disc ml-10">{children}</li>
+    <li className="text-xl list-disc ml-5">{children}</li>
   )
 }
 

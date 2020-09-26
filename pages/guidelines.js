@@ -27,7 +27,7 @@ const Guidelines = () => {
 
       <div className="mx-auto w-full px-4 lg:px-0 lg:w-2/3 grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-y-20">
         <div className="">
-          <h2 className="text-2xl mb-5">Check your bin is missing 🗺️</h2>
+          <h2 className="text-2xl mb-5">Check your bin is missing</h2>
           <P>
             Use <A href='/map'>this map</A> to find out if your bin has been catalogued yet.
           </P>
@@ -40,7 +40,7 @@ const Guidelines = () => {
         </div>
 
         <div className="">
-          <h2 className="text-2xl mb-5">Take consistent photos 📸</h2>
+          <h2 className="text-2xl mb-5">Take consistent photos</h2>
           <P>
             Consistent photos make it easier to see the difference between different bins.
           </P>

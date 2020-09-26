@@ -5,36 +5,33 @@ import H2 from "../components/h2";
 import Footer from "../components/footer";
 import Contact from "../components/contact";
 
+const Li = ({ children }) => {
+  return (
+    <li className="text-xl list-disc ml-5">{children}</li>
+  )
+}
+
 const About = () => {
   return (
     <>
       <div className="lg:w-2/3 lg:ml-40 px-5 pt-5 text-2xl font-rubik">
-        <P>Cataloguing a nation&apos;s bins</P>
-        <P>
-          <A href="https://medium.com/@HarryTrimble/contribute-to-govbins-88b23a24cbd7">
-            Submit photos to #govbins
-          </A>
+        <H2>About</H2>
+        <P>#govbins is a project to photograph wheelie bins in every UK local council.</P>
+
+        <P>Started in 2017, the catalogue is the work of dozens of people {" "}
+          <A href="/guidelines">
+            submitting photos
+          </A> from across the UK and beyond.
         </P>
+        <H2>Design and code</H2>
         <P>
-          Each bin is labelled with open data about local councils in{" "}
-          <A href="https://www.registers.service.gov.uk/registers/local-authority-eng">
-            England
-          </A>
-          ,{" "}
-          <A href="https://www.registers.service.gov.uk/registers/local-authority-nir">
-            Northern Ireland
-          </A>
-          ,{" "}
-          <A href="https://www.registers.service.gov.uk/registers/local-authority-sct">
-            Scotland
-          </A>{" "}
-          and{" "}
-          <A href="https://www.registers.service.gov.uk/registers/principal-local-authority">
-            Wales
-          </A>
+          This website is made by friends{" "}
+          <A href="https://www.instagram.com/govbins.uk/">Harry Trimble</A> and{" "}
+          <A href="https://www.instagram.com/govbins.uk/">Tommy Palmer</A>.
         </P>
+        <H2>Social media</H2>
         <P>
-          Follow on{" "}
+          Follow #govbins on{" "}
           <A href="https://www.instagram.com/govbins.uk/">Instagram</A>
         </P>
 

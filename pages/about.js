@@ -26,8 +26,8 @@ const About = () => {
         <H2>Design and code</H2>
         <P>
           This website is made by friends{" "}
-          <A href="https://www.instagram.com/govbins.uk/">Harry Trimble</A> and{" "}
-          <A href="https://www.instagram.com/govbins.uk/">Tommy Palmer</A>.
+          <A href="https://www.harrytrimble.co.uk/">Harry Trimble</A> and{" "}
+          <A href="http://tommyp.org/">Tommy Palmer</A>.
         </P>
         <H2>Social media</H2>
         <P>

@@ -9,17 +9,9 @@ const Map = () => {
   return (
     <>
       <div className="lg:w-2/3 lg:ml-40 px-5 pt-5 lg:px-0 text-2xl font-rubik">
-        <H2>Bins catalogued so far</H2>
-        <P>
-          <small>
-            Map made with{" "}
-            <A href="https://data.gov.uk/dataset/6ff3fc08-26ff-453e-9289-6420269ba10e/local-authority-districts-counties-and-unitary-authorities-december-2017-map-in-united-kingdom">
-              UK government data
-            </A>
-          </small>
-        </P>
+        <H2>Map</H2>
+        <P>Bins catalogued so far</P>
         <img src="/images/map.svg" />
-        <Contact />
         <Footer />
       </div>
     </>

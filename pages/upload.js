@@ -56,7 +56,7 @@ const Upload = () => {
           </FormGroup>
 
           <FormGroup>
-            <button type="submit" style={{ background: '#333' }} className="text-xl mt-4 text-white rounded-md p-2 inline-block">
+            <button type="submit" style={{ background: '#333' }} className="text-xl mt-4 text-white rounded-md p-4 inline-block">
               Send and finish
             </button>
           </FormGroup>

@@ -21,8 +21,8 @@ const Guidelines = () => {
   return (
     <>
       <div className="mx-auto w-full px-4 lg:px-0 pt-5 lg:w-3/4 mb-16">
-        <h1 className="text-3xl mt-8 mb-4">Submit photos to #govbins</h1>
-        <h2 className="text-2xl">Send photos from where you are and help catalogue a nations bins.</h2>
+        <h1 className="text-3xl mt-8 mb-4">Submit photos</h1>
+        <h2 className="text-2xl">Help catalogue a nations bins.</h2>
       </div>
 
       <div className="mx-auto w-full px-4 lg:px-0 lg:w-3/4 grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-y-20">
@@ -42,7 +42,7 @@ const Guidelines = () => {
         <div className="">
           <h2 className="text-2xl mb-5">2. Take consistent photos</h2>
           <P>
-            Consistent photos make it easier to see the difference between different bins.
+            Consistent photos make it easier to see the difference between different bin designs.
           </P>
           <P>
             Consistent photos are:

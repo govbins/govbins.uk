@@ -19,7 +19,7 @@ const About = () => {
         <P>#govbins is a project to photograph wheelie bins in every UK local council.</P>
 
         <P>Started in 2017, the catalogue is the work of dozens of people {" "}
-          <A href="/guidelines">
+          <A href="/submit-photos">
             submitting photos
           </A> from across the UK and beyond.
         </P>

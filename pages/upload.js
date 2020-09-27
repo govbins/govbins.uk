@@ -51,7 +51,7 @@ const Upload = () => {
 
           <FormGroup>
             <Label htmlFor="social">Social media URL (optional)</Label>
-            <p>We link to this to credit the image to you</p>
+            <p>We link to this to credit images to you</p>
             <TextInput name="social" />
           </FormGroup>
 

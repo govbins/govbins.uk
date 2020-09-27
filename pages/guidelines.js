@@ -20,9 +20,9 @@ const Li = ({ children }) => {
 const Guidelines = () => {
   return (
     <>
-      <div className="mx-auto w-full px-4 lg:px-0 pt-5 lg:w-1/3 mb-20">
-        <h1 className="text-3xl">Submit photos to #govbins</h1>
-        <h2 className="text-xl">Help catalogue a nations bins by sending photos from where you are.</h2>
+      <div className="mx-auto w-full px-4 lg:px-0 pt-5 lg:w-2/3 mb-16">
+        <h1 className="text-3xl mt-8 mb-4">Submit photos to #govbins</h1>
+        <h2 className="text-2xl">Help catalogue a nations bins by sending photos from where you are.</h2>
       </div>
 
       <div className="mx-auto w-full px-4 lg:px-0 lg:w-2/3 grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-y-20">
@@ -63,8 +63,8 @@ const Guidelines = () => {
         </div>
       </div>
 
-      <div className="mx-auto w-full px-4 lg:px-0 lg:w-1/3 my-16 text-center">
-        <h1 className="text-3xl">Ready to send your photo?</h1>
+      <div className="mx-auto w-full px-4 lg:px-0 lg:w-2/3 my-16">
+        <h1 className="text-2xl">Ready to send your photo?</h1>
 
         <Button href="/upload">
           Send your photos

@@ -20,14 +20,14 @@ const Li = ({ children }) => {
 const Guidelines = () => {
   return (
     <>
-      <div className="mx-auto w-full px-4 lg:px-0 pt-5 lg:w-2/3 mb-16">
+      <div className="mx-auto w-full px-4 lg:px-0 pt-5 lg:w-3/4 mb-16">
         <h1 className="text-3xl mt-8 mb-4">Submit photos to #govbins</h1>
-        <h2 className="text-2xl">Help catalogue a nations bins by sending photos from where you are.</h2>
+        <h2 className="text-2xl">Send photos from where you are and help catalogue a nations bins.</h2>
       </div>
 
-      <div className="mx-auto w-full px-4 lg:px-0 lg:w-2/3 grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-y-20">
+      <div className="mx-auto w-full px-4 lg:px-0 lg:w-3/4 grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-y-20">
         <div className="">
-          <h2 className="text-2xl mb-5">Check your bin is missing</h2>
+          <h2 className="text-2xl mb-5">1. Check your bin is missing</h2>
           <P>
             Use <A href='/map'>this map</A> to find out if your bin has been catalogued yet.
           </P>
@@ -40,7 +40,7 @@ const Guidelines = () => {
         </div>
 
         <div className="">
-          <h2 className="text-2xl mb-5">Take consistent photos</h2>
+          <h2 className="text-2xl mb-5">2. Take consistent photos</h2>
           <P>
             Consistent photos make it easier to see the difference between different bins.
           </P>
@@ -63,9 +63,8 @@ const Guidelines = () => {
         </div>
       </div>
 
-      <div className="mx-auto w-full px-4 lg:px-0 lg:w-2/3 my-16">
-        <h1 className="text-2xl">Ready to send your photo?</h1>
-
+      <div className="mx-auto w-full px-4 lg:px-0 lg:w-3/4 my-16">
+        <h1 className="text-2xl">3. Send your photos</h1>
         <Button href="/upload">
           Send your photos
         </Button>

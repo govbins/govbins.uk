@@ -2,6 +2,20 @@ export default
   {
     "bins": [
       {
+        "fileName": "Tewkesbury.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "TEW",
+        "collectionDate": "27 September 2020",
+        "colour": "260-blue"
+      },
+      {
+        "fileName": "Gloucester.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "GLO",
+        "collectionDate": "27 September 2020",
+        "colour": "762-grayscale"
+      },
+      {
         "fileName": "Fife.jpg",
         "localAuthorityCountry": "sct",
         "localAuthorityCode": "FIF",

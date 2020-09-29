@@ -2,6 +2,15 @@ export default
   {
     "bins": [
       {
+        "fileName": "Derby.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "DER",
+        "collectionDate": "29 September 2020",
+        "contributorHandle": "@beamer_boi",
+        "contributorURL": "https://twitter.com/beamer_boi",
+        "colour": "326-green"
+      },
+      {
         "fileName": "Tewkesbury.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "TEW",

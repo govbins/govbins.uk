@@ -8,7 +8,7 @@ export default
         "collectionDate": "29 September 2020",
         "contributorHandle": "@beamer_boi",
         "contributorURL": "https://twitter.com/beamer_boi",
-        "colour": "326-green"
+        "colour": "220-blue"
       },
       {
         "fileName": "Tewkesbury.jpg",

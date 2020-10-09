@@ -2,6 +2,15 @@ export default
   {
     "bins": [
       {
+        "fileName": "Gwynedd.jpg",
+        "localAuthorityCountry": "wls",
+        "localAuthorityCode": "GWN",
+        "contributorHandle": "@keithemmerson",
+        "contributorURL": "https://twitter.com/keithemmerson",        
+        "collectionDate": "1 October 2020",
+        "colour": "755-grayscale"
+      },     
+      {
         "fileName": "Derby.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "DER",

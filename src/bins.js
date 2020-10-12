@@ -2,6 +2,15 @@ export default
   {
     "bins": [
       {
+        "fileName": "Highland.jpg",
+        "localAuthorityCountry": "sct",
+        "localAuthorityCode": "HLD",
+        "collectionDate": "12 October 2020",
+        "contributorHandle": "@JoStraw1",
+        "contributorURL": "https://twitter.com/JoStraw1",
+        "colour": "325-green"
+      }, 
+      {
         "fileName": "Gwynedd.jpg",
         "localAuthorityCountry": "wls",
         "localAuthorityCode": "GWN",

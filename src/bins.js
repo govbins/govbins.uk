@@ -17,7 +17,7 @@ export default
         "contributorHandle": "@keithemmerson",
         "contributorURL": "https://twitter.com/keithemmerson",        
         "collectionDate": "1 October 2020",
-        "colour": "755-grayscale"
+        "colour": "600-brown"
       },     
       {
         "fileName": "Derby.jpg",

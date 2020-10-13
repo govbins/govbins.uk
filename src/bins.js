@@ -2,6 +2,15 @@ export default
   {
     "bins": [
       {
+        "fileName": "High-Peak.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "HIG",
+        "collectionDate": "13 October 2020",
+        "contributorHandle": "@ifranco_29",
+        "contributorURL": "https://twitter.com/ifranco_29",
+        "colour": "615-brown"
+      }, 
+      {
         "fileName": "Highland.jpg",
         "localAuthorityCountry": "sct",
         "localAuthorityCode": "HLD",

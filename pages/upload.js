@@ -8,7 +8,7 @@ const Label = ({ htmlFor, children }) => {
 
 const TextInput = ({ name }) => {
   return (
-    <input type="text" id={name} name={name} className="border-2 border-solid border-black text-xl w-full bg-gray" />
+    <input type="text" id={name} name={name} className="border-2 border-solid border-black text-xl w-full bg-gray" required />
   )
 }
 
@@ -31,7 +31,7 @@ const Upload = () => {
 
           <FormGroup>
             <Label htmlFor="photos">Upload photos</Label>
-            <input type="file" id="photos" name="photos" multiple className="text-sm" />
+            <input type="file" id="photos" name="photos" multiple className="text-sm" required/>
           </FormGroup>
 
           <FormGroup>
@@ -46,13 +46,13 @@ const Upload = () => {
 
           <FormGroup>
             <Label htmlFor="name">Name (optional)</Label>
-            <TextInput name="name" />
+            <input type="text" id="name" name="name" className="border-2 border-solid border-black text-xl w-full bg-gray" />
           </FormGroup>
 
           <FormGroup>
             <Label htmlFor="social">Social media URL (optional)</Label>
             <p>We link to this to credit images to you</p>
-            <TextInput name="social" />
+            <input type="text" id="social" name="social" className="border-2 border-solid border-black text-xl w-full bg-gray" />
           </FormGroup>
 
           <FormGroup>

@@ -10,7 +10,7 @@ const Confirmation = () => {
           <h2 className="text-3xl">Thank you for your submission</h2>
         </div>
         <h3 className="text-3xl pt-8">What happens next</h3>
-        <p className="text-xl">We&apos;ll contact you in the next day or two to confirm you image going on the website or to ask you some follow up questions.</p>
+        <p className="text-xl">We&apos;ll contact you in the next day or two to confirm your image going on the website or to ask you some follow up questions.</p>
         <p className="pt-4 text-xl">
           <Link href="/">
             <a className="underline">

@@ -9,7 +9,7 @@ const Map = () => {
     <>
       <div className="lg:w-2/3 lg:ml-40 px-5 pt-5 lg:px-0 text-2xl font-rubik">
         <H2>Map</H2>
-        <P>{data.bins.length} bins catalogued so far</P>
+        <P>{data.bins.length} bins catalogued</P>
         <img src="/images/map.svg" />
         <Footer />
       </div>

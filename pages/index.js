@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-import binsData from "../src/bins";
+import data from "../src/bins";
 import Bin from "../components/bin";
 import React from "react";
 import Footer from "../components/footer";
@@ -53,7 +53,7 @@ export async function getStaticProps() {
   const ni = niAuthorityCodes();
   return {
     props: {
-      bins: binsData.bins.map((bin) => {
+      bins: data.bins.map((bin) => {
         bin.fileName = `${process.env.NEXT_PUBLIC_ASSET_ROOT}${bin.fileName}`
         return bin
       }),

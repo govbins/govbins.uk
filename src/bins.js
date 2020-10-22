@@ -2,6 +2,15 @@ export default
   {
     "bins": [
       {
+        "fileName": "Inverclyde.jpg",
+        "localAuthorityCountry": "sct",
+        "localAuthorityCode": "IVC",
+        "collectionDate": "22 October 2020",
+        "contributorHandle": "@jamesmckechni_",
+        "contributorURL": "https://twitter.com/jamesmckechni_",
+        "colour": "600-brown"
+      }, 
+      {
         "fileName": "High-Peak.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "HIG",

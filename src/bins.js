@@ -2,6 +2,13 @@ export default
   {
     "bins": [
       {
+        "fileName": "Cotswold.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "COT",
+        "collectionDate": "24 October 2020",
+        "colour": "615-brown"
+      }, 
+      {
         "fileName": "Inverclyde.jpg",
         "localAuthorityCountry": "sct",
         "localAuthorityCode": "IVC",

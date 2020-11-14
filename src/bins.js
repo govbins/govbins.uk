@@ -8,7 +8,7 @@ export default
         "collectionDate": "14 November 2020",
         "contributorHandle": "@forarainydave",
         "contributorURL": "https://twitter.com/forarainydave",
-        "colour": "755-grayscale"
+        "colour": "310-green"
       }, 
       {
         "fileName": "Halton.jpg",

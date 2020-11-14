@@ -2,6 +2,15 @@ export default
   {
     "bins": [
       {
+        "fileName": "Barnsley.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "BNS",
+        "collectionDate": "13 November 2020",
+        "contributorHandle": "@forarainydave",
+        "contributorURL": "https://twitter.com/forarainydave",
+        "colour": "755-grayscale"
+      }, 
+      {
         "fileName": "Cotswold.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "COT",

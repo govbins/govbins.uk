@@ -15,7 +15,7 @@ export default
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "COT",
         "collectionDate": "24 October 2020",
-        "colour": "615-brown"
+        "colour": "325-green"
       }, 
       {
         "fileName": "Inverclyde.jpg",

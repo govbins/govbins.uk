@@ -27,7 +27,7 @@ const About = () => {
           </A>.
         </P>
         <P>
-          Originally {" "}<A href="https://www.harrytrimble.co.uk/">Harry</A> built the site with Bootstrap and hosted images on Netlify, which was made it slow and expensive. Thankfully, {" "}<A href="http://tommyp.org/">Tommy</A> got involved and changed all that.
+          Originally {" "}<A href="https://www.harrytrimble.co.uk/">Harry</A> built the site with Bootstrap and hosted images on Netlify, which made it slow and expensive. Thankfully, {" "}<A href="http://tommyp.org/">Tommy</A> got involved and changed all that.
         </P> 
         <H3>Open government data</H3> 
         <P>

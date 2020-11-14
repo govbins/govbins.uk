@@ -29,6 +29,9 @@ const About = () => {
           <A href="https://www.harrytrimble.co.uk/">Harry Trimble</A> and{" "}
           <A href="http://tommyp.org/">Tommy Palmer</A>.
         </P>
+        <P>
+          <A href="/build">How this site is built</A>.
+        </P>
         <H2>Social media</H2>
         <P>
           Follow #govbins on{" "}

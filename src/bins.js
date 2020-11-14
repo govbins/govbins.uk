@@ -2,6 +2,15 @@ export default
   {
     "bins": [
       {
+        "fileName": "Halton.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "HAL",
+        "collectionDate": "14 November 2020",
+        "contributorHandle": "@buddaboy",
+        "contributorURL": "https://twitter.com/buddaboy",
+        "colour": "220-blue"
+      },
+      {
         "fileName": "Barnsley.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "BNS",

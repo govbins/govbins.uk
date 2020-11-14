@@ -2,6 +2,15 @@ export default
   {
     "bins": [
       {
+        "fileName": "Barnsley.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "BNS",
+        "collectionDate": "14 November 2020",
+        "contributorHandle": "@forarainydave",
+        "contributorURL": "https://twitter.com/forarainydave",
+        "colour": "755-grayscale"
+      }, 
+      {
         "fileName": "Halton.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "HAL",
@@ -10,15 +19,6 @@ export default
         "contributorURL": "https://twitter.com/buddaboy",
         "colour": "220-blue"
       },
-      {
-        "fileName": "Barnsley.jpg",
-        "localAuthorityCountry": "eng",
-        "localAuthorityCode": "BNS",
-        "collectionDate": "13 November 2020",
-        "contributorHandle": "@forarainydave",
-        "contributorURL": "https://twitter.com/forarainydave",
-        "colour": "755-grayscale"
-      }, 
       {
         "fileName": "Cotswold.jpg",
         "localAuthorityCountry": "eng",

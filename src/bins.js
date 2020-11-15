@@ -196,6 +196,14 @@ export default
         "colour": "600-brown"
       },
       {
+        "fileName": "Torridge.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "TOR",
+        "collectionDate": "22 August 2020",
+        "contributorHandle": "Hugh Blackman",
+        "colour": "329-green"
+      },
+      {
         "fileName": "Derbyshire-Dales.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "DEB",

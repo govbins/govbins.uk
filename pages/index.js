@@ -53,7 +53,10 @@ export async function getStaticProps() {
   const ni = niAuthorityCodes();
   return {
     props: {
-      bins: data.bins,
+      bins: data.bins.map((bin) => {
+        bin.fileName = `/${bin.fileName}`
+        return bin
+      }),
       engAuthorityCodes: await eng,
       welshAuthorityCodes: await wales,
       scotAuthorityCodes: await scot,

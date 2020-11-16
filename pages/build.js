@@ -4,15 +4,8 @@ import P from "../components/p";
 import H2 from "../components/h2";
 import H3 from "../components/h3";
 import Footer from "../components/footer";
-import Contact from "../components/contact";
 
-const Li = ({ children }) => {
-  return (
-    <li className="text-xl list-disc ml-5">{children}</li>
-  )
-}
-
-const About = () => {
+const Build = () => {
   return (
     <>
       <div className="lg:w-2/3 lg:ml-40 px-5 pt-5 text-2xl font-rubik">
@@ -27,9 +20,9 @@ const About = () => {
           </A>.
         </P>
         <P>
-          Originally {" "}<A href="https://www.harrytrimble.co.uk/">Harry</A> built the site with Bootstrap and hosted images on Netlify, which made it slow and expensive. Thankfully, {" "}<A href="http://tommyp.org/">Tommy</A> got involved and changed all that.
-        </P> 
-        <H3>Open government data</H3> 
+          Originally {" "}<A href="https://www.harrytrimble.co.uk/">Harry</A> built the site with Bootstrap and some gnarly jQuery soup, which made it slow and expensive. Thankfully, {" "}<A href="http://tommyp.org/">Tommy</A> got involved and changed all that.
+        </P>
+        <H3>Open government data</H3>
         <P>
           Each bin image is labelled with open government APIs about local councils in{" "}
           <A href="https://www.registers.service.gov.uk/registers/local-authority-eng">
@@ -52,11 +45,11 @@ const About = () => {
             The current {" "}<A href='/map'>map</A> is a SVG exported from a {" "}
             <A href="https://data.gov.uk/dataset/6ff3fc08-26ff-453e-9289-6420269ba10e/local-authority-districts-counties-and-unitary-authorities-december-2017-map-in-united-kingdom">
               government vector map
-            </A>, which colours we tweaked bit. 
+            </A>, with colours we tweaked bit.
         </P>
-        <H3>Hosting and privacy</H3> 
+        <H3>Hosting and privacy</H3>
         <P>
-          Hosted on {" "}<A href="https://www.netlify.com/">Netlify</A>, the site {" "}<A href="https://www.netlify.com/products/analytics/">counts page views and visitors</A> using aggregated data, de-anonymised. Meaning the site doesn't use cookies or any other potentially creepy tracking stuff. 
+          Hosted on {" "}<A href="https://www.netlify.com/">Netlify</A>, the site {" "}<A href="https://www.netlify.com/products/analytics/">counts page views and visitors</A> using aggregated data, de-anonymised. Meaning the site doesn't use cookies or any other potentially creepy tracking stuff.
         </P>
         <H3>Web performance</H3>
         <P>
@@ -73,4 +66,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Build;

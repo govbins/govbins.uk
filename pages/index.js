@@ -54,7 +54,7 @@ export async function getStaticProps() {
   return {
     props: {
       bins: data.bins.map((bin) => {
-        bin.fileName = `${process.env.NEXT_PUBLIC_ASSET_ROOT}${bin.fileName}`
+        bin.fileName = `/${bin.fileName}`
         return bin
       }),
       engAuthorityCodes: await eng,

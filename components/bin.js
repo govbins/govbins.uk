@@ -1,5 +1,5 @@
 import React from "react";
-import LazyLoad from "react-lazy-load";
+import Image from "next/image";
 
 const Bin = ({
   fileName,
@@ -27,9 +27,13 @@ const Bin = ({
 
   return (
     <div className="sm:mb-10">
-      <LazyLoad offsetVertical={1500}>
-        <img src={fileName} />
-      </LazyLoad>
+      <Image
+        src={fileName}
+        alt={councilName}
+        width={720}
+        height={540}
+        loading="lazy"
+      />
       <div className="p-4 hidden sm:block">
         <h3 className="text-2xl mb-1" data-local-authority-eng={councilCode}>
           {councilName}

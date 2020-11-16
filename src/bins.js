@@ -2,6 +2,15 @@ export default
   {
     "bins": [
       {
+        "fileName": "Kettering.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "KET",
+        "collectionDate": "16 November 2020",
+        "contributorHandle": "@toshenhoff",
+        "contributorURL": "https://twitter.com/toshenhoff",
+        "colour": "709-grayscale"
+      }, 
+      {
         "fileName": "Barnsley.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "BNS",

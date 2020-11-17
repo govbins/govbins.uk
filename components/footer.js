@@ -6,9 +6,8 @@ const Footer = () => {
   return (
     <footer className="mt-40">
     <P>
-      <A href="/build">About this site</A> –
-        © <A href="http://www.harrytrimble.co.uk/" target="_blank">Harry Trimble</A> {new Date().getFullYear()}
-      </P>
+      <A href="/build">How this site is built</A>
+    </P>
     </footer>
   )
 }

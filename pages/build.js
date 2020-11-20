@@ -59,7 +59,6 @@ const Build = () => {
         <P>
           Go to {" "}<A href="https://github.com/govbins/govbins.uk">GitHib</A> to look all the code for this site.
         </P>
-        <Footer />
       </div>
     </>
   );

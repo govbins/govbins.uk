@@ -3,7 +3,6 @@ import A from "../components/a";
 import P from "../components/p";
 import H2 from "../components/h2";
 import H3 from "../components/h3";
-import Footer from "../components/footer";
 
 const Build = () => {
   return (

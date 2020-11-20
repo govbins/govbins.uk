@@ -8,7 +8,7 @@ export default
         "collectionDate": "16 November 2020",
         "contributorHandle": "@toshenhoff",
         "contributorURL": "https://twitter.com/toshenhoff",
-        "colour": "709-grayscale"
+        "colour": "220-blue"
       }, 
       {
         "fileName": "Barnsley.jpg",

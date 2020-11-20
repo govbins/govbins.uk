@@ -657,6 +657,13 @@ export default
         "colour": "356-green"
       },
       {
+        "fileName": "Southwark.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "SWK",
+        "collectionDate": "2 January 2020",
+        "colour": "318-green"
+      },
+      {
         "fileName": "Thanet.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "THA",
@@ -1719,13 +1726,6 @@ export default
         "localAuthorityCode": "BDG",
         "collectionDate": "11 June 2017",
         "colour": "615-brown"
-      },
-      {
-        "fileName": "Southwark.jpg",
-        "localAuthorityCountry": "eng",
-        "localAuthorityCode": "SWK",
-        "collectionDate": "8 June 2017",
-        "colour": "245-blue"
       },
       {
         "fileName": "Elmbridge.jpg",

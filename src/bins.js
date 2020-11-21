@@ -769,7 +769,7 @@ export default
         "colour": "500-red-burgundy"
       },
       {
-        "fileName": "Derry-City-and-Strabane.jpeg",
+        "fileName": "Derry-City-and-Strabane.jpg",
         "localAuthorityCountry": "ni",
         "localAuthorityCode": "DRS",
         "councilName": "Derry City and Strabane",

@@ -1064,7 +1064,7 @@ export default
         "colour": "616-brown"
       },
       {
-        "fileName": "Bristol.jpg",
+        "fileName": "City-of-Bristol.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "BST",
         "collectionDate": "2 December 2018",

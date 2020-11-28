@@ -113,6 +113,15 @@ export default
         "colour": "750-grayscale"
       },
       {
+        "fileName": "Malvern-Hills.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "MAV",
+        "collectionDate": "11 September 2020",
+        "contributorHandle": "@sillypunk",
+        "contributorURL": "https://instagram.com/sillypunk",
+        "colour": "720-grayscale"
+      },
+      {
         "fileName": "Merthyr-Tydfil.jpg",
         "localAuthorityCountry": "wls",
         "localAuthorityCode": "MTY",
@@ -1796,6 +1805,13 @@ export default
         "localAuthorityCode": "BEN",
         "collectionDate": "22 April 2017",
         "colour": "747-grayscale"
+      },
+      {
+        "fileName": "Daventry.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "DAV",
+        "collectionDate": "20 April 2017",
+        "colour": "766-grayscale"
       },
       {
         "fileName": "Northampton.jpg",

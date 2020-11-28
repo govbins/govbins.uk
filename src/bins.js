@@ -1473,7 +1473,7 @@ export default
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "STA",
         "collectionDate": "21 February 2018",
-        "colour": "230-blue"
+        "colour": "270-blue"
       },
       {
         "fileName": "Reigate-and-Banstead.jpg",
@@ -1487,7 +1487,7 @@ export default
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "TAN",
         "collectionDate": "17 February 2018",
-        "colour": "773-grayscale"
+        "colour": "724-grayscale"
       },
       {
         "fileName": "Hackney.jpg",
@@ -1515,7 +1515,7 @@ export default
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "THE",
         "collectionDate": "3 February 2018",
-        "colour": "641-brown"
+        "colour": "792-grayscale"
       },
       {
         "fileName": "Haringey.jpg",
@@ -1676,7 +1676,7 @@ export default
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "BOL",
         "collectionDate": "28 August 2017",
-        "colour": "507-red-burgundy"
+        "colour": "400-yellow-orange"
       },
       {
         "fileName": "Chorley.jpg",
@@ -1844,7 +1844,7 @@ export default
         "localAuthorityCountry": "sct",
         "localAuthorityCode": "EDU",
         "collectionDate": "15 April 2017",
-        "colour": "400-yellow-orange"
+        "colour": "401-yellow-orange"
       },
       {
         "fileName": "Stirling.jpg",

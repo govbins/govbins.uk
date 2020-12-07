@@ -7,7 +7,7 @@ export default
         "localAuthorityCode": "TEN",
         "collectionDate": "6 December 2020",
         "contributorHandle": "Rachel Kirvan",
-        "colour": "220-blue"
+        "colour": "762-grayscale"
       }, 
       {
         "fileName": "Kettering.jpg",

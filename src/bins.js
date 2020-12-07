@@ -2,6 +2,14 @@ export default
   {
     "bins": [
       {
+        "fileName": "Tendring.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "TEN",
+        "collectionDate": "6 December 2020",
+        "contributorHandle": "Rachel Kirvan",
+        "colour": "220-blue"
+      }, 
+      {
         "fileName": "Kettering.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "KET",

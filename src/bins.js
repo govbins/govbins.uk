@@ -2,6 +2,15 @@ export default
   {
     "bins": [
       {
+        "fileName": "Basildon.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "BAI",
+        "collectionDate": "8 December 2020",
+        "contributorHandle": "@llpeachyd",
+        "contributorURL": "https://instagram.com/llpeachyd",
+        "colour": "325-green"
+      },
+      {
         "fileName": "Tendring.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "TEN",

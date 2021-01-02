@@ -2,6 +2,15 @@ export default
   {
     "bins": [
       {
+        "fileName": "West-Lancashire.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "WLA",
+        "collectionDate": "2 January 2021",
+        "contributorHandle": "@harry.marston",
+        "contributorURL": "https://instagram.com/harry.marston",
+        "colour": "200-blue"
+      },
+      {
         "fileName": "Basildon.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "BAI",
@@ -566,7 +575,7 @@ export default
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "HAT",
         "collectionDate": "28 February 2020",
-        "colour": "200-blue"
+        "colour": "201-blue"
       },
       {
         "fileName": "Rushmoor.jpg",
@@ -1031,7 +1040,7 @@ export default
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "NOW",
         "collectionDate": "3 February 2019",
-        "colour": "201-blue"
+        "colour": "202-blue"
       },
       {
         "fileName": "East-Cambridgeshire.jpg",

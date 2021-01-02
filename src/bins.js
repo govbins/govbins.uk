@@ -28,15 +28,6 @@ export default
         "colour": "220-blue"
       }, 
       {
-        "fileName": "Barnsley.jpg",
-        "localAuthorityCountry": "eng",
-        "localAuthorityCode": "BNS",
-        "collectionDate": "14 November 2020",
-        "contributorHandle": "@forarainydave",
-        "contributorURL": "https://twitter.com/forarainydave",
-        "colour": "310-green"
-      }, 
-      {
         "fileName": "Halton.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "HAL",
@@ -119,7 +110,16 @@ export default
         "contributorHandle": "@tausendberlin31",
         "contributorURL": "https://instagram.com/tausendberlin31",
         "colour": "755-grayscale"
-      }, 
+      },
+      {
+        "fileName": "Barnsley.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "BNS",
+        "collectionDate": "16 September 2020",
+        "contributorHandle": "@sirskelton",
+        "contributorURL": "https://www.instagram.com/sirskelton",
+        "colour": "310-green"
+      },  
       {
         "fileName": "North-Norfolk.jpg",
         "localAuthorityCountry": "eng",

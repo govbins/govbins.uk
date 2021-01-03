@@ -74,11 +74,14 @@ export default class Index extends React.Component {
     this.sortName = this.sortName.bind(this)
     this.sortColour = this.sortColour.bind(this)
 
+    const bins = props.bins.map((bin) => {
+      bin.councilName = bin.councilName || this.councilName(bin)
+      return bin
+    })
+
     this.state = {
-      bins: props.bins.map((bin) => {
-        bin.councilName = bin.councilName || this.councilName(bin)
-        return bin
-      }),
+      bins: bins,
+      visibleBins: bins.filter((bin) => !bin.retro),
       sortOptions: {
         latest: {
           name: "Latest",
@@ -220,7 +223,7 @@ export default class Index extends React.Component {
           </ul>
         </div>
         <section className="grid grid-cols-2 lg:grid-cols-4">
-          {this.state.bins.map((bin, i) => {
+          {this.state.visibleBins.map((bin, i) => {
             return <Bin
               key={i}
               {...bin}

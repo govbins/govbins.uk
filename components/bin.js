@@ -1,6 +1,18 @@
 import React from "react";
 import LazyLoad from "react-lazy-load";
 
+const BinData = (councilName, councilCode, collectionDate, contributor) => {
+  return (
+    <>
+      <h3 className="text-2xl mb-1" data-local-authority-eng={councilCode}>
+        {councilName}
+      </h3>
+      <p className="text-xl font-sans font-light">{collectionDate}</p>
+      <p>{contributor}</p>
+    </>
+  )
+}
+
 const Bin = ({
   fileName,
   councilCode,
@@ -8,6 +20,7 @@ const Bin = ({
   collectionDate,
   contributorHandle,
   contributorURL,
+  retro,
 }) => {
   let contributor;
 
@@ -31,11 +44,7 @@ const Bin = ({
         <img src={fileName} />
       </LazyLoad>
       <div className="p-4 hidden sm:block">
-        <h3 className="text-2xl mb-1" data-local-authority-eng={councilCode}>
-          {councilName}
-        </h3>
-        <p className="text-xl font-sans font-light">{collectionDate}</p>
-        {contributor}
+        {retro ? null : BinData(councilName, councilCode, collectionDate, contributor)}
       </div>
     </div>
   );

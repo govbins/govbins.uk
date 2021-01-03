@@ -4,13 +4,37 @@ import LazyLoad from "react-lazy-load";
 const BinData = (councilName, councilCode, collectionDate, contributor) => {
   return (
     <>
-      <h3 className="text-2xl mb-1" data-local-authority-eng={councilCode}>
+      <h3 className="text-2xl mb-1">
         {councilName}
       </h3>
       <p className="text-xl font-sans font-light">{collectionDate}</p>
       <p>{contributor}</p>
     </>
   )
+}
+
+const RetroBinData = (retroName, retroWhy, startDate, endDate, contributor) => {
+  return (
+    <>
+      <h3 className="text-2xl mb-1">
+        {retroWhy == "abolished" ? <span className="line-through">{retroName}</span> : retroName}
+      </h3>
+      <p className="text-xl font-sans font-light">{RetroDate(startDate, endDate)}</p>
+      {contributor}
+    </>
+  )
+}
+
+const RetroDate = (startDate, endDate) => {
+  if (startDate && endDate) {
+    return `${startDate} - ${endDate}`
+  } else if (startDate) {
+    return `After ${startDate}`
+  } else if (endDate) {
+    return `Pre-${endDate}`
+  } else {
+    return ''
+  }
 }
 
 const Bin = ({
@@ -21,6 +45,10 @@ const Bin = ({
   contributorHandle,
   contributorURL,
   retro,
+  retroName,
+  retroWhy,
+  startDate,
+  endDate
 }) => {
   let contributor;
 
@@ -44,7 +72,9 @@ const Bin = ({
         <img src={fileName} />
       </LazyLoad>
       <div className="p-4 hidden sm:block">
-        {retro ? null : BinData(councilName, councilCode, collectionDate, contributor)}
+        {retro ?
+          RetroBinData(retroName, retroWhy, startDate, endDate, contributor) :
+          BinData(councilName, councilCode, collectionDate, contributor)}
       </div>
     </div>
   );

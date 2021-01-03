@@ -55,6 +55,9 @@ export async function getStaticProps() {
     props: {
       bins: data.bins.map((bin) => {
         bin.fileName = `${process.env.NEXT_PUBLIC_ASSET_ROOT}${bin.fileName}`
+        if (bin.presentTwinFileName) {
+          bin.presentTwinFileName = `${process.env.NEXT_PUBLIC_ASSET_ROOT}${bin.presentTwinFileName}`
+        }
         return bin
       }),
       engAuthorityCodes: await eng,
@@ -132,7 +135,7 @@ export default class Index extends React.Component {
     const bins = this.state.bins
 
     this.setState({
-      bins: bins.sort((a, b) => {
+      visibleBins: bins.filter((bin) => !bin.retro).sort((a, b) => {
         const aDate = moment(a.collectionDate)
         const bDate = moment(b.collectionDate)
 
@@ -150,7 +153,7 @@ export default class Index extends React.Component {
     const bins = this.state.bins
 
     this.setState({
-      bins: bins.sort((a, b) => {
+      visibleBins: bins.filter((bin) => !bin.retro).sort((a, b) => {
         const aDate = moment(a.collectionDate)
         const bDate = moment(b.collectionDate)
 
@@ -168,7 +171,7 @@ export default class Index extends React.Component {
     const bins = this.state.bins
 
     this.setState({
-      bins: bins.sort((a, b) => {
+      visibleBins: bins.filter((bin) => !bin.retro).sort((a, b) => {
         if (a.councilName.toLowerCase() < b.councilName.toLowerCase()) return -1;
         if (a.councilName.toLowerCase() > b.councilName.toLowerCase()) return 1;
         return 0;
@@ -185,6 +188,8 @@ export default class Index extends React.Component {
     this.setState({
       visibleBins: bins.filter((bin) => bin.retro)
     })
+
+    this.updateNav("retro")
   }
 
   sortColour(e) {

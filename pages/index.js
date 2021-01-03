@@ -73,6 +73,7 @@ export default class Index extends React.Component {
     this.sortLatest = this.sortLatest.bind(this)
     this.sortName = this.sortName.bind(this)
     this.sortColour = this.sortColour.bind(this)
+    this.showRetro = this.showRetro.bind(this)
 
     const bins = props.bins.map((bin) => {
       bin.councilName = bin.councilName || this.councilName(bin)
@@ -102,6 +103,11 @@ export default class Index extends React.Component {
           name: "Colour",
           active: false,
           func: this.sortColour,
+        },
+        retro: {
+          name: "Retro",
+          active: false,
+          func: this.showRetro,
         }
       }
     };
@@ -170,6 +176,15 @@ export default class Index extends React.Component {
     })
 
     this.updateNav("name")
+  }
+
+  showRetro(e) {
+    e.preventDefault()
+    const bins = this.state.bins
+
+    this.setState({
+      visibleBins: bins.filter((bin) => bin.retro)
+    })
   }
 
   sortColour(e) {

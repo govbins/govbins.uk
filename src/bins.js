@@ -2,6 +2,15 @@ export default
   {
     "bins": [
       {
+        "fileName": "Craven.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "CRA",
+        "collectionDate": "8 January 2021",
+        "contributorHandle": "@annemariebremner5355",
+        "contributorURL": "https://www.instagram.com/annemariebremner5355",
+        "colour": "211ƒ-blue"
+      },
+      {
         "fileName": "West-Lancashire.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "WLA",
@@ -1452,7 +1461,7 @@ export default
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "KWL",
         "collectionDate": "16 March 2018",
-        "colour": "210-blue"
+        "colour": "211-blue"
       },
       {
         "fileName": "Warrington.jpg",

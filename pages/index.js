@@ -198,7 +198,7 @@ export default class Index extends React.Component {
     const bins = this.state.bins
 
     this.setState({
-      bins: bins.sort((a, b) => {
+      visibleBins: bins.filter((bin) => !bin.retro).sort((a, b) => {
         const aColour = parseInt(a.colour.substring(0, 3))
         const bColour = parseInt(b.colour.substring(0, 3))
         if (aColour < bColour) return -1;

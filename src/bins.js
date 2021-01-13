@@ -126,7 +126,7 @@ export default
         "endDate": "2014",
       },
       {
-        "fileName": "Reigate-and-Banstead.jpg-retro.jpg",
+        "fileName": "Reigate-and-Banstead-retro.jpg",
         "retro": "true",
         "retroWhy": "branding",
         "retroName": "Reigate and Banstead",

@@ -1,6 +1,7 @@
 import fetch from "node-fetch";
 import data from "../src/bins";
 import Bin from "../components/bin";
+import RetroBin from "../components/retroBin";
 import React from "react";
 import Footer from "../components/footer";
 import moment from "moment"
@@ -244,10 +245,7 @@ export default class Index extends React.Component {
         </div>
         <section className="grid grid-cols-2 lg:grid-cols-4">
           {this.state.visibleBins.map((bin, i) => {
-            return <Bin
-              key={i}
-              {...bin}
-            />;
+            return bin.retro ? <RetroBin key={i} {...bin} /> : <Bin key={i} {...bin} />;
           })}
         </section>
         <div className="pl-6 text-2xl">

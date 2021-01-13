@@ -1,6 +1,7 @@
 import fetch from "node-fetch";
 import data from "../src/bins";
 import Bin from "../components/bin";
+import RetroBin from "../components/retroBin";
 import React from "react";
 import Footer from "../components/footer";
 import moment from "moment"
@@ -55,6 +56,9 @@ export async function getStaticProps() {
     props: {
       bins: data.bins.map((bin) => {
         bin.fileName = `${process.env.NEXT_PUBLIC_ASSET_ROOT}${bin.fileName}`
+        if (bin.presentTwinFileName) {
+          bin.presentTwinFileName = `${process.env.NEXT_PUBLIC_ASSET_ROOT}${bin.presentTwinFileName}`
+        }
         return bin
       }),
       engAuthorityCodes: await eng,
@@ -73,12 +77,16 @@ export default class Index extends React.Component {
     this.sortLatest = this.sortLatest.bind(this)
     this.sortName = this.sortName.bind(this)
     this.sortColour = this.sortColour.bind(this)
+    this.showRetro = this.showRetro.bind(this)
+
+    const bins = props.bins.map((bin) => {
+      bin.councilName = bin.councilName || this.councilName(bin)
+      return bin
+    })
 
     this.state = {
-      bins: props.bins.map((bin) => {
-        bin.councilName = bin.councilName || this.councilName(bin)
-        return bin
-      }),
+      bins: bins,
+      visibleBins: bins.filter((bin) => !bin.retro),
       sortOptions: {
         latest: {
           name: "Latest",
@@ -99,6 +107,11 @@ export default class Index extends React.Component {
           name: "Colour",
           active: false,
           func: this.sortColour,
+        },
+        retro: {
+          name: "Retro",
+          active: false,
+          func: this.showRetro,
         }
       }
     };
@@ -123,7 +136,7 @@ export default class Index extends React.Component {
     const bins = this.state.bins
 
     this.setState({
-      bins: bins.sort((a, b) => {
+      visibleBins: bins.filter((bin) => !bin.retro).sort((a, b) => {
         const aDate = moment(a.collectionDate)
         const bDate = moment(b.collectionDate)
 
@@ -141,7 +154,7 @@ export default class Index extends React.Component {
     const bins = this.state.bins
 
     this.setState({
-      bins: bins.sort((a, b) => {
+      visibleBins: bins.filter((bin) => !bin.retro).sort((a, b) => {
         const aDate = moment(a.collectionDate)
         const bDate = moment(b.collectionDate)
 
@@ -159,7 +172,7 @@ export default class Index extends React.Component {
     const bins = this.state.bins
 
     this.setState({
-      bins: bins.sort((a, b) => {
+      visibleBins: bins.filter((bin) => !bin.retro).sort((a, b) => {
         if (a.councilName.toLowerCase() < b.councilName.toLowerCase()) return -1;
         if (a.councilName.toLowerCase() > b.councilName.toLowerCase()) return 1;
         return 0;
@@ -167,6 +180,17 @@ export default class Index extends React.Component {
     })
 
     this.updateNav("name")
+  }
+
+  showRetro(e) {
+    e.preventDefault()
+    const bins = this.state.bins
+
+    this.setState({
+      visibleBins: bins.filter((bin) => bin.retro)
+    })
+
+    this.updateNav("retro")
   }
 
   sortColour(e) {
@@ -220,11 +244,8 @@ export default class Index extends React.Component {
           </ul>
         </div>
         <section className="grid grid-cols-2 lg:grid-cols-4">
-          {this.state.bins.map((bin, i) => {
-            return <Bin
-              key={i}
-              {...bin}
-            />;
+          {this.state.visibleBins.map((bin, i) => {
+            return bin.retro ? <RetroBin key={i} {...bin} /> : <Bin key={i} {...bin} />;
           })}
         </section>
         <div className="pl-6 text-2xl">

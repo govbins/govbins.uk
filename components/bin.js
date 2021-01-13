@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import LazyLoad from "react-lazy-load";
 
 const BinData = (councilName, councilCode, collectionDate, contributor) => {
@@ -48,9 +48,20 @@ const Bin = ({
   retroName,
   retroWhy,
   startDate,
-  endDate
+  endDate,
+  presentTwinFileName,
 }) => {
   let contributor;
+
+  const [showPresentDay, setShowPresentDay] = useState(false)
+
+  const onMouseEnter = () => {
+    setShowPresentDay(true)
+  }
+
+  const onMouseLeave = () => {
+    setShowPresentDay(false)
+  }
 
   if (contributorHandle && contributorURL) {
     contributor = (
@@ -68,9 +79,26 @@ const Bin = ({
 
   return (
     <div className="sm:mb-10">
-      <LazyLoad offsetVertical={1500}>
-        <img src={fileName} />
-      </LazyLoad>
+      { retro ?
+        <div
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
+        >
+          {showPresentDay ?
+            <LazyLoad offsetVertical={1500}>
+              <img src={presentTwinFileName} />
+            </LazyLoad>
+            :
+            <LazyLoad offsetVertical={1500}>
+              <img src={fileName} />
+            </LazyLoad>
+          }
+        </div>
+        :
+        <LazyLoad offsetVertical={1500}>
+          <img src={fileName} />
+        </LazyLoad>
+      }
       <div className="p-4 hidden sm:block">
         {retro ?
           RetroBinData(retroName, retroWhy, startDate, endDate, contributor) :

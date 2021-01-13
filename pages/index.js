@@ -48,23 +48,41 @@ const fetchCodes = async (url) => {
 };
 
 export async function getStaticProps() {
-  const eng = engAuthorityCodes();
-  const wales = welshAuthorityCodes();
-  const scot = scotAuthorityCodes();
-  const ni = niAuthorityCodes();
+  const eng = await engAuthorityCodes();
+  const wales = await welshAuthorityCodes();
+  const scot = await scotAuthorityCodes();
+  const ni = await niAuthorityCodes();
+
+  const councilName = (bin) => {
+    const { localAuthorityCountry, localAuthorityCode } = bin
+    switch (localAuthorityCountry) {
+      case "eng":
+        return engAuthorityCodes[localAuthorityCode];
+      case "sct":
+        return scotAuthorityCodes[localAuthorityCode];
+      case "wls":
+        return welshAuthorityCodes[localAuthorityCode];
+      case "ni":
+        return niAuthorityCodes[localAuthorityCode];
+      default:
+        return "";
+    }
+  }
+
+  const allBins = data.bins.map((bin) => {
+    bin.fileName = `${process.env.NEXT_PUBLIC_ASSET_ROOT}${bin.fileName}`
+    bin.councilName = bin.councilName || councilName(bin)
+    if (bin.presentTwinFileName) {
+      bin.presentTwinFileName = `${process.env.NEXT_PUBLIC_ASSET_ROOT}${bin.presentTwinFileName}`
+    }
+    return bin
+  })
+
   return {
     props: {
-      bins: data.bins.map((bin) => {
-        bin.fileName = `${process.env.NEXT_PUBLIC_ASSET_ROOT}${bin.fileName}`
-        if (bin.presentTwinFileName) {
-          bin.presentTwinFileName = `${process.env.NEXT_PUBLIC_ASSET_ROOT}${bin.presentTwinFileName}`
-        }
-        return bin
-      }),
-      engAuthorityCodes: await eng,
-      welshAuthorityCodes: await wales,
-      scotAuthorityCodes: await scot,
-      niAuthorityCodes: await ni,
+      allBins: allBins,
+      bins: allBins.filter(bin => !bin.retro),
+      retroBins: allBins.filter(bin => bin.retro),
     },
   };
 }
@@ -79,14 +97,9 @@ export default class Index extends React.Component {
     this.sortColour = this.sortColour.bind(this)
     this.showRetro = this.showRetro.bind(this)
 
-    const bins = props.bins.map((bin) => {
-      bin.councilName = bin.councilName || this.councilName(bin)
-      return bin
-    })
-
     this.state = {
-      bins: bins,
-      visibleBins: bins.filter((bin) => !bin.retro),
+      visibleBins: props.bins,
+      retroBins: props.retroBins,
       sortOptions: {
         latest: {
           name: "Latest",
@@ -208,23 +221,6 @@ export default class Index extends React.Component {
     })
 
     this.updateNav("colour")
-  }
-
-
-  councilName(bin) {
-    const { localAuthorityCountry, localAuthorityCode } = bin
-    switch (localAuthorityCountry) {
-      case "eng":
-        return this.props.engAuthorityCodes[localAuthorityCode];
-      case "sct":
-        return this.props.scotAuthorityCodes[localAuthorityCode];
-      case "wls":
-        return this.props.welshAuthorityCodes[localAuthorityCode];
-      case "ni":
-        return this.props.niAuthorityCodes[localAuthorityCode];
-      default:
-        return "";
-    }
   }
 
   render() {

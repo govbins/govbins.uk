@@ -232,11 +232,11 @@ export default class Index extends React.Component {
     return (
       <React.Fragment>
         <div className="sort-bar">
-          <ul>
+          <ul className="overflow-x-scroll whitespace-no-wrap">
             {Object.keys(sortOptions).map((option, index) => {
               const sortOption = sortOptions[option]
-              return <li className="inline-block" key={index}>
-                <a href="#" onClick={sortOption.func} className={`block px-3 py-1 border-transparent border-t-4 ${sortOption.active ? 'border-gray-800' : 'hover:border-gray-800'}`} >
+              return <li className='inline-block' key={index}>
+                <a href="#" className={`block px-3 py-1 border-transparent border-t-4 ${sortOption.active ? 'border-gray-800' : 'hover:border-gray-800'}`} onClick={sortOption.func}  >
                   {sortOption.name}
                 </a>
               </li>

@@ -57,13 +57,13 @@ export async function getStaticProps() {
     const { localAuthorityCountry, localAuthorityCode } = bin
     switch (localAuthorityCountry) {
       case "eng":
-        return engAuthorityCodes[localAuthorityCode];
+        return eng[localAuthorityCode];
       case "sct":
-        return scotAuthorityCodes[localAuthorityCode];
+        return scot[localAuthorityCode];
       case "wls":
-        return welshAuthorityCodes[localAuthorityCode];
+        return wales[localAuthorityCode];
       case "ni":
-        return niAuthorityCodes[localAuthorityCode];
+        return ni[localAuthorityCode];
       default:
         return "";
     }
@@ -79,10 +79,6 @@ export async function getStaticProps() {
         }
         return bin
       }),
-      engAuthorityCodes: await eng,
-      welshAuthorityCodes: await wales,
-      scotAuthorityCodes: await scot,
-      niAuthorityCodes: await ni,
     },
   };
 }

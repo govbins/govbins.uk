@@ -231,18 +231,16 @@ export default class Index extends React.Component {
     const { sortOptions } = this.state
     return (
       <React.Fragment>
-        <div className="sort-bar">
-          <ul className="overflow-x-scroll whitespace-no-wrap">
-            {Object.keys(sortOptions).map((option, index) => {
-              const sortOption = sortOptions[option]
-              return <li className='inline-block' key={index}>
-                <a href="#" className={`block px-3 py-1 border-transparent border-t-4 ${sortOption.active ? 'border-gray-800' : 'hover:border-gray-800'}`} onClick={sortOption.func}  >
-                  {sortOption.name}
-                </a>
-              </li>
-            })}
-          </ul>
-        </div>
+        <ul className="sort-bar overflow-x-scroll whitespace-no-wrap">
+          {Object.keys(sortOptions).map((option, index) => {
+            const sortOption = sortOptions[option]
+            return <li className='inline-block' key={index}>
+              <a href="#" className={`block px-3 py-1 border-transparent border-t-4 ${sortOption.active ? 'border-gray-800' : 'hover:border-gray-800'}`} onClick={sortOption.func}  >
+                {sortOption.name}
+              </a>
+            </li>
+          })}
+        </ul>
         <section className="grid grid-cols-2 lg:grid-cols-4">
           {this.state.visibleBins.map((bin, i) => {
             return bin.retro ? <RetroBin key={i} {...bin} /> : <Bin key={i} {...bin} />;

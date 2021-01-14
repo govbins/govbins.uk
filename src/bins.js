@@ -138,7 +138,7 @@ export default
         "retro": "true",
         "retroWhy": "branding",
         "retroName": "Lancaster",
-        "presentTwinFileName": "Lancashter.jpg",
+        "presentTwinFileName": "Lancaster.jpg",
         "endDate": "2014",
       },
       {

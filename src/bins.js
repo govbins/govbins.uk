@@ -160,6 +160,14 @@ export default
         "endDate": "2014",
       },
       {
+        "fileName": "Kingston-upon-Thames-retro.jpg",
+        "retro": "true",
+        "retroWhy": "branding",
+        "retroName": "Kingston upon Thames",
+        "presentTwinFileName": "Kingston-upon-Thames",
+        "endDate": "2014",
+      },
+      {
         "fileName": "North-Devon-retro.jpg",
         "retro": "true",
         "retroWhy": "branding",

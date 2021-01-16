@@ -2,6 +2,15 @@ export default
   {
     "bins": [
       {
+        "fileName": "Haringey.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "HRY",
+        "collectionDate": "16 January 2021",
+        "contributorHandle": "@colleybros",
+        "contributorURL": "https://www.instagram.com/colleybros",
+        "colour": "734-grayscale"
+      },
+      {
         "fileName": "Craven.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "CRA",
@@ -103,20 +112,20 @@ export default
         "endDate": "2008",
       },
       {
+        "fileName": "Haringey-retro.jpg",
+        "retro": "true",
+        "retroWhy": "branding",
+        "retroName": "Haringey",
+        "presentTwinFileName": "Haringey.jpg",
+        "endDate": "2015",
+      },
+      {
         "fileName": "Chelmsford-retro.jpg",
         "retro": "true",
         "retroWhy": "branding",
         "retroName": "Chelmsford",
         "presentTwinFileName": "Chelmsford.jpg",
         "endDate": "2012",
-      },
-      {
-        "fileName": "North-Devon-retro.jpg",
-        "retro": "true",
-        "retroWhy": "branding",
-        "retroName": "North Devon",
-        "presentTwinFileName": "North-Devon.jpg",
-        "endDate": "2009",
       },
       {
         "fileName": "Wyre-retro.jpg",
@@ -149,6 +158,14 @@ export default
         "retroName": "Lancaster",
         "presentTwinFileName": "Lancaster.jpg",
         "endDate": "2014",
+      },
+      {
+        "fileName": "North-Devon-retro.jpg",
+        "retro": "true",
+        "retroWhy": "branding",
+        "retroName": "North Devon",
+        "presentTwinFileName": "North-Devon.jpg",
+        "endDate": "2009",
       },
       {
         "fileName": "Castle-Morpeth.jpg",
@@ -1709,13 +1726,6 @@ export default
         "localAuthorityCode": "THE",
         "collectionDate": "3 February 2018",
         "colour": "792-grayscale"
-      },
-      {
-        "fileName": "Haringey.jpg",
-        "localAuthorityCountry": "eng",
-        "localAuthorityCode": "HRY",
-        "collectionDate": "3 February 2018",
-        "colour": "763-grayscale"
       },
       {
         "fileName": "Guildford.jpg",

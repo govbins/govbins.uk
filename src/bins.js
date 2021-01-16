@@ -8,7 +8,7 @@ export default
         "collectionDate": "8 January 2021",
         "contributorHandle": "@annemariebremner5355",
         "contributorURL": "https://www.instagram.com/annemariebremner5355",
-        "colour": "211ƒ-blue"
+        "colour": "220-blue"
       },
       {
         "fileName": "Macclesfield.jpg",

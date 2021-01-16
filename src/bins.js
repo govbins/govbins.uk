@@ -164,7 +164,7 @@ export default
         "retro": "true",
         "retroWhy": "branding",
         "retroName": "Kingston upon Thames",
-        "presentTwinFileName": "Kingston-upon-Thames",
+        "presentTwinFileName": "Kingston-upon-Thames.jpg",
         "endDate": "2014",
       },
       {

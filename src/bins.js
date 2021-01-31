@@ -2,6 +2,20 @@ export default
   {
     "bins": [
       {
+        "fileName": "Vale-of-White-Horse.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "VAL",
+        "collectionDate": "31 January 2021",
+        "colour": "615-brown"
+      },
+      {
+        "fileName": "Swindon.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "SWD",
+        "collectionDate": "31 January 2021",
+        "colour": "786-grayscale"
+      },
+      {
         "fileName": "North-Wiltshire.jpg",
         "retro": "true",
         "retroWhy": "abolished",
@@ -954,13 +968,6 @@ export default
         "localAuthorityCode": "UTT",
         "collectionDate": "17 December 2019",
         "colour": "794-grayscale"
-      },
-      {
-        "fileName": "Swindon.jpg",
-        "localAuthorityCountry": "eng",
-        "localAuthorityCode": "SWD",
-        "collectionDate": "8 December 2019",
-        "colour": "786-grayscale"
       },
       {
         "fileName": "South-Gloucestershire.jpg",

@@ -2,6 +2,15 @@ export default
   {
     "bins": [
       {
+        "fileName": "North-Wiltshire.jpg",
+        "retro": "true",
+        "retroWhy": "abolished",
+        "retroName": "West Wiltshire",
+        "presentTwinFileName": "Wiltshire.jpg",
+        "startDate": "1974",
+        "endDate": "2009",
+      },
+      {
         "fileName": "Haringey.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "HRY",
@@ -104,12 +113,13 @@ export default
         "endDate": "2019",
       },
       {
-        "fileName": "Bath-and-North-East-Somerset-retro.jpg",
+        "fileName": "North-Wiltshire.jpg",
         "retro": "true",
-        "retroWhy": "branding",
-        "retroName": "Bath and North East Somerset",
-        "presentTwinFileName": "Bath-and-North-East-Somerset.jpg",
-        "endDate": "2008",
+        "retroWhy": "abolished",
+        "retroName": "North Wiltshire",
+        "presentTwinFileName": "Wiltshire.jpg",
+        "startDate": "1974",
+        "endDate": "2009",
       },
       {
         "fileName": "Haringey-retro.jpg",
@@ -183,6 +193,14 @@ export default
         "presentTwinFileName": "Northumberland.jpg",
         "startDate": "1974",
         "endDate": "2009",
+      },
+      {
+        "fileName": "Bath-and-North-East-Somerset-retro.jpg",
+        "retro": "true",
+        "retroWhy": "branding",
+        "retroName": "Bath and North East Somerset",
+        "presentTwinFileName": "Bath-and-North-East-Somerset.jpg",
+        "endDate": "2008",
       },
       {
         "fileName": "West-Lancashire.jpg",

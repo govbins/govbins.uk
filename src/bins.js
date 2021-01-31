@@ -16,15 +16,6 @@ export default
         "colour": "786-grayscale"
       },
       {
-        "fileName": "North-Wiltshire.jpg",
-        "retro": "true",
-        "retroWhy": "abolished",
-        "retroName": "West Wiltshire",
-        "presentTwinFileName": "Wiltshire.jpg",
-        "startDate": "1974",
-        "endDate": "2009",
-      },
-      {
         "fileName": "Haringey.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "HRY",

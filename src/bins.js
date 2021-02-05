@@ -2,6 +2,15 @@ export default
   {
     "bins": [
       {
+        "fileName": "Mid-and-East-Antrim.jpg",
+        "localAuthorityCountry": "ni",
+        "localAuthorityCode": "MEA",
+        "collectionDate": "5 February 2021",
+        "contributorHandle": "@Leebeard1",
+        "contributorURL": "https://twitter.com/Leebeard1",
+        "colour": "220-blue"
+      },
+      {
         "fileName": "Vale-of-White-Horse.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "VAL",

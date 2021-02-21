@@ -2,6 +2,20 @@ export default
   {
     "bins": [
       {
+        "fileName": "East-Devon.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "EDE",
+        "collectionDate": "21 February 2021",
+        "colour": "318-green"
+      },
+      {
+        "fileName": "Dorset.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "DOR",
+        "collectionDate": "21 February 2021",
+        "colour": "780-grayscale"
+      },
+      {
         "fileName": "Mid-and-East-Antrim.jpg",
         "localAuthorityCountry": "ni",
         "localAuthorityCode": "MEA",
@@ -1146,13 +1160,6 @@ export default
         "colour": "351-green"
       },
       {
-        "fileName": "Dorset.jpg",
-        "localAuthorityCountry": "eng",
-        "localAuthorityCode": "DOR",
-        "collectionDate": "11 May 2019",
-        "colour": "734-grayscale"
-      },
-      {
         "fileName": "Midlothian.jpg",
         "localAuthorityCountry": "sct",
         "localAuthorityCode": "MLN",
@@ -1319,13 +1326,6 @@ export default
         "localAuthorityCode": "EXE",
         "collectionDate": "25 November 2018",
         "colour": "505-red-burgundy"
-      },
-      {
-        "fileName": "East-Devon.jpg",
-        "localAuthorityCountry": "eng",
-        "localAuthorityCode": "EDE",
-        "collectionDate": "25 November 2018",
-        "colour": "761-grayscale"
       },
       {
         "fileName": "Mid-Devon.jpg",

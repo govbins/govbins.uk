@@ -2,6 +2,15 @@ export default
   {
     "bins": [
       {
+        "fileName": "Herefordshire.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "HEF",
+        "collectionDate": "26 February 2021",
+        "contributorHandle": "@philgyford",
+        "contributorURL": "https://twitter.com/philgyford",
+        "colour": "762-grayscale"
+      },
+      {
         "fileName": "East-Devon.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "EDE",

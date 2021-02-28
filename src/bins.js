@@ -2,6 +2,27 @@ export default
   {
     "bins": [
       {
+        "fileName": "Teignbridge.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "TEI",
+        "collectionDate": "28 February 2021",
+        "colour": "780-grayscale"
+      },
+      {
+        "fileName": "Torbay.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "TOR",
+        "collectionDate": "28 February 2021",
+        "colour": "318-green"
+      },
+      {
+        "fileName": "South-Hams.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "SHA",
+        "collectionDate": "28 February 2021",
+        "colour": "601-brown"
+      },
+      {
         "fileName": "Herefordshire.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "HEF",
@@ -238,6 +259,14 @@ export default
         "retroName": "Bath and North East Somerset",
         "presentTwinFileName": "Bath-and-North-East-Somerset.jpg",
         "endDate": "2008",
+      },
+      {
+        "fileName": "Torbay-retro.jpg",
+        "retro": "true",
+        "retroWhy": "branding",
+        "retroName": "Torbay",
+        "presentTwinFileName": "Torbay.jpg",
+        "endDate": "2020",
       },
       {
         "fileName": "West-Lancashire.jpg",

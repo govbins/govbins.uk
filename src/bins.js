@@ -11,7 +11,7 @@ export default
       {
         "fileName": "Torbay.jpg",
         "localAuthorityCountry": "eng",
-        "localAuthorityCode": "TOR",
+        "localAuthorityCode": "TOB",
         "collectionDate": "28 February 2021",
         "colour": "318-green"
       },

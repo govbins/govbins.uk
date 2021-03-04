@@ -269,6 +269,15 @@ export default
         "endDate": "2020",
       },
       {
+        "fileName": "West-Dorset.jpg",
+        "retro": "true",
+        "retroWhy": "abolished",
+        "retroName": "West-Dorset",
+        "presentTwinFileName": "Dorset.jpg",
+        "startDate": "1974",
+        "endDate": "2019",
+      },
+      {
         "fileName": "West-Lancashire.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "WLA",

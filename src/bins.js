@@ -2,6 +2,13 @@ export default
   {
     "bins": [
       {
+        "fileName": "Dorset.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "DOR",
+        "collectionDate": "5 March 2021",
+        "colour": "780-grayscale"
+      },
+      {
         "fileName": "Teignbridge.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "TEI",
@@ -37,13 +44,6 @@ export default
         "localAuthorityCode": "EDE",
         "collectionDate": "21 February 2021",
         "colour": "318-green"
-      },
-      {
-        "fileName": "Dorset.jpg",
-        "localAuthorityCountry": "eng",
-        "localAuthorityCode": "DOR",
-        "collectionDate": "21 February 2021",
-        "colour": "780-grayscale"
       },
       {
         "fileName": "Mid-and-East-Antrim.jpg",

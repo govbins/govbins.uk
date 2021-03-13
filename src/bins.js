@@ -59,7 +59,7 @@ export default
         "contributorHandle": "@Leebeard1",
         "contributorURL": "https://twitter.com/Leebeard1",
         "colour": "220-blue",
-        "councilName": "Mid & East Antrim Borough Council"
+        "councilName": "Mid and East Antrim"
       },
       {
         "fileName": "Vale-of-White-Horse.jpg",
@@ -107,7 +107,6 @@ export default
         "endDate": "2009",
         "contributorHandle": "@alicebartlett",
         "contributorURL": "https://twitter.com/alicebartlett",
-        "councilName": ""
       },
       {
         "fileName": "Hart-retro.jpg",
@@ -116,7 +115,6 @@ export default
         "retroName": "Hart",
         "presentTwinFileName": "Hart.jpg",
         "endDate": "2008",
-        "councilName": ""
       },
       {
         "fileName": "West-Wiltshire.jpg",
@@ -128,7 +126,6 @@ export default
         "endDate": "2009",
         "contributorHandle": "@m.sergison",
         "contributorURL": "https://www.instagram.com/m.sergison",
-        "councilName": ""
       },
       {
         "fileName": "Liverpool-retro.jpg",
@@ -137,7 +134,6 @@ export default
         "retroName": "Liverpool",
         "presentTwinFileName": "Liverpool.jpg",
         "endDate": "2014",
-        "councilName": ""
       },
       {
         "fileName": "Southwark-retro.jpg",
@@ -146,7 +142,6 @@ export default
         "retroName": "Southwark",
         "presentTwinFileName": "Southwark.jpg",
         "endDate": "1999",
-        "councilName": ""
       },
       {
         "fileName": "Congleton.jpg",
@@ -158,7 +153,6 @@ export default
         "endDate": "2009",
         "contributorHandle": "@paulemorgan",
         "contributorURL": "https://www.instagram.com/paulemorgan/",
-        "councilName": ""
       },
       {
         "fileName": "Shepway.jpg",
@@ -168,7 +162,6 @@ export default
         "presentTwinFileName": "Folkestone-and-Hythe.jpg",
         "startDate": "1974",
         "endDate": "2018",
-        "councilName": ""
       },
       {
         "fileName": "Berwick-upon-Tweed.jpg",
@@ -178,7 +171,6 @@ export default
         "presentTwinFileName": "Northumberland.jpg",
         "startDate": "1974",
         "endDate": "2009",
-        "councilName": ""
       },
       {
         "fileName": "Purbeck.jpg",
@@ -188,7 +180,6 @@ export default
         "presentTwinFileName": "Dorset.jpg",
         "startDate": "1974",
         "endDate": "2019",
-        "councilName": ""
       },
       {
         "fileName": "North-Wiltshire.jpg",
@@ -198,7 +189,6 @@ export default
         "presentTwinFileName": "Wiltshire.jpg",
         "startDate": "1974",
         "endDate": "2009",
-        "councilName": ""
       },
       {
         "fileName": "Haringey-retro.jpg",
@@ -207,7 +197,6 @@ export default
         "retroName": "Haringey",
         "presentTwinFileName": "Haringey.jpg",
         "endDate": "2015",
-        "councilName": ""
       },
       {
         "fileName": "Chelmsford-retro.jpg",
@@ -216,7 +205,6 @@ export default
         "retroName": "Chelmsford",
         "presentTwinFileName": "Chelmsford.jpg",
         "endDate": "2012",
-        "councilName": ""
       },
       {
         "fileName": "Wyre-retro.jpg",
@@ -225,7 +213,6 @@ export default
         "retroName": "Wyre",
         "presentTwinFileName": "Wyre.jpg",
         "endDate": "1974",
-        "councilName": ""
       },
       {
         "fileName": "Gloucester-retro.jpg",
@@ -234,7 +221,6 @@ export default
         "retroName": "Gloucester",
         "presentTwinFileName": "Gloucester.jpg",
         "endDate": "2012",
-        "councilName": ""
       },
       {
         "fileName": "Reigate-and-Banstead-retro.jpg",
@@ -243,7 +229,6 @@ export default
         "retroName": "Reigate and Banstead",
         "presentTwinFileName": "Reigate-and-Banstead.jpg",
         "endDate": "TBC",
-        "councilName": ""
       },
       {
         "fileName": "Lancaster-retro.jpg",
@@ -252,7 +237,6 @@ export default
         "retroName": "Lancaster",
         "presentTwinFileName": "Lancaster.jpg",
         "endDate": "2014",
-        "councilName": ""
       },
       {
         "fileName": "Kingston-upon-Thames-retro.jpg",
@@ -261,7 +245,6 @@ export default
         "retroName": "Kingston upon Thames",
         "presentTwinFileName": "Kingston-upon-Thames.jpg",
         "endDate": "2014",
-        "councilName": ""
       },
       {
         "fileName": "North-Devon-retro.jpg",
@@ -270,7 +253,6 @@ export default
         "retroName": "North Devon",
         "presentTwinFileName": "North-Devon.jpg",
         "endDate": "2009",
-        "councilName": ""
       },
       {
         "fileName": "Castle-Morpeth.jpg",
@@ -280,7 +262,6 @@ export default
         "presentTwinFileName": "Northumberland.jpg",
         "startDate": "1974",
         "endDate": "2009",
-        "councilName": ""
       },
       {
         "fileName": "Bath-and-North-East-Somerset-retro.jpg",
@@ -289,7 +270,6 @@ export default
         "retroName": "Bath and North East Somerset",
         "presentTwinFileName": "Bath-and-North-East-Somerset.jpg",
         "endDate": "2008",
-        "councilName": ""
       },
       {
         "fileName": "Torbay-retro.jpg",
@@ -298,7 +278,6 @@ export default
         "retroName": "Torbay",
         "presentTwinFileName": "Torbay.jpg",
         "endDate": "2020",
-        "councilName": ""
       },
       {
         "fileName": "West-Dorset.jpg",
@@ -308,7 +287,6 @@ export default
         "presentTwinFileName": "Dorset.jpg",
         "startDate": "1974",
         "endDate": "2019",
-        "councilName": ""
       },
       {
         "fileName": "West-Lancashire.jpg",
@@ -678,7 +656,7 @@ export default
         "contributorHandle": "@patrick_s_k",
         "contributorURL": "https://www.instagram.com/patrick_s_k",
         "colour": "310-green",
-        "councilName": "Lisburn & Castlereagh City Council"
+        "councilName": "Lisburn and Castlereagh City"
       },
       {
         "fileName": "Somerset-West-and-Taunton.jpg",
@@ -1130,7 +1108,7 @@ export default
         "localAuthorityCode": "SHE",
         "collectionDate": "29 December 2019",
         "colour": "333-green",
-        "councilName": "Folkestone & Hythe"
+        "councilName": "Folkestone and Hythe"
       },
       {
         "fileName": "Dover.jpg",

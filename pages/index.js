@@ -1,4 +1,3 @@
-import fetch from "node-fetch";
 import data from "../src/bins";
 import Bin from "../components/bin";
 import RetroBin from "../components/retroBin";
@@ -6,74 +5,11 @@ import React from "react";
 import Footer from "../components/footer";
 import moment from "moment"
 
-const engAuthorityCodes = async () => {
-  return await fetchCodes(
-    "https://local-authority-eng.register.gov.uk/records.json?page-size=500"
-  );
-};
-
-const welshAuthorityCodes = async () => {
-  return await fetchCodes(
-    "https://principal-local-authority.register.gov.uk/records.json?page-size=500"
-  );
-};
-
-const scotAuthorityCodes = async () => {
-  return await fetchCodes(
-    "https://local-authority-sct.register.gov.uk/records.json?page-size=500"
-  );
-};
-
-const niAuthorityCodes = async () => {
-  return await fetchCodes(
-    "https://local-authority-nir.register.gov.uk/records.json?page-size=500"
-  );
-};
-
-const fetchCodes = async (url) => {
-  let codes = {};
-
-  try {
-    const response = await fetch(url);
-    const results = await response.json();
-    for (var localAuthorityCode in results) {
-      codes[localAuthorityCode] =
-        results[localAuthorityCode]["item"][0]["name"];
-    }
-  } catch (e) {
-    return null;
-  }
-
-  return codes;
-};
-
 export async function getStaticProps() {
-  const eng = await engAuthorityCodes();
-  const wales = await welshAuthorityCodes();
-  const scot = await scotAuthorityCodes();
-  const ni = await niAuthorityCodes();
-
-  const councilName = (bin) => {
-    const { localAuthorityCountry, localAuthorityCode } = bin
-    switch (localAuthorityCountry) {
-      case "eng":
-        return eng[localAuthorityCode];
-      case "sct":
-        return scot[localAuthorityCode];
-      case "wls":
-        return wales[localAuthorityCode];
-      case "ni":
-        return ni[localAuthorityCode];
-      default:
-        return "";
-    }
-  }
-
   return {
     props: {
       bins: data.bins.map((bin) => {
         bin.fileName = `${process.env.NEXT_PUBLIC_ASSET_ROOT}${bin.fileName}`
-        bin.councilName = bin.councilName || councilName(bin)
         if (bin.presentTwinFileName) {
           bin.presentTwinFileName = `${process.env.NEXT_PUBLIC_ASSET_ROOT}${bin.presentTwinFileName}`
         }

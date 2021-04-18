@@ -13,7 +13,11 @@ const Map = () => {
         <H2>Map</H2>
         <P>{data.bins.filter((bin) => !bin.retro).length} bins catalogued</P>
         <img onLoad={() => setLoaded(true)} src="/images/map.svg" />
-        {!isLoaded && "Map loading..."}
+        {!isLoaded &&
+          <span className="border border-black p-5">
+            Map loading...
+          </span>
+        }
         <Footer />
       </div>
     </>

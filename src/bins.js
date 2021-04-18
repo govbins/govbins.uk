@@ -2,6 +2,14 @@ export default
   {
     "bins": [
       {
+        "fileName": "Mendip.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "MEN",
+        "collectionDate": "15 April 2021",
+        "colour": "601-brown",
+        "councilName": "Mendip"
+      },
+      {
         "fileName": "Dorset.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "DOR",
@@ -1631,18 +1639,10 @@ export default
         "councilName": "City of Durham",
       },
       {
-        "fileName": "Mendip.jpg",
-        "localAuthorityCountry": "eng",
-        "localAuthorityCode": "MEN",
-        "collectionDate": "6 October 2018",
-        "colour": "601-brown",
-        "councilName": "Mendip"
-      },
-      {
         "fileName": "Sedgemoor.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "SEG",
-        "collectionDate": "8 October 2018",
+        "collectionDate":"6 October 2018",
         "colour": "779-grayscale",
         "councilName": "Sedgemoor"
       },

@@ -2,6 +2,16 @@ export default
   {
     "bins": [
       {
+        "fileName": "Buckinghamshire.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "BUC",
+        "collectionDate": "19 April 2021",
+        "contributorHandle": "@benunsworth",
+        "contributorURL": "https://twitter.com/benunsworth",
+        "colour": "601-brown",
+        "councilName": "Buckinghamshire"
+      },
+      {
         "fileName": "Mendip.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "MEN",
@@ -278,6 +288,42 @@ export default
         "retroName": "Bath and North East Somerset",
         "presentTwinFileName": "Bath-and-North-East-Somerset.jpg",
         "endDate": "2008",
+      },
+      {
+        "fileName": "Wycombe.jpg",
+        "retro": "true",
+        "retroWhy": "abolished",
+        "retroName": "Wycombe",
+        "presentTwinFileName": "Buckinghamshire.jpg",
+        "startDate": "1974",
+        "endDate": "2020",
+      },
+      {
+        "fileName": "Chiltern.jpg",
+        "retro": "true",
+        "retroWhy": "abolished",
+        "retroName": "Chiltern",
+        "presentTwinFileName": "Buckinghamshire.jpg",
+        "startDate": "1974",
+        "endDate": "2020",
+      },
+      {
+        "fileName": "South-Bucks.jpg",
+        "retro": "true",
+        "retroWhy": "abolished",
+        "retroName": "South Bucks",
+        "presentTwinFileName": "Buckinghamshire.jpg",
+        "startDate": "1974",
+        "endDate": "2020",
+      },
+      {
+        "fileName": "Aylesbury-Vale.jpg",
+        "retro": "true",
+        "retroWhy": "abolished",
+        "retroName": "Aylesbury Vale",
+        "presentTwinFileName": "Buckinghamshire.jpg",
+        "startDate": "1974",
+        "endDate": "2020",
       },
       {
         "fileName": "Torbay-retro.jpg",
@@ -1125,14 +1171,6 @@ export default
         "collectionDate": "29 December 2019",
         "colour": "781-grayscale",
         "councilName": "Dover"
-      },
-      {
-        "fileName": "Wycombe.jpg",
-        "localAuthorityCountry": "eng",
-        "localAuthorityCode": "WYO",
-        "collectionDate": "21 December 2019",
-        "colour": "315-green",
-        "councilName": "Wycombe"
       },
       {
         "fileName": "Uttlesford.jpg",
@@ -2111,36 +2149,12 @@ export default
         "councilName": "Lambeth"
       },
       {
-        "fileName": "Chiltern.jpg",
-        "localAuthorityCountry": "eng",
-        "localAuthorityCode": "CHN",
-        "collectionDate": "8 October 2017",
-        "colour": "230-blue",
-        "councilName": "Chiltern"
-      },
-      {
-        "fileName": "South-Bucks.jpg",
-        "localAuthorityCountry": "eng",
-        "localAuthorityCode": "SBU",
-        "collectionDate": "8 October 2017",
-        "colour": "741-grayscale",
-        "councilName": "South Bucks"
-      },
-      {
         "fileName": "Cherwell.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "CHR",
         "collectionDate": "7 October 2017",
         "colour": "611-brown",
         "councilName": "Cherwell"
-      },
-      {
-        "fileName": "Aylesbury-Vale.jpg",
-        "localAuthorityCountry": "eng",
-        "localAuthorityCode": "AYL",
-        "collectionDate": "7 October 2017",
-        "colour": "329-green",
-        "councilName": "Aylesbury Vale"
       },
       {
         "fileName": "Dacorum.jpg",

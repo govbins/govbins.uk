@@ -2,6 +2,15 @@ export default
   {
     "bins": [
       {
+        "fileName": "South-Kesteven.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "KES",
+        "collectionDate": "20 April 2021",
+        "contributorHandle": "Rachel Kirvan",
+        "colour": "762-grayscale",
+        "councilName": "South-Kesteven"
+      },
+      {
         "fileName": "Buckinghamshire.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "BUC",

@@ -44,7 +44,7 @@ const Build = () => {
             The current {" "}<A href='/map'>map</A> is a SVG exported from a {" "}
             <A href="https://data.gov.uk/dataset/6ff3fc08-26ff-453e-9289-6420269ba10e/local-authority-districts-counties-and-unitary-authorities-december-2017-map-in-united-kingdom">
               government vector map
-            </A>, with colours we tweaked bit.
+            </A>, with colours we tweaked a bit.
         </P>
         <H3>Hosting and privacy</H3>
         <P>
@@ -52,12 +52,12 @@ const Build = () => {
         </P>
         <H3>Web performance</H3>
         <P>
-          The homepage has lazy loading to decrease it's latency. Also to improve performance images are pasted through {" "}<A href="https://imageoptim.com/">ImageOptim</A> and synced them to {" "}<A href="https://aws.amazon.com/s3/">Amazon S3</A>, when deployed via GitHib.
+          The homepage has lazy loading to decrease its latency. Also to improve performance images are pasted through {" "}<A href="https://imageoptim.com/">ImageOptim</A> and synced them to {" "}<A href="https://aws.amazon.com/s3/">Amazon S3</A>, when deployed via GitHub.
         </P>
 
         <H3>Open code</H3>
         <P>
-          Go to {" "}<A href="https://github.com/govbins/govbins.uk">GitHib</A> to look all the code for this site.
+          Go to {" "}<A href="https://github.com/govbins/govbins.uk">GitHub</A> to look all the code for this site.
         </P>
       </div>
     </>

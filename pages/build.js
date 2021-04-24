@@ -57,7 +57,7 @@ const Build = () => {
 
         <H3>Open code</H3>
         <P>
-          Go to {" "}<A href="https://github.com/govbins/govbins.uk">GitHib</A> to look all the code for this site.
+          Go to {" "}<A href="https://github.com/govbins/govbins.uk">GitHub</A> to look all the code for this site.
         </P>
       </div>
     </>

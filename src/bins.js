@@ -8,7 +8,7 @@ export default
         "collectionDate": "24 April 2021",
         "contributorHandle": "Stan",
         "colour": "318-green",
-        "councilName": "South Kesteven"
+        "councilName": "South Norfolk"
       },
       {
         "fileName": "Hart.jpg",

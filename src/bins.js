@@ -7,7 +7,7 @@ export default
         "localAuthorityCode": "SNO",
         "collectionDate": "24 April 2021",
         "contributorHandle": "Stan",
-        "colour": "318-green",
+        "colour": "762-grayscale",
         "councilName": "South Norfolk"
       },
       {

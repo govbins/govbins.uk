@@ -11,6 +11,14 @@ export default
         "councilName": "South Kesteven"
       },
       {
+        "fileName": "Hart.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "HAT",
+        "collectionDate": "24 April 2021",
+        "colour": "318-green",
+        "councilName": "Hart"
+      },
+      {
         "fileName": "East-Hampshire.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "EHA",
@@ -1003,14 +1011,6 @@ export default
         "collectionDate": "5 March 2020",
         "colour": "799-grayscale",
         "councilName": "Bromsgrove"
-      },
-      {
-        "fileName": "Hart.jpg",
-        "localAuthorityCountry": "eng",
-        "localAuthorityCode": "HAT",
-        "collectionDate": "28 February 2020",
-        "colour": "201-blue",
-        "councilName": "Hart"
       },
       {
         "fileName": "Rushmoor.jpg",

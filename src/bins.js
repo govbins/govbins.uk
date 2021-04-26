@@ -2,13 +2,30 @@ export default
   {
     "bins": [
       {
+        "fileName": "South-Norfolk.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "SNO",
+        "collectionDate": "24 April 2021",
+        "contributorHandle": "Stan",
+        "colour": "318-green",
+        "councilName": "South Kesteven"
+      },
+      {
+        "fileName": "East-Hampshire.jpg",
+        "localAuthorityCountry": "eng",
+        "localAuthorityCode": "EHA",
+        "collectionDate": "24 April 2021",
+        "colour": "318-green",
+        "councilName": "East Hampshire"
+      },
+      {
         "fileName": "South-Kesteven.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "KES",
         "collectionDate": "20 April 2021",
         "contributorHandle": "Rachel Kirvan",
         "colour": "762-grayscale",
-        "councilName": "South-Kesteven"
+        "councilName": "South Kesteven"
       },
       {
         "fileName": "Buckinghamshire.jpg",

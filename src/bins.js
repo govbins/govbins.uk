@@ -6,7 +6,7 @@ export default
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "SNO",
         "collectionDate": "24 April 2021",
-        "contributorHandle": "Stan",
+        "contributorHandle": "Stan Hutcheon",
         "colour": "762-grayscale",
         "councilName": "South Norfolk"
       },

@@ -2,6 +2,15 @@ export default
   {
     "bins": [
       {
+        "fileName": "Pembrokeshire.jpg",
+        "localAuthorityCountry": "wls",
+        "localAuthorityCode": "PEM",
+        "collectionDate": "29 April 2020",
+        "contributorHandle": "Sam D'Ambrosio",
+        "colour": "507-red-burgundy",
+        "councilName": "Pembrokeshire"
+      },
+      {
         "fileName": "South-Norfolk.jpg",
         "localAuthorityCountry": "eng",
         "localAuthorityCode": "SNO",

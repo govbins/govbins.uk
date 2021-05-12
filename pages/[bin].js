@@ -1,6 +1,7 @@
 import data from "../src/bins";
 import binImage from "../utils/binImage";
 import H2 from "../components/h2";
+import Head from "next/head";
 
 export async function getStaticProps({ params }) {
   const { bin: binParam } = params;
@@ -48,6 +49,19 @@ const Contributor = ({ bin }) => {
 const Bin = ({ bin }) => {
   return (
     <>
+      <Head>
+        <title key="title">{`${bin.councilName} | #govbins`}</title>
+        <meta
+          property="twitter:title"
+          content={`${bin.councilName} | #govbins`}
+          key="tw_title"
+        />
+        <meta
+          property="og:title"
+          content={`${bin.councilName} | #govbins`}
+          key="og_title"
+        />
+      </Head>
       <div className="md:flex w-full md:w-10/12 mx-auto justify-between md:mt-12">
         <div className="lg:w-3/12 pt-5 px-5 md:px-0 text-2xl font-rubik">
           {bin.councilName && <H2>{bin.councilName}</H2>}

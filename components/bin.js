@@ -1,5 +1,6 @@
 import React from "react";
 import LazyLoad from "react-lazy-load";
+import Link from "next/link";
 
 const Bin = ({
   fileName,
@@ -8,6 +9,7 @@ const Bin = ({
   collectionDate,
   contributorHandle,
   contributorURL,
+  slug,
 }) => {
   let contributor;
 
@@ -27,16 +29,23 @@ const Bin = ({
 
   return (
     <div className="sm:mb-10">
-      <LazyLoad offsetVertical={1500}>
-        <img src={fileName} />
-      </LazyLoad>
-      <div className="p-4 hidden sm:block">
-        <h3 className="text-2xl mb-1" data-local-authority-eng={councilCode}>
-          {councilName}
-        </h3>
-        <p className="text-xl font-sans font-light">{collectionDate}</p>
-        {contributor}
-      </div>
+      <Link href={`/${slug}`}>
+        <a>
+          <LazyLoad offsetVertical={1500}>
+            <img src={fileName} />
+          </LazyLoad>
+          <div className="p-4 hidden sm:block">
+            <h3
+              className="text-2xl mb-1"
+              data-local-authority-eng={councilCode}
+            >
+              {councilName}
+            </h3>
+            <p className="text-xl font-sans font-light">{collectionDate}</p>
+            {contributor}
+          </div>
+        </a>
+      </Link>
     </div>
   );
 };

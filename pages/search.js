@@ -1,6 +1,35 @@
-const Search = () => {
+import { useState } from "react";
+import data from "../src/bins";
+import Link from "next/link";
+
+export async function getStaticProps() {
+  return {
+    props: {
+      bins: data.bins
+        .map((bin) => {
+          if (bin.retro != "true" || bin.retro === undefined) {
+            return {
+              name: bin.councilName,
+              slug: bin.slug,
+            };
+          }
+        })
+        .filter((bin) => bin !== undefined),
+    },
+  };
+}
+
+const Search = ({ bins }) => {
+  const [results, setResults] = useState([]);
+
   const searchBins = (e) => {
-    console.log(e.target.value);
+    if (e.target.value === "") {
+      setResults([]);
+    } else {
+      setResults(
+        bins.filter((b) => b.name.toLowerCase().includes(e.target.value))
+      );
+    }
   };
   return (
     <>
@@ -12,6 +41,14 @@ const Search = () => {
           autoComplete="off"
           onChange={searchBins}
         />
+        {results &&
+          results.map((result, idx) => {
+            return (
+              <h2 key={idx}>
+                <Link href={result.slug}>{result.name}</Link>
+              </h2>
+            );
+          })}
       </div>
     </>
   );

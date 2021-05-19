@@ -22,31 +22,13 @@ const Guidelines = () => {
     <>
       <div className="mx-auto w-full px-4 lg:px-0 pt-5 lg:w-3/4 mb-16">
         <h1 className="text-3xl mt-8 mb-4">Submit photos</h1>
-        <h2 className="text-2xl">Help catalogue a nations bins.</h2>
+        <P>Help catalogue a nations bins.</P>
       </div>
 
       <div className="mx-auto w-full px-4 lg:px-0 lg:w-3/4 grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-y-20">
-        <div className="">
-          <h2 className="text-2xl mb-5">1. Check your bin is missing</h2>
-          <P>
-            Use <A href='/map'>this map</A> to find out if your bin has been catalogued yet.
-          </P>
-          <P>
-            If your bin is from outside the UK or from a council that no longer exists, we'd still love to see it.
-          </P>
-        </div>
-        <div className="mb-10 lg:m-0">
-          <img src="/images/govbins-map.gif" alt="Map" />
-        </div>
 
         <div className="">
-          <h2 className="text-2xl mb-5">2. Take consistent photos</h2>
-          <P>
-            Consistent photos make it easier to see the difference between different bin designs.
-          </P>
-          <P>
-            Consistent photos are:
-          </P>
+          <h2 className="text-2xl mb-5">Consistent photos</h2>
           <ul>
             <Li>Flat and straight to the bin</Li>
             <Li>Have enough space to be cropped</Li>
@@ -57,6 +39,10 @@ const Guidelines = () => {
               <span className="hidden lg:inline">👉</span>
             </Li>
           </ul>
+          <P></P>
+          <P>
+            Consistent photos make it easier to see the difference between different bin designs.
+          </P>
         </div>
         <div className="">
           <img src="/images/Walford.png" alt="Walford" />
@@ -64,7 +50,6 @@ const Guidelines = () => {
       </div>
 
       <div className="mx-auto w-full px-4 lg:px-0 lg:w-3/4 my-16">
-        <h1 className="text-2xl">3. Send your photos</h1>
         <Button href="/upload">
           Send your photos
         </Button>

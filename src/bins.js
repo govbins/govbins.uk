@@ -1,6 +1,16 @@
 export default {
   bins: [
     {
+      fileName: "Thurrock.jpg",
+      slug: "thurrock",
+      localAuthorityCountry: "wls",
+      localAuthorityCode: "PEM",
+      collectionDate: "20 May 2020",
+      contributorHandle: "Anonymous",
+      colour: "245-blue",
+      councilName: "Thurrock",
+    },
+    {
       fileName: "Pembrokeshire.jpg",
       slug: "pembrokeshire",
       localAuthorityCountry: "wls",

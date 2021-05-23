@@ -2,27 +2,20 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-  },
   theme: {
     extend: {
       borderColor: {
-        pink: '#ea47cb',
+        pink: "#ea47cb",
       },
       backgroundColor: {
-        gray: '#f8f8f8',
+        gray: "#f8f8f8",
       },
       fontFamily: {
         rubik: ["Rubik", ...defaultTheme.fontFamily.sans],
       },
-    }
+    },
   },
   variants: {},
   plugins: [],
-  purge: [
-    './components/*.js',
-    './pages/*.js',
-  ],
+  purge: ["./components/*.js", "./pages/*.js"],
 };

@@ -55,7 +55,7 @@ export default function Govbins({ Component, pageProps }) {
       </style>
       <div className="font-rubik text-gray-800">
         <header
-          className={`w-screen pr-5 pl-5 pt-4 pb-10 sm:flex sm:justify-between ${
+          className={`w-screen p-5 pb-10 leading-normal sm:flex sm:justify-between ${
             router.pathname === "/" ? "" : "border-b-2 border-gray-800"
           }`}
         >
@@ -64,7 +64,7 @@ export default function Govbins({ Component, pageProps }) {
               <a>#govbins</a>
             </Link>
           </h1>
-          <nav className="w-full text-xl sm:mt-5">
+          <nav className="w-full text-xl sm:mt-4">
             <ul className="sm:text-right">
               <li className="inline-block mr-5">
                 <A href="/submit-photos">Submit photos</A>

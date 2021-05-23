@@ -164,7 +164,7 @@ export default class Index extends React.Component {
     const { sortOptions } = this.state;
     return (
       <React.Fragment>
-        <ul className="sort-bar overflow-x-scroll whitespace-no-wrap">
+        <ul className="sort-bar overflow-x-scroll whitespace-nowrap">
           {Object.keys(sortOptions).map((option, index) => {
             const sortOption = sortOptions[option];
             return (

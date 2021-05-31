@@ -15,6 +15,10 @@ export async function getStaticProps({ params }) {
   };
 }
 
+const P = ({ children }) => {
+  return <p className="text-xl mb-5">{children}</p>;
+};
+
 export async function getStaticPaths() {
   return {
     paths: data.bins.map((bin) => {
@@ -62,13 +66,14 @@ const Bin = ({ bin }) => {
           key="og_title"
         />
       </Head>
-      <div className="md:flex w-full md:w-10/12 mx-auto justify-between md:mt-12">
-        <div className="lg:w-3/12 pt-5 px-5 md:px-0 text-2xl font-rubik">
-          {bin.councilName && <H2>{bin.councilName}</H2>}
-          {bin.collectionDate && <H2>{bin.collectionDate}</H2>}
+      <div className="mx-auto lg:mt-20 w-full px-4 lg:px-0 lg:w-3/4 grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-y-20">
+        <div>
+          <h2 className="text-3xl mb-5">{bin.councilName}</h2>
+
+          {bin.collectionDate && <P>{bin.collectionDate}</P>}
           <Contributor bin={bin} />
         </div>
-        <div className="lg:w-8/12 pt-5 text-2xl font-rubik">
+        <div className="col-span-2">
           <img src={bin.fileName} className="w-full" />
         </div>
       </div>

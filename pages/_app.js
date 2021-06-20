@@ -45,6 +45,11 @@ export default function Govbins({ Component, pageProps }) {
           href="https://fonts.googleapis.com/css?family=Rubik"
           rel="stylesheet"
         />
+        <script
+          defer
+          data-domain="govbins.uk"
+          src="https://plausible.io/js/plausible.js"
+        ></script>
       </Head>
       <style jsx global>
         {`

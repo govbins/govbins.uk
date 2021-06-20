@@ -1,354 +1,354 @@
-{
-  "BGE": {
+export default {
+  BGE: {
     "index-entry-number": "2",
     "entry-number": "2",
     "entry-timestamp": "2017-07-06T15:55:39Z",
-    "key": "BGE",
-    "item": [
+    key: "BGE",
+    item: [
       {
         "official-name": "Bridgend County Borough Council",
         "principal-local-authority": "BGE",
         "official-name-cy": "Cyngor Bwrdeistref Sirol Pen-y-bont ar Ogwr",
-        "name": "Bridgend",
+        name: "Bridgend",
         "name-cy": "Pen-y-bont ar Ogwr",
-        "start-date": "1996-04-01"
-      }
-    ]
+        "start-date": "1996-04-01",
+      },
+    ],
   },
-  "RCT": {
+  RCT: {
     "index-entry-number": "23",
     "entry-number": "23",
     "entry-timestamp": "2017-08-01T09:15:16Z",
-    "key": "RCT",
-    "item": [
+    key: "RCT",
+    item: [
       {
         "official-name": "Rhondda Cynon Taf County Borough Council",
         "principal-local-authority": "RCT",
         "official-name-cy": "Cyngor Bwrdeistref Sirol Rhondda Cynon Taf",
-        "name": "Rhondda Cynon Taff",
+        name: "Rhondda Cynon Taff",
         "name-cy": "Rhondda Cynon Taf",
-        "start-date": "1996-04-01"
-      }
-    ]
+        "start-date": "1996-04-01",
+      },
+    ],
   },
-  "CWY": {
+  CWY: {
     "index-entry-number": "8",
     "entry-number": "8",
     "entry-timestamp": "2017-07-06T15:55:39Z",
-    "key": "CWY",
-    "item": [
+    key: "CWY",
+    item: [
       {
         "official-name": "Conwy County Borough Council",
         "principal-local-authority": "CWY",
         "official-name-cy": "Cyngor Bwrdeistref Sirol Conwy",
-        "name": "Conwy",
+        name: "Conwy",
         "name-cy": "Conwy",
-        "start-date": "1996-04-01"
-      }
-    ]
+        "start-date": "1996-04-01",
+      },
+    ],
   },
-  "CMN": {
+  CMN: {
     "index-entry-number": "6",
     "entry-number": "6",
     "entry-timestamp": "2017-07-06T15:55:39Z",
-    "key": "CMN",
-    "item": [
+    key: "CMN",
+    item: [
       {
         "official-name": "Carmarthenshire County Council",
         "principal-local-authority": "CMN",
         "official-name-cy": "Cyngor Sir Gâr",
-        "name": "Carmarthenshire",
+        name: "Carmarthenshire",
         "name-cy": "Sir Gaerfyrddin",
-        "start-date": "1996-04-01"
-      }
-    ]
+        "start-date": "1996-04-01",
+      },
+    ],
   },
-  "NWP": {
+  NWP: {
     "index-entry-number": "15",
     "entry-number": "15",
     "entry-timestamp": "2017-07-06T15:55:39Z",
-    "key": "NWP",
-    "item": [
+    key: "NWP",
+    item: [
       {
         "official-name": "Newport City Council",
         "principal-local-authority": "NWP",
         "official-name-cy": "Cyngor Dinas Casnewydd",
-        "name": "Newport",
+        name: "Newport",
         "name-cy": "Casnewydd",
-        "start-date": "1996-04-01"
-      }
-    ]
+        "start-date": "1996-04-01",
+      },
+    ],
   },
-  "NTL": {
+  NTL: {
     "index-entry-number": "14",
     "entry-number": "14",
     "entry-timestamp": "2017-07-06T15:55:39Z",
-    "key": "NTL",
-    "item": [
+    key: "NTL",
+    item: [
       {
         "official-name": "Neath Port Talbot County Borough Council",
         "principal-local-authority": "NTL",
         "official-name-cy": "Cyngor Bwrdeistref Sirol Castell-nedd Port Talbot",
-        "name": "Neath Port Talbot",
+        name: "Neath Port Talbot",
         "name-cy": "Castell-nedd Port Talbot",
-        "start-date": "1996-04-01"
-      }
-    ]
+        "start-date": "1996-04-01",
+      },
+    ],
   },
-  "FLN": {
+  FLN: {
     "index-entry-number": "10",
     "entry-number": "10",
     "entry-timestamp": "2017-07-06T15:55:39Z",
-    "key": "FLN",
-    "item": [
+    key: "FLN",
+    item: [
       {
         "official-name": "Flintshire County Council",
         "principal-local-authority": "FLN",
         "official-name-cy": "Cyngor Sir y Fflint",
-        "name": "Flintshire",
+        name: "Flintshire",
         "name-cy": "Sir y Fflint",
-        "start-date": "1996-04-01"
-      }
-    ]
+        "start-date": "1996-04-01",
+      },
+    ],
   },
-  "TOF": {
+  TOF: {
     "index-entry-number": "20",
     "entry-number": "20",
     "entry-timestamp": "2017-07-06T15:55:39Z",
-    "key": "TOF",
-    "item": [
+    key: "TOF",
+    item: [
       {
         "official-name": "Torfaen County Borough Council",
         "principal-local-authority": "TOF",
         "official-name-cy": "Cyngor Bwrdeistref Sirol Torfaen",
-        "name": "Torfaen",
+        name: "Torfaen",
         "name-cy": "Tor-faen",
-        "start-date": "1996-04-01"
-      }
-    ]
+        "start-date": "1996-04-01",
+      },
+    ],
   },
-  "CGN": {
+  CGN: {
     "index-entry-number": "5",
     "entry-number": "5",
     "entry-timestamp": "2017-07-06T15:55:39Z",
-    "key": "CGN",
-    "item": [
+    key: "CGN",
+    item: [
       {
         "official-name": "Ceredigion County Council",
         "principal-local-authority": "CGN",
         "official-name-cy": "Cyngor Sir Ceredigion",
-        "name": "Ceredigion",
+        name: "Ceredigion",
         "name-cy": "Ceredigion",
-        "start-date": "1996-04-01"
-      }
-    ]
+        "start-date": "1996-04-01",
+      },
+    ],
   },
-  "DEN": {
+  DEN: {
     "index-entry-number": "9",
     "entry-number": "9",
     "entry-timestamp": "2017-07-06T15:55:39Z",
-    "key": "DEN",
-    "item": [
+    key: "DEN",
+    item: [
       {
         "official-name": "Denbighshire County Council",
         "principal-local-authority": "DEN",
         "official-name-cy": "Cyngor Sir Ddinbych",
-        "name": "Denbighshire",
+        name: "Denbighshire",
         "name-cy": "Sir Ddinbych",
-        "start-date": "1996-04-01"
-      }
-    ]
+        "start-date": "1996-04-01",
+      },
+    ],
   },
-  "MON": {
+  MON: {
     "index-entry-number": "12",
     "entry-number": "12",
     "entry-timestamp": "2017-07-06T15:55:39Z",
-    "key": "MON",
-    "item": [
+    key: "MON",
+    item: [
       {
         "official-name": "Monmouthshire County Council",
         "principal-local-authority": "MON",
         "official-name-cy": "Cyngor Sir Fynwy",
-        "name": "Monmouthshire",
+        name: "Monmouthshire",
         "name-cy": "Sir Fynwy",
-        "start-date": "1996-04-01"
-      }
-    ]
+        "start-date": "1996-04-01",
+      },
+    ],
   },
-  "MTY": {
+  MTY: {
     "index-entry-number": "13",
     "entry-number": "13",
     "entry-timestamp": "2017-07-06T15:55:39Z",
-    "key": "MTY",
-    "item": [
+    key: "MTY",
+    item: [
       {
         "official-name": "Merthyr Tydfil County Borough Council",
         "principal-local-authority": "MTY",
         "official-name-cy": "Cyngor Bwrdeistref Sirol Merthyr Tudful",
-        "name": "Merthyr Tydfil",
+        name: "Merthyr Tydfil",
         "name-cy": "Merthyr Tudful",
-        "start-date": "1996-04-01"
-      }
-    ]
+        "start-date": "1996-04-01",
+      },
+    ],
   },
-  "BGW": {
+  BGW: {
     "index-entry-number": "3",
     "entry-number": "3",
     "entry-timestamp": "2017-07-06T15:55:39Z",
-    "key": "BGW",
-    "item": [
+    key: "BGW",
+    item: [
       {
         "official-name": "Blaenau Gwent County Borough Council",
         "principal-local-authority": "BGW",
         "official-name-cy": "Cyngor Bwrdeistref Sirol Blaenau Gwent",
-        "name": "Blaenau Gwent",
+        name: "Blaenau Gwent",
         "name-cy": "Blaenau Gwent",
-        "start-date": "1996-04-01"
-      }
-    ]
+        "start-date": "1996-04-01",
+      },
+    ],
   },
-  "AGY": {
+  AGY: {
     "index-entry-number": "1",
     "entry-number": "1",
     "entry-timestamp": "2017-07-06T15:55:39Z",
-    "key": "AGY",
-    "item": [
+    key: "AGY",
+    item: [
       {
         "official-name": "Isle of Anglesey County Council",
         "principal-local-authority": "AGY",
         "official-name-cy": "Cyngor Sir Ynys Môn",
-        "name": "Isle of Anglesey",
+        name: "Isle of Anglesey",
         "name-cy": "Sir Ynys Môn",
-        "start-date": "1996-04-01"
-      }
-    ]
+        "start-date": "1996-04-01",
+      },
+    ],
   },
-  "CRF": {
+  CRF: {
     "index-entry-number": "7",
     "entry-number": "7",
     "entry-timestamp": "2017-07-06T15:55:39Z",
-    "key": "CRF",
-    "item": [
+    key: "CRF",
+    item: [
       {
         "official-name": "City of Cardiff Council",
         "principal-local-authority": "CRF",
         "official-name-cy": "Cyngor Dinas Caerdydd",
-        "name": "Cardiff",
+        name: "Cardiff",
         "name-cy": "Caerdydd",
-        "start-date": "1996-04-01"
-      }
-    ]
+        "start-date": "1996-04-01",
+      },
+    ],
   },
-  "POW": {
+  POW: {
     "index-entry-number": "17",
     "entry-number": "17",
     "entry-timestamp": "2017-07-06T15:55:39Z",
-    "key": "POW",
-    "item": [
+    key: "POW",
+    item: [
       {
         "official-name": "Powys County Council",
         "principal-local-authority": "POW",
         "official-name-cy": "Cyngor Sir Powys",
-        "name": "Powys",
+        name: "Powys",
         "name-cy": "Powys",
-        "start-date": "1996-04-01"
-      }
-    ]
+        "start-date": "1996-04-01",
+      },
+    ],
   },
-  "PEM": {
+  PEM: {
     "index-entry-number": "16",
     "entry-number": "16",
     "entry-timestamp": "2017-07-06T15:55:39Z",
-    "key": "PEM",
-    "item": [
+    key: "PEM",
+    item: [
       {
         "official-name": "Pembrokeshire County Council",
         "principal-local-authority": "PEM",
         "official-name-cy": "Cyngor Sir Penfro",
-        "name": "Pembrokeshire",
+        name: "Pembrokeshire",
         "name-cy": "Sir Benfro",
-        "start-date": "1996-04-01"
-      }
-    ]
+        "start-date": "1996-04-01",
+      },
+    ],
   },
-  "VGL": {
+  VGL: {
     "index-entry-number": "21",
     "entry-number": "21",
     "entry-timestamp": "2017-07-06T15:55:39Z",
-    "key": "VGL",
-    "item": [
+    key: "VGL",
+    item: [
       {
         "official-name": "Vale of Glamorgan Council",
         "principal-local-authority": "VGL",
         "official-name-cy": "Cyngor Bro Morgannwg",
-        "name": "The Vale of Glamorgan",
+        name: "The Vale of Glamorgan",
         "name-cy": "Bro Morgannwg",
-        "start-date": "1996-04-01"
-      }
-    ]
+        "start-date": "1996-04-01",
+      },
+    ],
   },
-  "CAY": {
+  CAY: {
     "index-entry-number": "4",
     "entry-number": "4",
     "entry-timestamp": "2017-07-06T15:55:39Z",
-    "key": "CAY",
-    "item": [
+    key: "CAY",
+    item: [
       {
         "official-name": "Caerphilly County Borough Council",
         "principal-local-authority": "CAY",
         "official-name-cy": "Cyngor Bwrdeistref Sirol Caerffili",
-        "name": "Caerphilly",
+        name: "Caerphilly",
         "name-cy": "Caerffili",
-        "start-date": "1996-04-01"
-      }
-    ]
+        "start-date": "1996-04-01",
+      },
+    ],
   },
-  "WRX": {
+  WRX: {
     "index-entry-number": "22",
     "entry-number": "22",
     "entry-timestamp": "2017-07-06T15:55:39Z",
-    "key": "WRX",
-    "item": [
+    key: "WRX",
+    item: [
       {
         "official-name": "Wrexham County Borough Council",
         "principal-local-authority": "WRX",
         "official-name-cy": "Cyngor Bwrdeistref Sirol Wrecsam",
-        "name": "Wrexham",
+        name: "Wrexham",
         "name-cy": "Wrecsam",
-        "start-date": "1996-04-01"
-      }
-    ]
+        "start-date": "1996-04-01",
+      },
+    ],
   },
-  "SWA": {
+  SWA: {
     "index-entry-number": "19",
     "entry-number": "19",
     "entry-timestamp": "2017-07-06T15:55:39Z",
-    "key": "SWA",
-    "item": [
+    key: "SWA",
+    item: [
       {
         "official-name": "City and County of Swansea Council",
         "principal-local-authority": "SWA",
         "official-name-cy": "Dinas a Sir Abertawe",
-        "name": "Swansea",
+        name: "Swansea",
         "name-cy": "Abertawe",
-        "start-date": "1996-04-01"
-      }
-    ]
+        "start-date": "1996-04-01",
+      },
+    ],
   },
-  "GWN": {
+  GWN: {
     "index-entry-number": "11",
     "entry-number": "11",
     "entry-timestamp": "2017-07-06T15:55:39Z",
-    "key": "GWN",
-    "item": [
+    key: "GWN",
+    item: [
       {
         "official-name": "Gwynedd Council",
         "principal-local-authority": "GWN",
         "official-name-cy": "Cyngor Gwynedd",
-        "name": "Gwynedd",
+        name: "Gwynedd",
         "name-cy": "Gwynedd",
-        "start-date": "1996-04-01"
-      }
-    ]
-  }
-}
+        "start-date": "1996-04-01",
+      },
+    ],
+  },
+};

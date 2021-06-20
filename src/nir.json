@@ -7,7 +7,8 @@
     "item": [
       {
         "end-date": "2015-03-31",
-        "name": "Strabane District Council",
+        "offical-name": "Strabane District Council",
+        "name": "Strabane",
         "local-authority-nir": "STB"
       }
     ]
@@ -21,7 +22,8 @@
       {
         "local-authority-type": "BGH",
         "website": "http://www.antrimandnewtownabbey.gov.uk/",
-        "name": "Antrim & Newtownabbey Borough Council",
+        "offical-name": "Antrim & Newtownabbey Borough Council",
+        "name": "Antrim & Newtownabbey",
         "start-date": "2015-04-01",
         "local-authority-nir": "ANN"
       }
@@ -36,7 +38,8 @@
       {
         "local-authority-type": "BGH",
         "website": "https://www.armaghbanbridgecraigavon.gov.uk/",
-        "name": "Armagh City, Banbridge and Craigavon Borough Council",
+        "offical-name": "Armagh City, Banbridge and Craigavon Borough Council",
+        "name": "Armagh City, Banbridge and Craigavon",
         "start-date": "2015-04-01",
         "local-authority-nir": "ABC"
       }
@@ -51,7 +54,8 @@
       {
         "local-authority-type": "DIS",
         "website": "http://www.derrystrabane.com/",
-        "name": "Derry City and Strabane District Council",
+        "offical-name": "Derry City and Strabane District Council",
+        "name": "Derry City and Strabane",
         "start-date": "2015-04-01",
         "local-authority-nir": "DRS"
       }
@@ -65,7 +69,8 @@
     "item": [
       {
         "end-date": "2015-03-31",
-        "name": "Antrim Borough Council",
+        "offical-name": "Antrim Borough Council",
+        "name": "Antrim",
         "local-authority-nir": "ANT"
       }
     ]
@@ -78,7 +83,8 @@
     "item": [
       {
         "end-date": "2015-03-31",
-        "name": "Coleraine Borough Council",
+        "offical-name": "Coleraine Borough Council",
+        "name": "Coleraine",
         "local-authority-nir": "CLR"
       }
     ]
@@ -91,7 +97,8 @@
     "item": [
       {
         "end-date": "2015-03-31",
-        "name": "Larne Borough Council",
+        "offical-name": "Larne Borough Council",
+        "name": "Larne",
         "local-authority-nir": "LRN"
       }
     ]
@@ -104,7 +111,8 @@
     "item": [
       {
         "end-date": "2015-03-31",
-        "name": "Derry City Council",
+        "offical-name": "Derry City Council",
+        "name": "Derry",
         "local-authority-nir": "DRY"
       }
     ]
@@ -118,7 +126,8 @@
       {
         "local-authority-type": "CIT",
         "website": "https://www.lisburncastlereagh.gov.uk/",
-        "name": "Lisburn & Castlereagh City Council",
+        "offical-name": "Lisburn & Castlereagh City Council",
+        "name": "Lisburn & Castlereagh",
         "start-date": "2015-04-01",
         "local-authority-nir": "LBC"
       }
@@ -133,7 +142,8 @@
       {
         "local-authority-type": "CIT",
         "website": "http://www.belfastcity.gov.uk/",
-        "name": "Belfast City Council",
+        "offical-name": "Belfast City Council",
+        "name": "Belfast",
         "local-authority-nir": "BFS"
       }
     ]
@@ -146,7 +156,8 @@
     "item": [
       {
         "end-date": "2015-03-31",
-        "name": "Ballymoney Borough Council",
+        "offical-name": "Ballymoney Borough Council",
+        "name": "Ballymoney",
         "local-authority-nir": "BLY"
       }
     ]
@@ -159,7 +170,8 @@
     "item": [
       {
         "end-date": "2015-03-31",
-        "name": "North Down Borough Council",
+        "offical-name": "North Down Borough Council",
+        "name": "North Down",
         "local-authority-nir": "NDN"
       }
     ]
@@ -172,7 +184,8 @@
     "item": [
       {
         "end-date": "2015-03-31",
-        "name": "Magherafelt District Council",
+        "offical-name": "Magherafelt District Council",
+        "name": "Magherafelt",
         "local-authority-nir": "MFT"
       }
     ]
@@ -185,7 +198,8 @@
     "item": [
       {
         "end-date": "2015-03-31",
-        "name": "Lisburn City Council",
+        "offical-name": "Lisburn City Council",
+        "name": "Lisburn",
         "local-authority-nir": "LSB"
       }
     ]
@@ -198,7 +212,8 @@
     "item": [
       {
         "end-date": "2015-03-31",
-        "name": "Carrickfergus Borough Council",
+        "offical-name": "Carrickfergus Borough Council",
+        "name": "Carrickfergus",
         "local-authority-nir": "CKF"
       }
     ]
@@ -211,7 +226,8 @@
     "item": [
       {
         "end-date": "2015-03-31",
-        "name": "Moyle District Council",
+        "offical-name": "Moyle District Council",
+        "name": "Moyle",
         "local-authority-nir": "MYL"
       }
     ]
@@ -224,7 +240,8 @@
     "item": [
       {
         "end-date": "2015-03-31",
-        "name": "Newry and Mourne District Council",
+        "offical-name": "Newry and Mourne District Council",
+        "name": "Newry and Mourne",
         "local-authority-nir": "NYM"
       }
     ]
@@ -237,7 +254,8 @@
     "item": [
       {
         "end-date": "2015-03-31",
-        "name": "Castlereagh Borough Council",
+        "offical-name": "Castlereagh Borough Council",
+        "name": "Castlereagh",
         "local-authority-nir": "CSR"
       }
     ]
@@ -251,7 +269,8 @@
       {
         "local-authority-type": "DIS",
         "website": "http://www.newrymournedown.org/",
-        "name": "Newry, Mourne and Down District Council",
+        "offical-name": "Newry, Mourne and Down District Council",
+        "name": "Newry, Mourne and Down",
         "start-date": "2015-04-01",
         "local-authority-nir": "NMD"
       }
@@ -266,7 +285,8 @@
       {
         "local-authority-type": "DIS",
         "website": "http://www.midulstercouncil.org/",
-        "name": "Mid Ulster District Council",
+        "offical-name": "Mid Ulster District Council",
+        "name": "Mid Ulster",
         "start-date": "2015-04-01",
         "local-authority-nir": "MUL"
       }
@@ -281,7 +301,8 @@
       {
         "local-authority-type": "BGH",
         "website": "https://www.causewaycoastandglens.gov.uk/",
-        "name": "Causeway Coast and Glens Borough Council",
+        "offical-name": "Causeway Coast and Glens Borough Council",
+        "name": "Causeway Coast and Glens",
         "start-date": "2015-04-01",
         "local-authority-nir": "CCG"
       }
@@ -296,7 +317,8 @@
       {
         "local-authority-type": "BGH",
         "website": "http://www.midandeastantrim.gov.uk/",
-        "name": "Mid & East Antrim Borough Council",
+        "offical-name": "Mid & East Antrim Borough Council",
+        "name": "Mid & East Antrim",
         "start-date": "2015-04-01",
         "local-authority-nir": "MEA"
       }
@@ -311,7 +333,8 @@
       {
         "local-authority-type": "DIS",
         "website": "http://www.fermanaghomagh.com/",
-        "name": "Fermanagh and Omagh District Council",
+        "offical-name": "Fermanagh and Omagh District Council",
+        "name": "Fermanagh and Omagh",
         "start-date": "2015-04-01",
         "local-authority-nir": "FMO"
       }
@@ -325,7 +348,8 @@
     "item": [
       {
         "end-date": "2015-03-31",
-        "name": "Dungannon and South Tyrone Borough Council",
+        "offical-name": "Dungannon and South Tyrone Borough Council",
+        "name": "Dungannon and South Tyrone",
         "local-authority-nir": "DGN"
       }
     ]
@@ -338,7 +362,8 @@
     "item": [
       {
         "end-date": "2015-03-31",
-        "name": "Omagh District Council",
+        "offical-name": "Omagh District Council",
+        "name": "Omagh",
         "local-authority-nir": "OMH"
       }
     ]
@@ -351,7 +376,8 @@
     "item": [
       {
         "end-date": "2015-03-31",
-        "name": "Cookstown District Council",
+        "offical-name": "Cookstown District Council",
+        "name": "Cookstown",
         "local-authority-nir": "CKT"
       }
     ]
@@ -364,7 +390,8 @@
     "item": [
       {
         "end-date": "2015-03-31",
-        "name": "Down District Council",
+        "offical-name": "Down District Council",
+        "name": "Down",
         "local-authority-nir": "DOW"
       }
     ]
@@ -377,7 +404,8 @@
     "item": [
       {
         "end-date": "2015-03-31",
-        "name": "Fermanagh District Council",
+        "offical-name": "Fermanagh District Council",
+        "name": "Fermanagh",
         "local-authority-nir": "FER"
       }
     ]
@@ -390,7 +418,8 @@
     "item": [
       {
         "end-date": "2015-03-31",
-        "name": "Craigavon Borough Council",
+        "offical-name": "Craigavon Borough Council",
+        "name": "Craigavon",
         "local-authority-nir": "CGV"
       }
     ]
@@ -403,7 +432,8 @@
     "item": [
       {
         "end-date": "2015-03-31",
-        "name": "Ards Borough Council",
+        "offical-name": "Ards Borough Council",
+        "name": "Ards",
         "local-authority-nir": "ARD"
       }
     ]
@@ -416,7 +446,8 @@
     "item": [
       {
         "end-date": "2015-03-31",
-        "name": "Limavady Borough Council",
+        "offical-name": "Limavady Borough Council",
+        "name": "Limavady",
         "local-authority-nir": "LMV"
       }
     ]
@@ -429,7 +460,8 @@
     "item": [
       {
         "end-date": "2015-03-31",
-        "name": "Ballymena Borough Council",
+        "offical-name": "Ballymena Borough Council",
+        "name": "Ballymena",
         "local-authority-nir": "BLA"
       }
     ]
@@ -443,7 +475,8 @@
       {
         "local-authority-type": "BGH",
         "website": "http://www.ardsandnorthdown.gov.uk/",
-        "name": "Ards and North Down Borough Council",
+        "offical-name": "Ards and North Down Borough Council",
+        "name": "Ards and North Down",
         "start-date": "2015-04-01",
         "local-authority-nir": "AND"
       }
@@ -457,7 +490,8 @@
     "item": [
       {
         "end-date": "2015-03-31",
-        "name": "Banbridge District Council",
+        "offical-name": "Banbridge District Council",
+        "name": "Banbridge",
         "local-authority-nir": "BNB"
       }
     ]
@@ -470,7 +504,8 @@
     "item": [
       {
         "end-date": "2015-03-31",
-        "name": "Newtownabbey Borough Council",
+        "offical-name": "Newtownabbey Borough Council",
+        "name": "Newtownabbey",
         "local-authority-nir": "NTA"
       }
     ]
@@ -483,7 +518,8 @@
     "item": [
       {
         "end-date": "2015-03-31",
-        "name": "Armagh City and District Council",
+        "offical-name": "Armagh City and District Council",
+        "name": "Armagh City",
         "local-authority-nir": "ARM"
       }
     ]

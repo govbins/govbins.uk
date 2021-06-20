@@ -59,7 +59,7 @@ export default function Govbins({ Component, pageProps }) {
             router.pathname === "/" ? "" : "border-b-2 border-gray-800"
           }`}
         >
-          <h1 className="text-4xl w-full md:w-1/2">
+          <h1 className="text-4xl w-full md:w-1/2 pt-2">
             <Link href="/">
               <a>#govbins</a>
             </Link>

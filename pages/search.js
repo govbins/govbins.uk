@@ -22,7 +22,7 @@ export async function getStaticProps() {
 
 const Search = ({ bins }) => {
   const [results, setResults] = useState([]);
-  const [selected, setSelected] = useState(0);
+  const [selected, setSelected] = useState(null);
   const router = useRouter();
 
   const handleChange = (e) => {
@@ -42,27 +42,27 @@ const Search = ({ bins }) => {
       default:
         if (e.target.value === "") {
           setResults([]);
-          setSelected(0);
+          setSelected(null);
         } else {
+          setSelected(e.target.value);
           setResults(
-            bins.filter((b) => b.name.toLowerCase().includes(e.target.value))
+            bins.filter((b) =>
+              b.name.toLowerCase().includes(e.target.value.toLowerCase())
+            )
           );
         }
         break;
     }
   };
+
   return (
     <>
       <div className="w-full px-4 md:px-0 md:w-1/2 mx-auto">
-        <form>
-          <input
-            type="text"
-            name="search"
-            className="bg-white border border-gray-700 focus:border-gray-900 mt-10 text-4xl w-full px-3 py-1"
-            autoComplete="off"
-            onChange={handleChange}
-          />
-        </form>
+        <input
+          type="text"
+          className="bg-white border border-gray-700 focus:border-gray-900 mt-10 text-4xl w-full px-3 py-1"
+          onChange={handleChange}
+        />
         {results && (
           <ul className="bg-white text-4xl">
             {results.map((result, idx) => {

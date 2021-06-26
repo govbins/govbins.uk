@@ -15,6 +15,10 @@ export async function getStaticProps({ params }) {
   };
 }
 
+const P = ({ children }) => {
+  return <p className="text-xl mb-5">{children}</p>;
+};
+
 export async function getStaticPaths() {
   return {
     paths: data.bins.map((bin) => {
@@ -72,7 +76,7 @@ const Bin = ({ bin }) => {
           )}
           <Contributor bin={bin} />
         </div>
-        <div className="lg:w-8/12 pt-5 text-2xl font-rubik">
+        <div className="col-span-2">
           <img src={bin.fileName} className="w-full" />
         </div>
       </div>

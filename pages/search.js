@@ -2,6 +2,7 @@ import { useState } from "react";
 import data from "../src/bins";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import A from "../components/a";
 
 export async function getStaticProps() {
   return {
@@ -22,7 +23,9 @@ export async function getStaticProps() {
 
 const Search = ({ bins }) => {
   const [results, setResults] = useState([]);
+  const [noResult, setNoResult] = useState(null);
   const [selected, setSelected] = useState(null);
+  const [searchTerm, setSearchTerm] = useState(null);
   const router = useRouter();
 
   const onKeydown = (e) => {
@@ -32,10 +35,12 @@ const Search = ({ bins }) => {
         break;
 
       case 38:
+        e.preventDefault();
         setSelected(Math.max(selected - 1, 0));
         break;
 
       case 40:
+        e.preventDefault();
         setSelected(Math.min(selected + 1, results.length - 1));
         break;
 
@@ -43,13 +48,19 @@ const Search = ({ bins }) => {
         if (e.target.value === "") {
           setResults([]);
           setSelected(null);
+          setNoResult(null);
         } else {
-          setSelected(0);
-          setResults(
-            bins.filter((b) =>
-              b.name.toLowerCase().includes(e.target.value.toLowerCase())
-            )
+          const r = bins.filter((b) =>
+            b.name.toLowerCase().includes(e.target.value.toLowerCase())
           );
+          setSelected(0);
+          if (r.length == 0) {
+            setNoResult(true);
+            setSearchTerm(e.target.value);
+          } else {
+            setNoResult(false);
+          }
+          setResults(r);
         }
         break;
     }
@@ -64,7 +75,7 @@ const Search = ({ bins }) => {
           onKeyDown={onKeydown}
         />
         {results && (
-          <ul className="bg-white text-4xl">
+          <ul className="bg-white text-4xl max-h-screen overflow-scroll">
             {results.map((result, idx) => {
               return (
                 <li key={idx}>
@@ -81,6 +92,13 @@ const Search = ({ bins }) => {
               );
             })}
           </ul>
+        )}
+        {noResult && (
+          <div className="mt-3 text-2xl">
+            <p>{searchTerm}</p>
+            <p className="font-bold">Not catalogued...yet!</p>
+            <A href="/submit-photos">Submit photos</A>
+          </div>
         )}
       </div>
     </>

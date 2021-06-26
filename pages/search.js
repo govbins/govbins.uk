@@ -25,18 +25,18 @@ const Search = ({ bins }) => {
   const [selected, setSelected] = useState(null);
   const router = useRouter();
 
-  const handleChange = (e) => {
+  const onKeydown = (e) => {
     switch (e.keyCode) {
       case 13:
         router.push(results[selected].slug);
         break;
 
       case 38:
-        setSelected(selected - 1);
+        setSelected(Math.max(selected - 1, 0));
         break;
 
       case 40:
-        setSelected(selected + 1);
+        setSelected(Math.min(selected + 1, results.length - 1));
         break;
 
       default:
@@ -44,7 +44,7 @@ const Search = ({ bins }) => {
           setResults([]);
           setSelected(null);
         } else {
-          setSelected(e.target.value);
+          setSelected(0);
           setResults(
             bins.filter((b) =>
               b.name.toLowerCase().includes(e.target.value.toLowerCase())
@@ -61,7 +61,7 @@ const Search = ({ bins }) => {
         <input
           type="text"
           className="bg-white border border-gray-700 focus:border-gray-900 mt-10 text-4xl w-full px-3 py-1"
-          onChange={handleChange}
+          onKeyDown={onKeydown}
         />
         {results && (
           <ul className="bg-white text-4xl">

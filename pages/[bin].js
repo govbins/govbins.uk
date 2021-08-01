@@ -1,6 +1,5 @@
 import data from "../src/bins";
 import binImage from "../utils/binImage";
-import H2 from "../components/h2";
 import Head from "next/head";
 
 export async function getStaticProps({ params }) {
@@ -14,10 +13,6 @@ export async function getStaticProps({ params }) {
     },
   };
 }
-
-const P = ({ children }) => {
-  return <p className="text-xl mb-5">{children}</p>;
-};
 
 export async function getStaticPaths() {
   return {
@@ -66,17 +61,17 @@ const Bin = ({ bin }) => {
           key="og_title"
         />
       </Head>
-      <div className="md:flex w-full md:w-10/12 mx-auto justify-between md:mt-12">
-        <div className="lg:w-3/12 pt-5 px-5 md:px-0 text-2xl font-rubik">
+      <div className="mx-auto w-full px-4 lg:px-0 lg:w-3/4 grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-y-20">
+        <div className="text-2xl font-rubik">
           {bin.councilName && (
-            <h1 className="text-3xl mb-5">{bin.councilName}</h1>
+            <h1 className="text-3xl mt-8 mb-4">{bin.councilName}</h1>
           )}
           {bin.collectionDate && (
             <h2 className="text-xl">{bin.collectionDate}</h2>
           )}
           <Contributor bin={bin} />
         </div>
-        <div className="col-span-2">
+        <div className="col-span-2 md:mt-16">
           <img src={bin.fileName} className="w-full" />
         </div>
       </div>

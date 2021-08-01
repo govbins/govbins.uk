@@ -28,9 +28,9 @@ const Bin = ({
   }
 
   return (
-    <div className="sm:mb-10">
+    <div>
       <Link href={`/${slug}`}>
-        <div>
+        <a className="block sm:pb-10">
           <LazyLoad offsetVertical={1500}>
             <img src={fileName} />
           </LazyLoad>
@@ -44,7 +44,7 @@ const Bin = ({
             <p className="text-xl font-sans font-light">{collectionDate}</p>
             {contributor}
           </div>
-        </div>
+        </a>
       </Link>
     </div>
   );

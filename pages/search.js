@@ -1,22 +1,24 @@
-import { useEffect, useState } from "react";
-import data from "../src/bins";
+import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import A from "../components/a";
+import Eng from "../src/eng";
+import Sct from "../src/sct";
+import Wales from "../src/wales";
+import Nir from "../src/nir";
+import { paramCase } from "param-case";
 
 export async function getStaticProps() {
   return {
     props: {
-      bins: data.bins
-        .map((bin) => {
-          if (bin.retro != "true" || bin.retro === undefined) {
-            return {
-              name: bin.councilName,
-              slug: bin.slug,
-            };
-          }
-        })
-        .filter((bin) => bin !== undefined),
+      bins: [Eng, Sct, Wales, Nir].flatMap((region) => {
+        return Object.values(region).map((council) => {
+          return {
+            name: council.item[0].name,
+            slug: paramCase(council.item[0].name),
+          };
+        });
+      }),
     },
   };
 }

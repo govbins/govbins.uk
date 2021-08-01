@@ -2,25 +2,47 @@ import data from "../src/bins";
 import binImage from "../utils/binImage";
 import Head from "next/head";
 import Link from "next/link";
+import Eng from "../src/eng";
+import Sct from "../src/sct";
+import Wales from "../src/wales";
+import Nir from "../src/nir";
+import { paramCase } from "param-case";
 
 export async function getStaticProps({ params }) {
   const { bin: binParam } = params;
 
   const bin = data.bins.filter((b) => b.slug === binParam)[0];
 
-  return {
-    props: {
-      bin: binImage(bin),
-    },
-  };
+  if (bin) {
+    return {
+      props: {
+        bin: binImage(bin),
+      },
+    };
+  } else {
+    return {
+      props: {
+        placeHolder: true,
+        bin: {},
+      },
+    };
+  }
 }
 
 export async function getStaticPaths() {
+  const paths = [Eng, Sct, Wales, Nir].flatMap((region) => {
+    return Object.values(region).map((council) => {
+      return paramCase(council.item[0].name);
+    });
+  });
+
+  console.log(paths);
+
   return {
-    paths: data.bins.map((bin) => {
+    paths: paths.map((path) => {
       return {
         params: {
-          bin: bin.slug,
+          bin: path,
         },
       };
     }),

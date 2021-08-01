@@ -1,6 +1,7 @@
 import data from "../src/bins";
 import binImage from "../utils/binImage";
 import Head from "next/head";
+import Link from "next/link";
 
 export async function getStaticProps({ params }) {
   const { bin: binParam } = params;
@@ -62,7 +63,10 @@ const Bin = ({ bin }) => {
         />
       </Head>
       <div className="mx-auto w-full px-4 lg:px-0 lg:w-3/4 grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-y-20">
-        <div className="text-2xl font-rubik">
+        <div className="text-2xl font-rubik pt-16">
+          <Link href="/search">
+            <a className="text-lg">&larr; Search</a>
+          </Link>
           {bin.councilName && (
             <h1 className="text-3xl mt-8 mb-4">{bin.councilName}</h1>
           )}

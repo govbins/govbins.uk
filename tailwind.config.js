@@ -10,6 +10,7 @@ module.exports = {
         },
         gray: {
           400: "#f8f8f8",
+          500: "#1f2937",
         },
       },
       fontFamily: {
@@ -17,7 +18,11 @@ module.exports = {
       },
     },
   },
-  variants: {},
+  variants: {
+    extend: {
+      borderWidth: ["focus"],
+    },
+  },
   plugins: [],
   purge: ["./components/*.js", "./pages/*.js"],
 };

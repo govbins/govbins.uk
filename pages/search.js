@@ -28,7 +28,7 @@ const Search = ({ bins }) => {
   const [searchTerm, setSearchTerm] = useState(null);
   const router = useRouter();
 
-  const onKeydown = (e) => {
+  const onKeyPress = (e) => {
     switch (e.keyCode) {
       case 13:
         router.push(results[selected].slug);
@@ -71,9 +71,10 @@ const Search = ({ bins }) => {
       <div className="w-full px-4 md:px-0 md:w-1/2 mx-auto">
         <input
           type="text"
-          className="bg-white border border-gray-700 focus:border-gray-900 mt-10 text-4xl w-full px-3 py-1"
-          onKeyDown={onKeydown}
+          className="bg-white border-2 border-gray-700  mt-10 text-4xl w-full px-3 py-1 focus:outline-none focus:border-yellow-400 focus:border-2 rounded-md placeholder-gray-500 focus:placeholder-gray-200"
+          onKeyPress={onKeyPress}
           autoFocus
+          placeholder="Search catalogue"
         />
         {results && (
           <ul className="bg-white text-4xl max-h-screen overflow-scroll">

@@ -28,7 +28,7 @@ const Search = ({ bins }) => {
   const [searchTerm, setSearchTerm] = useState(null);
   const router = useRouter();
 
-  const onKeyPress = (e) => {
+  const onKeyUp = (e) => {
     switch (e.keyCode) {
       case 13:
         router.push(results[selected].slug);
@@ -72,7 +72,7 @@ const Search = ({ bins }) => {
         <input
           type="text"
           className="bg-white border-2 border-gray-700  mt-10 text-4xl w-full px-3 py-1 focus:outline-none focus:border-yellow-400 focus:border-2 rounded-md placeholder-gray-500 focus:placeholder-gray-200"
-          onKeyPress={onKeyPress}
+          onKeyUp={onKeyUp}
           autoFocus
           placeholder="Search catalogue"
         />

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import data from "../src/bins";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -73,6 +73,7 @@ const Search = ({ bins }) => {
           type="text"
           className="bg-white border border-gray-700 focus:border-gray-900 mt-10 text-4xl w-full px-3 py-1"
           onKeyDown={onKeydown}
+          autoFocus
         />
         {results && (
           <ul className="bg-white text-4xl max-h-screen overflow-scroll">

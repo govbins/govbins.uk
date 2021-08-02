@@ -15,16 +15,14 @@ const Bin = ({
 
   if (contributorHandle && contributorURL) {
     contributor = (
-      <p className="text-xl font-sans font-light">
+      <p>
         <a className="contributor" href={contributorURL}>
           {contributorHandle}
         </a>
       </p>
     );
   } else if (contributorHandle) {
-    contributor = (
-      <p className="text-xl font-sans font-light">{contributorHandle}</p>
-    );
+    contributor = <p>{contributorHandle}</p>;
   }
 
   return (
@@ -41,8 +39,10 @@ const Bin = ({
             >
               {councilName}
             </h3>
-            <p className="text-xl font-sans font-light">{collectionDate}</p>
-            {contributor}
+            <div className="text-xl font-sans font-light">
+              <p>{collectionDate}</p>
+              {contributor}
+            </div>
           </div>
         </a>
       </Link>

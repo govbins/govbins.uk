@@ -87,7 +87,9 @@ const Bin = ({ bin, placeHolder }) => {
             <h1 className="text-3xl mt-8 mb-4">{bin.councilName}</h1>
           )}
           {bin.collectionDate && (
-            <h2 className="text-xl">{bin.collectionDate}</h2>
+            <h2 className="text-xl font-sans font-light">
+              {bin.collectionDate}
+            </h2>
           )}
           {placeHolder && (
             <div>

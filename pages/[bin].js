@@ -104,7 +104,7 @@ const Bin = ({ bin, placeHolder }) => {
         <div className="col-span-2 md:mt-16">
           {bin.fileName && <img src={bin.fileName} className="w-full" />}
           {placeHolder && (
-            <div className="border-dashed border-2 border-black w-full h-96 md:h-128"></div>
+            <div className="border-dashed border-2 border-black aspect-w-4 aspect-h-3"></div>
           )}
         </div>
       </div>

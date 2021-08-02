@@ -2,23 +2,12 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import A from "../components/a";
-import Eng from "../src/eng";
-import Sct from "../src/sct";
-import Wales from "../src/wales";
-import Nir from "../src/nir";
-import { paramCase } from "param-case";
+import councils from "../src/councils";
 
 export async function getStaticProps() {
   return {
     props: {
-      bins: [Eng, Sct, Wales, Nir].flatMap((region) => {
-        return Object.values(region).map((council) => {
-          return {
-            name: council.item[0].name,
-            slug: paramCase(council.item[0].name),
-          };
-        });
-      }),
+      bins: councils,
     },
   };
 }

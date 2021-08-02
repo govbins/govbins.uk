@@ -16,6 +16,9 @@ module.exports = {
       fontFamily: {
         rubik: ["Rubik", ...defaultTheme.fontFamily.sans],
       },
+      height: {
+        128: "36rem",
+      },
     },
   },
   variants: {

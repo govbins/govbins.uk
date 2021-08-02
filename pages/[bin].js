@@ -2,16 +2,15 @@ import data from "../src/bins";
 import binImage from "../utils/binImage";
 import Head from "next/head";
 import Link from "next/link";
-import Eng from "../src/eng";
-import Sct from "../src/sct";
-import Wales from "../src/wales";
-import Nir from "../src/nir";
-import { paramCase } from "param-case";
+import councils from "../src/councils";
+import A from "../components/a";
 
 export async function getStaticProps({ params }) {
   const { bin: binParam } = params;
 
   const bin = data.bins.filter((b) => b.slug === binParam)[0];
+
+  const council = councils.filter((council) => council.slug == binParam)[0];
 
   if (bin) {
     return {
@@ -22,27 +21,21 @@ export async function getStaticProps({ params }) {
   } else {
     return {
       props: {
+        bin: {
+          councilName: council.name,
+        },
         placeHolder: true,
-        bin: {},
       },
     };
   }
 }
 
 export async function getStaticPaths() {
-  const paths = [Eng, Sct, Wales, Nir].flatMap((region) => {
-    return Object.values(region).map((council) => {
-      return paramCase(council.item[0].name);
-    });
-  });
-
-  console.log(paths);
-
   return {
-    paths: paths.map((path) => {
+    paths: councils.map((council) => {
       return {
         params: {
-          bin: path,
+          bin: council.slug,
         },
       };
     }),
@@ -50,7 +43,7 @@ export async function getStaticPaths() {
   };
 }
 
-const Contributor = ({ bin }) => {
+const Contributor = ({ bin, placeHolder }) => {
   const { contributorURL, contributorHandle } = bin;
 
   if (contributorHandle && contributorURL) {
@@ -68,7 +61,7 @@ const Contributor = ({ bin }) => {
   }
 };
 
-const Bin = ({ bin }) => {
+const Bin = ({ bin, placeHolder }) => {
   return (
     <>
       <Head>
@@ -85,6 +78,7 @@ const Bin = ({ bin }) => {
         />
       </Head>
       <div className="mx-auto w-full px-4 lg:px-0 lg:w-3/4 grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-y-20">
+        {placeHolder}
         <div className="text-2xl font-rubik pt-16">
           <Link href="/search">
             <a className="text-lg">&larr; Search</a>
@@ -95,10 +89,23 @@ const Bin = ({ bin }) => {
           {bin.collectionDate && (
             <h2 className="text-xl">{bin.collectionDate}</h2>
           )}
+          {placeHolder && (
+            <div>
+              <p className="text-xl font-sans font-light mb-4">
+                Not catalogued...yet!
+              </p>
+              <p className="text-2xl">
+                <A href="/submit-photos">Submit photos</A>
+              </p>
+            </div>
+          )}
           <Contributor bin={bin} />
         </div>
         <div className="col-span-2 md:mt-16">
-          <img src={bin.fileName} className="w-full" />
+          {bin.fileName && <img src={bin.fileName} className="w-full" />}
+          {placeHolder && (
+            <div className="border-dashed border-2 border-black w-full h-96 md:h-128"></div>
+          )}
         </div>
       </div>
     </>

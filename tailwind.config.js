@@ -4,18 +4,28 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   theme: {
     extend: {
-      borderColor: {
-        pink: "#ea47cb",
-      },
-      backgroundColor: {
-        gray: "#f8f8f8",
+      colors: {
+        pink: {
+          400: "#ea47cb",
+        },
+        gray: {
+          400: "#f8f8f8",
+          500: "#1f2937",
+        },
       },
       fontFamily: {
         rubik: ["Rubik", ...defaultTheme.fontFamily.sans],
       },
+      height: {
+        128: "36rem",
+      },
     },
   },
-  variants: {},
-  plugins: [],
+  variants: {
+    extend: {
+      borderWidth: ["focus"],
+    },
+  },
+  plugins: [require("@tailwindcss/aspect-ratio")],
   purge: ["./components/*.js", "./pages/*.js"],
 };

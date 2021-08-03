@@ -1,30 +1,41 @@
 import data from "../src/bins";
 import binImage from "../utils/binImage";
-import H2 from "../components/h2";
 import Head from "next/head";
+import Link from "next/link";
+import councils from "../src/councils";
+import A from "../components/a";
 
 export async function getStaticProps({ params }) {
   const { bin: binParam } = params;
 
   const bin = data.bins.filter((b) => b.slug === binParam)[0];
 
-  return {
-    props: {
-      bin: binImage(bin),
-    },
-  };
-}
+  const council = councils.filter((council) => council.slug == binParam)[0];
 
-const P = ({ children }) => {
-  return <p className="text-xl mb-5">{children}</p>;
-};
+  if (bin) {
+    return {
+      props: {
+        bin: binImage(bin),
+      },
+    };
+  } else {
+    return {
+      props: {
+        bin: {
+          councilName: council.name,
+        },
+        placeHolder: true,
+      },
+    };
+  }
+}
 
 export async function getStaticPaths() {
   return {
-    paths: data.bins.map((bin) => {
+    paths: councils.map((council) => {
       return {
         params: {
-          bin: bin.slug,
+          bin: council.slug,
         },
       };
     }),
@@ -32,7 +43,7 @@ export async function getStaticPaths() {
   };
 }
 
-const Contributor = ({ bin }) => {
+const Contributor = ({ bin, placeHolder }) => {
   const { contributorURL, contributorHandle } = bin;
 
   if (contributorHandle && contributorURL) {
@@ -50,7 +61,7 @@ const Contributor = ({ bin }) => {
   }
 };
 
-const Bin = ({ bin }) => {
+const Bin = ({ bin, placeHolder }) => {
   return (
     <>
       <Head>
@@ -66,15 +77,37 @@ const Bin = ({ bin }) => {
           key="og_title"
         />
       </Head>
-      <div className="mx-auto lg:mt-20 w-full px-4 lg:px-0 lg:w-3/4 grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-y-20">
-        <div>
-          <h2 className="text-3xl mb-5">{bin.councilName}</h2>
-
-          {bin.collectionDate && <P>{bin.collectionDate}</P>}
+      <div className="mx-auto w-full px-4 lg:px-0 lg:w-3/4 grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-y-20">
+        {placeHolder}
+        <div className="text-2xl font-rubik pt-8 md:pt-16">
+          <Link href="/search">
+            <a className="text-lg">&larr; Search</a>
+          </Link>
+          {bin.councilName && (
+            <h1 className="text-3xl mt-4 md:mt-8 mb-4">{bin.councilName}</h1>
+          )}
+          {bin.collectionDate && (
+            <h2 className="text-xl font-sans font-light">
+              {bin.collectionDate}
+            </h2>
+          )}
+          {placeHolder && (
+            <div>
+              <p className="text-xl font-sans font-light mb-4">
+                Not catalogued...yet!
+              </p>
+              <p className="text-2xl">
+                <A href="/submit-photos">Submit photos</A>
+              </p>
+            </div>
+          )}
           <Contributor bin={bin} />
         </div>
-        <div className="col-span-2">
-          <img src={bin.fileName} className="w-full" />
+        <div className="col-span-2 md:mt-16">
+          {bin.fileName && <img src={bin.fileName} className="w-full" />}
+          {placeHolder && (
+            <div className="border-dashed border-2 border-black aspect-w-4 aspect-h-3"></div>
+          )}
         </div>
       </div>
     </>

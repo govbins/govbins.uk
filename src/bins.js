@@ -5,10 +5,10 @@ export default {
       slug: "ryedale",
       localAuthorityCountry: "eng",
       localAuthorityCode: "NNO",
-      collectionDate: "9 August",
+      collectionDate: "9 August 2021",
       contributorHandle: "@alicebartlett",
       contributorURL: "https://twitter.com/alicebartlett",
-      colour: "750-grayscale",
+      colour: "300-green",
       councilName: "Ryedale",
     },
     {

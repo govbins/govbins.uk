@@ -19,7 +19,7 @@ export default {
       collectionDate: "16 July 2021",
       contributorHandle: "@siamakamini",
       contributorURL: "https://www.instagram.com/siamakamini/",
-      colour: "782-grayscale",
+      colour: "503-red-burgundy",
       councilName: "Burnley",
     },
     {

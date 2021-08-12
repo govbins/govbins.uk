@@ -1,6 +1,16 @@
 export default {
   bins: [
     {
+      fileName: "Bournemouth-Christchurch-and-Poole.jpg",
+      slug: "bournemouth-christchurch-and-poole",
+      localAuthorityCountry: "eng",
+      localAuthorityCode: "BPC",
+      collectionDate: "12 August 2021",
+      contributorHandle: "Matt Cheetham",
+      colour: "210-blue",
+      councilName: "Bournemouth, Christchurch and Poole",
+    },    
+    {
       fileName: "Ryedale.jpg",
       slug: "ryedale",
       localAuthorityCountry: "eng",
@@ -944,15 +954,6 @@ export default {
       collectionDate: "11 July 2020",
       colour: "321-green",
       councilName: "Southampton",
-    },
-    {
-      fileName: "Bournemouth-Christchurch-and-Poole.jpg",
-      slug: "bournemouth-christchurch-and-poole",
-      localAuthorityCountry: "eng",
-      localAuthorityCode: "BPC",
-      collectionDate: "11 July 2020",
-      colour: "210-blue",
-      councilName: "Bournemouth, Christchurch and Poole",
     },
     {
       fileName: "Forest-of-Dean.jpg",

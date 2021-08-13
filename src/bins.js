@@ -20,7 +20,7 @@ export default {
       contributorHandle: "@stuwilky",
       contributorURL: "https://twitter.com/stuwilky",
       colour: "300-green",
-      councilName: "Ribble valley",
+      councilName: "Ribble Valley",
     },
     {
       fileName: "Lichfield.jpg",

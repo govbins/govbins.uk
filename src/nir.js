@@ -22,8 +22,8 @@ export default {
       {
         "local-authority-type": "BGH",
         website: "http://www.antrimandnewtownabbey.gov.uk/",
-        "offical-name": "Antrim & Newtownabbey Borough Council",
-        name: "Antrim & Newtownabbey",
+        "offical-name": "Antrim and Newtownabbey Borough Council",
+        name: "Antrim and Newtownabbey",
         "start-date": "2015-04-01",
         "local-authority-nir": "ANN",
       },
@@ -126,8 +126,8 @@ export default {
       {
         "local-authority-type": "CIT",
         website: "https://www.lisburncastlereagh.gov.uk/",
-        "offical-name": "Lisburn & Castlereagh City Council",
-        name: "Lisburn & Castlereagh",
+        "offical-name": "Lisburn and Castlereagh City Council",
+        name: "Lisburn and Castlereagh",
         "start-date": "2015-04-01",
         "local-authority-nir": "LBC",
       },
@@ -317,8 +317,8 @@ export default {
       {
         "local-authority-type": "BGH",
         website: "http://www.midandeastantrim.gov.uk/",
-        "offical-name": "Mid & East Antrim Borough Council",
-        name: "Mid & East Antrim",
+        "offical-name": "Mid and East Antrim Borough Council",
+        name: "Mid and East Antrim",
         "start-date": "2015-04-01",
         "local-authority-nir": "MEA",
       },

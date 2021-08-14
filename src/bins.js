@@ -41,7 +41,7 @@ export default {
       contributorHandle: "Matt Cheetham",
       colour: "210-blue",
       councilName: "Bournemouth, Christchurch and Poole",
-    },    
+    },
     {
       fileName: "Stoke-on-Trent.jpg",
       slug: "stoke-on-trent",
@@ -55,7 +55,7 @@ export default {
     },
     {
       fileName: "Stratford-on-Avon.jpg",
-      slug: "Stratford-on-Avon",
+      slug: "stratford-on-avon",
       localAuthorityCountry: "eng",
       localAuthorityCode: "NNO",
       collectionDate: "12 August 2021",

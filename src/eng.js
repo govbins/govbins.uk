@@ -1832,7 +1832,7 @@ export default {
         "local-authority-type": "NMD",
         "official-name": "Folkestone and Hythe Council",
         "local-authority-eng": "SHE",
-        name: "Folkestone & Hythe",
+        name: "Folkestone and Hythe",
       },
     ],
   },

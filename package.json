@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^2.3.0",
+    "@sentry/nextjs": "^6.11.0",
     "@tailwindcss/aspect-ratio": "^0.2.1",
     "autoprefixer": "^10.2.5",
     "fontsource-rubik": "^2.1.2",

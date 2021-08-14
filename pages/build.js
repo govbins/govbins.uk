@@ -48,7 +48,7 @@ const Build = () => {
         </P>
         <H3>Hosting and privacy</H3>
         <P>
-          Hosted on {" "}<A href="https://www.netlify.com/">Netlify</A>, the site {" "}<A href="https://www.netlify.com/products/analytics/">counts page views and visitors</A> using aggregated data, anonymised. Meaning the site doesn't use cookies or any other potentially creepy tracking stuff.
+          Hosted on {" "}<A href="https://www.netlify.com/">Netlify</A>, the site {" "}<A href="https://plausible.io/govbins.uk">counts page views and visitors</A> using aggregated data, anonymised. Meaning the site doesn't use cookies or any other potentially creepy tracking stuff.
         </P>
         <H3>Web performance</H3>
         <P>

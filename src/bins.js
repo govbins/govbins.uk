@@ -626,6 +626,18 @@ export default {
       contributorURL: "https://www.instagram.com/paulemorgan/",
     },
     {
+      fileName: "North-Shropshire.jpg",
+      slug: "north-shropshire",
+      retro: "true",
+      retroWhy: "abolished",
+      retroName: "North Shropshire",
+      presentTwinFileName: "Shropshire.jpg",
+      startDate: "1972",
+      endDate: "2009",
+      contributorHandle: "@allanwin",
+      contributorURL: "https://twitter.com/allanwin",
+    },
+    {
       fileName: "West-Lancashire.jpg",
       slug: "west-lancashire",
       localAuthorityCountry: "eng",

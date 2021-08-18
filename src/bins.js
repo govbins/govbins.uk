@@ -1,6 +1,17 @@
 export default {
   bins: [
     {
+      fileName: "Wychavon.jpg",
+      slug: "wychavon",
+      localAuthorityCountry: "eng",
+      localAuthorityCode: "NNO",
+      collectionDate: "18 August 2021",
+      contributorHandle: "@rlcjones",
+      contributorURL: "https://twitter.com/rlcjones",
+      colour: "720-grayscale",
+      councilName: "Wychavon",
+    },
+    {
       fileName: "Scarborough.jpg",
       slug: "scarborough",
       localAuthorityCountry: "eng",

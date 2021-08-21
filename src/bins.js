@@ -1,6 +1,17 @@
 export default {
   bins: [
     {
+      fileName: "Redbridge.jpg",
+      slug: "redbridge",
+      localAuthorityCountry: "eng",
+      localAuthorityCode: "NNO",
+      collectionDate: "21 August 2021",
+      contributorHandle: "@thewub",
+      contributorURL: "https://twitter.com/thewub",
+      colour: "772-grayscale",
+      councilName: "Redbridge",
+    },
+    {
       fileName: "Wychavon.jpg",
       slug: "wychavon",
       localAuthorityCountry: "eng",

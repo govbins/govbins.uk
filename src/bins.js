@@ -1,6 +1,17 @@
 export default {
   bins: [
     {
+      fileName: "Erewash.jpg",
+      slug: "erewash",
+      localAuthorityCountry: "eng",
+      localAuthorityCode: "NNO",
+      collectionDate: "24 August 2021",
+      contributorHandle: "@beffdizzle",
+      contributorURL: "https://twitter.com/beffdizzle",
+      colour: "601-brown",
+      councilName: "Erewash",
+    },
+    {
       fileName: "Redbridge.jpg",
       slug: "redbridge",
       localAuthorityCountry: "eng",

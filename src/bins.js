@@ -1,6 +1,17 @@
 export default {
   bins: [
     {
+      fileName: "Selby.jpg",
+      slug: "selby",
+      localAuthorityCountry: "eng",
+      localAuthorityCode: "NNO",
+      collectionDate: "26 August 2021",
+      contributorHandle: "@resnikov359",
+      contributorURL: "https://www.instagram.com/resnikov359",
+      colour: "601-brown",
+      councilName: "Selby",
+    },
+    {
       fileName: "Erewash.jpg",
       slug: "erewash",
       localAuthorityCountry: "eng",

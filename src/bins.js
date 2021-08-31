@@ -1,6 +1,17 @@
 export default {
   bins: [
     {
+      fileName: "Gosport.jpg",
+      slug: "Gosport",
+      localAuthorityCountry: "eng",
+      localAuthorityCode: "NNO",
+      collectionDate: "31 August 2021",
+      contributorHandle: "@rlcjones",
+      contributorURL: "https://www.instagram.com/rlcjones",
+      colour: "772-grayscale",
+      councilName: "Gosport",
+    },
+    {
       fileName: "Selby.jpg",
       slug: "selby",
       localAuthorityCountry: "eng",

@@ -2,7 +2,7 @@ export default {
   bins: [
     {
       fileName: "Gosport.jpg",
-      slug: "Gosport",
+      slug: "gosport",
       localAuthorityCountry: "eng",
       localAuthorityCode: "NNO",
       collectionDate: "31 August 2021",

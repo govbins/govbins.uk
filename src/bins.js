@@ -1,6 +1,37 @@
 export default {
   bins: [
     {
+      fileName: "Eden.jpg",
+      slug: "eden",
+      localAuthorityCountry: "eng",
+      localAuthorityCode: "KES",
+      collectionDate: "2 October 2021",
+      contributorHandle: "Rachel Kirvan",
+      colour: "762-grayscale",
+      councilName: "Eden",
+    },
+    {
+      fileName: "Cornwall.jpg",
+      slug: "cornwall",
+      localAuthorityCountry: "eng",
+      localAuthorityCode: "NNO",
+      collectionDate: "2 October 2021",
+      contributorHandle: "@Amy_Hupe",
+      contributorURL: "https://twitter.com/Amy_Hupe",
+      colour: "601-brown",
+      councilName: "Cornwall",
+    },
+    {
+      fileName: "Worcester.jpg",
+      slug: "worcester",
+      localAuthorityCountry: "eng",
+      localAuthorityCode: "NNO",
+      collectionDate: "26 September 2021",
+      contributorHandle: "Sharon Walton",
+      colour: "601-brown",
+      councilName: "Worcester",
+    },
+    {
       fileName: "Gosport.jpg",
       slug: "gosport",
       localAuthorityCountry: "eng",

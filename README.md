@@ -2,13 +2,6 @@
 
 Source code for [govbins.uk](http://govbins.uk/)
 
-Open data APIs used in site:
-
-- [Local authorities in England](https://www.registers.service.gov.uk/registers/local-authority-eng)
-- [Local authorities in Northern Ireland](https://www.registers.service.gov.uk/registers/local-authority-nir)
-- [Local authorities in Scotland](https://www.registers.service.gov.uk/registers/local-authority-sct)
-- [Principal local authorities in Wales](https://www.registers.service.gov.uk/registers/principal-local-authority)
-
 ## Running it
 
 Install the dependencies:
@@ -31,9 +24,14 @@ Add the image in `/public/images`, then add another entry in `/src/bins.js` with
 
 ```javascript
 {
-  "fileName": "name-of-image.jpg",
-  "localAuthorityCountry": "eng", // must be eng, ni, sct or wls
-  "localAuthorityCode": "CHE", // must match the code from the api
-  "collectionDate": "12 March 2020"
-},
+  fileName: "Cornwall.jpg",
+  slug: "cornwall",
+  localAuthorityCountry: "eng",
+  localAuthorityCode: "NNO",
+  collectionDate: "2 October 2021",
+  contributorHandle: "@Amy_Hupe",
+  contributorURL: "https://twitter.com/Amy_Hupe",
+  colour: "601-brown",
+  councilName: "Cornwall",
+}
 ```

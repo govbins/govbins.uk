@@ -15,7 +15,7 @@ export default {
       localAuthorityCountry: "eng",
       localAuthorityCode: "EHA",
       collectionDate: "9 October 2021",
-      colour: "357-green",
+      colour: "780-grayscale",
       councilName: "Bedford",
     },
     {
@@ -25,7 +25,7 @@ export default {
       localAuthorityCode: "KES",
       collectionDate: "2 October 2021",
       contributorHandle: "Rachel Kirvan",
-      colour: "762-grayscale",
+      colour: "352-green",
       councilName: "Eden",
     },
     {
@@ -36,7 +36,7 @@ export default {
       collectionDate: "2 October 2021",
       contributorHandle: "@Amy_Hupe",
       contributorURL: "https://twitter.com/Amy_Hupe",
-      colour: "601-brown",
+      colour: "630-brown",
       councilName: "Cornwall",
     },
     {

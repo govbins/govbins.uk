@@ -1219,7 +1219,7 @@ export default {
       contributorHandle: "@candaharcats",
       contributorURL: "https://www.instagram.com/candaharcats/",
       colour: "220-blue",
-      councilName: "Belfast City Council",
+      councilName: "Belfast City",
     },
     {
       fileName: "Falkirk.jpg",

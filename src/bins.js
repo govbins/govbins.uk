@@ -1,6 +1,24 @@
 export default {
   bins: [
     {
+      fileName: "Central-Bedfordshire.jpg",
+      slug: "central-bedfordshire",
+      localAuthorityCountry: "eng",
+      localAuthorityCode: "EHA",
+      collectionDate: "9 October 2021",
+      colour: "357-green",
+      councilName: "Central Bedfordshire",
+    },
+    {
+      fileName: "Bedford.jpg",
+      slug: "bedford",
+      localAuthorityCountry: "eng",
+      localAuthorityCode: "EHA",
+      collectionDate: "9 October 2021",
+      colour: "357-green",
+      councilName: "Bedford",
+    },
+    {
       fileName: "Eden.jpg",
       slug: "eden",
       localAuthorityCountry: "eng",

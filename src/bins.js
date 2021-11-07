@@ -1,6 +1,17 @@
 export default {
   bins: [
     {
+      fileName: "Clackmannanshire.jpg",
+      slug: "clackmannanshire",
+      localAuthorityCountry: "sct",
+      localAuthorityCode: "GLG",
+      collectionDate: "7 November 2021",
+      contributorHandle: "@thnurg",
+      contributorURL: "https://twitter.com/thnurg",
+      colour: "220-blue",
+      councilName: "Clackmannanshire",
+    },
+    {
       fileName: "Central-Bedfordshire.jpg",
       slug: "central-bedfordshire",
       localAuthorityCountry: "eng",
@@ -3056,15 +3067,6 @@ export default {
       collectionDate: "15 April 2017",
       colour: "775-grayscale",
       councilName: "Perth and Kinross",
-    },
-    {
-      fileName: "Glasgow-City.jpg",
-      slug: "glasgow-city",
-      localAuthorityCountry: "sct",
-      localAuthorityCode: "GLG",
-      collectionDate: "15 April 2017",
-      colour: "210-blue",
-      councilName: "Glasgow City",
     },
     {
       fileName: "Medway.jpg",

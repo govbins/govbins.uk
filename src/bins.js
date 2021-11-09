@@ -1,6 +1,17 @@
 export default {
   bins: [
     {
+      fileName: "East-Ayrshire.jpg",
+      slug: "east-ayrshire",
+      localAuthorityCountry: "sct",
+      localAuthorityCode: "GLG",
+      collectionDate: "9 November 2021",
+      contributorHandle: "@StephanieKrus",
+      contributorURL: "https://twitter.com/StephanieKrus",
+      colour: "220-blue",
+      councilName: "East Ayrshire",
+    },
+    {
       fileName: "Clackmannanshire.jpg",
       slug: "clackmannanshire",
       localAuthorityCountry: "sct",

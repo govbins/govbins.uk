@@ -1,6 +1,17 @@
 export default {
   bins: [
     {
+      fileName: "Great-Yarmouth.jpg",
+      slug: "great-garmouth",
+      localAuthorityCountry: "sct",
+      localAuthorityCode: "GLG",
+      collectionDate: "13 November 2021",
+      contributorHandle: "@halfmanhalfwit",
+      contributorURL: "https://twitter.com/halfmanhalfwit",
+      colour: "352-green",
+      councilName: "Great Yarmouth",
+    },
+    {
       fileName: "South-Ayrshire.jpg",
       slug: "south-ayrshire",
       localAuthorityCountry: "sct",

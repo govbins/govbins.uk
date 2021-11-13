@@ -2,7 +2,7 @@ export default {
   bins: [
     {
       fileName: "Great-Yarmouth.jpg",
-      slug: "great-garmouth",
+      slug: "great-yarmouth",
       localAuthorityCountry: "sct",
       localAuthorityCode: "GLG",
       collectionDate: "13 November 2021",

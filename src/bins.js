@@ -1,6 +1,17 @@
 export default {
   bins: [
     {
+      fileName: "Boston.jpg",
+      slug: "boston",
+      localAuthorityCountry: "eng",
+      localAuthorityCode: "BOS",
+      collectionDate: "19 November 2021",
+      contributorHandle: "@samantharosesaw",
+      contributorURL: "https://twitter.com/samantharosesaw",
+      colour: "220-blue",
+      councilName: "Boston",
+    },
+    {
       fileName: "Great-Yarmouth.jpg",
       slug: "great-yarmouth",
       localAuthorityCountry: "sct",

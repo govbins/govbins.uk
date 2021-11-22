@@ -1,6 +1,37 @@
 export default {
   bins: [
     {
+      fileName: "Carmarthenshire.jpg",
+      slug: "carmarthenshire",
+      localAuthorityCountry: "wls",
+      localAuthorityCode: "CAR",
+      collectionDate: "22 November 2021",
+      colour: "722-grayscale",
+      councilName: "Carmarthenshire",
+    },
+    {
+      fileName: "Isle-of-Wight.jpg",
+      slug: "isle-of-wight",
+      localAuthorityCountry: "eng",
+      localAuthorityCode: "BOS",
+      collectionDate: "22 November 2021",
+      contributorHandle: "@andysc",
+      contributorURL: "https://twitter.com/andysc",
+      colour: "220-blue",
+      councilName: "Isle of Wight",
+    },
+    {
+      fileName: "Castle-Point.jpg",
+      slug: "castle-point",
+      localAuthorityCountry: "eng",
+      localAuthorityCode: "BOS",
+      collectionDate: "22 November 2021",
+      contributorHandle: "@mattharring_ton",
+      contributorURL: "https://twitter.com/mattharring_ton",
+      colour: "220-blue",
+      councilName: "Castle Point",
+    },
+    {
       fileName: "Breckland.jpg",
       slug: "breckland",
       localAuthorityCountry: "eng",

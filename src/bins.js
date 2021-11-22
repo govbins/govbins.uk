@@ -1,6 +1,26 @@
 export default {
   bins: [
     {
+      fileName: "Breckland.jpg",
+      slug: "breckland",
+      localAuthorityCountry: "eng",
+      localAuthorityCode: "NNO",
+      collectionDate: "21 November 2021",
+      colour: "746-grayscale",
+      councilName: "Breckland",
+    },
+    {
+      fileName: "Boston.jpg",
+      slug: "boston",
+      localAuthorityCountry: "eng",
+      localAuthorityCode: "BOS",
+      collectionDate: "20 November 2021",
+      contributorHandle: "@samantharosesaw",
+      contributorURL: "https://twitter.com/samantharosesaw",
+      colour: "220-blue",
+      councilName: "Boston",
+    },
+    {
       fileName: "Lincolnshire.jpg",
       slug: "lincolnshire",
       localAuthorityCountry: "eng",
@@ -10,17 +30,6 @@ export default {
       contributorURL: "https://twitter.com/samantharosesaw",
       colour: "220-blue",
       councilName: "Lincolnshire",
-    },
-    {
-      fileName: "Boston.jpg",
-      slug: "boston",
-      localAuthorityCountry: "eng",
-      localAuthorityCode: "BOS",
-      collectionDate: "19 November 2021",
-      contributorHandle: "@samantharosesaw",
-      contributorURL: "https://twitter.com/samantharosesaw",
-      colour: "220-blue",
-      councilName: "Boston",
     },
     {
       fileName: "Great-Yarmouth.jpg",
@@ -200,17 +209,6 @@ export default {
       contributorURL: "https://twitter.com/StruanSocial",
       colour: "762-grayscale",
       councilName: "Dumfries and Galloway",
-    },
-    {
-      fileName: "Breckland.jpg",
-      slug: "breckland",
-      localAuthorityCountry: "eng",
-      localAuthorityCode: "NNO",
-      collectionDate: "14 August 2021",
-      contributorHandle: "@liz545",
-      contributorURL: "https://twitter.com/liz545",
-      colour: "746-grayscale",
-      councilName: "Breckland",
     },
     {
       fileName: "Scottish-borders.jpg",

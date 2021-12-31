@@ -1,6 +1,17 @@
 export default {
   bins: [
     {
+      fileName: "Dudley.jpg",
+      slug: "dudley",
+      localAuthorityCountry: "eng",
+      localAuthorityCode: "BOS",
+      collectionDate: "28 December 2021",
+      contributorHandle: "@_amyrogers",
+      contributorURL: "https://twitter.com/_amyrogers",
+      colour: "220-blue",
+      councilName: "Dudley",
+    },  
+    {
       fileName: "Carmarthenshire.jpg",
       slug: "carmarthenshire",
       localAuthorityCountry: "wls",

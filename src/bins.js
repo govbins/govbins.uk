@@ -1,6 +1,17 @@
 export default {
   bins: [
     {
+      fileName: "Wyre-Forest.jpg",
+      slug: "Wyre Forest",
+      localAuthorityCountry: "eng",
+      localAuthorityCode: "BOS",
+      collectionDate: "28 December 2021",
+      contributorHandle: "@_amyrogers",
+      contributorURL: "https://twitter.com/_amyrogers",
+      colour: "220-blue",
+      councilName: "Wyre Forest",
+    }, 
+    {
       fileName: "Dudley.jpg",
       slug: "dudley",
       localAuthorityCountry: "eng",

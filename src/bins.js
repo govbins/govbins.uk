@@ -2,7 +2,7 @@ export default {
   bins: [
     {
       fileName: "Wyre-Forest.jpg",
-      slug: "Wyre Forest",
+      slug: "wyre-forest",
       localAuthorityCountry: "eng",
       localAuthorityCode: "BOS",
       collectionDate: "28 December 2021",

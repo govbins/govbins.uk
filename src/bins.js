@@ -1,6 +1,16 @@
 export default {
   bins: [
     {
+      fileName: "Plymouth.jpg",
+      slug: "plymouth",
+      localAuthorityCountry: "eng",
+      localAuthorityCode: "PLY",
+      collectionDate: "30 January 2021",
+      contributorHandle: "Anonymous",
+      colour: "220-blue",
+      councilName: "Plymouth",
+    }, 
+    {
       fileName: "Wyre-Forest.jpg",
       slug: "wyre-forest",
       localAuthorityCountry: "eng",

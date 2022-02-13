@@ -1,6 +1,16 @@
 export default {
   bins: [
     {
+      fileName: "Harrogate.jpg",
+      slug: "harrogate",
+      localAuthorityCountry: "eng",
+      localAuthorityCode: "HAR",
+      collectionDate: "6 February 2021",
+      contributorHandle: "Anonymous",
+      colour: "220-blue",
+      councilName: "Harrogate",
+    }, 
+    {
       fileName: "Plymouth.jpg",
       slug: "plymouth",
       localAuthorityCountry: "eng",

@@ -1,6 +1,24 @@
 export default {
   bins: [
     {
+      fileName: "Wallsall.jpg",
+      slug: "wallsall",
+      localAuthorityCountry: "eng",
+      localAuthorityCode: "WAL",
+      collectionDate: "22 May 2022",
+      colour: "722-grayscale",
+      councilName: "Wallsall",
+    },
+    {
+      fileName: "Newcastle-under-Lyme.jpg",
+      slug: "newcastle-under-lyme",
+      localAuthorityCountry: "eng",
+      localAuthorityCode: "NEW",
+      collectionDate: "22 May 2022",
+      colour: "722-grayscale",
+      councilName: "Newcastle-under-Lyme",
+    },
+    {
       fileName: "Harrogate.jpg",
       slug: "harrogate",
       localAuthorityCountry: "eng",

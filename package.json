@@ -16,7 +16,7 @@
     "autoprefixer": "^10.2.5",
     "fontsource-rubik": "^2.1.2",
     "moment": "^2.29.4",
-    "next": "^10.0.0",
+    "next": "^12.1.0",
     "next-on-netlify": "^2.3.2",
     "node-fetch": "^2.6.7",
     "param-case": "^3.0.4",

@@ -1,0 +1,66 @@
+---
+import Base from "../layouts/Base.astro";
+import { load, statusLabel } from "../lib/govbins";
+
+const { councils } = await load();
+const rank = { current: 0, upcoming: 1, abolished: 2 };
+const list = [...councils].sort((a, b) => rank[a.status] - rank[b.status] || a.name.localeCompare(b.name));
+---
+
+<Base title="Search">
+  <div class="search">
+    <label for="q" class="visually-hidden">Search for a council</label>
+    <input id="q" type="search" placeholder="Search catalogue" autocomplete="off" autofocus aria-controls="results" />
+    <ul id="results">
+      {
+        list.map((c) => (
+          <li data-name={[c.name, c.nameCy ?? "", c.officialName].join(" ").toLowerCase()}>
+            <a href={`/${c.id}`}>
+              {c.name}
+              {statusLabel(c) && <span class="label"> ({statusLabel(c)})</span>}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <div class="none" id="none" hidden>
+      <p id="none-term"></p>
+      <p><strong>Not catalogued...yet!</strong></p>
+      <a href="/submit-photos">Submit photos</a>
+    </div>
+  </div>
+</Base>
+
+<script>
+  const input = document.getElementById("q") as HTMLInputElement;
+  const items = [...document.querySelectorAll<HTMLLIElement>("#results li")];
+  const none = document.getElementById("none")!;
+  let selected = 0;
+
+  const visible = () => items.filter((li) => !li.hidden);
+  const highlight = () =>
+    visible().forEach((li, i) => li.firstElementChild!.classList.toggle("selected", i === selected));
+
+  const filter = () => {
+    const q = input.value.trim().toLowerCase();
+    items.forEach((li) => (li.hidden = !q || !li.dataset.name!.includes(q)));
+    selected = 0;
+    highlight();
+    none.hidden = !q || visible().length > 0;
+    document.getElementById("none-term")!.textContent = input.value;
+  };
+
+  input.addEventListener("input", filter);
+  input.addEventListener("keydown", (e) => {
+    const v = visible();
+    if (e.key === "ArrowDown") selected = Math.min(selected + 1, v.length - 1);
+    else if (e.key === "ArrowUp") selected = Math.max(selected - 1, 0);
+    else if (e.key === "Enter" && v[selected]) {
+      location.href = (v[selected].firstElementChild as HTMLAnchorElement).href;
+      return;
+    } else return;
+    e.preventDefault();
+    highlight();
+  });
+  filter();
+</script>

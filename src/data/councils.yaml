@@ -1,0 +1,3801 @@
+# Every council govbins knows about, past, present and scheduled.
+#
+# id:          used in the URL (govbins.uk/<id>). Don't change once published.
+# type:        county | district | unitary | metropolitan-district |
+#              london-borough | city-of-london. Counties don't collect bins.
+# gss:         ONS code, used to draw the map
+# county:      for two-tier districts, the county council's id
+# start / end: dates the council existed (end is the last day)
+# successors:  ids of the council(s) that took over
+#
+# To add a reorganisation: add the new councils with a start date, and give
+# each old council an end date (the day before vesting day) and successors.
+# The site works out what's current when it's built.
+
+- id: aberdeen-city
+  name: Aberdeen City
+  official_name: The Aberdeen City Council
+  type: unitary
+  nation: scotland
+  gss: S12000033
+  legacy_code: ABE
+- id: aberdeenshire
+  name: Aberdeenshire
+  official_name: The Aberdeenshire Council
+  type: unitary
+  nation: scotland
+  gss: S12000034
+  legacy_code: ABD
+- id: adur
+  name: Adur
+  official_name: Adur District Council
+  type: district
+  nation: england
+  gss: E07000223
+  county: west-sussex
+  legacy_code: ADU
+- id: allerdale
+  name: Allerdale
+  official_name: Allerdale Borough Council
+  type: district
+  nation: england
+  gss: E07000026
+  county: cumbria
+  start: 1974-04-01
+  end: 2023-03-31
+  successors:
+    - cumberland
+  legacy_code: ALL
+- id: amber-valley
+  name: Amber Valley
+  official_name: Amber Valley Borough Council
+  type: district
+  nation: england
+  gss: E07000032
+  county: derbyshire
+  legacy_code: AMB
+- id: angus
+  name: Angus
+  official_name: The Angus Council
+  type: unitary
+  nation: scotland
+  gss: S12000041
+  legacy_code: ANS
+- id: antrim
+  name: Antrim
+  official_name: Antrim Borough Council
+  type: district
+  nation: northern-ireland
+  end: 2015-03-31
+  successors:
+    - antrim-and-newtownabbey
+  legacy_code: ANT
+- id: antrim-and-newtownabbey
+  name: Antrim and Newtownabbey
+  official_name: Antrim and Newtownabbey Borough Council
+  type: district
+  nation: northern-ireland
+  gss: N09000001
+  start: 2015-04-01
+  legacy_code: ANN
+- id: ards
+  name: Ards
+  official_name: Ards Borough Council
+  type: district
+  nation: northern-ireland
+  end: 2015-03-31
+  successors:
+    - ards-and-north-down
+  legacy_code: ARD
+- id: ards-and-north-down
+  name: Ards and North Down
+  official_name: Ards and North Down Borough Council
+  type: district
+  nation: northern-ireland
+  gss: N09000011
+  start: 2015-04-01
+  legacy_code: AND
+- id: argyll-and-bute
+  name: Argyll and Bute
+  official_name: The Argyll and Bute Council
+  type: unitary
+  nation: scotland
+  gss: S12000035
+  legacy_code: AGB
+- id: armagh-city
+  name: Armagh City
+  official_name: Armagh City and District Council
+  type: district
+  nation: northern-ireland
+  end: 2015-03-31
+  successors:
+    - armagh-city-banbridge-and-craigavon
+  legacy_code: ARM
+- id: armagh-city-banbridge-and-craigavon
+  name: Armagh City, Banbridge and Craigavon
+  official_name: Armagh City, Banbridge and Craigavon Borough Council
+  type: district
+  nation: northern-ireland
+  gss: N09000002
+  start: 2015-04-01
+  legacy_code: ABC
+- id: arun
+  name: Arun
+  official_name: Arun District Council
+  type: district
+  nation: england
+  gss: E07000224
+  county: west-sussex
+  legacy_code: ARU
+- id: ashfield
+  name: Ashfield
+  official_name: Ashfield District Council
+  type: district
+  nation: england
+  gss: E07000170
+  county: nottinghamshire
+  legacy_code: ASH
+- id: ashford
+  name: Ashford
+  official_name: Ashford Borough Council
+  type: district
+  nation: england
+  gss: E07000105
+  county: kent
+  legacy_code: ASF
+- id: aylesbury-vale
+  name: Aylesbury Vale
+  official_name: Aylesbury Vale District Council
+  type: district
+  nation: england
+  start: 1974-04-01
+  end: 2020-03-31
+  successors:
+    - buckinghamshire
+  legacy_code: AYL
+- id: babergh
+  name: Babergh
+  official_name: Babergh District Council
+  type: district
+  nation: england
+  gss: E07000200
+  county: suffolk
+  legacy_code: BAB
+- id: ballymena
+  name: Ballymena
+  official_name: Ballymena Borough Council
+  type: district
+  nation: northern-ireland
+  end: 2015-03-31
+  successors:
+    - mid-and-east-antrim
+  legacy_code: BLA
+- id: ballymoney
+  name: Ballymoney
+  official_name: Ballymoney Borough Council
+  type: district
+  nation: northern-ireland
+  end: 2015-03-31
+  successors:
+    - causeway-coast-and-glens
+  legacy_code: BLY
+- id: banbridge
+  name: Banbridge
+  official_name: Banbridge District Council
+  type: district
+  nation: northern-ireland
+  end: 2015-03-31
+  successors:
+    - armagh-city-banbridge-and-craigavon
+  legacy_code: BNB
+- id: barking-and-dagenham
+  name: Barking and Dagenham
+  official_name: London Borough of Barking and Dagenham
+  type: london-borough
+  nation: england
+  gss: E09000002
+  legacy_code: BDG
+- id: barnet
+  name: Barnet
+  official_name: London Borough of Barnet
+  type: london-borough
+  nation: england
+  gss: E09000003
+  legacy_code: BNE
+- id: barnsley
+  name: Barnsley
+  official_name: Barnsley Metropolitan Borough Council
+  type: metropolitan-district
+  nation: england
+  gss: E08000016
+  legacy_code: BNS
+- id: barrow-in-furness
+  name: Barrow-in-Furness
+  official_name: Barrow-in-Furness Borough Council
+  type: district
+  nation: england
+  gss: E07000027
+  county: cumbria
+  start: 1974-04-01
+  end: 2023-03-31
+  successors:
+    - westmorland-and-furness
+  legacy_code: BAR
+- id: basildon
+  name: Basildon
+  official_name: Basildon Borough Council
+  type: district
+  nation: england
+  gss: E07000066
+  county: essex
+  legacy_code: BAI
+- id: basingstoke-and-deane
+  name: Basingstoke and Deane
+  official_name: Basingstoke and Deane Borough Council
+  type: district
+  nation: england
+  gss: E07000084
+  county: hampshire
+  legacy_code: BAN
+- id: bassetlaw
+  name: Bassetlaw
+  official_name: Bassetlaw District Council
+  type: district
+  nation: england
+  gss: E07000171
+  county: nottinghamshire
+  legacy_code: BAE
+- id: bath-and-north-east-somerset
+  name: Bath and North East Somerset
+  official_name: Bath and North East Somerset Council
+  type: unitary
+  nation: england
+  gss: E06000022
+  legacy_code: BAS
+- id: bedford
+  name: Bedford
+  official_name: Bedford Borough Council
+  type: unitary
+  nation: england
+  gss: E06000055
+  start: 2009-04-01
+  legacy_code: BDF
+- id: belfast
+  name: Belfast
+  official_name: Belfast City Council
+  type: district
+  nation: northern-ireland
+  gss: N09000003
+  legacy_code: BFS
+- id: berwick-upon-tweed
+  name: Berwick-upon-Tweed
+  official_name: Berwick-upon-Tweed Borough Council
+  type: district
+  nation: england
+  start: 1974-04-01
+  end: 2009-03-31
+  successors:
+    - northumberland
+- id: bexley
+  name: Bexley
+  official_name: London Borough of Bexley
+  type: london-borough
+  nation: england
+  gss: E09000004
+  legacy_code: BEX
+- id: birmingham
+  name: Birmingham
+  official_name: Birmingham City Council
+  type: metropolitan-district
+  nation: england
+  gss: E08000025
+  legacy_code: BIR
+- id: blaby
+  name: Blaby
+  official_name: Blaby District Council
+  type: district
+  nation: england
+  gss: E07000129
+  county: leicestershire
+  legacy_code: BLA
+- id: blackburn-with-darwen
+  name: Blackburn with Darwen
+  official_name: Blackburn with Darwen Borough Council
+  type: unitary
+  nation: england
+  gss: E06000008
+  legacy_code: BBD
+- id: blackpool
+  name: Blackpool
+  official_name: Blackpool Borough Council
+  type: unitary
+  nation: england
+  gss: E06000009
+  legacy_code: BPL
+- id: blaenau-gwent
+  name: Blaenau Gwent
+  name_cy: Blaenau Gwent
+  official_name: Blaenau Gwent County Borough Council
+  official_name_cy: Cyngor Bwrdeistref Sirol Blaenau Gwent
+  type: unitary
+  nation: wales
+  gss: W06000019
+  legacy_code: BGW
+- id: bolsover
+  name: Bolsover
+  official_name: Bolsover District Council
+  type: district
+  nation: england
+  gss: E07000033
+  county: derbyshire
+  legacy_code: BOS
+- id: bolton
+  name: Bolton
+  official_name: Bolton Metropolitan Borough Council
+  type: metropolitan-district
+  nation: england
+  gss: E08000001
+  legacy_code: BOL
+- id: boston
+  name: Boston
+  official_name: Boston Borough Council
+  type: district
+  nation: england
+  gss: E07000136
+  county: lincolnshire
+  legacy_code: BOT
+- id: bournemouth
+  name: Bournemouth
+  official_name: Bournemouth Borough Council
+  type: unitary
+  nation: england
+  start: 1974-04-01
+  end: 2019-03-31
+  successors:
+    - bournemouth-christchurch-and-poole
+  legacy_code: BMH
+- id: bournemouth-christchurch-and-poole
+  name: Bournemouth, Christchurch and Poole
+  official_name: Bournemouth, Christchurch and Poole Council
+  type: unitary
+  nation: england
+  gss: E06000058
+  start: 2019-04-01
+  legacy_code: BPC
+- id: bracknell-forest
+  name: Bracknell Forest
+  official_name: Bracknell Forest Council
+  type: unitary
+  nation: england
+  gss: E06000036
+  legacy_code: BRC
+- id: bradford
+  name: Bradford
+  official_name: City of Bradford Metropolitan District Council
+  type: metropolitan-district
+  nation: england
+  gss: E08000032
+  legacy_code: BRD
+- id: braintree
+  name: Braintree
+  official_name: Braintree District Council
+  type: district
+  nation: england
+  gss: E07000067
+  county: essex
+  legacy_code: BRA
+- id: breckland
+  name: Breckland
+  official_name: Breckland District Council
+  type: district
+  nation: england
+  gss: E07000143
+  county: norfolk
+  legacy_code: BRE
+- id: brent
+  name: Brent
+  official_name: London Borough of Brent
+  type: london-borough
+  nation: england
+  gss: E09000005
+  legacy_code: BEN
+- id: brentwood
+  name: Brentwood
+  official_name: Brentwood Borough Council
+  type: district
+  nation: england
+  gss: E07000068
+  county: essex
+  legacy_code: BRW
+- id: bridgend
+  name: Bridgend
+  name_cy: Pen-y-bont ar Ogwr
+  official_name: Bridgend County Borough Council
+  official_name_cy: Cyngor Bwrdeistref Sirol Pen-y-bont ar Ogwr
+  type: unitary
+  nation: wales
+  gss: W06000013
+  legacy_code: BGE
+- id: brighton-and-hove
+  name: Brighton and Hove
+  official_name: Brighton and Hove City Council
+  type: unitary
+  nation: england
+  gss: E06000043
+  legacy_code: BNH
+- id: broadland
+  name: Broadland
+  official_name: Broadland District Council
+  type: district
+  nation: england
+  gss: E07000144
+  county: norfolk
+  legacy_code: BRO
+- id: bromley
+  name: Bromley
+  official_name: London Borough of Bromley
+  type: london-borough
+  nation: england
+  gss: E09000006
+  legacy_code: BRY
+- id: bromsgrove
+  name: Bromsgrove
+  official_name: Bromsgrove District Council
+  type: district
+  nation: england
+  gss: E07000234
+  county: worcestershire
+  legacy_code: BRM
+- id: broxbourne
+  name: Broxbourne
+  official_name: Broxbourne Borough Council
+  type: district
+  nation: england
+  gss: E07000095
+  county: hertfordshire
+  legacy_code: BRX
+- id: broxtowe
+  name: Broxtowe
+  official_name: Broxtowe Borough Council
+  type: district
+  nation: england
+  gss: E07000172
+  county: nottinghamshire
+  legacy_code: BRT
+- id: buckinghamshire
+  name: Buckinghamshire
+  official_name: Buckinghamshire Council
+  type: unitary
+  nation: england
+  gss: E06000060
+  start: 2020-04-01
+  legacy_code: BUC
+- id: buckinghamshire-county-council
+  name: Buckinghamshire
+  official_name: Buckinghamshire County Council
+  type: county
+  nation: england
+  end: 2020-03-31
+  successors:
+    - buckinghamshire
+  legacy_code: BKM
+- id: burnley
+  name: Burnley
+  official_name: Burnley Borough Council
+  type: district
+  nation: england
+  gss: E07000117
+  county: lancashire
+  legacy_code: BUN
+- id: bury
+  name: Bury
+  official_name: Bury Metropolitan Borough Council
+  type: metropolitan-district
+  nation: england
+  gss: E08000002
+  legacy_code: BUR
+- id: caerphilly
+  name: Caerphilly
+  name_cy: Caerffili
+  official_name: Caerphilly County Borough Council
+  official_name_cy: Cyngor Bwrdeistref Sirol Caerffili
+  type: unitary
+  nation: wales
+  gss: W06000018
+  legacy_code: CAY
+- id: calderdale
+  name: Calderdale
+  official_name: Calderdale Metropolitan Borough Council
+  type: metropolitan-district
+  nation: england
+  gss: E08000033
+  legacy_code: CLD
+- id: cambridge
+  name: Cambridge
+  official_name: Cambridge City Council
+  type: district
+  nation: england
+  gss: E07000008
+  county: cambridgeshire
+  legacy_code: CAB
+- id: cambridgeshire
+  name: Cambridgeshire
+  official_name: Cambridgeshire County Council
+  type: county
+  nation: england
+  gss: E10000003
+  legacy_code: CAM
+- id: camden
+  name: Camden
+  official_name: London Borough of Camden
+  type: london-borough
+  nation: england
+  gss: E09000007
+  legacy_code: CMD
+- id: cannock-chase
+  name: Cannock Chase
+  official_name: Cannock Chase District Council
+  type: district
+  nation: england
+  gss: E07000192
+  county: staffordshire
+  legacy_code: CAN
+- id: canterbury
+  name: Canterbury
+  official_name: Canterbury City Council
+  type: district
+  nation: england
+  gss: E07000106
+  county: kent
+  legacy_code: CAT
+- id: cardiff
+  name: Cardiff
+  name_cy: Caerdydd
+  official_name: City of Cardiff Council
+  official_name_cy: Cyngor Dinas Caerdydd
+  type: unitary
+  nation: wales
+  gss: W06000015
+  legacy_code: CRF
+- id: carlisle
+  name: Carlisle
+  official_name: Carlisle City Council
+  type: district
+  nation: england
+  gss: E07000028
+  county: cumbria
+  start: 1974-04-01
+  end: 2023-03-31
+  successors:
+    - cumberland
+  legacy_code: CAR
+- id: carmarthenshire
+  name: Carmarthenshire
+  name_cy: Sir Gaerfyrddin
+  official_name: Carmarthenshire County Council
+  official_name_cy: Cyngor Sir Gâr
+  type: unitary
+  nation: wales
+  gss: W06000010
+  legacy_code: CMN
+- id: carrickfergus
+  name: Carrickfergus
+  official_name: Carrickfergus Borough Council
+  type: district
+  nation: northern-ireland
+  end: 2015-03-31
+  successors:
+    - mid-and-east-antrim
+  legacy_code: CKF
+- id: castle-morpeth
+  name: Castle Morpeth
+  official_name: Castle Morpeth Borough Council
+  type: district
+  nation: england
+  start: 1974-04-01
+  end: 2009-03-31
+  successors:
+    - northumberland
+- id: castle-point
+  name: Castle Point
+  official_name: Castle Point Borough Council
+  type: district
+  nation: england
+  gss: E07000069
+  county: essex
+  legacy_code: CAS
+- id: castlereagh
+  name: Castlereagh
+  official_name: Castlereagh Borough Council
+  type: district
+  nation: northern-ireland
+  end: 2015-03-31
+  successors:
+    - lisburn-and-castlereagh
+  legacy_code: CSR
+- id: causeway-coast-and-glens
+  name: Causeway Coast and Glens
+  official_name: Causeway Coast and Glens Borough Council
+  type: district
+  nation: northern-ireland
+  gss: N09000004
+  start: 2015-04-01
+  legacy_code: CCG
+- id: central-bedfordshire
+  name: Central Bedfordshire
+  official_name: Central Bedfordshire Council
+  type: unitary
+  nation: england
+  gss: E06000056
+  start: 2009-04-01
+  legacy_code: CBF
+- id: ceredigion
+  name: Ceredigion
+  name_cy: Ceredigion
+  official_name: Ceredigion County Council
+  official_name_cy: Cyngor Sir Ceredigion
+  type: unitary
+  nation: wales
+  gss: W06000008
+  legacy_code: CGN
+- id: charnwood
+  name: Charnwood
+  official_name: Charnwood Borough Council
+  type: district
+  nation: england
+  gss: E07000130
+  county: leicestershire
+  legacy_code: CHA
+- id: chelmsford
+  name: Chelmsford
+  official_name: Chelmsford City Council
+  type: district
+  nation: england
+  gss: E07000070
+  county: essex
+  legacy_code: CHL
+- id: cheltenham
+  name: Cheltenham
+  official_name: Cheltenham Borough Council
+  type: district
+  nation: england
+  gss: E07000078
+  county: gloucestershire
+  legacy_code: CHT
+- id: cherwell
+  name: Cherwell
+  official_name: Cherwell District Council
+  type: district
+  nation: england
+  gss: E07000177
+  county: oxfordshire
+  legacy_code: CHR
+- id: cheshire-east
+  name: Cheshire East
+  official_name: Cheshire East Council
+  type: unitary
+  nation: england
+  gss: E06000049
+  start: 2009-04-01
+  legacy_code: CHE
+- id: cheshire-west-and-chester
+  name: Cheshire West and Chester
+  official_name: Cheshire West and Chester Council
+  type: unitary
+  nation: england
+  gss: E06000050
+  start: 2009-04-01
+  legacy_code: CHW
+- id: chesterfield
+  name: Chesterfield
+  official_name: Chesterfield Borough Council
+  type: district
+  nation: england
+  gss: E07000034
+  county: derbyshire
+  legacy_code: CHS
+- id: chichester
+  name: Chichester
+  official_name: Chichester District Council
+  type: district
+  nation: england
+  gss: E07000225
+  county: west-sussex
+  legacy_code: CHI
+- id: chiltern
+  name: Chiltern
+  official_name: Chiltern District Council
+  type: district
+  nation: england
+  start: 1974-04-01
+  end: 2020-03-31
+  successors:
+    - buckinghamshire
+  legacy_code: CHN
+- id: chorley
+  name: Chorley
+  official_name: Chorley Borough Council
+  type: district
+  nation: england
+  gss: E07000118
+  county: lancashire
+  legacy_code: CHO
+- id: christchurch
+  name: Christchurch
+  official_name: Christchurch Borough Council
+  type: district
+  nation: england
+  start: 1974-04-01
+  end: 2019-03-31
+  successors:
+    - bournemouth-christchurch-and-poole
+  legacy_code: CHC
+- id: city-of-bristol
+  name: Bristol
+  official_name: Bristol City Council
+  type: unitary
+  nation: england
+  gss: E06000023
+  legacy_code: BST
+- id: city-of-durham
+  name: City of Durham
+  official_name: City of Durham Council
+  type: district
+  nation: england
+  start: 1974-04-01
+  end: 2009-03-31
+  successors:
+    - county-durham
+- id: city-of-lincoln
+  name: City of Lincoln
+  official_name: City of Lincoln Council
+  type: district
+  nation: england
+  gss: E07000138
+  county: lincolnshire
+  legacy_code: LIC
+- id: city-of-london
+  name: City of London
+  official_name: City of London Corporation
+  type: city-of-london
+  nation: england
+  gss: E09000001
+  legacy_code: LND
+- id: clackmannanshire
+  name: Clackmannanshire
+  official_name: The Clackmannanshire Council
+  type: unitary
+  nation: scotland
+  gss: S12000005
+  legacy_code: CLK
+- id: colchester
+  name: Colchester
+  official_name: Colchester Borough Council
+  type: district
+  nation: england
+  gss: E07000071
+  county: essex
+  legacy_code: COL
+- id: coleraine
+  name: Coleraine
+  official_name: Coleraine Borough Council
+  type: district
+  nation: northern-ireland
+  end: 2015-03-31
+  successors:
+    - causeway-coast-and-glens
+  legacy_code: CLR
+- id: congleton
+  name: Congleton
+  official_name: Congleton Borough Council
+  type: district
+  nation: england
+  start: 1974-04-01
+  end: 2009-03-31
+  successors:
+    - cheshire-east
+- id: conwy
+  name: Conwy
+  name_cy: Conwy
+  official_name: Conwy County Borough Council
+  official_name_cy: Cyngor Bwrdeistref Sirol Conwy
+  type: unitary
+  nation: wales
+  gss: W06000003
+  legacy_code: CWY
+- id: cookstown
+  name: Cookstown
+  official_name: Cookstown District Council
+  type: district
+  nation: northern-ireland
+  end: 2015-03-31
+  successors:
+    - mid-ulster
+  legacy_code: CKT
+- id: copeland
+  name: Copeland
+  official_name: Copeland Borough Council
+  type: district
+  nation: england
+  gss: E07000029
+  county: cumbria
+  start: 1974-04-01
+  end: 2023-03-31
+  successors:
+    - cumberland
+  legacy_code: COP
+- id: corby
+  name: Corby
+  official_name: Corby Borough Council
+  type: district
+  nation: england
+  start: 1974-04-01
+  end: 2021-03-31
+  successors:
+    - north-northamptonshire
+  legacy_code: COR
+- id: cornwall
+  name: Cornwall
+  official_name: Cornwall Council
+  type: unitary
+  nation: england
+  gss: E06000052
+  start: 2009-04-01
+  legacy_code: CON
+- id: cotswold
+  name: Cotswold
+  official_name: Cotswold District Council
+  type: district
+  nation: england
+  gss: E07000079
+  county: gloucestershire
+  legacy_code: COT
+- id: county-durham
+  name: County Durham
+  official_name: Durham County Council
+  type: unitary
+  nation: england
+  gss: E06000047
+  start: 2009-04-01
+  legacy_code: DUR
+- id: coventry
+  name: Coventry
+  official_name: Coventry City Council
+  type: metropolitan-district
+  nation: england
+  gss: E08000026
+  legacy_code: COV
+- id: craigavon
+  name: Craigavon
+  official_name: Craigavon Borough Council
+  type: district
+  nation: northern-ireland
+  end: 2015-03-31
+  successors:
+    - armagh-city-banbridge-and-craigavon
+  legacy_code: CGV
+- id: craven
+  name: Craven
+  official_name: Craven District Council
+  type: district
+  nation: england
+  gss: E07000163
+  county: north-yorkshire-county-council
+  start: 1974-04-01
+  end: 2023-03-31
+  successors:
+    - north-yorkshire
+  legacy_code: CRA
+- id: crawley
+  name: Crawley
+  official_name: Crawley Borough Council
+  type: district
+  nation: england
+  gss: E07000226
+  county: west-sussex
+  legacy_code: CRW
+- id: croydon
+  name: Croydon
+  official_name: London Borough of Croydon
+  type: london-borough
+  nation: england
+  gss: E09000008
+  legacy_code: CRY
+- id: cumberland
+  name: Cumberland
+  official_name: Cumberland Council
+  type: unitary
+  nation: england
+  gss: E06000063
+  start: 2023-04-01
+- id: cumbria
+  name: Cumbria
+  official_name: Cumbria County Council
+  type: county
+  nation: england
+  gss: E10000006
+  end: 2023-03-31
+  successors:
+    - cumberland
+    - westmorland-and-furness
+  legacy_code: CMA
+- id: dacorum
+  name: Dacorum
+  official_name: Dacorum Borough Council
+  type: district
+  nation: england
+  gss: E07000096
+  county: hertfordshire
+  legacy_code: DAC
+- id: darlington
+  name: Darlington
+  official_name: Darlington Borough Council
+  type: unitary
+  nation: england
+  gss: E06000005
+  legacy_code: DAL
+- id: dartford
+  name: Dartford
+  official_name: Dartford Borough Council
+  type: district
+  nation: england
+  gss: E07000107
+  county: kent
+  legacy_code: DAR
+- id: daventry
+  name: Daventry
+  official_name: Daventry District Council
+  type: district
+  nation: england
+  start: 1974-04-01
+  end: 2021-03-31
+  successors:
+    - west-northamptonshire
+  legacy_code: DAV
+- id: denbighshire
+  name: Denbighshire
+  name_cy: Sir Ddinbych
+  official_name: Denbighshire County Council
+  official_name_cy: Cyngor Sir Ddinbych
+  type: unitary
+  nation: wales
+  gss: W06000004
+  legacy_code: DEN
+- id: derby
+  name: Derby
+  official_name: Derby City Council
+  type: unitary
+  nation: england
+  gss: E06000015
+  legacy_code: DER
+- id: derbyshire
+  name: Derbyshire
+  official_name: Derbyshire County Council
+  type: county
+  nation: england
+  gss: E10000007
+  legacy_code: DBY
+- id: derbyshire-dales
+  name: Derbyshire Dales
+  official_name: Derbyshire Dales District Council
+  type: district
+  nation: england
+  gss: E07000035
+  county: derbyshire
+  legacy_code: DEB
+- id: derry
+  name: Derry
+  official_name: Derry City Council
+  type: district
+  nation: northern-ireland
+  end: 2015-03-31
+  successors:
+    - derry-city-and-strabane
+  legacy_code: DRY
+- id: derry-city-and-strabane
+  name: Derry City and Strabane
+  official_name: Derry City and Strabane District Council
+  type: district
+  nation: northern-ireland
+  gss: N09000005
+  start: 2015-04-01
+  legacy_code: DRS
+- id: devon
+  name: Devon
+  official_name: Devon County Council
+  type: county
+  nation: england
+  gss: E10000008
+  legacy_code: DEV
+- id: doncaster
+  name: Doncaster
+  official_name: Doncaster Metropolitan Borough Council
+  type: metropolitan-district
+  nation: england
+  gss: E08000017
+  legacy_code: DNC
+- id: dorset
+  name: Dorset
+  official_name: Dorset Council
+  type: unitary
+  nation: england
+  gss: E06000059
+  start: 2019-04-01
+  legacy_code: DST
+- id: dorset-county-council
+  name: Dorset
+  official_name: Dorset County Council
+  type: county
+  nation: england
+  end: 2019-03-31
+  successors:
+    - dorset
+  legacy_code: DOR
+- id: dover
+  name: Dover
+  official_name: Dover District Council
+  type: district
+  nation: england
+  gss: E07000108
+  county: kent
+  legacy_code: DOV
+- id: down
+  name: Down
+  official_name: Down District Council
+  type: district
+  nation: northern-ireland
+  end: 2015-03-31
+  successors:
+    - newry-mourne-and-down
+  legacy_code: DOW
+- id: dudley
+  name: Dudley
+  official_name: Dudley Metropolitan Borough Council
+  type: metropolitan-district
+  nation: england
+  gss: E08000027
+  legacy_code: DUD
+- id: dumfries-and-galloway
+  name: Dumfries and Galloway
+  official_name: The Dumfries and Galloway Council
+  type: unitary
+  nation: scotland
+  gss: S12000006
+  legacy_code: DGY
+- id: dundee-city
+  name: Dundee City
+  official_name: The Dundee City Council
+  type: unitary
+  nation: scotland
+  gss: S12000042
+  legacy_code: DND
+- id: dungannon-and-south-tyrone
+  name: Dungannon and South Tyrone
+  official_name: Dungannon and South Tyrone Borough Council
+  type: district
+  nation: northern-ireland
+  end: 2015-03-31
+  successors:
+    - mid-ulster
+  legacy_code: DGN
+- id: ealing
+  name: Ealing
+  official_name: London Borough of Ealing
+  type: london-borough
+  nation: england
+  gss: E09000009
+  legacy_code: EAL
+- id: east-ayrshire
+  name: East Ayrshire
+  official_name: The East Ayrshire Council
+  type: unitary
+  nation: scotland
+  gss: S12000008
+  legacy_code: EAY
+- id: east-cambridgeshire
+  name: East Cambridgeshire
+  official_name: East Cambridgeshire District Council
+  type: district
+  nation: england
+  gss: E07000009
+  county: cambridgeshire
+  legacy_code: ECA
+- id: east-devon
+  name: East Devon
+  official_name: East Devon District Council
+  type: district
+  nation: england
+  gss: E07000040
+  county: devon
+  legacy_code: EDE
+- id: east-dorset
+  name: East Dorset
+  official_name: East Dorset District Council
+  type: district
+  nation: england
+  start: 1974-04-01
+  end: 2019-03-31
+  successors:
+    - dorset
+  legacy_code: EDO
+- id: east-dunbartonshire
+  name: East Dunbartonshire
+  official_name: The East Dunbartonshire Council
+  type: unitary
+  nation: scotland
+  gss: S12000045
+  legacy_code: EDU
+- id: east-hampshire
+  name: East Hampshire
+  official_name: East Hampshire District Council
+  type: district
+  nation: england
+  gss: E07000085
+  county: hampshire
+  legacy_code: EHA
+- id: east-hertfordshire
+  name: East Hertfordshire
+  official_name: East Hertfordshire District Council
+  type: district
+  nation: england
+  gss: E07000242
+  county: hertfordshire
+  legacy_code: EHE
+- id: east-lindsey
+  name: East Lindsey
+  official_name: East Lindsey District Council
+  type: district
+  nation: england
+  gss: E07000137
+  county: lincolnshire
+  legacy_code: ELI
+- id: east-lothian
+  name: East Lothian
+  official_name: The East Lothian Council
+  type: unitary
+  nation: scotland
+  gss: S12000010
+  legacy_code: ELN
+- id: east-northamptonshire
+  name: East Northamptonshire
+  official_name: East Northamptonshire Council
+  type: district
+  nation: england
+  start: 1974-04-01
+  end: 2021-03-31
+  successors:
+    - north-northamptonshire
+  legacy_code: ENO
+- id: east-renfrewshire
+  name: East Renfrewshire
+  official_name: The East Renfrewshire Council
+  type: unitary
+  nation: scotland
+  gss: S12000011
+  legacy_code: ERW
+- id: east-riding-of-yorkshire
+  name: East Riding of Yorkshire
+  official_name: East Riding of Yorkshire Council
+  type: unitary
+  nation: england
+  gss: E06000011
+  legacy_code: ERY
+- id: east-staffordshire
+  name: East Staffordshire
+  official_name: East Staffordshire Borough Council
+  type: district
+  nation: england
+  gss: E07000193
+  county: staffordshire
+  legacy_code: EST
+- id: east-suffolk
+  name: East Suffolk
+  official_name: East Suffolk Council
+  type: district
+  nation: england
+  gss: E07000244
+  county: suffolk
+  start: 2019-04-01
+  legacy_code: ESK
+- id: east-surrey
+  name: East Surrey
+  official_name: East Surrey Council
+  type: unitary
+  nation: england
+  start: 2027-04-01
+- id: east-sussex
+  name: East Sussex
+  official_name: East Sussex County Council
+  type: county
+  nation: england
+  gss: E10000011
+  legacy_code: ESX
+- id: eastbourne
+  name: Eastbourne
+  official_name: Eastbourne Borough Council
+  type: district
+  nation: england
+  gss: E07000061
+  county: east-sussex
+  legacy_code: EAS
+- id: eastleigh
+  name: Eastleigh
+  official_name: Eastleigh Borough Council
+  type: district
+  nation: england
+  gss: E07000086
+  county: hampshire
+  legacy_code: EAT
+- id: eden
+  name: Eden
+  official_name: Eden District Council
+  type: district
+  nation: england
+  gss: E07000030
+  county: cumbria
+  start: 1974-04-01
+  end: 2023-03-31
+  successors:
+    - westmorland-and-furness
+  legacy_code: EDN
+- id: edinburgh
+  name: Edinburgh
+  official_name: The City of Edinburgh Council
+  type: unitary
+  nation: scotland
+  gss: S12000036
+  legacy_code: EDH
+- id: elmbridge
+  name: Elmbridge
+  official_name: Elmbridge Borough Council
+  type: district
+  nation: england
+  gss: E07000207
+  county: surrey
+  start: 1974-04-01
+  end: 2027-03-31
+  successors:
+    - east-surrey
+  legacy_code: ELM
+- id: enfield
+  name: Enfield
+  official_name: London Borough of Enfield
+  type: london-borough
+  nation: england
+  gss: E09000010
+  legacy_code: ENF
+- id: epping-forest
+  name: Epping Forest
+  official_name: Epping Forest District Council
+  type: district
+  nation: england
+  gss: E07000072
+  county: essex
+  legacy_code: EPP
+- id: epsom-and-ewell
+  name: Epsom and Ewell
+  official_name: Epsom and Ewell Borough Council
+  type: district
+  nation: england
+  gss: E07000208
+  county: surrey
+  start: 1974-04-01
+  end: 2027-03-31
+  successors:
+    - east-surrey
+  legacy_code: EPS
+- id: erewash
+  name: Erewash
+  official_name: Erewash Borough Council
+  type: district
+  nation: england
+  gss: E07000036
+  county: derbyshire
+  legacy_code: ERE
+- id: essex
+  name: Essex
+  official_name: Essex County Council
+  type: county
+  nation: england
+  gss: E10000012
+  legacy_code: ESS
+- id: exeter
+  name: Exeter
+  official_name: Exeter City Council
+  type: district
+  nation: england
+  gss: E07000041
+  county: devon
+  legacy_code: EXE
+- id: falkirk
+  name: Falkirk
+  official_name: The Falkirk Council
+  type: unitary
+  nation: scotland
+  gss: S12000014
+  legacy_code: FAL
+- id: fareham
+  name: Fareham
+  official_name: Fareham Borough Council
+  type: district
+  nation: england
+  gss: E07000087
+  county: hampshire
+  legacy_code: FAR
+- id: fenland
+  name: Fenland
+  official_name: Fenland District Council
+  type: district
+  nation: england
+  gss: E07000010
+  county: cambridgeshire
+  legacy_code: FEN
+- id: fermanagh
+  name: Fermanagh
+  official_name: Fermanagh District Council
+  type: district
+  nation: northern-ireland
+  end: 2015-03-31
+  successors:
+    - fermanagh-and-omagh
+  legacy_code: FER
+- id: fermanagh-and-omagh
+  name: Fermanagh and Omagh
+  official_name: Fermanagh and Omagh District Council
+  type: district
+  nation: northern-ireland
+  gss: N09000006
+  start: 2015-04-01
+  legacy_code: FMO
+- id: fife
+  name: Fife
+  official_name: The Fife Council
+  type: unitary
+  nation: scotland
+  gss: S12000047
+  legacy_code: FIF
+- id: flintshire
+  name: Flintshire
+  name_cy: Sir y Fflint
+  official_name: Flintshire County Council
+  official_name_cy: Cyngor Sir y Fflint
+  type: unitary
+  nation: wales
+  gss: W06000005
+  legacy_code: FLN
+- id: folkestone-and-hythe
+  name: Folkestone and Hythe
+  official_name: Folkestone and Hythe Council
+  type: district
+  nation: england
+  gss: E07000112
+  county: kent
+  start: 2018-04-01
+  legacy_code: SHE
+- id: forest-heath
+  name: Forest Heath
+  official_name: Forest Heath District Council
+  type: district
+  nation: england
+  start: 1974-04-01
+  end: 2019-03-31
+  successors:
+    - west-suffolk
+  legacy_code: FOR
+- id: forest-of-dean
+  name: Forest of Dean
+  official_name: Forest of Dean District Council
+  type: district
+  nation: england
+  gss: E07000080
+  county: gloucestershire
+  legacy_code: FOE
+- id: fylde
+  name: Fylde
+  official_name: Fylde Borough Council
+  type: district
+  nation: england
+  gss: E07000119
+  county: lancashire
+  legacy_code: FYL
+- id: gateshead
+  name: Gateshead
+  official_name: Gateshead Metropolitan Borough Council
+  type: metropolitan-district
+  nation: england
+  gss: E08000037
+  legacy_code: GAT
+- id: gedling
+  name: Gedling
+  official_name: Gedling Borough Council
+  type: district
+  nation: england
+  gss: E07000173
+  county: nottinghamshire
+  legacy_code: GED
+- id: glasgow-city
+  name: Glasgow City
+  official_name: The Glasgow City Council
+  type: unitary
+  nation: scotland
+  gss: S12000049
+  legacy_code: GLG
+- id: gloucester
+  name: Gloucester
+  official_name: Gloucester City Council
+  type: district
+  nation: england
+  gss: E07000081
+  county: gloucestershire
+  legacy_code: GLO
+- id: gloucestershire
+  name: Gloucestershire
+  official_name: Gloucestershire County Council
+  type: county
+  nation: england
+  gss: E10000013
+  legacy_code: GLS
+- id: gosport
+  name: Gosport
+  official_name: Gosport Borough Council
+  type: district
+  nation: england
+  gss: E07000088
+  county: hampshire
+  legacy_code: GOS
+- id: gravesham
+  name: Gravesham
+  official_name: Gravesham Borough Council
+  type: district
+  nation: england
+  gss: E07000109
+  county: kent
+  legacy_code: GRA
+- id: great-yarmouth
+  name: Great Yarmouth
+  official_name: Great Yarmouth Borough Council
+  type: district
+  nation: england
+  gss: E07000145
+  county: norfolk
+  legacy_code: GRY
+- id: greenwich
+  name: Greenwich
+  official_name: Royal Borough of Greenwich
+  type: london-borough
+  nation: england
+  gss: E09000011
+  legacy_code: GRE
+- id: guildford
+  name: Guildford
+  official_name: Guildford Borough Council
+  type: district
+  nation: england
+  gss: E07000209
+  county: surrey
+  start: 1974-04-01
+  end: 2027-03-31
+  successors:
+    - west-surrey
+  legacy_code: GRT
+- id: gwynedd
+  name: Gwynedd
+  name_cy: Gwynedd
+  official_name: Gwynedd Council
+  official_name_cy: Cyngor Gwynedd
+  type: unitary
+  nation: wales
+  gss: W06000002
+  legacy_code: GWN
+- id: hackney
+  name: Hackney
+  official_name: London Borough of Hackney
+  type: london-borough
+  nation: england
+  gss: E09000012
+  legacy_code: HCK
+- id: halton
+  name: Halton
+  official_name: Halton Borough Council
+  type: unitary
+  nation: england
+  gss: E06000006
+  legacy_code: HAL
+- id: hambleton
+  name: Hambleton
+  official_name: Hambleton District Council
+  type: district
+  nation: england
+  gss: E07000164
+  county: north-yorkshire-county-council
+  start: 1974-04-01
+  end: 2023-03-31
+  successors:
+    - north-yorkshire
+  legacy_code: HAE
+- id: hammersmith-and-fulham
+  name: Hammersmith and Fulham
+  official_name: London Borough of Hammersmith & Fulham
+  type: london-borough
+  nation: england
+  gss: E09000013
+  legacy_code: HMF
+- id: hampshire
+  name: Hampshire
+  official_name: Hampshire County Council
+  type: county
+  nation: england
+  gss: E10000014
+  legacy_code: HAM
+- id: harborough
+  name: Harborough
+  official_name: Harborough District Council
+  type: district
+  nation: england
+  gss: E07000131
+  county: leicestershire
+  legacy_code: HAO
+- id: haringey
+  name: Haringey
+  official_name: London Borough of Haringey
+  type: london-borough
+  nation: england
+  gss: E09000014
+  legacy_code: HRY
+- id: harlow
+  name: Harlow
+  official_name: Harlow District Council
+  type: district
+  nation: england
+  gss: E07000073
+  county: essex
+  legacy_code: HAR
+- id: harrogate
+  name: Harrogate
+  official_name: Harrogate Borough Council
+  type: district
+  nation: england
+  gss: E07000165
+  county: north-yorkshire-county-council
+  start: 1974-04-01
+  end: 2023-03-31
+  successors:
+    - north-yorkshire
+  legacy_code: HAG
+- id: harrow
+  name: Harrow
+  official_name: London Borough of Harrow
+  type: london-borough
+  nation: england
+  gss: E09000015
+  legacy_code: HRW
+- id: hart
+  name: Hart
+  official_name: Hart District Council
+  type: district
+  nation: england
+  gss: E07000089
+  county: hampshire
+  legacy_code: HAT
+- id: hartlepool
+  name: Hartlepool
+  official_name: Hartlepool Borough Council
+  type: unitary
+  nation: england
+  gss: E06000001
+  legacy_code: HPL
+- id: hastings
+  name: Hastings
+  official_name: Hastings Borough Council
+  type: district
+  nation: england
+  gss: E07000062
+  county: east-sussex
+  legacy_code: HAS
+- id: havant
+  name: Havant
+  official_name: Havant Borough Council
+  type: district
+  nation: england
+  gss: E07000090
+  county: hampshire
+  legacy_code: HAA
+- id: havering
+  name: Havering
+  official_name: London Borough of Havering
+  type: london-borough
+  nation: england
+  gss: E09000016
+  legacy_code: HAV
+- id: herefordshire
+  name: Herefordshire
+  official_name: Herefordshire Council
+  type: unitary
+  nation: england
+  gss: E06000019
+  legacy_code: HEF
+- id: hertfordshire
+  name: Hertfordshire
+  official_name: Hertfordshire County Council
+  type: county
+  nation: england
+  gss: E10000015
+  legacy_code: HRT
+- id: hertsmere
+  name: Hertsmere
+  official_name: Hertsmere Borough Council
+  type: district
+  nation: england
+  gss: E07000098
+  county: hertfordshire
+  legacy_code: HER
+- id: high-peak
+  name: High Peak
+  official_name: High Peak Borough Council
+  type: district
+  nation: england
+  gss: E07000037
+  county: derbyshire
+  legacy_code: HIG
+- id: highland
+  name: Highland
+  official_name: The Highland Council
+  type: unitary
+  nation: scotland
+  gss: S12000017
+  legacy_code: HLD
+- id: hillingdon
+  name: Hillingdon
+  official_name: London Borough of Hillingdon
+  type: london-borough
+  nation: england
+  gss: E09000017
+  legacy_code: HIL
+- id: hinckley-and-bosworth
+  name: Hinckley and Bosworth
+  official_name: Hinckley and Bosworth Borough Council
+  type: district
+  nation: england
+  gss: E07000132
+  county: leicestershire
+  legacy_code: HIN
+- id: horsham
+  name: Horsham
+  official_name: Horsham District Council
+  type: district
+  nation: england
+  gss: E07000227
+  county: west-sussex
+  legacy_code: HOR
+- id: hounslow
+  name: Hounslow
+  official_name: London Borough of Hounslow
+  type: london-borough
+  nation: england
+  gss: E09000018
+  legacy_code: HNS
+- id: huntingdonshire
+  name: Huntingdonshire
+  official_name: Huntingdonshire District Council
+  type: district
+  nation: england
+  gss: E07000011
+  county: cambridgeshire
+  legacy_code: HUN
+- id: hyndburn
+  name: Hyndburn
+  official_name: Hyndburn Borough Council
+  type: district
+  nation: england
+  gss: E07000120
+  county: lancashire
+  legacy_code: HYN
+- id: inverclyde
+  name: Inverclyde
+  official_name: The Inverclyde Council
+  type: unitary
+  nation: scotland
+  gss: S12000018
+  legacy_code: IVC
+- id: ipswich
+  name: Ipswich
+  official_name: Ipswich Borough Council
+  type: district
+  nation: england
+  gss: E07000202
+  county: suffolk
+  legacy_code: IPS
+- id: isle-of-anglesey
+  name: Isle of Anglesey
+  name_cy: Sir Ynys Môn
+  official_name: Isle of Anglesey County Council
+  official_name_cy: Cyngor Sir Ynys Môn
+  type: unitary
+  nation: wales
+  gss: W06000001
+  legacy_code: AGY
+- id: isle-of-wight
+  name: Isle of Wight
+  official_name: Isle of Wight Council
+  type: unitary
+  nation: england
+  gss: E06000046
+  legacy_code: IOW
+- id: isles-of-scilly
+  name: Isles of Scilly
+  official_name: Council of the Isles of Scilly
+  type: unitary
+  nation: england
+  gss: E06000053
+  legacy_code: IOS
+- id: islington
+  name: Islington
+  official_name: London Borough of Islington
+  type: london-borough
+  nation: england
+  gss: E09000019
+  legacy_code: ISL
+- id: kensington-and-chelsea
+  name: Kensington and Chelsea
+  official_name: Royal Borough of Kensington and Chelsea
+  type: london-borough
+  nation: england
+  gss: E09000020
+  legacy_code: KEC
+- id: kent
+  name: Kent
+  official_name: Kent County Council
+  type: county
+  nation: england
+  gss: E10000016
+  legacy_code: KEN
+- id: kettering
+  name: Kettering
+  official_name: Kettering Borough Council
+  type: district
+  nation: england
+  start: 1974-04-01
+  end: 2021-03-31
+  successors:
+    - north-northamptonshire
+  legacy_code: KET
+- id: kings-lynn-and-west-norfolk
+  name: King's Lynn and West Norfolk
+  official_name: Borough Council of King's Lynn and West Norfolk
+  type: district
+  nation: england
+  gss: E07000146
+  county: norfolk
+  legacy_code: KIN
+- id: kingston-upon-hull
+  name: Kingston upon Hull
+  official_name: Hull City Council
+  type: unitary
+  nation: england
+  gss: E06000010
+  legacy_code: KHL
+- id: kingston-upon-thames
+  name: Kingston upon Thames
+  official_name: Royal Borough of Kingston upon Thames
+  type: london-borough
+  nation: england
+  gss: E09000021
+  legacy_code: KTT
+- id: kirklees
+  name: Kirklees
+  official_name: Kirklees Council
+  type: metropolitan-district
+  nation: england
+  gss: E08000034
+  legacy_code: KIR
+- id: knowsley
+  name: Knowsley
+  official_name: Knowsley Metropolitan Borough Council
+  type: metropolitan-district
+  nation: england
+  gss: E08000011
+  legacy_code: KWL
+- id: lambeth
+  name: Lambeth
+  official_name: London Borough of Lambeth
+  type: london-borough
+  nation: england
+  gss: E09000022
+  legacy_code: LBH
+- id: lancashire
+  name: Lancashire
+  official_name: Lancashire County Council
+  type: county
+  nation: england
+  gss: E10000017
+  legacy_code: LAN
+- id: lancaster
+  name: Lancaster
+  official_name: Lancaster City Council
+  type: district
+  nation: england
+  gss: E07000121
+  county: lancashire
+  legacy_code: LAC
+- id: larne
+  name: Larne
+  official_name: Larne Borough Council
+  type: district
+  nation: northern-ireland
+  end: 2015-03-31
+  successors:
+    - mid-and-east-antrim
+  legacy_code: LRN
+- id: leeds
+  name: Leeds
+  official_name: Leeds City Council
+  type: metropolitan-district
+  nation: england
+  gss: E08000035
+  legacy_code: LDS
+- id: leicester
+  name: Leicester
+  official_name: Leicester City Council
+  type: unitary
+  nation: england
+  gss: E06000016
+  legacy_code: LCE
+- id: leicestershire
+  name: Leicestershire
+  official_name: Leicestershire County Council
+  type: county
+  nation: england
+  gss: E10000018
+  legacy_code: LEC
+- id: lewes
+  name: Lewes
+  official_name: Lewes District Council
+  type: district
+  nation: england
+  gss: E07000063
+  county: east-sussex
+  legacy_code: LEE
+- id: lewisham
+  name: Lewisham
+  official_name: London Borough of Lewisham
+  type: london-borough
+  nation: england
+  gss: E09000023
+  legacy_code: LEW
+- id: lichfield
+  name: Lichfield
+  official_name: Lichfield District Council
+  type: district
+  nation: england
+  gss: E07000194
+  county: staffordshire
+  legacy_code: LIF
+- id: limavady
+  name: Limavady
+  official_name: Limavady Borough Council
+  type: district
+  nation: northern-ireland
+  end: 2015-03-31
+  successors:
+    - causeway-coast-and-glens
+  legacy_code: LMV
+- id: lincolnshire
+  name: Lincolnshire
+  official_name: Lincolnshire County Council
+  type: county
+  nation: england
+  gss: E10000019
+  legacy_code: LIN
+- id: lisburn
+  name: Lisburn
+  official_name: Lisburn City Council
+  type: district
+  nation: northern-ireland
+  end: 2015-03-31
+  successors:
+    - lisburn-and-castlereagh
+  legacy_code: LSB
+- id: lisburn-and-castlereagh
+  name: Lisburn and Castlereagh
+  official_name: Lisburn and Castlereagh City Council
+  type: district
+  nation: northern-ireland
+  gss: N09000007
+  start: 2015-04-01
+  legacy_code: LBC
+- id: liverpool
+  name: Liverpool
+  official_name: Liverpool City Council
+  type: metropolitan-district
+  nation: england
+  gss: E08000012
+  legacy_code: LIV
+- id: luton
+  name: Luton
+  official_name: Luton Borough Council
+  type: unitary
+  nation: england
+  gss: E06000032
+  legacy_code: LUT
+- id: macclesfield
+  name: Macclesfield
+  official_name: Macclesfield Borough Council
+  type: district
+  nation: england
+  start: 1974-04-01
+  end: 2009-03-31
+  successors:
+    - cheshire-east
+- id: magherafelt
+  name: Magherafelt
+  official_name: Magherafelt District Council
+  type: district
+  nation: northern-ireland
+  end: 2015-03-31
+  successors:
+    - mid-ulster
+  legacy_code: MFT
+- id: maidstone
+  name: Maidstone
+  official_name: Maidstone Borough Council
+  type: district
+  nation: england
+  gss: E07000110
+  county: kent
+  legacy_code: MAI
+- id: maldon
+  name: Maldon
+  official_name: Maldon District Council
+  type: district
+  nation: england
+  gss: E07000074
+  county: essex
+  legacy_code: MAL
+- id: malvern-hills
+  name: Malvern Hills
+  official_name: Malvern Hills District Council
+  type: district
+  nation: england
+  gss: E07000235
+  county: worcestershire
+  legacy_code: MAV
+- id: manchester
+  name: Manchester
+  official_name: Manchester City Council
+  type: metropolitan-district
+  nation: england
+  gss: E08000003
+  legacy_code: MAN
+- id: mansfield
+  name: Mansfield
+  official_name: Mansfield District Council
+  type: district
+  nation: england
+  gss: E07000174
+  county: nottinghamshire
+  legacy_code: MAS
+- id: medway
+  name: Medway
+  official_name: Medway Council
+  type: unitary
+  nation: england
+  gss: E06000035
+  legacy_code: MDW
+- id: melton
+  name: Melton
+  official_name: Melton Borough Council
+  type: district
+  nation: england
+  gss: E07000133
+  county: leicestershire
+  legacy_code: MEL
+- id: mendip
+  name: Mendip
+  official_name: Mendip District Council
+  type: district
+  nation: england
+  gss: E07000187
+  county: somerset-county-council
+  start: 1974-04-01
+  end: 2023-03-31
+  successors:
+    - somerset
+  legacy_code: MEN
+- id: merthyr-tydfil
+  name: Merthyr Tydfil
+  name_cy: Merthyr Tudful
+  official_name: Merthyr Tydfil County Borough Council
+  official_name_cy: Cyngor Bwrdeistref Sirol Merthyr Tudful
+  type: unitary
+  nation: wales
+  gss: W06000024
+  legacy_code: MTY
+- id: merton
+  name: Merton
+  official_name: London Borough of Merton
+  type: london-borough
+  nation: england
+  gss: E09000024
+  legacy_code: MRT
+- id: mid-and-east-antrim
+  name: Mid and East Antrim
+  official_name: Mid and East Antrim Borough Council
+  type: district
+  nation: northern-ireland
+  gss: N09000008
+  start: 2015-04-01
+  legacy_code: MEA
+- id: mid-devon
+  name: Mid Devon
+  official_name: Mid Devon District Council
+  type: district
+  nation: england
+  gss: E07000042
+  county: devon
+  legacy_code: MDE
+- id: mid-suffolk
+  name: Mid Suffolk
+  official_name: Mid Suffolk District Council
+  type: district
+  nation: england
+  gss: E07000203
+  county: suffolk
+  legacy_code: MSU
+- id: mid-sussex
+  name: Mid Sussex
+  official_name: Mid Sussex District Council
+  type: district
+  nation: england
+  gss: E07000228
+  county: west-sussex
+  legacy_code: MSS
+- id: mid-ulster
+  name: Mid Ulster
+  official_name: Mid Ulster District Council
+  type: district
+  nation: northern-ireland
+  gss: N09000009
+  start: 2015-04-01
+  legacy_code: MUL
+- id: middlesbrough
+  name: Middlesbrough
+  official_name: Middlesbrough Borough Council
+  type: unitary
+  nation: england
+  gss: E06000002
+  legacy_code: MDB
+- id: midlothian
+  name: Midlothian
+  official_name: The Midlothian Council
+  type: unitary
+  nation: scotland
+  gss: S12000019
+  legacy_code: MLN
+- id: milton-keynes
+  name: Milton Keynes
+  official_name: Milton Keynes Council
+  type: unitary
+  nation: england
+  gss: E06000042
+  legacy_code: MIK
+- id: mole-valley
+  name: Mole Valley
+  official_name: Mole Valley District Council
+  type: district
+  nation: england
+  gss: E07000210
+  county: surrey
+  start: 1974-04-01
+  end: 2027-03-31
+  successors:
+    - east-surrey
+  legacy_code: MOL
+- id: monmouthshire
+  name: Monmouthshire
+  name_cy: Sir Fynwy
+  official_name: Monmouthshire County Council
+  official_name_cy: Cyngor Sir Fynwy
+  type: unitary
+  nation: wales
+  gss: W06000021
+  legacy_code: MON
+- id: moray
+  name: Moray
+  official_name: The Moray Council
+  type: unitary
+  nation: scotland
+  gss: S12000020
+  legacy_code: MRY
+- id: moyle
+  name: Moyle
+  official_name: Moyle District Council
+  type: district
+  nation: northern-ireland
+  end: 2015-03-31
+  successors:
+    - causeway-coast-and-glens
+  legacy_code: MYL
+- id: na-h-eileanan-an-iar
+  name: Na h-Eileanan an Iar
+  official_name: Comhairle nan Eilean Siar
+  type: unitary
+  nation: scotland
+  gss: S12000013
+  legacy_code: ELS
+- id: neath-port-talbot
+  name: Neath Port Talbot
+  name_cy: Castell-nedd Port Talbot
+  official_name: Neath Port Talbot County Borough Council
+  official_name_cy: Cyngor Bwrdeistref Sirol Castell-nedd Port Talbot
+  type: unitary
+  nation: wales
+  gss: W06000012
+  legacy_code: NTL
+- id: new-forest
+  name: New Forest
+  official_name: New Forest District Council
+  type: district
+  nation: england
+  gss: E07000091
+  county: hampshire
+  legacy_code: NEW
+- id: newark-and-sherwood
+  name: Newark and Sherwood
+  official_name: Newark and Sherwood District Council
+  type: district
+  nation: england
+  gss: E07000175
+  county: nottinghamshire
+  legacy_code: NEA
+- id: newcastle-under-lyme
+  name: Newcastle-under-Lyme
+  official_name: Newcastle-under-Lyme Borough Council
+  type: district
+  nation: england
+  gss: E07000195
+  county: staffordshire
+  legacy_code: NEC
+- id: newcastle-upon-tyne
+  name: Newcastle upon Tyne
+  official_name: Newcastle City Council
+  type: metropolitan-district
+  nation: england
+  gss: E08000021
+  legacy_code: NET
+- id: newham
+  name: Newham
+  official_name: London Borough of Newham
+  type: london-borough
+  nation: england
+  gss: E09000025
+  legacy_code: NWM
+- id: newport
+  name: Newport
+  name_cy: Casnewydd
+  official_name: Newport City Council
+  official_name_cy: Cyngor Dinas Casnewydd
+  type: unitary
+  nation: wales
+  gss: W06000022
+  legacy_code: NWP
+- id: newry-and-mourne
+  name: Newry and Mourne
+  official_name: Newry and Mourne District Council
+  type: district
+  nation: northern-ireland
+  end: 2015-03-31
+  successors:
+    - newry-mourne-and-down
+  legacy_code: NYM
+- id: newry-mourne-and-down
+  name: Newry, Mourne and Down
+  official_name: Newry, Mourne and Down District Council
+  type: district
+  nation: northern-ireland
+  gss: N09000010
+  start: 2015-04-01
+  legacy_code: NMD
+- id: newtownabbey
+  name: Newtownabbey
+  official_name: Newtownabbey Borough Council
+  type: district
+  nation: northern-ireland
+  end: 2015-03-31
+  successors:
+    - antrim-and-newtownabbey
+  legacy_code: NTA
+- id: norfolk
+  name: Norfolk
+  official_name: Norfolk County Council
+  type: county
+  nation: england
+  gss: E10000020
+  legacy_code: NFK
+- id: north-ayrshire
+  name: North Ayrshire
+  official_name: The North Ayrshire Council
+  type: unitary
+  nation: scotland
+  gss: S12000021
+  legacy_code: NAY
+- id: north-devon
+  name: North Devon
+  official_name: North Devon District Council
+  type: district
+  nation: england
+  gss: E07000043
+  county: devon
+  legacy_code: NDE
+- id: north-dorset
+  name: North Dorset
+  official_name: North Dorset District Council
+  type: district
+  nation: england
+  start: 1974-04-01
+  end: 2019-03-31
+  successors:
+    - dorset
+  legacy_code: NDO
+- id: north-down
+  name: North Down
+  official_name: North Down Borough Council
+  type: district
+  nation: northern-ireland
+  end: 2015-03-31
+  successors:
+    - ards-and-north-down
+  legacy_code: NDN
+- id: north-east-derbyshire
+  name: North East Derbyshire
+  official_name: North East Derbyshire District Council
+  type: district
+  nation: england
+  gss: E07000038
+  county: derbyshire
+  legacy_code: NED
+- id: north-east-lincolnshire
+  name: North East Lincolnshire
+  official_name: North East Lincolnshire Council
+  type: unitary
+  nation: england
+  gss: E06000012
+  legacy_code: NEL
+- id: north-hertfordshire
+  name: North Hertfordshire
+  official_name: North Hertfordshire District Council
+  type: district
+  nation: england
+  gss: E07000099
+  county: hertfordshire
+  legacy_code: NHE
+- id: north-kesteven
+  name: North Kesteven
+  official_name: North Kesteven District Council
+  type: district
+  nation: england
+  gss: E07000139
+  county: lincolnshire
+  legacy_code: NKE
+- id: north-lanarkshire
+  name: North Lanarkshire
+  official_name: The North Lanarkshire Council
+  type: unitary
+  nation: scotland
+  gss: S12000050
+  legacy_code: NLK
+- id: north-lincolnshire
+  name: North Lincolnshire
+  official_name: North Lincolnshire Council
+  type: unitary
+  nation: england
+  gss: E06000013
+  legacy_code: NLN
+- id: north-norfolk
+  name: North Norfolk
+  official_name: North Norfolk District Council
+  type: district
+  nation: england
+  gss: E07000147
+  county: norfolk
+  legacy_code: NNO
+- id: north-northamptonshire
+  name: North Northamptonshire
+  official_name: North Northamptonshire Council
+  type: unitary
+  nation: england
+  gss: E06000061
+  start: 2021-04-01
+- id: north-shropshire
+  name: North Shropshire
+  official_name: North Shropshire District Council
+  type: district
+  nation: england
+  start: 1974-04-01
+  end: 2009-03-31
+  successors:
+    - shropshire
+- id: north-somerset
+  name: North Somerset
+  official_name: North Somerset Council
+  type: unitary
+  nation: england
+  gss: E06000024
+  legacy_code: NSM
+- id: north-tyneside
+  name: North Tyneside
+  official_name: North Tyneside Council
+  type: metropolitan-district
+  nation: england
+  gss: E08000022
+  legacy_code: NTY
+- id: north-warwickshire
+  name: North Warwickshire
+  official_name: North Warwickshire Borough Council
+  type: district
+  nation: england
+  gss: E07000218
+  county: warwickshire
+  legacy_code: NWA
+- id: north-west-leicestershire
+  name: North West Leicestershire
+  official_name: North West Leicestershire District Council
+  type: district
+  nation: england
+  gss: E07000134
+  county: leicestershire
+  legacy_code: NWL
+- id: north-wiltshire
+  name: North Wiltshire
+  official_name: North Wiltshire District Council
+  type: district
+  nation: england
+  start: 1974-04-01
+  end: 2009-03-31
+  successors:
+    - wiltshire
+- id: north-yorkshire
+  name: North Yorkshire
+  official_name: North Yorkshire Council
+  type: unitary
+  nation: england
+  gss: E06000065
+  start: 2023-04-01
+- id: north-yorkshire-county-council
+  name: North Yorkshire
+  official_name: North Yorkshire County Council
+  type: county
+  nation: england
+  gss: E10000023
+  end: 2023-03-31
+  successors:
+    - north-yorkshire
+  legacy_code: NYK
+- id: northampton
+  name: Northampton
+  official_name: Northampton Borough Council
+  type: district
+  nation: england
+  start: 1974-04-01
+  end: 2021-03-31
+  successors:
+    - west-northamptonshire
+  legacy_code: NOR
+- id: northamptonshire
+  name: Northamptonshire
+  official_name: Northamptonshire County Council
+  type: county
+  nation: england
+  end: 2021-03-31
+  successors:
+    - north-northamptonshire
+    - west-northamptonshire
+  legacy_code: NTH
+- id: northumberland
+  name: Northumberland
+  official_name: Northumberland County Council
+  type: unitary
+  nation: england
+  gss: E06000057
+  start: 2009-04-01
+  legacy_code: NBL
+- id: norwich
+  name: Norwich
+  official_name: Norwich City Council
+  type: district
+  nation: england
+  gss: E07000148
+  county: norfolk
+  legacy_code: NOW
+- id: nottingham
+  name: Nottingham
+  official_name: Nottingham City Council
+  type: unitary
+  nation: england
+  gss: E06000018
+  legacy_code: NGM
+- id: nottinghamshire
+  name: Nottinghamshire
+  official_name: Nottinghamshire County Council
+  type: county
+  nation: england
+  gss: E10000024
+  legacy_code: NTT
+- id: nuneaton-and-bedworth
+  name: Nuneaton and Bedworth
+  official_name: Nuneaton and Bedworth Borough Council
+  type: district
+  nation: england
+  gss: E07000219
+  county: warwickshire
+  legacy_code: NUN
+- id: oadby-and-wigston
+  name: Oadby and Wigston
+  official_name: Oadby and Wigston Borough Council
+  type: district
+  nation: england
+  gss: E07000135
+  county: leicestershire
+  legacy_code: OAD
+- id: oldham
+  name: Oldham
+  official_name: Oldham Metropolitan Borough Council
+  type: metropolitan-district
+  nation: england
+  gss: E08000004
+  legacy_code: OLD
+- id: omagh
+  name: Omagh
+  official_name: Omagh District Council
+  type: district
+  nation: northern-ireland
+  end: 2015-03-31
+  successors:
+    - fermanagh-and-omagh
+  legacy_code: OMH
+- id: orkney-islands
+  name: Orkney Islands
+  official_name: Orkney Islands Council
+  type: unitary
+  nation: scotland
+  gss: S12000023
+  legacy_code: ORK
+- id: oxford
+  name: Oxford
+  official_name: Oxford City Council
+  type: district
+  nation: england
+  gss: E07000178
+  county: oxfordshire
+  legacy_code: OXO
+- id: oxfordshire
+  name: Oxfordshire
+  official_name: Oxfordshire County Council
+  type: county
+  nation: england
+  gss: E10000025
+  legacy_code: OXF
+- id: pembrokeshire
+  name: Pembrokeshire
+  name_cy: Sir Benfro
+  official_name: Pembrokeshire County Council
+  official_name_cy: Cyngor Sir Penfro
+  type: unitary
+  nation: wales
+  gss: W06000009
+  legacy_code: PEM
+- id: pendle
+  name: Pendle
+  official_name: Pendle Borough Council
+  type: district
+  nation: england
+  gss: E07000122
+  county: lancashire
+  legacy_code: PEN
+- id: perth-and-kinross
+  name: Perth and Kinross
+  official_name: The Perth and Kinross Council
+  type: unitary
+  nation: scotland
+  gss: S12000048
+  legacy_code: PKN
+- id: peterborough
+  name: Peterborough
+  official_name: Peterborough City Council
+  type: unitary
+  nation: england
+  gss: E06000031
+  legacy_code: PTE
+- id: plymouth
+  name: Plymouth
+  official_name: Plymouth City Council
+  type: unitary
+  nation: england
+  gss: E06000026
+  legacy_code: PLY
+- id: poole
+  name: Poole
+  official_name: Borough of Poole
+  type: unitary
+  nation: england
+  start: 1974-04-01
+  end: 2019-03-31
+  successors:
+    - bournemouth-christchurch-and-poole
+  legacy_code: POL
+- id: portsmouth
+  name: Portsmouth
+  official_name: Portsmouth City Council
+  type: unitary
+  nation: england
+  gss: E06000044
+  legacy_code: POR
+- id: powys
+  name: Powys
+  name_cy: Powys
+  official_name: Powys County Council
+  official_name_cy: Cyngor Sir Powys
+  type: unitary
+  nation: wales
+  gss: W06000023
+  legacy_code: POW
+- id: preston
+  name: Preston
+  official_name: Preston City Council
+  type: district
+  nation: england
+  gss: E07000123
+  county: lancashire
+  legacy_code: PRE
+- id: purbeck
+  name: Purbeck
+  official_name: Purbeck District Council
+  type: district
+  nation: england
+  start: 1974-04-01
+  end: 2019-03-31
+  successors:
+    - dorset
+  legacy_code: PUR
+- id: reading
+  name: Reading
+  official_name: Reading Borough Council
+  type: unitary
+  nation: england
+  gss: E06000038
+  legacy_code: RDG
+- id: redbridge
+  name: Redbridge
+  official_name: London Borough of Redbridge
+  type: london-borough
+  nation: england
+  gss: E09000026
+  legacy_code: RDB
+- id: redcar-and-cleveland
+  name: Redcar and Cleveland
+  official_name: Redcar and Cleveland Borough Council
+  type: unitary
+  nation: england
+  gss: E06000003
+  legacy_code: RCC
+- id: redditch
+  name: Redditch
+  official_name: Redditch Borough Council
+  type: district
+  nation: england
+  gss: E07000236
+  county: worcestershire
+  legacy_code: RED
+- id: reigate-and-banstead
+  name: Reigate and Banstead
+  official_name: Reigate and Banstead Borough Council
+  type: district
+  nation: england
+  gss: E07000211
+  county: surrey
+  start: 1974-04-01
+  end: 2027-03-31
+  successors:
+    - east-surrey
+  legacy_code: REI
+- id: renfrewshire
+  name: Renfrewshire
+  official_name: The Renfrewshire Council
+  type: unitary
+  nation: scotland
+  gss: S12000038
+  legacy_code: RFW
+- id: rhondda-cynon-taff
+  name: Rhondda Cynon Taf
+  name_cy: Rhondda Cynon Taf
+  official_name: Rhondda Cynon Taf County Borough Council
+  official_name_cy: Cyngor Bwrdeistref Sirol Rhondda Cynon Taf
+  type: unitary
+  nation: wales
+  gss: W06000016
+  legacy_code: RCT
+- id: ribble-valley
+  name: Ribble Valley
+  official_name: Ribble Valley Borough Council
+  type: district
+  nation: england
+  gss: E07000124
+  county: lancashire
+  legacy_code: RIB
+- id: richmond-upon-thames
+  name: Richmond upon Thames
+  official_name: London Borough of Richmond upon Thames
+  type: london-borough
+  nation: england
+  gss: E09000027
+  legacy_code: RIC
+- id: richmondshire
+  name: Richmondshire
+  official_name: Richmondshire District Council
+  type: district
+  nation: england
+  gss: E07000166
+  county: north-yorkshire-county-council
+  start: 1974-04-01
+  end: 2023-03-31
+  successors:
+    - north-yorkshire
+  legacy_code: RIH
+- id: rochdale
+  name: Rochdale
+  official_name: Rochdale Metropolitan Borough Council
+  type: metropolitan-district
+  nation: england
+  gss: E08000005
+  legacy_code: RCH
+- id: rochford
+  name: Rochford
+  official_name: Rochford District Council
+  type: district
+  nation: england
+  gss: E07000075
+  county: essex
+  legacy_code: ROC
+- id: rossendale
+  name: Rossendale
+  official_name: Rossendale Borough Council
+  type: district
+  nation: england
+  gss: E07000125
+  county: lancashire
+  legacy_code: ROS
+- id: rother
+  name: Rother
+  official_name: Rother District Council
+  type: district
+  nation: england
+  gss: E07000064
+  county: east-sussex
+  legacy_code: ROH
+- id: rotherham
+  name: Rotherham
+  official_name: Rotherham Metropolitan Borough Council
+  type: metropolitan-district
+  nation: england
+  gss: E08000018
+  legacy_code: ROT
+- id: rugby
+  name: Rugby
+  official_name: Rugby Borough Council
+  type: district
+  nation: england
+  gss: E07000220
+  county: warwickshire
+  legacy_code: RUG
+- id: runnymede
+  name: Runnymede
+  official_name: Runnymede Borough Council
+  type: district
+  nation: england
+  gss: E07000212
+  county: surrey
+  start: 1974-04-01
+  end: 2027-03-31
+  successors:
+    - west-surrey
+  legacy_code: RUN
+- id: rushcliffe
+  name: Rushcliffe
+  official_name: Rushcliffe Borough Council
+  type: district
+  nation: england
+  gss: E07000176
+  county: nottinghamshire
+  legacy_code: RUS
+- id: rushmoor
+  name: Rushmoor
+  official_name: Rushmoor Borough Council
+  type: district
+  nation: england
+  gss: E07000092
+  county: hampshire
+  legacy_code: RUH
+- id: rutland
+  name: Rutland
+  official_name: Rutland County Council
+  type: unitary
+  nation: england
+  gss: E06000017
+  legacy_code: RUT
+- id: ryedale
+  name: Ryedale
+  official_name: Ryedale District Council
+  type: district
+  nation: england
+  gss: E07000167
+  county: north-yorkshire-county-council
+  start: 1974-04-01
+  end: 2023-03-31
+  successors:
+    - north-yorkshire
+  legacy_code: RYE
+- id: salford
+  name: Salford
+  official_name: Salford City Council
+  type: metropolitan-district
+  nation: england
+  gss: E08000006
+  legacy_code: SLF
+- id: sandwell
+  name: Sandwell
+  official_name: Sandwell Metropolitan Borough Council
+  type: metropolitan-district
+  nation: england
+  gss: E08000028
+  legacy_code: SAW
+- id: scarborough
+  name: Scarborough
+  official_name: Scarborough Borough Council
+  type: district
+  nation: england
+  gss: E07000168
+  county: north-yorkshire-county-council
+  start: 1974-04-01
+  end: 2023-03-31
+  successors:
+    - north-yorkshire
+  legacy_code: SCE
+- id: scottish-borders
+  name: Scottish Borders
+  official_name: The Scottish Borders Council
+  type: unitary
+  nation: scotland
+  gss: S12000026
+  legacy_code: SCB
+- id: sedgemoor
+  name: Sedgemoor
+  official_name: Sedgemoor District Council
+  type: district
+  nation: england
+  gss: E07000188
+  county: somerset-county-council
+  start: 1974-04-01
+  end: 2023-03-31
+  successors:
+    - somerset
+  legacy_code: SEG
+- id: sefton
+  name: Sefton
+  official_name: Sefton Metropolitan Borough Council
+  type: metropolitan-district
+  nation: england
+  gss: E08000014
+  legacy_code: SFT
+- id: selby
+  name: Selby
+  official_name: Selby District Council
+  type: district
+  nation: england
+  gss: E07000169
+  county: north-yorkshire-county-council
+  start: 1974-04-01
+  end: 2023-03-31
+  successors:
+    - north-yorkshire
+  legacy_code: SEL
+- id: sevenoaks
+  name: Sevenoaks
+  official_name: Sevenoaks District Council
+  type: district
+  nation: england
+  gss: E07000111
+  county: kent
+  legacy_code: SEV
+- id: sheffield
+  name: Sheffield
+  official_name: Sheffield City Council
+  type: metropolitan-district
+  nation: england
+  gss: E08000019
+  legacy_code: SHF
+- id: shepway
+  name: Shepway
+  official_name: Shepway District Council
+  type: district
+  nation: england
+  start: 1974-04-01
+  end: 2018-03-31
+  successors:
+    - folkestone-and-hythe
+  renamed: true
+- id: shetland-islands
+  name: Shetland Islands
+  official_name: Shetland Islands Council
+  type: unitary
+  nation: scotland
+  gss: S12000027
+  legacy_code: ZET
+- id: shropshire
+  name: Shropshire
+  official_name: Shropshire Council
+  type: unitary
+  nation: england
+  gss: E06000051
+  start: 2009-04-01
+  legacy_code: SHR
+- id: slough
+  name: Slough
+  official_name: Slough Borough Council
+  type: unitary
+  nation: england
+  gss: E06000039
+  legacy_code: SLG
+- id: solihull
+  name: Solihull
+  official_name: Solihull Metropolitan Borough Council
+  type: metropolitan-district
+  nation: england
+  gss: E08000029
+  legacy_code: SOL
+- id: somerset
+  name: Somerset
+  official_name: Somerset Council
+  type: unitary
+  nation: england
+  gss: E06000066
+  start: 2023-04-01
+- id: somerset-county-council
+  name: Somerset
+  official_name: Somerset County Council
+  type: county
+  nation: england
+  gss: E10000027
+  end: 2023-03-31
+  successors:
+    - somerset
+  legacy_code: SOM
+- id: somerset-west-and-taunton
+  name: Somerset West and Taunton
+  official_name: Somerset West and Taunton Council
+  type: district
+  nation: england
+  gss: E07000246
+  county: somerset-county-council
+  start: 2019-04-01
+  end: 2023-03-31
+  successors:
+    - somerset
+  legacy_code: SWT
+- id: south-ayrshire
+  name: South Ayrshire
+  official_name: The South Ayrshire Council
+  type: unitary
+  nation: scotland
+  gss: S12000028
+  legacy_code: SAY
+- id: south-bucks
+  name: South Bucks
+  official_name: South Bucks District Council
+  type: district
+  nation: england
+  start: 1974-04-01
+  end: 2020-03-31
+  successors:
+    - buckinghamshire
+  legacy_code: SBU
+- id: south-cambridgeshire
+  name: South Cambridgeshire
+  official_name: South Cambridgeshire District Council
+  type: district
+  nation: england
+  gss: E07000012
+  county: cambridgeshire
+  legacy_code: SCA
+- id: south-derbyshire
+  name: South Derbyshire
+  official_name: South Derbyshire District Council
+  type: district
+  nation: england
+  gss: E07000039
+  county: derbyshire
+  legacy_code: SDE
+- id: south-gloucestershire
+  name: South Gloucestershire
+  official_name: South Gloucestershire Council
+  type: unitary
+  nation: england
+  gss: E06000025
+  legacy_code: SGC
+- id: south-hams
+  name: South Hams
+  official_name: South Hams District Council
+  type: district
+  nation: england
+  gss: E07000044
+  county: devon
+  legacy_code: SHA
+- id: south-holland
+  name: South Holland
+  official_name: South Holland District Council
+  type: district
+  nation: england
+  gss: E07000140
+  county: lincolnshire
+  legacy_code: SHO
+- id: south-kesteven
+  name: South Kesteven
+  official_name: South Kesteven District Council
+  type: district
+  nation: england
+  gss: E07000141
+  county: lincolnshire
+  legacy_code: SKE
+- id: south-lakeland
+  name: South Lakeland
+  official_name: South Lakeland District Council
+  type: district
+  nation: england
+  gss: E07000031
+  county: cumbria
+  start: 1974-04-01
+  end: 2023-03-31
+  successors:
+    - westmorland-and-furness
+  legacy_code: SLA
+- id: south-lanarkshire
+  name: South Lanarkshire
+  official_name: The South Lanarkshire Council
+  type: unitary
+  nation: scotland
+  gss: S12000029
+  legacy_code: SLK
+- id: south-norfolk
+  name: South Norfolk
+  official_name: South Norfolk District Council
+  type: district
+  nation: england
+  gss: E07000149
+  county: norfolk
+  legacy_code: SNO
+- id: south-northamptonshire
+  name: South Northamptonshire
+  official_name: South Northamptonshire Council
+  type: district
+  nation: england
+  start: 1974-04-01
+  end: 2021-03-31
+  successors:
+    - west-northamptonshire
+  legacy_code: SNR
+- id: south-oxfordshire
+  name: South Oxfordshire
+  official_name: South Oxfordshire District Council
+  type: district
+  nation: england
+  gss: E07000179
+  county: oxfordshire
+  legacy_code: SOX
+- id: south-ribble
+  name: South Ribble
+  official_name: South Ribble Borough Council
+  type: district
+  nation: england
+  gss: E07000126
+  county: lancashire
+  legacy_code: SRI
+- id: south-somerset
+  name: South Somerset
+  official_name: South Somerset District Council
+  type: district
+  nation: england
+  gss: E07000189
+  county: somerset-county-council
+  start: 1974-04-01
+  end: 2023-03-31
+  successors:
+    - somerset
+  legacy_code: SSO
+- id: south-staffordshire
+  name: South Staffordshire
+  official_name: South Staffordshire Council
+  type: district
+  nation: england
+  gss: E07000196
+  county: staffordshire
+  legacy_code: SST
+- id: south-tyneside
+  name: South Tyneside
+  official_name: South Tyneside Council
+  type: metropolitan-district
+  nation: england
+  gss: E08000023
+  legacy_code: STY
+- id: southampton
+  name: Southampton
+  official_name: Southampton City Council
+  type: unitary
+  nation: england
+  gss: E06000045
+  legacy_code: STH
+- id: southend-on-sea
+  name: Southend-on-Sea
+  official_name: Southend-on-Sea Borough Council
+  type: unitary
+  nation: england
+  gss: E06000033
+  legacy_code: SOS
+- id: southwark
+  name: Southwark
+  official_name: London Borough of Southwark
+  type: london-borough
+  nation: england
+  gss: E09000028
+  legacy_code: SWK
+- id: spelthorne
+  name: Spelthorne
+  official_name: Spelthorne Borough Council
+  type: district
+  nation: england
+  gss: E07000213
+  county: surrey
+  start: 1974-04-01
+  end: 2027-03-31
+  successors:
+    - west-surrey
+  legacy_code: SPE
+- id: st-albans
+  name: St Albans
+  official_name: St Albans City and District Council
+  type: district
+  nation: england
+  gss: E07000240
+  county: hertfordshire
+  legacy_code: SAL
+- id: st-edmundsbury
+  name: St Edmundsbury
+  official_name: St Edmundsbury Borough Council
+  type: district
+  nation: england
+  start: 1974-04-01
+  end: 2019-03-31
+  successors:
+    - west-suffolk
+  legacy_code: SED
+- id: st-helens
+  name: St. Helens
+  official_name: St Helens Council
+  type: metropolitan-district
+  nation: england
+  gss: E08000013
+  legacy_code: SHN
+- id: stafford
+  name: Stafford
+  official_name: Stafford Borough Council
+  type: district
+  nation: england
+  gss: E07000197
+  county: staffordshire
+  legacy_code: STA
+- id: staffordshire
+  name: Staffordshire
+  official_name: Staffordshire County Council
+  type: county
+  nation: england
+  gss: E10000028
+  legacy_code: STS
+- id: staffordshire-moorlands
+  name: Staffordshire Moorlands
+  official_name: Staffordshire Moorlands District Council
+  type: district
+  nation: england
+  gss: E07000198
+  county: staffordshire
+  legacy_code: STF
+- id: stevenage
+  name: Stevenage
+  official_name: Stevenage Borough Council
+  type: district
+  nation: england
+  gss: E07000243
+  county: hertfordshire
+  legacy_code: STV
+- id: stirling
+  name: Stirling
+  official_name: The Stirling Council
+  type: unitary
+  nation: scotland
+  gss: S12000030
+  legacy_code: STG
+- id: stockport
+  name: Stockport
+  official_name: Stockport Metropolitan Borough Council
+  type: metropolitan-district
+  nation: england
+  gss: E08000007
+  legacy_code: SKP
+- id: stockton-on-tees
+  name: Stockton-on-Tees
+  official_name: Stockton-on-Tees Borough Council
+  type: unitary
+  nation: england
+  gss: E06000004
+  legacy_code: STT
+- id: stoke-on-trent
+  name: Stoke-on-Trent
+  official_name: Stoke-on-Trent City Council
+  type: unitary
+  nation: england
+  gss: E06000021
+  legacy_code: STE
+- id: strabane
+  name: Strabane
+  official_name: Strabane District Council
+  type: district
+  nation: northern-ireland
+  end: 2015-03-31
+  successors:
+    - derry-city-and-strabane
+  legacy_code: STB
+- id: stratford-on-avon
+  name: Stratford-on-Avon
+  official_name: Stratford-on-Avon District Council
+  type: district
+  nation: england
+  gss: E07000221
+  county: warwickshire
+  legacy_code: STR
+- id: stroud
+  name: Stroud
+  official_name: Stroud District Council
+  type: district
+  nation: england
+  gss: E07000082
+  county: gloucestershire
+  legacy_code: STO
+- id: suffolk
+  name: Suffolk
+  official_name: Suffolk County Council
+  type: county
+  nation: england
+  gss: E10000029
+  legacy_code: SFK
+- id: suffolk-coastal
+  name: Suffolk Coastal
+  official_name: Suffolk Coastal District Council
+  type: district
+  nation: england
+  start: 1974-04-01
+  end: 2019-03-31
+  successors:
+    - east-suffolk
+  legacy_code: SUF
+- id: sunderland
+  name: Sunderland
+  official_name: Sunderland City Council
+  type: metropolitan-district
+  nation: england
+  gss: E08000024
+  legacy_code: SND
+- id: surrey
+  name: Surrey
+  official_name: Surrey County Council
+  type: county
+  nation: england
+  gss: E10000030
+  end: 2027-03-31
+  successors:
+    - east-surrey
+    - west-surrey
+  legacy_code: SRY
+- id: surrey-heath
+  name: Surrey Heath
+  official_name: Surrey Heath Borough Council
+  type: district
+  nation: england
+  gss: E07000214
+  county: surrey
+  start: 1974-04-01
+  end: 2027-03-31
+  successors:
+    - west-surrey
+  legacy_code: SUR
+- id: sutton
+  name: Sutton
+  official_name: London Borough of Sutton
+  type: london-borough
+  nation: england
+  gss: E09000029
+  legacy_code: STN
+- id: swale
+  name: Swale
+  official_name: Swale Borough Council
+  type: district
+  nation: england
+  gss: E07000113
+  county: kent
+  legacy_code: SWL
+- id: swansea
+  name: Swansea
+  name_cy: Abertawe
+  official_name: City and County of Swansea Council
+  official_name_cy: Dinas a Sir Abertawe
+  type: unitary
+  nation: wales
+  gss: W06000011
+  legacy_code: SWA
+- id: swindon
+  name: Swindon
+  official_name: Swindon Borough Council
+  type: unitary
+  nation: england
+  gss: E06000030
+  legacy_code: SWD
+- id: tameside
+  name: Tameside
+  official_name: Tameside Metropolitan Borough Council
+  type: metropolitan-district
+  nation: england
+  gss: E08000008
+  legacy_code: TAM
+- id: tamworth
+  name: Tamworth
+  official_name: Tamworth Borough Council
+  type: district
+  nation: england
+  gss: E07000199
+  county: staffordshire
+  legacy_code: TAW
+- id: tandridge
+  name: Tandridge
+  official_name: Tandridge District Council
+  type: district
+  nation: england
+  gss: E07000215
+  county: surrey
+  start: 1974-04-01
+  end: 2027-03-31
+  successors:
+    - east-surrey
+  legacy_code: TAN
+- id: taunton-deane
+  name: Taunton Deane
+  official_name: Taunton Deane Borough Council
+  type: district
+  nation: england
+  start: 1974-04-01
+  end: 2019-03-31
+  successors:
+    - somerset-west-and-taunton
+  legacy_code: TAU
+- id: teignbridge
+  name: Teignbridge
+  official_name: Teignbridge District Council
+  type: district
+  nation: england
+  gss: E07000045
+  county: devon
+  legacy_code: TEI
+- id: telford-and-wrekin
+  name: Telford and Wrekin
+  official_name: Telford & Wrekin Council
+  type: unitary
+  nation: england
+  gss: E06000020
+  legacy_code: TFW
+- id: tendring
+  name: Tendring
+  official_name: Tendring District Council
+  type: district
+  nation: england
+  gss: E07000076
+  county: essex
+  legacy_code: TEN
+- id: test-valley
+  name: Test Valley
+  official_name: Test Valley Borough Council
+  type: district
+  nation: england
+  gss: E07000093
+  county: hampshire
+  legacy_code: TES
+- id: tewkesbury
+  name: Tewkesbury
+  official_name: Tewkesbury Borough Council
+  type: district
+  nation: england
+  gss: E07000083
+  county: gloucestershire
+  legacy_code: TEW
+- id: thanet
+  name: Thanet
+  official_name: Thanet District Council
+  type: district
+  nation: england
+  gss: E07000114
+  county: kent
+  legacy_code: THA
+- id: the-vale-of-glamorgan
+  name: The Vale of Glamorgan
+  name_cy: Bro Morgannwg
+  official_name: Vale of Glamorgan Council
+  official_name_cy: Cyngor Bro Morgannwg
+  type: unitary
+  nation: wales
+  gss: W06000014
+  legacy_code: VGL
+- id: three-rivers
+  name: Three Rivers
+  official_name: Three Rivers District Council
+  type: district
+  nation: england
+  gss: E07000102
+  county: hertfordshire
+  legacy_code: THE
+- id: thurrock
+  name: Thurrock
+  official_name: Thurrock Council
+  type: unitary
+  nation: england
+  gss: E06000034
+  legacy_code: THR
+- id: tonbridge-and-malling
+  name: Tonbridge and Malling
+  official_name: Tonbridge and Malling Borough Council
+  type: district
+  nation: england
+  gss: E07000115
+  county: kent
+  legacy_code: TON
+- id: torbay
+  name: Torbay
+  official_name: Torbay Council
+  type: unitary
+  nation: england
+  gss: E06000027
+  legacy_code: TOB
+- id: torfaen
+  name: Torfaen
+  name_cy: Tor-faen
+  official_name: Torfaen County Borough Council
+  official_name_cy: Cyngor Bwrdeistref Sirol Torfaen
+  type: unitary
+  nation: wales
+  gss: W06000020
+  legacy_code: TOF
+- id: torridge
+  name: Torridge
+  official_name: Torridge District Council
+  type: district
+  nation: england
+  gss: E07000046
+  county: devon
+  legacy_code: TOR
+- id: tower-hamlets
+  name: Tower Hamlets
+  official_name: London Borough of Tower Hamlets
+  type: london-borough
+  nation: england
+  gss: E09000030
+  legacy_code: TWH
+- id: trafford
+  name: Trafford
+  official_name: Trafford Metropolitan Borough Council
+  type: metropolitan-district
+  nation: england
+  gss: E08000009
+  legacy_code: TRF
+- id: tunbridge-wells
+  name: Tunbridge Wells
+  official_name: Tunbridge Wells Borough Council
+  type: district
+  nation: england
+  gss: E07000116
+  county: kent
+  legacy_code: TUN
+- id: uttlesford
+  name: Uttlesford
+  official_name: Uttlesford District Council
+  type: district
+  nation: england
+  gss: E07000077
+  county: essex
+  legacy_code: UTT
+- id: vale-of-white-horse
+  name: Vale of White Horse
+  official_name: Vale of White Horse District Council
+  type: district
+  nation: england
+  gss: E07000180
+  county: oxfordshire
+  legacy_code: VAL
+- id: wakefield
+  name: Wakefield
+  official_name: Wakefield Metropolitan District Council
+  type: metropolitan-district
+  nation: england
+  gss: E08000036
+  legacy_code: WKF
+- id: walsall
+  name: Walsall
+  official_name: Walsall Metropolitan Borough Council
+  type: metropolitan-district
+  nation: england
+  gss: E08000030
+  legacy_code: WLL
+- id: waltham-forest
+  name: Waltham Forest
+  official_name: London Borough of Waltham Forest
+  type: london-borough
+  nation: england
+  gss: E09000031
+  legacy_code: WFT
+- id: wandsworth
+  name: Wandsworth
+  official_name: London Borough of Wandsworth
+  type: london-borough
+  nation: england
+  gss: E09000032
+  legacy_code: WND
+- id: warrington
+  name: Warrington
+  official_name: Warrington Borough Council
+  type: unitary
+  nation: england
+  gss: E06000007
+  legacy_code: WRT
+- id: warwick
+  name: Warwick
+  official_name: Warwick District Council
+  type: district
+  nation: england
+  gss: E07000222
+  county: warwickshire
+  legacy_code: WAW
+- id: warwickshire
+  name: Warwickshire
+  official_name: Warwickshire County Council
+  type: county
+  nation: england
+  gss: E10000031
+  legacy_code: WAR
+- id: watford
+  name: Watford
+  official_name: Watford Borough Council
+  type: district
+  nation: england
+  gss: E07000103
+  county: hertfordshire
+  legacy_code: WAT
+- id: waveney
+  name: Waveney
+  official_name: Waveney District Council
+  type: district
+  nation: england
+  start: 1974-04-01
+  end: 2019-03-31
+  successors:
+    - east-suffolk
+  legacy_code: WAV
+- id: waverley
+  name: Waverley
+  official_name: Waverley Borough Council
+  type: district
+  nation: england
+  gss: E07000216
+  county: surrey
+  start: 1974-04-01
+  end: 2027-03-31
+  successors:
+    - west-surrey
+  legacy_code: WAE
+- id: wealden
+  name: Wealden
+  official_name: Wealden District Council
+  type: district
+  nation: england
+  gss: E07000065
+  county: east-sussex
+  legacy_code: WEA
+- id: wellingborough
+  name: Wellingborough
+  official_name: Wellingborough Borough Council
+  type: district
+  nation: england
+  start: 1974-04-01
+  end: 2021-03-31
+  successors:
+    - north-northamptonshire
+  legacy_code: WEL
+- id: welwyn-hatfield
+  name: Welwyn Hatfield
+  official_name: Welwyn Hatfield Borough Council
+  type: district
+  nation: england
+  gss: E07000241
+  county: hertfordshire
+  legacy_code: WEW
+- id: west-berkshire
+  name: West Berkshire
+  official_name: West Berkshire Council
+  type: unitary
+  nation: england
+  gss: E06000037
+  legacy_code: WBK
+- id: west-devon
+  name: West Devon
+  official_name: West Devon Borough Council
+  type: district
+  nation: england
+  gss: E07000047
+  county: devon
+  legacy_code: WDE
+- id: west-dorset
+  name: West Dorset
+  official_name: West Dorset District Council
+  type: district
+  nation: england
+  start: 1974-04-01
+  end: 2019-03-31
+  successors:
+    - dorset
+  legacy_code: WDO
+- id: west-dunbartonshire
+  name: West Dunbartonshire
+  official_name: The West Dunbartonshire Council
+  type: unitary
+  nation: scotland
+  gss: S12000039
+  legacy_code: WDU
+- id: west-lancashire
+  name: West Lancashire
+  official_name: West Lancashire Borough Council
+  type: district
+  nation: england
+  gss: E07000127
+  county: lancashire
+  legacy_code: WLA
+- id: west-lindsey
+  name: West Lindsey
+  official_name: West Lindsey District Council
+  type: district
+  nation: england
+  gss: E07000142
+  county: lincolnshire
+  legacy_code: WLI
+- id: west-lothian
+  name: West Lothian
+  official_name: The West Lothian Council
+  type: unitary
+  nation: scotland
+  gss: S12000040
+  legacy_code: WLN
+- id: west-northamptonshire
+  name: West Northamptonshire
+  official_name: West Northamptonshire Council
+  type: unitary
+  nation: england
+  gss: E06000062
+  start: 2021-04-01
+- id: west-oxfordshire
+  name: West Oxfordshire
+  official_name: West Oxfordshire District Council
+  type: district
+  nation: england
+  gss: E07000181
+  county: oxfordshire
+  legacy_code: WOX
+- id: west-somerset
+  name: West Somerset
+  official_name: West Somerset District Council
+  type: district
+  nation: england
+  start: 1974-04-01
+  end: 2019-03-31
+  successors:
+    - somerset-west-and-taunton
+  legacy_code: WSO
+- id: west-suffolk
+  name: West Suffolk
+  official_name: West Suffolk Council
+  type: district
+  nation: england
+  gss: E07000245
+  county: suffolk
+  start: 2019-04-01
+  legacy_code: WSK
+- id: west-surrey
+  name: West Surrey
+  official_name: West Surrey Council
+  type: unitary
+  nation: england
+  start: 2027-04-01
+- id: west-sussex
+  name: West Sussex
+  official_name: West Sussex County Council
+  type: county
+  nation: england
+  gss: E10000032
+  legacy_code: WSX
+- id: west-wiltshire
+  name: West Wiltshire
+  official_name: West Wiltshire District Council
+  type: district
+  nation: england
+  start: 1974-04-01
+  end: 2009-03-31
+  successors:
+    - wiltshire
+- id: westminster
+  name: Westminster
+  official_name: City of Westminster
+  type: london-borough
+  nation: england
+  gss: E09000033
+  legacy_code: WSM
+- id: westmorland-and-furness
+  name: Westmorland and Furness
+  official_name: Westmorland and Furness Council
+  type: unitary
+  nation: england
+  gss: E06000064
+  start: 2023-04-01
+- id: weymouth-and-portland
+  name: Weymouth and Portland
+  official_name: Weymouth and Portland Borough Council
+  type: district
+  nation: england
+  start: 1974-04-01
+  end: 2019-03-31
+  successors:
+    - dorset
+  legacy_code: WEY
+- id: wigan
+  name: Wigan
+  official_name: Wigan Metropolitan Borough Council
+  type: metropolitan-district
+  nation: england
+  gss: E08000010
+  legacy_code: WGN
+- id: wiltshire
+  name: Wiltshire
+  official_name: Wiltshire Council
+  type: unitary
+  nation: england
+  gss: E06000054
+  start: 2009-04-01
+  legacy_code: WIL
+- id: winchester
+  name: Winchester
+  official_name: Winchester City Council
+  type: district
+  nation: england
+  gss: E07000094
+  county: hampshire
+  legacy_code: WIN
+- id: windsor-and-maidenhead
+  name: Windsor and Maidenhead
+  official_name: Royal Borough of Windsor and Maidenhead
+  type: unitary
+  nation: england
+  gss: E06000040
+  legacy_code: WNM
+- id: wirral
+  name: Wirral
+  official_name: Wirral Borough Council
+  type: metropolitan-district
+  nation: england
+  gss: E08000015
+  legacy_code: WRL
+- id: woking
+  name: Woking
+  official_name: Woking Borough Council
+  type: district
+  nation: england
+  gss: E07000217
+  county: surrey
+  start: 1974-04-01
+  end: 2027-03-31
+  successors:
+    - west-surrey
+  legacy_code: WOI
+- id: wokingham
+  name: Wokingham
+  official_name: Wokingham Borough Council
+  type: unitary
+  nation: england
+  gss: E06000041
+  legacy_code: WOK
+- id: wolverhampton
+  name: Wolverhampton
+  official_name: City of Wolverhampton Council
+  type: metropolitan-district
+  nation: england
+  gss: E08000031
+  legacy_code: WLV
+- id: worcester
+  name: Worcester
+  official_name: Worcester City Council
+  type: district
+  nation: england
+  gss: E07000237
+  county: worcestershire
+  legacy_code: WOC
+- id: worcestershire
+  name: Worcestershire
+  official_name: Worcestershire County Council
+  type: county
+  nation: england
+  gss: E10000034
+  legacy_code: WOR
+- id: worthing
+  name: Worthing
+  official_name: Worthing Borough Council
+  type: district
+  nation: england
+  gss: E07000229
+  county: west-sussex
+  legacy_code: WOT
+- id: wrexham
+  name: Wrexham
+  name_cy: Wrecsam
+  official_name: Wrexham County Borough Council
+  official_name_cy: Cyngor Bwrdeistref Sirol Wrecsam
+  type: unitary
+  nation: wales
+  gss: W06000006
+  legacy_code: WRX
+- id: wychavon
+  name: Wychavon
+  official_name: Wychavon District Council
+  type: district
+  nation: england
+  gss: E07000238
+  county: worcestershire
+  legacy_code: WYC
+- id: wycombe
+  name: Wycombe
+  official_name: Wycombe District Council
+  type: district
+  nation: england
+  start: 1974-04-01
+  end: 2020-03-31
+  successors:
+    - buckinghamshire
+  legacy_code: WYO
+- id: wyre
+  name: Wyre
+  official_name: Wyre Borough Council
+  type: district
+  nation: england
+  gss: E07000128
+  county: lancashire
+  legacy_code: WYR
+- id: wyre-forest
+  name: Wyre Forest
+  official_name: Wyre Forest District Council
+  type: district
+  nation: england
+  gss: E07000239
+  county: worcestershire
+  legacy_code: WYE
+- id: york
+  name: York
+  official_name: City of York Council
+  type: unitary
+  nation: england
+  gss: E06000014
+  legacy_code: YOR

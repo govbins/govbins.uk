@@ -1,0 +1,157 @@
+---
+import { Image } from "astro:assets";
+import Base from "../layouts/Base.astro";
+import Card from "../components/Card.astro";
+import Footer from "../components/Footer.astro";
+import { load, formatDate, type Council } from "../lib/govbins";
+
+export async function getStaticPaths() {
+  const { councils } = await load();
+  return councils.map((council) => ({ params: { council: council.id }, props: { council } }));
+}
+
+const { council } = Astro.props as { council: Council };
+const bin = council.bin;
+const fullName = (c: Council) => c.officialName;
+const district = (n: number) => (n === 1 ? "district council" : `${n} district councils`);
+// What's happened, or is about to happen, to this council. Built as HTML
+// strings so the punctuation sits tight against the links.
+const esc = (t: string) => t.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+const links = (cs: Council[], official = true) =>
+  cs.map((c) => `<a href="/${c.id}">${esc(official ? c.officialName : c.name)}</a>`).join(" and ");
+const me = esc(fullName(council));
+const notes: string[] = [];
+if (council.status === "abolished" && council.renamed) {
+  notes.push(`${me} was renamed ${links(council.successors, false)} on ${formatDate(council.replacedOn!)}.`);
+} else if (council.status === "abolished") {
+  const by = council.successors.length ? ` and replaced by ${links(council.successors)}` : "";
+  notes.push(`${me} was abolished on ${formatDate(council.end!)}${by}.`);
+}
+if (council.status === "upcoming") notes.push(`${me} takes over on ${formatDate(council.start!)}.`);
+if (council.status === "current" && council.successors.length) {
+  notes.push(`${me} will be replaced by ${links(council.successors)} on ${formatDate(council.replacedOn!)}.`);
+}
+if (council.type === "county" && council.status !== "abolished") {
+  notes.push(`${me} doesn't collect bins. Its ${district(council.districts.length)} do.`);
+}
+
+const description = bin
+  ? `The ${council.name} wheelie bin, catalogued by #govbins`
+  : `${council.name} on #govbins, a catalogue of every UK council's wheelie bin`;
+---
+
+<Base title={council.name} description={description}>
+  <div class="council">
+    <div class="about">
+      <a class="back" href="/search">&larr; Search</a>
+      <h1>
+        {council.name}
+        {council.nameCy && <span class="light cy" lang="cy">{council.nameCy}</span>}
+      </h1>
+
+      {bin?.photographed && <p class="light">{formatDate(bin.photographed)}</p>}
+      {
+        bin?.contributor && (
+          <p class="light">
+            {bin.contributor.url ? (
+              <a class="contributor" href={bin.contributor.url}>
+                {bin.contributor.name}
+              </a>
+            ) : (
+              bin.contributor.name
+            )}
+          </p>
+        )
+      }
+      {
+        bin && bin.councils.length > 1 && (
+          <p class="light">
+            Shared by{" "}
+            {bin.councils.map((c, i) => (
+              <>
+                {i > 0 && " and "}
+                {c.id === council.id ? c.name : <a href={`/${c.id}`}>{c.name}</a>}
+              </>
+            ))}
+          </p>
+        )
+      }
+
+      {
+        !bin && council.collectsBins && council.status !== "upcoming" && (
+          <>
+            <p class="light">Not catalogued...yet!</p>
+            <p>
+              <a href="/submit-photos">Submit photos</a>
+            </p>
+          </>
+        )
+      }
+
+      {notes.map((n) => <p class="note light" set:html={n} />)}
+    </div>
+
+    {
+      (council.collectsBins || bin) && (
+        <div class="hero">
+          {bin ? (
+            <Image src={bin.image} alt={`${bin.name} wheelie bin`} widths={[720, 1440]} sizes="(min-width: 1024px) 50vw, 100vw" loading="eager" />
+          ) : (
+            <div class="empty" />
+          )}
+        </div>
+      )
+    }
+  </div>
+
+  {
+    council.oldDesigns.length > 0 && (
+      <section class="related">
+        <h2>Older designs</h2>
+        <div class="bins">
+          {council.oldDesigns.map((b) => (
+            <Card bin={b} />
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  {
+    council.type === "county" && council.districts.length > 0 && (
+      <section class="related">
+        <h2>District councils</h2>
+        <div class="bins">
+          {council.districts.map((d) => (
+            <Card council={d} bin={d.bin} />
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  {
+    council.status !== "abolished" && council.predecessors.some((p) => p.type !== "county") && (
+      <section class="related">
+        <h2>{council.status === "upcoming" ? "Taking over from" : council.start ? `Before ${council.start.slice(0, 4)}` : "Formed from"}</h2>
+        <div class="bins">
+          {council.predecessors
+            .filter((p) => p.type !== "county")
+            .map((p) => (
+              <Card council={p} bin={p.bin} />
+            ))}
+        </div>
+      </section>
+    )
+  }
+
+  <Footer />
+</Base>
+
+<style>
+  .cy {
+    display: block;
+    font-size: 1.25rem;
+    margin-top: 0.25rem;
+  }
+</style>

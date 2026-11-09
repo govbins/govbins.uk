@@ -1,0 +1,40 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="Submit photos">
+  <div class="page">
+    <h2>Submit photos</h2>
+    <p>Help catalogue a nation's bins.</p>
+
+    <h3>Consistent photos</h3>
+    <div class="guidelines">
+      <div class="small">
+        <ul class="bullets">
+          <li>Flat and straight to the bin</li>
+          <li>Have enough space to be cropped</li>
+          <li>Landscape (4:3 ratio)</li>
+          <li>Like this example</li>
+        </ul>
+        <p>Consistent photos make it easier to see the difference between different bin designs.</p>
+        <p>Old photos are welcome too. Bins from councils that no longer exist go in Retro.</p>
+      </div>
+      <img src="/images/Walford.png" alt="Example photo: a wheelie bin, square on, with space around it" width="720" height="540" />
+    </div>
+
+    <p><a class="button" href="/upload">Send your photos</a></p>
+  </div>
+</Base>
+
+<style>
+  .guidelines {
+    display: grid;
+    gap: 1.25rem;
+    margin-bottom: 3rem;
+  }
+  @media (min-width: 1024px) {
+    .guidelines {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>

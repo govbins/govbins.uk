@@ -1,0 +1,59 @@
+---
+// Draws today's councils from ONS 2022 boundaries. Councils created since
+// (Cumberland, North Yorkshire...) are drawn by merging the councils they
+// replaced, so the map keeps up with src/data/councils.yaml by itself.
+import { geoPath, geoTransverseMercator } from "d3-geo";
+import { feature, merge } from "topojson-client";
+import topology from "../data/ons-council-boundaries-2022.json";
+import type { Council } from "../lib/govbins";
+
+interface Props {
+  councils: Council[];
+}
+const { councils } = Astro.props;
+
+const geometries = (topology as any).objects.councils.geometries;
+const byCode = new Map(geometries.map((g: any) => [g.properties.code, g]));
+
+// the 2022 boundaries that make up a council
+const parts = (c: Council, depth = 0): any[] => {
+  if (c.gss && byCode.has(c.gss)) return [byCode.get(c.gss)];
+  if (depth > 3) return [];
+  return c.predecessors.filter((p) => p.type !== "county").flatMap((p) => parts(p, depth + 1));
+};
+
+const shapes = councils
+  .map((c) => {
+    const ps = parts(c);
+    if (!ps.length) return undefined;
+    const geo = ps.length === 1 ? feature(topology as any, ps[0]) : { type: "Feature", properties: {}, geometry: merge(topology as any, ps) };
+    return { council: c, geo };
+  })
+  .filter(Boolean) as { council: Council; geo: any }[];
+
+const missing = councils.filter((c) => !shapes.some((s) => s.council === c));
+if (missing.length) throw new Error(`No boundary for: ${missing.map((c) => c.id).join(", ")}`);
+
+const width = 600;
+const height = 900;
+const projection = geoTransverseMercator()
+  .rotate([3.5, -54])
+  .fitSize([width, height], { type: "FeatureCollection", features: shapes.map((s) => s.geo) } as any);
+const path = geoPath(projection).digits(1);
+---
+
+<svg viewBox={`0 0 ${width} ${height}`} role="img" aria-labelledby="map-title">
+  <title id="map-title">Map of UK councils, coloured by bin where we have one</title>
+  {
+    shapes.map(({ council, geo }) => (
+      <a href={`/${council.id}`}>
+        <path
+          d={path(geo)}
+          fill={council.bin?.colourFamily ? `var(--bin-${council.bin.colourFamily})` : "var(--bin-none)"}
+        >
+          <title>{council.bin ? council.name : `${council.name} (not catalogued yet)`}</title>
+        </path>
+      </a>
+    ))
+  }
+</svg>

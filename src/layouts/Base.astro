@@ -1,0 +1,77 @@
+---
+import "@fontsource/rubik/400.css";
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+const { title, description = "Cataloguing a nation's bins" } = Astro.props;
+const fullTitle = title ? `${title} | #govbins` : "#govbins";
+const isHome = Astro.url.pathname === "/";
+const nav = [
+  { href: "/submit-photos", label: "Submit photos", short: "Submit" },
+  { href: "/about", label: "About" },
+  { href: "/map", label: "Map" },
+  { href: "/search", label: "Search" },
+];
+const card = new URL("/images/preview-card.png", Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.ico" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={card} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script is:inline>document.documentElement.classList.add("js");</script>
+    <script defer data-domain="govbins.uk" src="https://plausible.io/js/plausible.js"></script>
+  </head>
+  <body>
+    <header class:list={["site-header", { ruled: !isHome }]}>
+      <a class="home" href="/">#govbins</a>
+      <nav aria-label="Main">
+        <ul>
+          {
+            nav.map((item) => (
+              <li>
+                <a href={item.href} aria-current={Astro.url.pathname.replace(/\/$/, "") === item.href ? "page" : undefined}>
+                  {item.short ? (
+                    <>
+                      {item.short}
+                      <span class="nav-more"> photos</span>
+                    </>
+                  ) : (
+                    item.label
+                  )}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>
+
+<style>
+  .nav-more {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .nav-more {
+      display: inline;
+    }
+  }
+</style>

@@ -7,9 +7,11 @@ import { load } from "../lib/govbins";
 const { bins } = await load();
 const latest = (a, b) => (b.photographed ?? "").localeCompare(a.photographed ?? "") || a.name.localeCompare(b.name);
 const current = bins.filter((b) => !b.retro).sort(latest);
+// Retro: most recent change first (abolished, renamed or redesigned), then
+// by name. Old designs with no known date go last.
 const retro = bins
   .filter((b) => b.retro)
-  .sort((a, b) => a.name.localeCompare(b.name));
+  .sort((a, b) => (b.retroYear ?? 0) - (a.retroYear ?? 0) || a.name.localeCompare(b.name));
 const sorts = [
   { id: "latest", label: "Latest" },
   { id: "oldest", label: "Oldest" },

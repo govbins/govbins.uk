@@ -64,6 +64,18 @@ const details = await Promise.all(
 <div class="map-frame" data-map>
   <svg viewBox={`0 0 ${width} ${height}`} role="img" aria-labelledby="map-title">
     <title id="map-title">Map of UK councils, coloured by whether their bin is catalogued</title>
+    <defs>
+      <!-- Patterns as well as colours, so the key works without colour.
+           Their size is kept constant on screen as the map zooms. -->
+      <pattern id="pattern-harry" patternUnits="userSpaceOnUse" width="7" height="7" data-pattern>
+        <rect width="7" height="7" style="fill: var(--by-harry)" />
+        <circle cx="3.5" cy="3.5" r="1.4" fill="#fff" fill-opacity="0.75" />
+      </pattern>
+      <pattern id="pattern-others" patternUnits="userSpaceOnUse" width="6" height="6" data-pattern data-rotate="45" patternTransform="rotate(45)">
+        <rect width="6" height="6" style="fill: var(--by-others)" />
+        <rect width="2.2" height="6" fill="#fff" fill-opacity="0.6" />
+      </pattern>
+    </defs>
     <g class="zoom">
       {
         shapes.map(({ council, geo }, i) => (
@@ -105,6 +117,7 @@ const details = await Promise.all(
     const panel = frame.querySelector<HTMLElement>(".picked")!;
     const controls = frame.querySelector<HTMLElement>(".zoom-controls")!;
     const { width, height } = svg.viewBox.baseVal;
+    const patterns = [...svg.querySelectorAll<SVGPatternElement>("[data-pattern]")];
 
     // Zoom and pan: scroll or pinch, drag, double-click, or the buttons
     const behaviour = zoom<SVGSVGElement, unknown>()
@@ -112,6 +125,10 @@ const details = await Promise.all(
       .translateExtent([[0, 0], [width, height]])
       .on("zoom", (e) => {
         layer.setAttribute("transform", e.transform.toString());
+        for (const p of patterns) {
+          const rotate = p.dataset.rotate ? `rotate(${p.dataset.rotate}) ` : "";
+          p.setAttribute("patternTransform", `${rotate}scale(${1 / e.transform.k})`);
+        }
         frame.classList.toggle("zoomed", e.transform.k > 1.01);
       });
     const svgSel = select(svg).call(behaviour);
@@ -198,10 +215,10 @@ const details = await Promise.all(
   }
 
   .by-harry {
-    fill: var(--by-harry);
+    fill: url(#pattern-harry);
   }
   .by-others {
-    fill: var(--by-others);
+    fill: url(#pattern-others);
   }
   .by-none {
     fill: var(--by-none);

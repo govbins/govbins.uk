@@ -98,7 +98,7 @@ const details = await Promise.all(
   </div>
 
   <aside class="picked" aria-live="polite" hidden>
-    <button type="button" class="close" aria-label="Close">×</button>
+    <button type="button" class="close">Close</button>
     <img alt="" width="360" height="270" hidden />
     <h3></h3>
     <p class="light line"></p>
@@ -307,7 +307,6 @@ const details = await Promise.all(
     font-weight: 400;
     line-height: 1.25;
     margin: 0;
-    padding-right: 2rem;
   }
 
   .picked .line {
@@ -316,15 +315,21 @@ const details = await Promise.all(
 
   .picked .close {
     position: absolute;
-    top: 0.25rem;
-    right: 0.25rem;
-    width: 2.25rem;
-    height: 2.25rem;
-    font-size: 1.5rem;
-    background: none;
+    top: 1.25rem;
+    right: 1.25rem;
+    padding: 0.25rem 0.5rem;
+    font: inherit;
+    font-size: 1rem;
+    line-height: 1.25;
+    background: rgb(255 255 255 / 0.75);
     border: 0;
     color: var(--ink);
+    text-decoration: underline;
     cursor: pointer;
+  }
+
+  .picked .close:hover {
+    background: #fff;
   }
 
   /* on phones the bottom of the map can be off screen, so open at the top */
@@ -335,6 +340,14 @@ const details = await Promise.all(
     }
     .picked img {
       display: none;
+    }
+    /* no photo on phones, so keep long names clear of the button */
+    .picked .close {
+      top: 0.75rem;
+      right: 0.75rem;
+    }
+    .picked h3 {
+      padding-right: 4.5rem;
     }
     .map-frame:has(.picked:not([hidden])) .hover-name {
       display: none;

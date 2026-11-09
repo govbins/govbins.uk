@@ -98,9 +98,14 @@ a {
 
 .site-header nav ul {
   display: flex;
-  gap: 0.5rem 1rem;
+  flex-wrap: wrap;
   font-size: 1.25rem;
   margin-top: 1.25rem;
+}
+
+/* the same space between every link, whatever the browser */
+.site-header nav li + li {
+  margin-left: 1rem;
 }
 
 @media (min-width: 768px) {

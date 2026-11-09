@@ -46,8 +46,7 @@ const card = new URL("/images/preview-card.png", Astro.site);
                 <a href={item.href} aria-current={Astro.url.pathname.replace(/\/$/, "") === item.href ? "page" : undefined}>
                   {item.short ? (
                     <>
-                      {item.short}
-                      <span class="nav-more"> photos</span>
+                      {item.short}<span class="nav-more">&nbsp;photos</span>
                     </>
                   ) : (
                     item.label

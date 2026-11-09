@@ -10,15 +10,11 @@
   --sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --rubik: "Rubik", var(--sans);
 
-  /* bin colour families, used on the map */
-  --bin-purple: #6d4c9a;
-  --bin-blue: #2b5797;
-  --bin-green: #3d7a3f;
-  --bin-yellow-orange: #e2a12b;
-  --bin-red-burgundy: #8c2a3c;
-  --bin-brown: #6e4b34;
-  --bin-grayscale: #4b5057;
-  --bin-none: #dcdcdc;
+  /* the map */
+  --by-harry: #f28b1e;
+  --by-others: #ea47cb;
+  --by-none: #c4c7cc;
+  --sea: #e4e9ee;
 }
 
 *,
@@ -457,51 +453,6 @@ a {
 .search .none {
   margin-top: 0.75rem;
   font-size: 1.5rem;
-}
-
-/* ---------- map ---------- */
-
-.map svg {
-  width: 100%;
-  height: auto;
-  max-height: 85vh;
-  display: block;
-}
-
-.map path {
-  stroke: var(--paper);
-  stroke-width: 0.6;
-  stroke-linejoin: round;
-}
-
-.map a:hover path,
-.map a:focus-visible path {
-  stroke: var(--ink);
-  stroke-width: 1.5;
-}
-
-.map a:focus-visible {
-  outline: none;
-}
-
-.legend {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1.25rem;
-  font-size: 1.125rem;
-  margin: 1rem 0 2rem;
-}
-
-.legend li {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.legend span {
-  width: 1rem;
-  height: 1rem;
-  border-radius: 2px;
 }
 
 /* ---------- forms ---------- */

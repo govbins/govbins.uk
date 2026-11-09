@@ -1,11 +1,15 @@
 ---
-// Draws today's councils from ONS 2022 boundaries. Councils created since
-// (Cumberland, North Yorkshire...) are drawn by merging the councils they
-// replaced, so the map keeps up with src/data/councils.yaml by itself.
+// An interactive map of today's councils, from ONS 2022 boundaries.
+// Councils created since (Cumberland, North Yorkshire...) are drawn by
+// merging the councils they replaced, so the map keeps up with
+// src/data/councils.yaml by itself. Without JavaScript it's a plain map
+// where every council links to its page.
+import { getImage } from "astro:assets";
 import { geoPath, geoTransverseMercator } from "d3-geo";
 import { feature, merge } from "topojson-client";
 import topology from "../data/ons-council-boundaries-2022.json";
-import type { Council } from "../lib/govbins";
+import { formatDate, type Council } from "../lib/govbins";
+import { cataloguedBy } from "../lib/catalogued";
 
 interface Props {
   councils: Council[];
@@ -22,17 +26,15 @@ const parts = (c: Council, depth = 0): any[] => {
   return c.predecessors.filter((p) => p.type !== "county").flatMap((p) => parts(p, depth + 1));
 };
 
-const shapes = councils
-  .map((c) => {
-    const ps = parts(c);
-    if (!ps.length) return undefined;
-    const geo = ps.length === 1 ? feature(topology as any, ps[0]) : { type: "Feature", properties: {}, geometry: merge(topology as any, ps) };
-    return { council: c, geo };
-  })
-  .filter(Boolean) as { council: Council; geo: any }[];
-
-const missing = councils.filter((c) => !shapes.some((s) => s.council === c));
-if (missing.length) throw new Error(`No boundary for: ${missing.map((c) => c.id).join(", ")}`);
+const shapes = councils.map((c) => {
+  const ps = parts(c);
+  if (!ps.length) throw new Error(`No boundary for ${c.id}`);
+  const geo =
+    ps.length === 1
+      ? feature(topology as any, ps[0])
+      : { type: "Feature", properties: {}, geometry: merge(topology as any, ps) };
+  return { council: c, geo };
+});
 
 const width = 600;
 const height = 900;
@@ -40,20 +42,274 @@ const projection = geoTransverseMercator()
   .rotate([3.5, -54])
   .fitSize([width, height], { type: "FeatureCollection", features: shapes.map((s) => s.geo) } as any);
 const path = geoPath(projection).digits(1);
+
+// Details for the panel that opens when you pick a council
+const details = await Promise.all(
+  shapes.map(async ({ council: c }) => {
+    const by = cataloguedBy(c);
+    const thumb = c.bin ? (await getImage({ src: c.bin.image, width: 360, format: "webp" })).src : "";
+    const older = c.predecessors.filter((p) => p.type !== "county" && p.bin).length;
+    let line = "Not catalogued yet";
+    if (c.bin) {
+      line = c.bin.photographed ? formatDate(c.bin.photographed) : "Catalogued";
+      line += by === "harry" ? ", by Harry" : `, by ${c.bin.contributor!.name}`;
+    } else if (older) {
+      line += `. We have bins from ${older === 1 ? "a council" : `${older} councils`} it replaced.`;
+    }
+    return { by, thumb, line };
+  })
+);
 ---
 
-<svg viewBox={`0 0 ${width} ${height}`} role="img" aria-labelledby="map-title">
-  <title id="map-title">Map of UK councils, coloured by bin where we have one</title>
-  {
-    shapes.map(({ council, geo }) => (
-      <a href={`/${council.id}`}>
-        <path
-          d={path(geo)}
-          fill={council.bin?.colourFamily ? `var(--bin-${council.bin.colourFamily})` : "var(--bin-none)"}
-        >
-          <title>{council.bin ? council.name : `${council.name} (not catalogued yet)`}</title>
-        </path>
-      </a>
-    ))
+<div class="map-frame" data-map>
+  <svg viewBox={`0 0 ${width} ${height}`} role="img" aria-labelledby="map-title">
+    <title id="map-title">Map of UK councils, coloured by whether their bin is catalogued</title>
+    <g class="zoom">
+      {
+        shapes.map(({ council, geo }, i) => (
+          <a href={`/${council.id}`} data-id={council.id} data-name={council.name} data-line={details[i].line} data-thumb={details[i].thumb}>
+            <path d={path(geo)} class={`by-${details[i].by}`}>
+              <title>{`${council.name}: ${details[i].line}`}</title>
+            </path>
+          </a>
+        ))
+      }
+    </g>
+  </svg>
+
+  <p class="hover-name" aria-hidden="true" hidden></p>
+
+  <div class="zoom-controls" hidden>
+    <button type="button" data-zoom="in" aria-label="Zoom in">+</button>
+    <button type="button" data-zoom="out" aria-label="Zoom out">−</button>
+    <button type="button" data-zoom="reset" aria-label="Show the whole UK">⟲</button>
+  </div>
+
+  <aside class="picked" aria-live="polite" hidden>
+    <button type="button" class="close" aria-label="Close">×</button>
+    <img alt="" width="360" height="270" hidden />
+    <h3></h3>
+    <p class="light line"></p>
+    <a class="go"></a>
+  </aside>
+</div>
+
+<script>
+  import { select } from "d3-selection";
+  import { zoom, zoomIdentity } from "d3-zoom";
+
+  for (const frame of document.querySelectorAll<HTMLElement>("[data-map]")) {
+    const svg = frame.querySelector("svg")!;
+    const layer = frame.querySelector<SVGGElement>("g.zoom")!;
+    const hoverName = frame.querySelector<HTMLElement>(".hover-name")!;
+    const panel = frame.querySelector<HTMLElement>(".picked")!;
+    const controls = frame.querySelector<HTMLElement>(".zoom-controls")!;
+    const { width, height } = svg.viewBox.baseVal;
+
+    // Zoom and pan: scroll or pinch, drag, double-click, or the buttons
+    const behaviour = zoom<SVGSVGElement, unknown>()
+      .scaleExtent([1, 40])
+      .translateExtent([[0, 0], [width, height]])
+      .on("zoom", (e) => {
+        layer.setAttribute("transform", e.transform.toString());
+        frame.classList.toggle("zoomed", e.transform.k > 1.01);
+      });
+    const svgSel = select(svg).call(behaviour);
+    controls.hidden = false;
+    controls.addEventListener("click", (e) => {
+      const button = (e.target as HTMLElement).closest("button");
+      if (!button) return;
+      const z = button.dataset.zoom;
+      if (z === "in") behaviour.scaleBy(svgSel, 1.8);
+      if (z === "out") behaviour.scaleBy(svgSel, 1 / 1.8);
+      if (z === "reset") behaviour.transform(svgSel, zoomIdentity);
+    });
+
+    // Name of the council under the pointer
+    layer.addEventListener("pointerover", (e) => {
+      const a = (e.target as Element).closest("a");
+      if (!a) return;
+      hoverName.textContent = a.dataset.name!;
+      hoverName.hidden = false;
+    });
+    layer.addEventListener("pointerleave", () => (hoverName.hidden = true));
+
+    // Picking a council opens a panel instead of leaving the page, so a tap
+    // on a phone doesn't navigate away by accident
+    let picked: Element | undefined;
+    const close = () => {
+      panel.hidden = true;
+      picked?.classList.remove("selected");
+      picked = undefined;
+    };
+    layer.addEventListener("click", (e) => {
+      const a = (e.target as Element).closest("a") as unknown as SVGAElement & { dataset: DOMStringMap };
+      if (!a) return;
+      e.preventDefault();
+      picked?.classList.remove("selected");
+      picked = a.querySelector("path")!;
+      picked.classList.add("selected");
+      // draw it on top so its outline isn't hidden by its neighbours
+      layer.append(a);
+
+      const { name, line, thumb } = a.dataset;
+      const img = panel.querySelector("img")!;
+      img.hidden = !thumb;
+      if (thumb) img.src = thumb;
+      panel.querySelector("h3")!.textContent = name!;
+      panel.querySelector(".line")!.textContent = line!;
+      const go = panel.querySelector<HTMLAnchorElement>(".go")!;
+      go.href = a.getAttribute("href")!;
+      go.textContent = thumb ? `See ${name}'s bin` : `Go to ${name}`;
+      panel.hidden = false;
+    });
+    panel.querySelector(".close")!.addEventListener("click", close);
+    frame.addEventListener("keydown", (e) => e.key === "Escape" && close());
   }
-</svg>
+</script>
+
+<style>
+  .map-frame {
+    position: relative;
+    height: min(78vh, 60rem);
+    min-height: 26rem;
+    background: var(--sea);
+    border: 2px solid var(--ink);
+    overflow: hidden;
+  }
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: grab;
+    touch-action: none;
+  }
+
+  svg:active {
+    cursor: grabbing;
+  }
+
+  path {
+    stroke: #fff;
+    stroke-width: 0.6;
+    stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
+  }
+
+  .by-harry {
+    fill: var(--by-harry);
+  }
+  .by-others {
+    fill: var(--by-others);
+  }
+  .by-none {
+    fill: var(--by-none);
+  }
+
+  a:hover path,
+  a:focus-visible path {
+    stroke: var(--ink);
+    stroke-width: 1.5;
+  }
+
+  path.selected {
+    stroke: var(--ink);
+    stroke-width: 3;
+  }
+
+  a:focus-visible {
+    outline: none;
+  }
+
+  .hover-name {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    background: var(--paper);
+    padding: 0.25rem 0.5rem;
+    font-size: 1.125rem;
+    pointer-events: none;
+  }
+
+  .zoom-controls {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .zoom-controls button {
+    width: 2.75rem;
+    height: 2.75rem;
+    font: inherit;
+    font-size: 1.5rem;
+    line-height: 1;
+    background: var(--paper);
+    color: var(--ink);
+    border: 2px solid var(--ink);
+    cursor: pointer;
+  }
+
+  .zoom-controls button:hover {
+    background: #fff;
+  }
+
+  .picked {
+    position: absolute;
+    left: 0.75rem;
+    bottom: 0.75rem;
+    width: min(18rem, calc(100% - 4.5rem));
+    background: var(--paper);
+    border: 2px solid var(--ink);
+    padding: 0.75rem;
+    font-size: 1.125rem;
+  }
+
+  .picked img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+  }
+
+  .picked h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-right: 2rem;
+  }
+
+  .picked .line {
+    margin: 0.25rem 0 0.5rem;
+  }
+
+  .picked .close {
+    position: absolute;
+    top: 0.25rem;
+    right: 0.25rem;
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 1.5rem;
+    background: none;
+    border: 0;
+    color: var(--ink);
+    cursor: pointer;
+  }
+
+  /* on phones the bottom of the map can be off screen, so open at the top */
+  @media (max-width: 639px) {
+    .picked {
+      top: 0.75rem;
+      bottom: auto;
+    }
+    .picked img {
+      display: none;
+    }
+    .map-frame:has(.picked:not([hidden])) .hover-name {
+      display: none;
+    }
+  }
+</style>

@@ -3,39 +3,82 @@ import Base from "../layouts/Base.astro";
 import CouncilMap from "../components/CouncilMap.astro";
 import Footer from "../components/Footer.astro";
 import { load, collectors } from "../lib/govbins";
+import { cataloguedBy } from "../lib/catalogued";
 
 const { councils } = await load();
 const today = collectors(councils);
-const done = today.filter((c) => c.bin);
-const families = [
-  ["purple", "Purple"],
-  ["blue", "Blue"],
-  ["green", "Green"],
-  ["yellow-orange", "Yellow and orange"],
-  ["red-burgundy", "Red and burgundy"],
-  ["brown", "Brown"],
-  ["grayscale", "Black and grey"],
-  ["none", "Not catalogued yet"],
-];
+const count = { harry: 0, others: 0, none: 0 };
+for (const c of today) count[cataloguedBy(c)]++;
+const done = count.harry + count.others;
 ---
 
-<Base title="Map">
-  <div class="page">
+<Base title="Map" description={`${done} of ${today.length} UK councils' bins catalogued`}>
+  <div class="map-page">
     <h2>Map</h2>
-    <p>{done.length} of {today.length} councils catalogued</p>
-    <ul class="legend light">
-      {
-        families.map(([id, label]) => (
-          <li>
-            <span style={`background: var(--bin-${id})`} />
-            {label}
-          </li>
-        ))
-      }
+    <p>{done} of {today.length} councils catalogued</p>
+    <ul class="key light">
+      <li><span class="swatch by-harry"></span>By Harry ({count.harry})</li>
+      <li><span class="swatch by-others"></span>By others ({count.others})</li>
+      <li><span class="swatch by-none"></span>Not catalogued yet ({count.none})</li>
     </ul>
-    <div class="map">
-      <CouncilMap councils={today} />
-    </div>
-    <Footer />
+    <p class="hint light">Scroll or pinch to zoom, drag to move. Pick a council to see its bin.</p>
+    <CouncilMap councils={today} />
+    <p class="small light">
+      Boundaries from <a href="https://geoportal.statistics.gov.uk/">ONS</a>. Contains OS data © Crown copyright and
+      database right.
+    </p>
   </div>
+  <Footer />
 </Base>
+
+<style>
+  .map-page {
+    padding: 1.25rem 1.25rem 0;
+    font-size: 1.5rem;
+    max-width: 75rem;
+  }
+  @media (min-width: 1024px) {
+    .map-page {
+      margin-left: 10rem;
+    }
+  }
+  h2 {
+    font-size: 1.875rem;
+    font-weight: 400;
+    margin: 3rem 0 1.5rem;
+  }
+  .key {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    font-size: 1.25rem;
+    margin: 1rem 0;
+  }
+  .key li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .swatch {
+    width: 1.1rem;
+    height: 1.1rem;
+    border: 1px solid var(--ink);
+  }
+  .swatch.by-harry {
+    background: var(--by-harry);
+  }
+  .swatch.by-others {
+    background: var(--by-others);
+  }
+  .swatch.by-none {
+    background: var(--by-none);
+  }
+  .hint {
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+  }
+  .small {
+    font-size: 1rem;
+    margin-top: 0.75rem;
+  }
+</style>

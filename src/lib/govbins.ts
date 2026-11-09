@@ -55,6 +55,8 @@ export interface Bin {
   retro: false | "old-design" | "abolished";
   /** "1974 – 2023", "Pre-2008" */
   retroDates?: string;
+  /** the year the council was abolished or the design changed */
+  retroYear?: number;
   /** the bin you see now in its place */
   twin?: Bin;
 }
@@ -135,10 +137,12 @@ export async function load() {
     if (data.old_design) {
       bin.retroDates =
         data.old_design === true ? undefined : `Pre-${data.old_design.until}`;
+      if (data.old_design !== true) bin.retroYear = data.old_design.until;
     } else if (bin.retro === "abolished") {
       const c = bc[0];
       const until = c.end!.slice(0, 4);
       bin.retroDates = c.start ? `${c.start.slice(0, 4)} – ${until}` : `Pre-${until}`;
+      bin.retroYear = Number(until);
     }
     for (const c of bc) {
       if (data.old_design) c.oldDesigns.push(bin);

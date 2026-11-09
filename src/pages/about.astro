@@ -1,0 +1,51 @@
+---
+import Base from "../layouts/Base.astro";
+import Footer from "../components/Footer.astro";
+
+const press = [
+  ["The Guardian", "https://www.theguardian.com/cities/2018/apr/02/the-beauty-of-bins-instagram-account-catalogues-cities-unique-designs"],
+  ["Creative Review", "https://www.creativereview.co.uk/bin-done-visual-catalogue-nations-bins/"],
+  ["Bloomberg", "https://www.citylab.com/design/2018/03/britains-beautiful-garbage-bins/556217/"],
+  ["The Independent", "https://inews.co.uk/light-relief/offbeat/local-council-wheelie-bins/"],
+  ["Quartz", "https://qz.com/emails/quartz-obsession/1687384/", " (scroll way down)"],
+  ["Gizmodo UK", "https://www.gizmodo.co.uk/2020/08/this-website-shows-you-what-bins-look-like-around-the-uk/"],
+];
+---
+
+<Base title="About">
+  <div class="page">
+    <h2>About</h2>
+    <p>#govbins is a project to photograph wheelie bins in every UK local council.</p>
+    <p>
+      Started in 2017, the catalogue is the work of dozens of people <a href="/submit-photos">submitting photos</a> from
+      across the UK and beyond.
+    </p>
+
+    <h2>Design and code</h2>
+    <p>
+      This website is made by friends <a href="https://www.harrytrimble.com/">Harry Trimble</a> and
+      <a href="http://tommyp.org/">Tommy Palmer</a>.
+    </p>
+    <p><a href="/build">How this site is built</a>.</p>
+
+    <h2>Social media</h2>
+    <p>Follow #govbins on <a href="https://www.instagram.com/govbins.uk/">Instagram</a></p>
+
+    <h2>Press</h2>
+    {
+      press.map(([name, url, extra]) => (
+        <p>
+          <a href={url}>{name}</a>
+          {extra}
+        </p>
+      ))
+    }
+
+    <h2>Contact</h2>
+    <p>
+      <a href="https://twitter.com/HarryTrimble/">Twitter</a>, <a href="https://github.com/govbins/govbins.uk">GitHub</a>,
+      <a href="mailto:harryroberttrimble@gmail.com">email</a>
+    </p>
+    <Footer />
+  </div>
+</Base>

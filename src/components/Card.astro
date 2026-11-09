@@ -1,0 +1,85 @@
+---
+import { Image } from "astro:assets";
+import type { Bin, Council } from "../lib/govbins";
+import { formatDate } from "../lib/govbins";
+
+// A tile in a grid: a bin photo, a retro bin, or a council we don't have yet.
+interface Props {
+  bin?: Bin;
+  council?: Council;
+  /** link somewhere other than the bin's (first) council */
+  href?: string;
+  loading?: "lazy" | "eager";
+}
+const { bin, council, loading = "lazy" } = Astro.props;
+const target = council ?? bin!.councils[0];
+const href = Astro.props.href ?? `/${target.id}`;
+const title = bin && !council ? bin.name : target.name;
+const gone = (bin?.retro === "abolished" && !council) || (council && council.status === "abolished");
+
+let lines: string[] = [];
+if (bin?.retro && !council) {
+  if (bin.retroDates) lines.push(bin.retroDates);
+  if (bin.retro === "abolished") {
+    const now = bin.councils[0].successors;
+    if (now.length) lines.push(`Now ${now.map((s) => s.name).join(" and ")}`);
+  }
+} else if (council?.status === "abolished") {
+  lines.push(council.start ? `${council.start.slice(0, 4)} – ${council.end!.slice(0, 4)}` : `Until ${council.end!.slice(0, 4)}`);
+} else if (bin?.photographed) {
+  lines.push(formatDate(bin.photographed));
+}
+const twin = bin?.retro && !council ? bin.twin : undefined;
+const sizes = "(min-width: 1024px) 25vw, 50vw";
+---
+
+<article
+  class="card"
+  data-name={title}
+  data-date={bin?.photographed ?? ""}
+  data-colour={bin?.colourOrder ?? 999}
+>
+  <a href={href}>
+    <div class="photo">
+      {
+        bin ? (
+          <Image src={bin.image} alt={`${title} wheelie bin`} widths={[360, 720]} sizes={sizes} loading={loading} />
+        ) : (
+          <div class="placeholder light">Not catalogued yet</div>
+        )
+      }
+      {
+        twin && (
+          <Image class="twin" src={twin.image} alt="" widths={[360, 720]} sizes={sizes} loading="lazy" />
+        )
+      }
+    </div>
+    <div class="meta">
+      <h3 class:list={{ gone }}>{title}</h3>
+      {lines.map((l) => <p class="light">{l}</p>)}
+    </div>
+  </a>
+  {
+    bin?.contributor && !council && (
+      <p class="meta light credit">
+        {bin.contributor.url ? (
+          <a class="contributor" href={bin.contributor.url}>
+            {bin.contributor.name}
+          </a>
+        ) : (
+          bin.contributor.name
+        )}
+      </p>
+    )
+  }
+</article>
+
+<style>
+  /* the credit sits outside the card link, tucked under the meta */
+  .card:has(.credit) > a .meta {
+    padding-bottom: 0;
+  }
+  .credit {
+    padding-top: 0 !important;
+  }
+</style>

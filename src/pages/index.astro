@@ -1,0 +1,71 @@
+---
+import Base from "../layouts/Base.astro";
+import Card from "../components/Card.astro";
+import Footer from "../components/Footer.astro";
+import { load } from "../lib/govbins";
+
+const { bins } = await load();
+const latest = (a, b) => (b.photographed ?? "").localeCompare(a.photographed ?? "") || a.name.localeCompare(b.name);
+const current = bins.filter((b) => !b.retro).sort(latest);
+const retro = bins
+  .filter((b) => b.retro)
+  .sort((a, b) => a.name.localeCompare(b.name));
+const sorts = [
+  { id: "latest", label: "Latest" },
+  { id: "oldest", label: "Oldest" },
+  { id: "name", label: "Name" },
+  { id: "colour", label: "Colour" },
+  { id: "retro", label: "Retro" },
+];
+---
+
+<Base>
+  <h1 class="visually-hidden">Every council's wheelie bin</h1>
+  <div class="sort-bar" role="toolbar" aria-label="Sort bins" hidden>
+    {
+      sorts.map((s, i) => (
+        <button type="button" data-sort={s.id} aria-pressed={i === 0 ? "true" : "false"}>
+          {s.label}
+        </button>
+      ))
+    }
+  </div>
+  <section class="bins" id="current" aria-label="Bins">
+    {current.map((bin, i) => <Card bin={bin} loading={i < 8 ? "eager" : "lazy"} />)}
+  </section>
+  <h2 class="retro-heading" id="retro-heading">Retro</h2>
+  <section class="bins" id="retro" aria-labelledby="retro-heading">
+    {retro.map((bin) => <Card bin={bin} />)}
+  </section>
+  <Footer />
+</Base>
+
+<script>
+  const bar = document.querySelector<HTMLElement>(".sort-bar")!;
+  const current = document.getElementById("current")!;
+  const retro = document.getElementById("retro")!;
+  const cards = [...current.children] as HTMLElement[];
+
+  const compare: Record<string, (a: HTMLElement, b: HTMLElement) => number> = {
+    latest: (a, b) => b.dataset.date!.localeCompare(a.dataset.date!),
+    oldest: (a, b) => a.dataset.date!.localeCompare(b.dataset.date!),
+    name: (a, b) => a.dataset.name!.localeCompare(b.dataset.name!),
+    colour: (a, b) => Number(a.dataset.colour) - Number(b.dataset.colour),
+  };
+
+  const show = (sort: string) => {
+    for (const b of bar.querySelectorAll("button")) {
+      b.setAttribute("aria-pressed", String(b.dataset.sort === sort));
+    }
+    retro.hidden = sort !== "retro";
+    current.hidden = sort === "retro";
+    if (compare[sort]) current.append(...[...cards].sort(compare[sort]));
+  };
+
+  bar.hidden = false;
+  retro.hidden = true;
+  bar.addEventListener("click", (e) => {
+    const button = (e.target as HTMLElement).closest("button");
+    if (button) show(button.dataset.sort!);
+  });
+</script>

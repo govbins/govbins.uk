@@ -1,0 +1,50 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="How this site is built">
+  <div class="page">
+    <h2>How this site is built</h2>
+    <p>This site is a static site built with <a href="https://astro.build/">Astro</a>.</p>
+    <p>
+      Originally <a href="https://www.harrytrimble.com/">Harry</a> built the site with Bootstrap and some gnarly jQuery
+      soup, which made it slow and expensive. Thankfully, <a href="http://tommyp.org/">Tommy</a> got involved and changed
+      all that, with Next.js and Tailwind. In 2026 it was rebuilt again so it could keep up with councils being created,
+      merged and abolished.
+    </p>
+
+    <h3>Councils</h3>
+    <p>
+      Every council the site knows about, past, present and scheduled, is in one data file. It started from the
+      government's open registers of local authorities in England, Northern Ireland, Scotland and Wales, which were
+      switched off in 2021. Each council is matched to its <a href="https://www.ons.gov.uk/methodology/geography/ukgeographies/administrativegeography">ONS code</a>.
+    </p>
+    <p>
+      Reorganisations are dates in that file, so the site works out what's current each time it's built. When a council is
+      abolished its bin moves to Retro, and its page points to whoever took over.
+    </p>
+
+    <h3>The map</h3>
+    <p>
+      The <a href="/map">map</a> is drawn when the site is built, from
+      <a href="https://github.com/ONSvisual/topojson_boundaries">ONS boundaries</a> for 2022. Councils created since then
+      are drawn by joining together the councils they replaced.
+    </p>
+
+    <h3>Hosting and privacy</h3>
+    <p>
+      Hosted on <a href="https://www.netlify.com/">Netlify</a>, the site
+      <a href="https://plausible.io/govbins.uk">counts page views and visitors</a> using aggregated data, anonymised.
+      Meaning the site doesn't use cookies or any other potentially creepy tracking stuff.
+    </p>
+
+    <h3>Web performance</h3>
+    <p>
+      Photos are resized and converted to WebP when the site is built, and load as you scroll. The homepage works without
+      JavaScript; sorting is the only thing that needs it.
+    </p>
+
+    <h3>Open code</h3>
+    <p>Go to <a href="https://github.com/govbins/govbins.uk">GitHub</a> to look at all the code for this site.</p>
+  </div>
+</Base>

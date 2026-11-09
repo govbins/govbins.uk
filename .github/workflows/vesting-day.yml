@@ -1,0 +1,15 @@
+# Rebuild the site on 1 April, when reorganised councils take over, so
+# abolished councils' bins move to Retro without anyone pushing a change.
+# Needs a Netlify build hook URL saved as the NETLIFY_BUILD_HOOK secret.
+name: Rebuild on vesting day
+
+on:
+  schedule:
+    - cron: "5 0 1 4 *"
+  workflow_dispatch:
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - run: curl -fsS -X POST -d '{}' "${{ secrets.NETLIFY_BUILD_HOOK }}"

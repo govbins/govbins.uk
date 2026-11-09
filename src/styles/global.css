@@ -1,0 +1,509 @@
+/* govbins.uk — a small stylesheet that keeps the look of the original
+   Tailwind site: Rubik, #f8f8f8 paper, a pink underline for credits. */
+
+:root {
+  --ink: #1f2937;
+  --paper: #f8f8f8;
+  --pink: #ea47cb;
+  --rule: #cccccc;
+  --muted: #6b7280;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --rubik: "Rubik", var(--sans);
+
+  /* the map */
+  --by-harry: #f28b1e;
+  --by-others: #ea47cb;
+  --by-none: #c4c7cc;
+  --sea: #e4e9ee;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--rubik);
+  line-height: 1.5;
+}
+
+h1, h2, h3, p, ul, figure {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--pink);
+  outline-offset: 2px;
+}
+
+.light {
+  font-family: var(--sans);
+  font-weight: 300;
+}
+
+.contributor {
+  text-decoration: underline;
+  text-decoration-color: var(--pink);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ---------- header ---------- */
+
+.site-header {
+  padding: 1rem 1.25rem 2.5rem;
+}
+
+.site-header.ruled {
+  border-bottom: 2px solid var(--ink);
+}
+
+.site-header .home {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  padding-top: 0.5rem;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.site-header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+/* the same space between every link, whatever the browser */
+.site-header nav li + li {
+  margin-left: 1rem;
+}
+
+@media (min-width: 768px) {
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .site-header nav ul {
+    margin-top: 1.25rem;
+  }
+}
+
+/* ---------- homepage ---------- */
+
+.sort-bar {
+  background: var(--rule);
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+
+.sort-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.sort-bar button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  border-top: 4px solid transparent;
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+}
+
+.sort-bar button:hover,
+.sort-bar button[aria-pressed="true"] {
+  border-top-color: var(--ink);
+}
+
+.bins {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (min-width: 1024px) {
+  .bins {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.retro-heading {
+  font-size: 1.875rem;
+  font-weight: 400;
+  padding: 3rem 1.5rem 1.5rem;
+}
+
+.js .retro-heading {
+  display: none;
+}
+
+/* ---------- bin cards ---------- */
+
+.card {
+  min-width: 0;
+}
+
+.card > a {
+  display: block;
+  text-decoration: none;
+}
+
+.card .photo {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: #ececec;
+}
+
+.card .photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .meta {
+  display: none;
+  padding: 1rem 1rem 2.5rem;
+  font-size: 1.25rem;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+}
+
+.card a:hover h3,
+.card a:focus-visible h3 {
+  text-decoration: underline;
+}
+
+@media (min-width: 640px) {
+  .card .meta {
+    display: block;
+  }
+}
+
+/* retro: hover or focus to see what's there now */
+.card .twin {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.card > a:hover .twin,
+.card > a:focus-visible .twin {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card .twin {
+    transition: none;
+  }
+}
+
+.card .gone {
+  text-decoration: line-through;
+}
+
+/* a council we don't have yet */
+.card .placeholder {
+  position: absolute;
+  inset: 0.75rem;
+  border: 2px dashed var(--ink);
+  display: flex;
+  align-items: flex-end;
+  padding: 0.75rem;
+  font-size: 1.125rem;
+}
+
+/* ---------- prose pages ---------- */
+
+.page {
+  padding: 1.25rem 1.25rem 0;
+  font-size: 1.5rem;
+  max-width: 52rem;
+}
+
+@media (min-width: 1024px) {
+  .page {
+    margin-left: 10rem;
+  }
+}
+
+.page h2 {
+  font-size: 1.875rem;
+  font-weight: 400;
+  margin: 3rem 0 1.5rem;
+}
+
+.page h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 3rem 0 1.5rem;
+}
+
+.page p {
+  margin-bottom: 1.5rem;
+}
+
+.page .small,
+.page .small p,
+.page li {
+  font-size: 1.25rem;
+}
+
+.page ul.bullets {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.site-footer {
+  margin-top: 10rem;
+  padding: 0 1.5rem 2rem;
+  font-size: 1.5rem;
+}
+
+.page .site-footer {
+  padding-left: 0;
+}
+
+.button {
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  border: 0;
+  border-radius: 0.375rem;
+  padding: 1rem;
+  font: inherit;
+  font-size: 1.25rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ---------- council pages ---------- */
+
+.council {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+  .council {
+    width: 75%;
+    padding: 0;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 1.25rem;
+  }
+}
+
+.council .about {
+  padding-top: 2rem;
+  font-size: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .council .about,
+  .council .hero {
+    padding-top: 4rem;
+  }
+}
+
+.council .back {
+  font-size: 1.125rem;
+}
+
+.council h1 {
+  font-size: 1.875rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 2rem 0 1rem;
+}
+
+.council .about p {
+  margin-bottom: 0.75rem;
+}
+
+.council .note {
+  margin-top: 1.5rem;
+  padding-left: 1rem;
+  border-left: 4px solid var(--ink);
+}
+
+.council .hero .empty {
+  aspect-ratio: 4 / 3;
+  border: 2px dashed var(--ink);
+}
+
+.related {
+  width: 100%;
+  margin: 4rem auto 0;
+}
+
+@media (min-width: 1024px) {
+  .related {
+    width: 75%;
+  }
+}
+
+.related h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding: 0 1rem 1rem;
+}
+
+@media (min-width: 1024px) {
+  .related h2 {
+    padding-left: 0;
+  }
+}
+
+/* ---------- search ---------- */
+
+.search {
+  width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .search {
+    width: 50%;
+    padding: 0;
+  }
+}
+
+.search input {
+  margin-top: 2.5rem;
+  width: 100%;
+  font: inherit;
+  font-size: 2.25rem;
+  padding: 0.25rem 0.75rem;
+  border: 2px solid #374151;
+  border-radius: 0.375rem;
+  background: #fff;
+  color: var(--ink);
+}
+
+.search input:focus {
+  outline: none;
+  border-color: #fbbf24;
+}
+
+.search input::placeholder {
+  color: #9ca3af;
+}
+
+.search ul {
+  background: #fff;
+  font-size: 2.25rem;
+}
+
+.search li a {
+  display: block;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-top: 0;
+  text-decoration: none;
+}
+
+.search li a:hover,
+.search li a.selected {
+  background: var(--ink);
+  color: #fff;
+}
+
+.search .label {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.search .none {
+  margin-top: 0.75rem;
+  font-size: 1.5rem;
+}
+
+/* ---------- forms ---------- */
+
+.form {
+  width: 100%;
+  margin: 2rem auto 5rem;
+  padding: 1.25rem 1rem 0;
+  max-width: 34rem;
+}
+
+.form h1 {
+  font-size: 1.875rem;
+  font-weight: 400;
+}
+
+.form .group {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+}
+
+.form label {
+  display: block;
+}
+
+.form .hint {
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="url"] {
+  width: 100%;
+  font: inherit;
+  border: 2px solid #000;
+  background: var(--paper);
+  padding: 0.25rem;
+}
+
+.success {
+  border: 2px solid var(--pink);
+  padding: 2rem;
+  text-align: center;
+}
+
+[hidden] {
+  display: none !important;
+}

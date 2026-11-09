@@ -12,11 +12,11 @@ for (const c of today) count[cataloguedBy(c)]++;
 const done = count.harry + count.others;
 ---
 
-<Base title="Map" description={`${count.none} UK councils' bins still to find`}>
+<Base title="Map" description={`${count.none} UK councils' bins still to catalogue`}>
   <div class="page">
     <h1>Map</h1>
     <p>
-      {count.none} councils still to find. {done} of {today.length} catalogued.{" "}
+      {count.none} councils still to catalogue. {done} of {today.length} catalogued.{" "}
       <a href="/submit-photos">Submit photos</a>
     </p>
     <ul class="key light">

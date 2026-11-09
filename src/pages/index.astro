@@ -7,9 +7,28 @@ import { load } from "../lib/govbins";
 const { bins } = await load();
 const latest = (a, b) => (b.photographed ?? "").localeCompare(a.photographed ?? "") || a.name.localeCompare(b.name);
 const current = bins.filter((b) => !b.retro).sort(latest);
-const retro = bins
-  .filter((b) => b.retro)
-  .sort((a, b) => a.name.localeCompare(b.name));
+const byName = (a, b) => a.name.localeCompare(b.name);
+
+// Retro, grouped like a council's "Before 2023" section: the councils each
+// new council replaced, newest reorganisation first, then older designs of
+// councils that still exist.
+const groups = new Map();
+for (const bin of bins.filter((b) => b.retro === "abolished")) {
+  const c = bin.councils[0];
+  const key = `${c.end}|${c.successors.map((s) => s.id).join("+")}`;
+  if (!groups.has(key)) groups.set(key, { council: c, bins: [] });
+  groups.get(key).bins.push(bin);
+}
+const reorganised = [...groups.values()]
+  .map(({ council: c, bins }) => ({
+    year: c.end.slice(0, 4),
+    end: c.end,
+    renamed: c.renamed,
+    successors: c.successors,
+    bins: bins.sort(byName),
+  }))
+  .sort((a, b) => b.end.localeCompare(a.end) || a.successors[0].name.localeCompare(b.successors[0].name));
+const oldDesigns = bins.filter((b) => b.retro === "old-design").sort(byName);
 const sorts = [
   { id: "latest", label: "Latest" },
   { id: "oldest", label: "Oldest" },
@@ -20,6 +39,19 @@ const sorts = [
 ---
 
 <Base>
+  <style>
+    .retro-group h3 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      padding: 2.5rem 1rem 1rem;
+    }
+    .retro-group:first-of-type h3 {
+      padding-top: 1.5rem;
+    }
+    .retro-group h3 .light {
+      font-size: 1.25rem;
+    }
+  </style>
   <h1 class="visually-hidden">Every council's wheelie bin</h1>
   <div class="sort-bar" role="toolbar" aria-label="Sort bins" hidden>
     {
@@ -33,9 +65,37 @@ const sorts = [
   <section class="bins" id="current" aria-label="Bins">
     {current.map((bin, i) => <Card bin={bin} loading={i < 8 ? "eager" : "lazy"} />)}
   </section>
-  <h2 class="retro-heading" id="retro-heading">Retro</h2>
-  <section class="bins" id="retro" aria-labelledby="retro-heading">
-    {retro.map((bin) => <Card bin={bin} />)}
+  <section id="retro" aria-labelledby="retro-heading">
+    <h2 class="retro-heading" id="retro-heading">Retro</h2>
+    {
+      reorganised.map((g) => (
+        <div class="retro-group">
+          <h3>
+            {g.renamed ? "Renamed " : "Became "}
+            {g.successors.map((s, i) => (
+              <>
+                {i > 0 && " and "}
+                <a href={`/${s.id}`}>{s.name}</a>
+              </>
+            ))}
+            <span class="light">{` in ${g.year}`}</span>
+          </h3>
+          <div class="bins">
+            {g.bins.map((bin) => (
+              <Card bin={bin} hideSuccessor />
+            ))}
+          </div>
+        </div>
+      ))
+    }
+    <div class="retro-group">
+      <h3>Older designs</h3>
+      <div class="bins">
+        {oldDesigns.map((bin) => (
+          <Card bin={bin} />
+        ))}
+      </div>
+    </div>
   </section>
   <Footer />
 </Base>

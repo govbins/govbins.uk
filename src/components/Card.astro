@@ -10,8 +10,10 @@ interface Props {
   /** link somewhere other than the bin's (first) council */
   href?: string;
   loading?: "lazy" | "eager";
+  /** leave off "Now North Yorkshire" when the heading already says so */
+  hideSuccessor?: boolean;
 }
-const { bin, council, loading = "lazy" } = Astro.props;
+const { bin, council, loading = "lazy", hideSuccessor = false } = Astro.props;
 const target = council ?? bin!.councils[0];
 const href = Astro.props.href ?? `/${target.id}`;
 const title = bin && !council ? bin.name : target.name;
@@ -22,7 +24,7 @@ if (bin?.retro && !council) {
   if (bin.retroDates) lines.push(bin.retroDates);
   if (bin.retro === "abolished") {
     const now = bin.councils[0].successors;
-    if (now.length) lines.push(`Now ${now.map((s) => s.name).join(" and ")}`);
+    if (now.length && !hideSuccessor) lines.push(`Now ${now.map((s) => s.name).join(" and ")}`);
   }
 } else if (council?.status === "abolished") {
   lines.push(council.start ? `${council.start.slice(0, 4)} – ${council.end!.slice(0, 4)}` : `Until ${council.end!.slice(0, 4)}`);

@@ -11,10 +11,14 @@
   --rubik: "Rubik", var(--sans);
 
   /* the map */
-  --by-harry: #f28b1e;
-  --by-others: #ea47cb;
-  --by-none: #c4c7cc;
-  --sea: #e4e9ee;
+  /* the map leads with the gaps: uncatalogued councils are the strongest
+     tone, catalogued ones are quiet tints with a pattern in a deeper shade */
+  --by-harry: #f9d2a6;
+  --by-harry-mark: #e3892b;
+  --by-others: #f6cdee;
+  --by-others-mark: #d968c0;
+  --by-none: #2b3442;
+  --sea: #eef2f5;
 }
 
 *,

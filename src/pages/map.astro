@@ -12,14 +12,17 @@ for (const c of today) count[cataloguedBy(c)]++;
 const done = count.harry + count.others;
 ---
 
-<Base title="Map" description={`${done} of ${today.length} UK councils' bins catalogued`}>
+<Base title="Map" description={`${count.none} UK councils' bins still to find`}>
   <div class="page">
     <h1>Map</h1>
-    <p>{done} of {today.length} councils catalogued</p>
+    <p>
+      {count.none} councils still to find. {done} of {today.length} catalogued.{" "}
+      <a href="/submit-photos">Submit photos</a>
+    </p>
     <ul class="key light">
+      <li><span class="swatch by-none"></span>Not catalogued yet ({count.none})</li>
       <li><span class="swatch by-harry"></span>By Harry ({count.harry})</li>
       <li><span class="swatch by-others"></span>By others ({count.others})</li>
-      <li><span class="swatch by-none"></span>Not catalogued yet ({count.none})</li>
     </ul>
     <p class="hint light">Scroll or pinch to zoom, drag to move. Pick a council to see its bin.</p>
     <CouncilMap councils={today} />
@@ -45,15 +48,19 @@ const done = count.harry + count.others;
     gap: 0.5rem;
   }
   .swatch {
-    width: 1.1rem;
-    height: 1.1rem;
+    width: 1.5rem;
+    height: 1.5rem;
     border: 1px solid var(--ink);
   }
   .swatch.by-harry {
-    background: var(--by-harry);
+    background:
+      radial-gradient(circle, var(--by-harry-mark) 1.4px, transparent 1.8px) 0 0 / 6px 6px,
+      var(--by-harry);
   }
   .swatch.by-others {
-    background: var(--by-others);
+    background:
+      repeating-linear-gradient(-45deg, var(--by-others-mark) 0 2px, transparent 2px 7px),
+      var(--by-others);
   }
   .swatch.by-none {
     background: var(--by-none);

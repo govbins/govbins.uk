@@ -263,6 +263,15 @@ a {
   }
 }
 
+/* the page title: a little closer to the header than section headings are
+   to the text above them */
+.page h1 {
+  font-size: 1.875rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 2rem 0 1.5rem;
+}
+
 .page h2 {
   font-size: 1.875rem;
   font-weight: 400;
@@ -341,7 +350,7 @@ a {
 @media (min-width: 768px) {
   .council .about,
   .council .hero {
-    padding-top: 4rem;
+    padding-top: 3rem;
   }
 }
 
@@ -353,7 +362,7 @@ a {
   font-size: 1.875rem;
   font-weight: 400;
   line-height: 1.2;
-  margin: 2rem 0 1rem;
+  margin: 1.5rem 0 1rem;
 }
 
 .council .about p {

@@ -13,7 +13,7 @@ const done = count.harry + count.others;
 ---
 
 <Base title="Map" description={`${done} of ${today.length} UK councils' bins catalogued`}>
-  <div class="map-page">
+  <div class="page">
     <h2>Map</h2>
     <p>{done} of {today.length} councils catalogued</p>
     <ul class="key light">
@@ -27,26 +27,11 @@ const done = count.harry + count.others;
       Boundaries from <a href="https://geoportal.statistics.gov.uk/">ONS</a>. Contains OS data © Crown copyright and
       database right.
     </p>
+    <Footer />
   </div>
-  <Footer />
 </Base>
 
 <style>
-  .map-page {
-    padding: 1.25rem 1.25rem 0;
-    font-size: 1.5rem;
-    max-width: 75rem;
-  }
-  @media (min-width: 1024px) {
-    .map-page {
-      margin-left: 10rem;
-    }
-  }
-  h2 {
-    font-size: 1.875rem;
-    font-weight: 400;
-    margin: 3rem 0 1.5rem;
-  }
   .key {
     display: flex;
     flex-wrap: wrap;

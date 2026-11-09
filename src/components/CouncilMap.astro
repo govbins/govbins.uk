@@ -69,11 +69,11 @@ const details = await Promise.all(
            Their size is kept constant on screen as the map zooms. -->
       <pattern id="pattern-harry" patternUnits="userSpaceOnUse" width="7" height="7" data-pattern>
         <rect width="7" height="7" style="fill: var(--by-harry)" />
-        <circle cx="3.5" cy="3.5" r="1.4" fill="#fff" fill-opacity="0.75" />
+        <circle cx="3.5" cy="3.5" r="1.4" style="fill: var(--by-harry-mark)" />
       </pattern>
       <pattern id="pattern-others" patternUnits="userSpaceOnUse" width="6" height="6" data-pattern data-rotate="45" patternTransform="rotate(45)">
         <rect width="6" height="6" style="fill: var(--by-others)" />
-        <rect width="2.2" height="6" fill="#fff" fill-opacity="0.6" />
+        <rect width="1.8" height="6" style="fill: var(--by-others-mark)" />
       </pattern>
     </defs>
     <g class="zoom">
@@ -176,8 +176,9 @@ const details = await Promise.all(
       panel.querySelector("h3")!.textContent = name!;
       panel.querySelector(".line")!.textContent = line!;
       const go = panel.querySelector<HTMLAnchorElement>(".go")!;
-      go.href = a.getAttribute("href")!;
-      go.textContent = thumb ? `See ${name}'s bin` : `Go to ${name}`;
+      // for a gap, ask for a photo
+      go.href = thumb ? a.getAttribute("href")! : "/submit-photos";
+      go.textContent = thumb ? `See ${name}'s bin` : `Got a photo of ${name}'s bin? Send it in`;
       panel.hidden = false;
     });
     panel.querySelector(".close")!.addEventListener("click", close);
@@ -228,6 +229,13 @@ const details = await Promise.all(
   a:focus-visible path {
     stroke: var(--ink);
     stroke-width: 1.5;
+  }
+
+  /* on the dark uncatalogued councils, outline in the site's pink instead */
+  a:hover path.by-none,
+  a:focus-visible path.by-none,
+  path.selected.by-none {
+    stroke: var(--pink);
   }
 
   path.selected {

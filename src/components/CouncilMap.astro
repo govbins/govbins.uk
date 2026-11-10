@@ -52,7 +52,7 @@ const details = await Promise.all(
     let line = "Not catalogued yet";
     if (c.bin) {
       line = c.bin.photographed ? formatDate(c.bin.photographed) : "Catalogued";
-      line += by === "harry" ? ", by Harry" : `, by ${c.bin.contributor!.name}`;
+      line += by === "harry" ? ", by the #govbins team" : `, by ${c.bin.contributor!.name}`;
     } else if (older) {
       line += `. We have bins from ${older === 1 ? "a council" : `${older} councils`} it replaced.`;
     }

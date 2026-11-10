@@ -32,7 +32,7 @@ colour: 300-green
 ```
 
 - `council` is an `id` from `src/data/councils.yaml`. A bin shared by several councils takes a list: `council: [adur, worthing]`.
-- `contributor` is optional, and so is its `url`. Leave it out for your own photos: the map colours bins with no contributor as yours (orange) and everyone else's pink.
+- `contributor` is optional, and so is its `url`. Leave it out for your own photos: the map shows bins with no contributor as "By #govbins team", and everyone else's as "By others".
 - `colour` sets the order on the Colour tab, and the bin's colour on the map. The number sorts within the family. Families: `purple`, `blue`, `green`, `yellow-orange`, `red-burgundy`, `brown`, `grayscale`.
 
 ### Older designs

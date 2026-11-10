@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import Base from "../layouts/Base.astro";
 import Card from "../components/Card.astro";
+import Credit from "../components/Credit.astro";
 import Footer from "../components/Footer.astro";
 import { load, formatDate, type Council } from "../lib/govbins";
 
@@ -53,13 +54,7 @@ const description = bin
       {
         bin?.contributor && (
           <p class="light">
-            {bin.contributor.url ? (
-              <a class="contributor" href={bin.contributor.url}>
-                {bin.contributor.name}
-              </a>
-            ) : (
-              bin.contributor.name
-            )}
+            <Credit contributor={bin.contributor} />
           </p>
         )
       }

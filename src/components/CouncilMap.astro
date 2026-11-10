@@ -50,13 +50,14 @@ const details = await Promise.all(
     const thumb = c.bin ? (await getImage({ src: c.bin.image, width: 360, format: "webp" })).src : "";
     const older = c.predecessors.filter((p) => p.type !== "county" && p.bin).length;
     let line = "Not catalogued yet";
+    let credit = "";
     if (c.bin) {
       line = c.bin.photographed ? formatDate(c.bin.photographed) : "Catalogued";
-      line += by === "harry" ? ", by the #govbins team" : `, by ${c.bin.contributor!.name}`;
+      credit = by === "harry" ? "#govbins team" : c.bin.contributor!.name;
     } else if (older) {
       line += `. We have bins from ${older === 1 ? "a council" : `${older} councils`} it replaced.`;
     }
-    return { by, thumb, line };
+    return { by, thumb, line, credit };
   })
 );
 ---
@@ -79,9 +80,9 @@ const details = await Promise.all(
     <g class="zoom">
       {
         shapes.map(({ council, geo }, i) => (
-          <a href={`/${council.id}`} data-id={council.id} data-name={council.name} data-line={details[i].line} data-thumb={details[i].thumb}>
+          <a href={`/${council.id}`} data-id={council.id} data-name={council.name} data-line={details[i].line} data-credit={details[i].credit} data-thumb={details[i].thumb}>
             <path d={path(geo)} class={`by-${details[i].by}`}>
-              <title>{`${council.name}: ${details[i].line}`}</title>
+              <title>{`${council.name}: ${details[i].line}${details[i].credit ? `, photo by ${details[i].credit}` : ""}`}</title>
             </path>
           </a>
         ))
@@ -102,6 +103,7 @@ const details = await Promise.all(
     <img alt="" width="360" height="270" hidden />
     <h3></h3>
     <p class="light line"></p>
+    <p class="light credit-line"><span class="visually-hidden">Photo by </span><span aria-hidden="true">📷 </span><span class="who"></span></p>
     <a class="go"></a>
   </aside>
 </div>
@@ -169,12 +171,15 @@ const details = await Promise.all(
       // draw it on top so its outline isn't hidden by its neighbours
       layer.append(a);
 
-      const { name, line, thumb } = a.dataset;
+      const { name, line, thumb, credit } = a.dataset;
       const img = panel.querySelector("img")!;
       img.hidden = !thumb;
       if (thumb) img.src = thumb;
       panel.querySelector("h3")!.textContent = name!;
       panel.querySelector(".line")!.textContent = line!;
+      const creditLine = panel.querySelector<HTMLElement>(".credit-line")!;
+      creditLine.hidden = !credit;
+      creditLine.querySelector(".who")!.textContent = credit ?? "";
       const go = panel.querySelector<HTMLAnchorElement>(".go")!;
       // for a gap, ask for a photo
       go.href = thumb ? a.getAttribute("href")! : "/submit-photos";
@@ -307,6 +312,10 @@ const details = await Promise.all(
     font-weight: 400;
     line-height: 1.25;
     margin: 0;
+  }
+
+  .picked .credit-line {
+    margin: -0.25rem 0 0.5rem;
   }
 
   .picked .line {

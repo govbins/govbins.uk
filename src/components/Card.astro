@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import Credit from "./Credit.astro";
 import type { Bin, Council } from "../lib/govbins";
 import { formatDate } from "../lib/govbins";
 
@@ -62,13 +63,7 @@ const sizes = "(min-width: 1024px) 25vw, 50vw";
   {
     bin?.contributor && !council && (
       <p class="meta light credit">
-        {bin.contributor.url ? (
-          <a class="contributor" href={bin.contributor.url}>
-            {bin.contributor.name}
-          </a>
-        ) : (
-          bin.contributor.name
-        )}
+        <Credit contributor={bin.contributor} />
       </p>
     )
   }

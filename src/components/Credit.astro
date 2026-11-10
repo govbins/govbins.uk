@@ -1,0 +1,17 @@
+---
+// A photo credit: 📷 and the contributor's name, linked if we have a URL.
+interface Props {
+  contributor: { name: string; url?: string };
+}
+const { contributor } = Astro.props;
+---
+
+<span class="visually-hidden">Photo by </span><span aria-hidden="true">📷 </span>{
+  contributor.url ? (
+    <a class="contributor" href={contributor.url}>
+      {contributor.name}
+    </a>
+  ) : (
+    contributor.name
+  )
+}

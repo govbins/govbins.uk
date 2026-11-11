@@ -8,10 +8,20 @@ import Base from "../layouts/Base.astro";
     <form action="/confirmation" method="POST" data-netlify="true" name="submission" enctype="multipart/form-data">
       <input type="hidden" name="form-name" value="submission" />
 
-      <div class="group">
-        <label for="photos">Upload photos</label>
-        <input type="file" id="photos" name="photos" accept="image/*" multiple required />
-      </div>
+      <div class="error" id="error" role="alert" tabindex="-1" hidden></div>
+
+      <!-- Netlify Forms keeps one file per field, so each photo gets its own
+           field. A field with "multiple" silently loses the photos. -->
+      <fieldset class="group photos">
+        <legend>Photos</legend>
+        <p class="hint" id="photos-hint">Up to 3 photos, 8 MB in total. Have more? Send them in another go.</p>
+        <label for="photo-1">Photo</label>
+        <input type="file" id="photo-1" name="photo-1" accept="image/*" aria-describedby="photos-hint" required />
+        <label for="photo-2">Another photo (optional)</label>
+        <input type="file" id="photo-2" name="photo-2" accept="image/*" aria-describedby="photos-hint" />
+        <label for="photo-3">Another photo (optional)</label>
+        <input type="file" id="photo-3" name="photo-3" accept="image/*" aria-describedby="photos-hint" />
+      </fieldset>
 
       <div class="group">
         <label for="council">Local council</label>
@@ -40,3 +50,54 @@ import Base from "../layouts/Base.astro";
     </form>
   </div>
 </Base>
+
+<script>
+  // Netlify turns away submissions over 8 MB in total, so check first and
+  // say so, instead of the photos going missing
+  const LIMIT = 8 * 1024 * 1024 - 200 * 1024; // leave room for the text fields
+  const form = document.querySelector<HTMLFormElement>('form[name="submission"]')!;
+  const error = document.getElementById("error")!;
+  const files = () =>
+    [...form.querySelectorAll<HTMLInputElement>('input[type="file"]')].flatMap((i) => [...(i.files ?? [])]);
+
+  form.addEventListener("submit", (e) => {
+    const chosen = files();
+    if (!chosen.length) return; // the browser's "required" check handles this
+    const total = chosen.reduce((sum, f) => sum + f.size, 0);
+    if (total > LIMIT) {
+      e.preventDefault();
+      const mb = (total / 1024 / 1024).toFixed(1);
+      error.textContent = `Your photos add up to ${mb} MB, which is too big to send in one go. Send them one at a time, or make them smaller first.`;
+      error.hidden = false;
+      error.focus();
+    }
+  });
+  form.addEventListener("change", () => (error.hidden = true));
+</script>
+
+<style>
+  .photos {
+    border: 0;
+    padding: 0;
+    margin: 1rem 0 0;
+  }
+  .photos legend {
+    font-size: 1.25rem;
+    padding: 0;
+  }
+  .photos label {
+    margin-top: 0.75rem;
+    font-size: 1.125rem;
+  }
+  .photos input {
+    display: block;
+    margin-top: 0.25rem;
+  }
+  .error {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-left: 5px solid #d4351c;
+    background: #fff;
+    font-size: 1.125rem;
+  }
+</style>

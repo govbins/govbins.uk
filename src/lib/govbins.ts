@@ -191,6 +191,9 @@ export const statusLabel = (c: Council) =>
     ? "county council"
     : undefined;
 
+/** URL for a retro bin: /retro/hart rather than /retro/hart-retro */
+export const retroPath = (bin: { id: string }) => `/retro/${bin.id.replace(/-retro$/, "")}`;
+
 export const listNames = (cs: { name: string }[]) =>
   cs.length <= 2
     ? cs.map((c) => c.name).join(" and ")

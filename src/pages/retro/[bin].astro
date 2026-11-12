@@ -1,0 +1,59 @@
+---
+// A page for each retro bin: an older design, or a bin from a council
+// that's since been abolished. /retro/<bin id>
+import { Image } from "astro:assets";
+import Base from "../../layouts/Base.astro";
+import Card from "../../components/Card.astro";
+import Credit from "../../components/Credit.astro";
+import Footer from "../../components/Footer.astro";
+import { load, formatDate, retroPath, type Bin } from "../../lib/govbins";
+
+export async function getStaticPaths() {
+  const { bins } = await load();
+  return bins.filter((b) => b.retro).map((bin) => ({ params: { bin: retroPath(bin).slice(7) }, props: { bin } }));
+}
+
+const { bin } = Astro.props as { bin: Bin };
+const council = bin.councils[0];
+const esc = (t: string) => t.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+const link = (c: { id: string; officialName: string }) => `<a href="/${c.id}">${esc(c.officialName)}</a>`;
+
+let note = "";
+if (bin.retro === "old-design") {
+  note = `An older design from ${link(council)}.`;
+} else if (council.renamed) {
+  note = `${esc(council.officialName)} was renamed ${council.successors.map(link).join(" and ")} on ${formatDate(council.replacedOn!)}.`;
+} else {
+  const by = council.successors.length ? ` and replaced by ${council.successors.map(link).join(" and ")}` : "";
+  note = `${esc(council.officialName)} was abolished on ${formatDate(council.end!)}${by}.`;
+}
+const label = bin.retro === "old-design" ? "Older design" : council.renamed ? "Renamed" : "Abolished council";
+---
+
+<Base title={`${bin.name} (retro)`} description={`A retro ${bin.name} wheelie bin on #govbins`}>
+  <div class="council">
+    <div class="about">
+      <a class="back" href="/#retro">&larr; Retro</a>
+      <h1>{bin.name}</h1>
+      <p class="light">{label}{bin.retroDates && `, ${bin.retroDates}`}</p>
+      {bin.photographed && <p class="light">Photographed {formatDate(bin.photographed)}</p>}
+      {bin.contributor && <p class="light"><Credit contributor={bin.contributor} /></p>}
+      <p class="note light" set:html={note} />
+    </div>
+    <div class="hero">
+      <Image src={bin.image} alt={`${bin.name} wheelie bin, ${label.toLowerCase()}`} widths={[720, 1440]} sizes="(min-width: 1024px) 50vw, 100vw" loading="eager" />
+    </div>
+  </div>
+
+  {
+    bin.twin && (
+      <section class="related">
+        <h2>Now</h2>
+        <div class="bins">
+          <Card bin={bin.twin} />
+        </div>
+      </section>
+    )
+  }
+  <Footer />
+</Base>

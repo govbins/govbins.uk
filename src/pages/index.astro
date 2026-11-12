@@ -60,12 +60,16 @@ const sorts = [
       b.setAttribute("aria-pressed", String(b.dataset.sort === sort));
     }
     retro.hidden = sort !== "retro";
+    history.replaceState(null, "", sort === "retro" ? "#retro" : location.pathname);
     current.hidden = sort === "retro";
     if (compare[sort]) current.append(...[...cards].sort(compare[sort]));
   };
 
   bar.hidden = false;
   retro.hidden = true;
+  // /#retro opens the Retro tab, so it can be linked to
+  if (location.hash === "#retro") show("retro");
+  window.addEventListener("hashchange", () => location.hash === "#retro" && show("retro"));
   bar.addEventListener("click", (e) => {
     const button = (e.target as HTMLElement).closest("button");
     if (button) show(button.dataset.sort!);

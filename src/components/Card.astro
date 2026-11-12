@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import Credit from "./Credit.astro";
 import type { Bin, Council } from "../lib/govbins";
-import { formatDate } from "../lib/govbins";
+import { formatDate, retroPath } from "../lib/govbins";
 
 // A tile in a grid: a bin photo, a retro bin, or a council we don't have yet.
 interface Props {
@@ -14,7 +14,8 @@ interface Props {
 }
 const { bin, council, loading = "lazy" } = Astro.props;
 const target = council ?? bin!.councils[0];
-const href = Astro.props.href ?? `/${target.id}`;
+// retro bins have their own page; everything else goes to its council
+const href = Astro.props.href ?? (bin?.retro && !council ? retroPath(bin) : `/${target.id}`);
 const title = bin && !council ? bin.name : target.name;
 const gone = (bin?.retro === "abolished" && !council) || (council && council.status === "abolished");
 

@@ -1,0 +1,22 @@
+---
+// "← Back" goes to the previous page on govbins. Without JavaScript, or when
+// someone arrives from another site, it falls back to the given page.
+interface Props {
+  fallback?: string;
+}
+const { fallback = "/" } = Astro.props;
+---
+
+<a class="back" href={fallback} data-back>&larr; Back</a>
+
+<script>
+  for (const link of document.querySelectorAll<HTMLAnchorElement>("[data-back]")) {
+    link.addEventListener("click", (e) => {
+      const fromHere = document.referrer && new URL(document.referrer).origin === location.origin;
+      if (fromHere && history.length > 1) {
+        e.preventDefault();
+        history.back();
+      }
+    });
+  }
+</script>

@@ -2,6 +2,7 @@
 // A page for each retro bin: an older design, or a bin from a council
 // that's since been abolished. /retro/<bin id>
 import { Image } from "astro:assets";
+import Back from "../../components/Back.astro";
 import Base from "../../layouts/Base.astro";
 import Card from "../../components/Card.astro";
 import Credit from "../../components/Credit.astro";
@@ -33,7 +34,7 @@ const label = bin.retro === "old-design" ? "Older design" : council.renamed ? "R
 <Base title={`${bin.name} (retro)`} description={`A retro ${bin.name} wheelie bin on #govbins`}>
   <div class="council">
     <div class="about">
-      <a class="back" href="/#retro">&larr; Retro</a>
+      <Back fallback="/#retro" />
       <h1>{bin.name}</h1>
       <p class="light">{label}{bin.retroDates && `, ${bin.retroDates}`}</p>
       {bin.photographed && <p class="light">Photographed {formatDate(bin.photographed)}</p>}

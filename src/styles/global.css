@@ -521,3 +521,19 @@ a {
 [hidden] {
   display: none !important;
 }
+
+/* on council and retro pages, line the footer up with the page's content */
+.site-footer.inset {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .site-footer.inset {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

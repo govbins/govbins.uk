@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import Back from "../components/Back.astro";
 import Base from "../layouts/Base.astro";
 import Card from "../components/Card.astro";
 import Credit from "../components/Credit.astro";
@@ -44,7 +45,7 @@ const description = bin
 <Base title={council.name} description={description}>
   <div class="council">
     <div class="about">
-      <a class="back" href="/search">&larr; Search</a>
+      <Back fallback="/" />
       <h1>
         {council.name}
         {council.nameCy && <span class="light cy" lang="cy">{council.nameCy}</span>}
@@ -140,7 +141,7 @@ const description = bin
     )
   }
 
-  <Footer />
+  <Footer inset />
 </Base>
 
 <style>

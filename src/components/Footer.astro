@@ -1,3 +1,11 @@
-<footer class="site-footer">
+---
+// inset: line up with the council and retro pages' content column
+interface Props {
+  inset?: boolean;
+}
+const { inset = false } = Astro.props;
+---
+
+<footer class:list={["site-footer", { inset }]}>
   <p><a href="/build">How this site is built</a></p>
 </footer>

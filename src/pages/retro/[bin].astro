@@ -31,7 +31,7 @@ if (bin.retro === "old-design") {
 const label = bin.retro === "old-design" ? "Older design" : council.renamed ? "Renamed" : "Abolished council";
 ---
 
-<Base title={`${bin.name} (retro)`} description={`A retro ${bin.name} wheelie bin on #govbins`}>
+<Base title={`${bin.name} (retro)`} description={`A retro ${bin.name} wheelie bin on #govbins`} image={bin.image} imageAlt={`Retro ${bin.name} wheelie bin`}>
   <div class="council">
     <div class="about">
       <Back fallback="/#retro" />

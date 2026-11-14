@@ -42,7 +42,7 @@ const description = bin
   : `${council.name} on #govbins, a catalogue of every UK council's wheelie bin`;
 ---
 
-<Base title={council.name} description={description}>
+<Base title={council.name} description={description} image={bin?.image} imageAlt={bin ? `${bin.name} wheelie bin` : undefined}>
   <div class="council">
     <div class="about">
       <Back fallback="/" />

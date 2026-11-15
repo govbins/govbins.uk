@@ -11,15 +11,15 @@ import ExamplePhoto from "../components/ExamplePhoto.astro";
 
       <div class="error" id="error" role="alert" tabindex="-1" hidden></div>
 
+      <div class="example-photo">
+        <ExamplePhoto />
+      </div>
       <!-- Netlify Forms keeps one file per field, so each photo gets its own
            field. A field with "multiple" silently loses the photos. -->
       <fieldset class="group photos">
         <legend>Photos</legend>
         <p class="hint" id="photos-hint">Up to 3 photos, 8 MB in total. Have more? Send them in another go.</p>
-        <div class="example-photo">
-          <p class="hint">Like this: landscape, straight on, phone level with the rim.</p>
-          <ExamplePhoto />
-        </div>
+        <p class="hint">Like this: landscape, straight on, phone level with the rim.</p>
         <label for="photo-1">Photo</label>
         <input type="file" id="photo-1" name="photo-1" accept="image/*" aria-describedby="photos-hint" required />
         <label for="photo-2">Another photo (optional)</label>

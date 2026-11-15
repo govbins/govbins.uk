@@ -1,0 +1,156 @@
+---
+// The example photo on the submit page, with guide lines that draw on
+// one after another: rim level with the phone, space either side,
+// space above the lid. Without motion, the lines are just there.
+---
+
+<figure class="example" data-example>
+  <svg viewBox="0 0 1400 1048" role="img" aria-labelledby="example-title example-desc">
+    <title id="example-title">Example photo</title>
+    <desc id="example-desc">
+      A green wheelie bin photographed straight on, in landscape, from the height of its rim, with space above the lid and on either side.
+    </desc>
+    <image href="/images/Walford.png" width="1400" height="1048" />
+
+    <g class="step s1">
+      <line class="draw" x1="0" y1="305" x2="1400" y2="305" pathLength="1" />
+      <g class="label" transform="translate(1376 330)">
+        <rect x="-450" y="0" width="450" height="58" rx="8" />
+        <text x="-225" y="40">Phone level with the rim</text>
+      </g>
+    </g>
+
+    <g class="step s2">
+      <line class="draw" x1="8" y1="640" x2="222" y2="640" pathLength="1" />
+      <line class="draw" x1="1392" y1="640" x2="1178" y2="640" pathLength="1" />
+      <line class="tick" x1="8" y1="616" x2="8" y2="664" />
+      <line class="tick" x1="1392" y1="616" x2="1392" y2="664" />
+      <g class="label" transform="translate(24 668)">
+        <rect x="0" y="0" width="128" height="58" rx="8" />
+        <text x="64" y="40">Space</text>
+      </g>
+      <g class="label" transform="translate(1376 668)">
+        <rect x="-128" y="0" width="128" height="58" rx="8" />
+        <text x="-64" y="40">Space</text>
+      </g>
+    </g>
+
+    <g class="step s3">
+      <line class="draw" x1="1150" y1="8" x2="1150" y2="132" pathLength="1" />
+      <line class="tick" x1="1126" y1="8" x2="1174" y2="8" />
+      <g class="label" transform="translate(24 24)">
+        <rect x="0" y="0" width="380" height="58" rx="8" />
+        <text x="190" y="40">Space above the lid</text>
+      </g>
+    </g>
+
+    <g class="step s4">
+      <g class="label" transform="translate(700 960)">
+        <rect x="-235" y="0" width="470" height="58" rx="8" />
+        <text x="0" y="40">Straight on, landscape</text>
+      </g>
+    </g>
+  </svg>
+  <button type="button" class="replay" hidden>Play again</button>
+</figure>
+
+<script>
+  for (const fig of document.querySelectorAll<HTMLElement>("[data-example]")) {
+    const replay = fig.querySelector<HTMLButtonElement>(".replay")!;
+    const play = () => {
+      fig.classList.remove("play");
+      void fig.offsetWidth; // restart the animations
+      fig.classList.add("play");
+    };
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      fig.classList.add("still");
+      continue;
+    }
+    fig.classList.add("ready");
+    replay.hidden = false;
+    replay.addEventListener("click", play);
+    new IntersectionObserver((entries, obs) => {
+      if (entries.some((e) => e.isIntersecting)) {
+        play();
+        obs.disconnect();
+      }
+    }, { threshold: 0.5 }).observe(fig);
+  }
+</script>
+
+<style>
+  .example {
+    margin: 0;
+  }
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .draw,
+  .tick {
+    stroke: var(--pink);
+    stroke-width: 8;
+    stroke-linecap: round;
+    fill: none;
+  }
+  .s1 .draw {
+    stroke-dasharray: 0.02 0.012;
+  }
+  .label rect {
+    fill: rgba(31, 41, 55, 0.88);
+  }
+  .s1 .label rect {
+    fill: var(--pink);
+  }
+  .label text {
+    fill: #fff;
+    font: 500 32px Rubik, system-ui, sans-serif;
+    text-anchor: middle;
+  }
+
+  /* before it plays: everything hidden, ready to draw */
+  .ready .step {
+    opacity: 0;
+  }
+  .ready .draw {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+  }
+  .ready.play .step {
+    animation: show 0.3s ease-out forwards;
+  }
+  .ready.play .draw {
+    animation: draw 0.8s ease-in-out forwards;
+  }
+  .ready.play .s1, .ready.play .s1 .draw { animation-delay: 0.3s; }
+  .ready.play .s2, .ready.play .s2 .draw { animation-delay: 1.4s; }
+  .ready.play .s3, .ready.play .s3 .draw { animation-delay: 2.5s; }
+  .ready.play .s4 { animation-delay: 3.5s; }
+  .ready.play .s1 .label { animation: show 0.4s 1s ease-out both; }
+  .ready.play .s2 .label { animation: show 0.4s 2.1s ease-out both; }
+  .ready.play .s3 .label { animation: show 0.4s 3.2s ease-out both; }
+  /* the rim line is dashed once drawn */
+  .ready.play .s1 .draw {
+    animation: draw 0.8s 0.3s ease-in-out forwards, dash 0s 1.1s forwards;
+  }
+
+  @keyframes show { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  @keyframes dash { to { stroke-dasharray: 0.02 0.012; } }
+
+  .replay {
+    margin-top: 0.5rem;
+    font: inherit;
+    font-size: 0.8em;
+    background: none;
+    border: 0;
+    padding: 0;
+    color: var(--ink);
+    text-decoration: underline;
+    text-decoration-color: var(--pink);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    cursor: pointer;
+  }
+</style>

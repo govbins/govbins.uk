@@ -1,5 +1,6 @@
 ---
 import Base from "../layouts/Base.astro";
+import ExamplePhoto from "../components/ExamplePhoto.astro";
 ---
 
 <Base title="Send your photos">
@@ -15,6 +16,10 @@ import Base from "../layouts/Base.astro";
       <fieldset class="group photos">
         <legend>Photos</legend>
         <p class="hint" id="photos-hint">Up to 3 photos, 8 MB in total. Have more? Send them in another go.</p>
+        <div class="example-photo">
+          <p class="hint">Like this: landscape, straight on, phone level with the rim.</p>
+          <ExamplePhoto />
+        </div>
         <label for="photo-1">Photo</label>
         <input type="file" id="photo-1" name="photo-1" accept="image/*" aria-describedby="photos-hint" required />
         <label for="photo-2">Another photo (optional)</label>
@@ -80,6 +85,10 @@ import Base from "../layouts/Base.astro";
     border: 0;
     padding: 0;
     margin: 1rem 0 0;
+  }
+  .example-photo {
+    max-width: 32rem;
+    margin: 0.5rem 0 1.25rem;
   }
   .photos legend {
     font-size: 1.25rem;

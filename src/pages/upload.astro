@@ -3,9 +3,9 @@ import Base from "../layouts/Base.astro";
 import ExamplePhoto from "../components/ExamplePhoto.astro";
 ---
 
-<Base title="Send your photos">
+<Base title="Upload your photos">
   <div class="form">
-    <h1>Send your photos</h1>
+    <h1>Upload your photos <span aria-hidden="true">👇</span></h1>
     <form action="/confirmation" method="POST" data-netlify="true" name="submission" enctype="multipart/form-data">
       <input type="hidden" name="form-name" value="submission" />
 

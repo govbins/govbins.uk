@@ -47,6 +47,7 @@ export interface Bin {
   name: string;
   image: CollectionEntry<"bins">["data"]["image"];
   photographed?: string;
+  added?: string;
   contributor?: { name: string; url?: string };
   colour?: string;
   colourFamily?: string;
@@ -124,6 +125,7 @@ export async function load() {
       name: bc.map((c) => c.name).join(" and "),
       image: data.image,
       photographed: iso(data.photographed),
+      added: iso(data.added),
       contributor: data.contributor,
       colour: data.colour,
       colourFamily: data.colour?.replace(/^\d+-/, ""),

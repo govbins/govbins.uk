@@ -39,6 +39,8 @@ const bins = defineCollection({
         .transform((v) => (Array.isArray(v) ? v : [v])),
       image: image(),
       photographed: z.coerce.date().optional(),
+      /** when the bin went on govbins.uk (used to order Retro) */
+      added: z.coerce.date().optional(),
       contributor: z
         .object({ name: z.string(), url: z.string().url().optional() })
         .optional(),
